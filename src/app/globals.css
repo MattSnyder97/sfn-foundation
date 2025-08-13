@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+/* ===== Theme Variables ===== */
+@theme {
+  /* Colors */
+  --color-primary: #5159CF;
+  --color-secondary: #f3f4f6;
+  --color-accent: #4F46E5;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #111827;
+
+  /* Fonts */
+  --font-sans: 'Lato', sans-serif;
+  --font-heading: 'Public Sans', sans-serif;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+
+  /* Border Radius */
+  --radius-card: 0.75rem;
+  --radius-btn: 0.5rem;
+
+  /* Shadows */
+  --shadow-header: 0 4px 12px 6px rgba(33, 26, 63, 0.02);
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  body {
+    @apply font-sans text-text-primary bg-bg-light;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    padding-left: var(--spacing-desktop-x);
+    padding-right: var(--spacing-desktop-x);
+  }
+
+  /* Mobile/tablet overrides */
+  @media (max-width: 1024px) {
+    .container-padding {
+      padding-left: 2rem; /* 32px */
+      padding-right: 2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container-padding {
+      padding-left: 1rem; /* 16px */
+      padding-right: 1rem;
+    }
+  }
+
+  /* Animation Utilities */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .animate-fadeSlideIn {
+    animation: fadeSlideIn 0.2s ease-out;
+  }
+}

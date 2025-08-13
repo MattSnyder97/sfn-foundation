@@ -1,0 +1,16 @@
+I'm making a web app for small fiber neuropathy using Next.js and Tailwind CSS (I used "npx create-next-app@latest sfn-foundation --typescript --tailwind --src-dir --app --import-alias "@/*"" to generate my project), I want it to be as modular as possible. I made a mockup using Figma.
+
+Most AI models struggle with Tailwind V4 because it no longer uses a tailwind.config file and you do all theme styles in globals.css now using @theme. Theme variables are special CSS variables defined using the @theme directive that influence which utility classes exist in your project.
+
+For example, you can add a new color to your project by defining a theme variable like --color-mint-500:
+app.css
+
+@import "tailwindcss";@theme {  --color-mint-500: oklch(0.72 0.11 178);}
+
+Now you can use utility classes like bg-mint-500, text-mint-500, or fill-mint-500 in your HTML:
+
+<div class="bg-mint-500">  <!-- ... --></div> Always refer to globals.css for my project when needing global variables.
+
+I am using multiples of 8 for spacing, padding, and rounded corners so like 24 px rounded corners is standard, 40px gap between FAQ accordions etc. I am using Public Sans font for all text.
+
+The ultimate goal of this website is to provide people with small fiber neuropathy information in an accessible way and provide hope. We will use this web app to eventually have another part of it to allow authorized users to upload latest small fiber neuropathy research that will be stripped to a format that is easiest for a LLM AI to use to find a cure.
