@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
       
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-8 relative z-10 flex items-center min-h-[520px] md:min-h-[560px]">
+      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[520px] md:min-h-[560px]">
         <div className="py-12 text-left text-white max-w-[900px]">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
                 Giving Hope
@@ -29,7 +29,7 @@ export default function Hero() {
             <h2 className="text-xl md:text-2xl font-medium mb-6">
                 Through Community and Research
             </h2>
-          <p className="text-base md:text-lg leading-relaxed text-white/90 max-w-prose mb-8">
+          <p className="text-base md:text-lg leading-relaxed text-white/60 max-w-prose mb-8">
             Our foundation exists to speed up finding the cure for <span className="font-semibold">small fiber neuropathy</span> and provide you the support you need along the way.
           </p>
           <div className="flex flex-wrap gap-8">

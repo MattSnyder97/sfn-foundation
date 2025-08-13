@@ -14,16 +14,11 @@
   --color-dark: #54566E;
   --color-gray: #5B5D70;
 
-    --color-hero-from: #5b6dfb;  /* bluish */
-  --color-hero-mid:  #6a5ddb;  /* indigo/purple */
-  --color-hero-to:   #4e54c8; 
-
   /* Fonts */
   --font-sans: 'Lato', sans-serif;
 
   /* Spacing */
   --spacing-section: 5rem;
-  --spacing-desktop-x: 15rem;
 
   /* Border Radius */
   --radius-card: 0.75rem;
@@ -46,8 +41,9 @@
 
 @layer utilities {
   .container-padding {
-    padding-left: var(--spacing-desktop-x);
-    padding-right: var(--spacing-desktop-x);
+    max-width: 80rem; /* equivalent to max-w-7xl */
+    padding-left: 2rem; /* equivalent to px-8 */
+    padding-right: 2rem; /* equivalent to px-8 */
   }
 
   /* Mobile/tablet overrides */

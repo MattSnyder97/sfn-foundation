@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white shadow-header relative">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-12 px-8">
+      <div className="container-padding mx-auto flex items-center justify-between py-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
