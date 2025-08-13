@@ -28,7 +28,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center justify-end flex-1 space-x-8">
+        <div className="hidden md:flex items-center justify-end flex-1 space-x-12">
           {!searchOpen &&
             navLinks.map((link) => (
               <div
@@ -37,7 +37,7 @@ export default function Header() {
                 onMouseEnter={() => setActiveDropdown(link.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <div className="flex items-center space-x-1">
+                <div className="flex items-center space-x-3">
                   <Link
                     href={link.href}
                     className="text-base font-medium text-gray-700 hover:text-gray-700"
@@ -60,10 +60,10 @@ export default function Header() {
 
                 {/* Dropdown menu */}
                 {activeDropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-10 animate-fadeIn">
+                  <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-lg rounded-md z-10 animate-fadeIn">
                     <Link
                       href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                     >
                       Dropdown Item
                     </Link>
