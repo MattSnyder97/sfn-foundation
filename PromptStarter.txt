@@ -11,6 +11,6 @@ Now you can use utility classes like bg-mint-500, text-mint-500, or fill-mint-50
 
 <div class="bg-mint-500">  <!-- ... --></div> Always refer to globals.css for my project when needing global variables.
 
-I am using multiples of 8 for spacing, padding, and rounded corners so like 24 px rounded corners is standard, 40px gap between FAQ accordions etc. I am using Public Sans font for all text.
+I am using multiples of 8 for spacing, padding, and rounded corners so like 24 px rounded corners is standard, 40px gap between FAQ accordions etc. I am using Public Sans font for all text. I made a variable .container-padding in globals.css to apply to content to match the Figma layout it can be used like container-padding
 
 The ultimate goal of this website is to provide people with small fiber neuropathy information in an accessible way and provide hope. We will use this web app to eventually have another part of it to allow authorized users to upload latest small fiber neuropathy research that will be stripped to a format that is easiest for a LLM AI to use to find a cure.

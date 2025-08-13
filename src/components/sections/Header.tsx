@@ -7,12 +7,20 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileDropdowns, setMobileDropdowns] = useState<{ [key: string]: boolean }>({});
 
   const navLinks = [
-    { label: "About SFN", href: "#", dropdown: true },
-    { label: "Research", href: "#", dropdown: true },
-    { label: "Resources", href: "#", dropdown: true }
+    { label: "About SFN", dropdown: true },
+    { label: "Research", dropdown: true },
+    { label: "Resources", dropdown: true }
   ];
+
+  const toggleMobileDropdown = (label: string) => {
+    setMobileDropdowns((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
+  };
 
   return (
     <header className="w-full bg-white shadow-header relative">
@@ -35,15 +43,17 @@ export default function Header() {
                 key={link.label}
                 className="relative group"
                 onMouseEnter={() => setActiveDropdown(link.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseLeave={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                    setActiveDropdown(null);
+                  }
+                }}
               >
-                <div className="flex items-center space-x-3">
-                  <Link
-                    href={link.href}
-                    className="text-base font-medium text-gray-700 hover:text-gray-700"
-                  >
+                {/* Trigger */}
+                <div className="flex items-center space-x-3 cursor-default">
+                  <span className="text-base font-medium text-gray-700">
                     {link.label}
-                  </Link>
+                  </span>
                   {link.dropdown && (
                     <Image
                       src="/icons/chevron.svg"
@@ -53,19 +63,29 @@ export default function Header() {
                       className={`transition-transform duration-160 ${
                         activeDropdown === link.label ? "scale-y-[-1]" : ""
                       }`}
-                      style={{ opacity: 1 }}
                     />
                   )}
                 </div>
 
+                {/* Invisible buffer */}
+                {link.dropdown && (
+                  <div className="absolute top-full left-0 h-4 w-full bg-transparent"></div>
+                )}
+
                 {/* Dropdown menu */}
                 {activeDropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-lg rounded-md z-10 animate-fadeIn">
+                  <div className="absolute top-full left-0 mt-4 w-64 bg-white shadow-lg rounded-md z-10 animate-fadeIn">
                     <Link
                       href="#"
                       className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                     >
                       Dropdown Item
+                    </Link>
+                    <Link
+                      href="#"
+                      className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                    >
+                      Another Item
                     </Link>
                   </div>
                 )}
@@ -84,7 +104,7 @@ export default function Header() {
             )}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="ml-4 transition-opacity duration-300"
+              className="ml-4 transition-opacity duration-300 cursor-pointer"
             >
               {searchOpen ? (
                 <svg
@@ -147,13 +167,44 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-white shadow-lg px-8 py-4 space-y-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="block text-base font-medium text-gray-700"
-            >
-              {link.label}
-            </Link>
+            <div key={link.label}>
+              <div
+                className="flex items-center justify-between cursor-pointer"
+                onClick={() => toggleMobileDropdown(link.label)}
+              >
+                <span className="text-base font-medium text-gray-700">
+                  {link.label}
+                </span>
+                {link.dropdown && (
+                  <Image
+                    src="/icons/chevron.svg"
+                    alt="Expand"
+                    width={12}
+                    height={12}
+                    className={`transition-transform duration-160 ${
+                      mobileDropdowns[link.label] ? "scale-y-[-1]" : ""
+                    }`}
+                  />
+                )}
+              </div>
+
+              {mobileDropdowns[link.label] && link.dropdown && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link
+                    href="#"
+                    className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
+                  >
+                    Dropdown Item
+                  </Link>
+                  <Link
+                    href="#"
+                    className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
+                  >
+                    Another Item
+                  </Link>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}
