@@ -17,12 +17,12 @@ export default function Hero() {
           className="object-cover opacity-7"
         />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-secondary/50"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-secondary/30"/>
       </div>
       
       {/* Content */}
-      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[520px] md:min-h-[560px]">
-        <div className="py-12 text-left text-offWhite max-w-[900px]">
+      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[520px] md:min-h-[525px]">
+        <div className="text-left text-offWhite max-w-[900px]">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
                 Giving Hope
             </h1>
@@ -34,7 +34,13 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-8">
             <Button variant="outline" size="md" className="rounded-full border-white text-white hover:bg-white/10">
-              Latest Research
+                <a
+                    href="/research/latest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Latest Research
+                </a>
             </Button>
             <Button
               variant="outline"

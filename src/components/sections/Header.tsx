@@ -128,7 +128,7 @@ export default function Header() {
                   {/* Dropdown */}
                   {isActive && link.dropdown && (
                     <div
-                      className="absolute left-0 top-full z-20 w-64 -translate-x-4" // shifted left
+                      className="absolute left-0 top-full z-20 w-56 -translate-x-4"
                       onMouseEnter={() => openDropdown(link.label)}
                       onMouseLeave={scheduleClose}
                     >

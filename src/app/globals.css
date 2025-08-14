@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
 /* ===== Theme Variables ===== */
@@ -6,24 +6,23 @@
   /* Colors */
   --color-primary: #5159CF;
   --color-secondary: #009CFA;
-
   --color-white: #FBF8F8;
   --color-offWhite: #EFEEF5;
-
   --color-black: #373847;
   --color-dark: #54566E;
   --color-gray: #5B5D70;
-
+  
   /* Fonts */
-  --font-sans: 'Lato', sans-serif;
-
+  --font-sans: 'Public Sans', sans-serif;
+  --font-serif: 'Lora', serif;
+  
   /* Spacing */
   --spacing-section: 5rem;
-
+  
   /* Border Radius */
   --radius-card: 0.75rem;
   --radius-btn: 0.5rem;
-
+  
   /* Shadows */
   --shadow-header: 0 4px 12px 6px rgba(33, 26, 63, 0.02);
 }
@@ -33,7 +32,6 @@
   body {
     @apply font-sans text-dark bg-offWhite;
   }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-bold;
   }
@@ -45,7 +43,7 @@
     padding-left: 2rem; /* equivalent to px-8 */
     padding-right: 2rem; /* equivalent to px-8 */
   }
-
+  
   /* Mobile/tablet overrides */
   @media (max-width: 1024px) {
     .container-padding {
@@ -53,14 +51,14 @@
       padding-right: 2rem;
     }
   }
-
+  
   @media (max-width: 640px) {
     .container-padding {
       padding-left: 1rem; /* 16px */
       padding-right: 1rem;
     }
   }
-
+  
   .hero-gradient {
     background: linear-gradient(
       180deg,
@@ -69,20 +67,22 @@
       color(var(--color-hero-to)   / 0.92) 100%
     );
   }
-
+  
   /* Animation Utilities */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
   .animate-fadeIn {
     animation: fadeIn 0.2s ease-in-out;
   }
-
+  
   @keyframes fadeSlideIn {
     from { opacity: 0; transform: translateX(24px); }
     to { opacity: 1; transform: translateX(0); }
   }
+  
   .animate-fadeSlideIn {
     animation: fadeSlideIn 0.2s ease-out;
   }
