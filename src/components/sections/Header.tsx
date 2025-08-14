@@ -1,25 +1,83 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+function Chevron({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileDropdowns, setMobileDropdowns] = useState<{ [key: string]: boolean }>({});
+  const [mobileDropdowns, setMobileDropdowns] = useState<Record<string, boolean>>({});
+  const closeTimer = useRef<number | null>(null);
 
   const navLinks = [
-    { label: "About SFN", dropdown: true },
-    { label: "Research", dropdown: true },
-    { label: "Resources", dropdown: true }
+    {
+      label: "About SFN",
+      dropdown: true,
+      items: [
+        { label: "What is SFN", href: "/about/sfn" },
+        { label: "Symptoms", href: "/about/symptoms" },
+        { label: "Causes", href: "/about/causes" },
+        { label: "Treatments", href: "/about/treatments" },
+      ],
+    },
+    {
+      label: "Research",
+      dropdown: true,
+      items: [
+        { label: "Latest Research", href: "/research/latest" },
+        { label: "Clinical Trials", href: "/research/clinical-trials" },
+      ],
+    },
+    {
+      label: "Resources",
+      dropdown: true,
+      items: [
+        { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
+        { label: "Support Group", href: "/resources/support-group" },
+        { label: "Caregiver Tips", href: "/resources/caregiver-tips" },
+        { label: "Approved Doctors", href: "/resources/doctors" },
+        { label: "SFN Dictionary", href: "/resources/dictionary" },
+        { label: "Living With SFN", href: "/resources/living-with-sfn" },
+      ],
+    },
   ];
 
+  const openDropdown = (label: string) => {
+    if (closeTimer.current) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setActiveDropdown(label);
+  };
+
+  const scheduleClose = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => {
+      setActiveDropdown(null);
+      closeTimer.current = null;
+    }, 220);
+  };
+
   const toggleMobileDropdown = (label: string) => {
-    setMobileDropdowns((prev) => ({
-      ...prev,
-      [label]: !prev[label],
-    }));
+    setMobileDropdowns((prev) => ({ ...prev, [label]: !prev[label] }));
   };
 
   return (
@@ -38,59 +96,62 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-end flex-1 space-x-12">
           {!searchOpen &&
-            navLinks.map((link) => (
-              <div
-                key={link.label}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(link.label)}
-                onMouseLeave={(e) => {
-                  if (!e.currentTarget.contains(e.relatedTarget as Node)) {
-                    setActiveDropdown(null);
-                  }
-                }}
-              >
-                {/* Trigger */}
-                <div className="flex items-center space-x-3 cursor-default">
-                  <span className="text-base font-medium text-gray-700">
-                    {link.label}
-                  </span>
-                  {link.dropdown && (
-                    <Image
-                      src="/icons/chevron.svg"
-                      alt="Dropdown"
-                      width={12}
-                      height={12}
-                      className={`transition-transform duration-160 ${
-                        activeDropdown === link.label ? "scale-y-[-1]" : ""
+            navLinks.map((link) => {
+              const isActive = activeDropdown === link.label;
+              return (
+                <div
+                  key={link.label}
+                  className="relative group"
+                  onMouseEnter={() => openDropdown(link.label)}
+                  onMouseLeave={scheduleClose}
+                >
+                  {/* Trigger */}
+                  <div className="flex items-center space-x-3 cursor-default">
+                    <span
+                      className={`text-base font-medium transition-colors duration-150 ${
+                        isActive ? "text-primary" : "text-dark group-hover:text-primary"
                       }`}
-                    />
+                    >
+                      {link.label}
+                    </span>
+                    {link.dropdown && (
+                      <Chevron
+                        className={`h-3.5 w-3.5 transition-transform duration-160 ${
+                          isActive
+                            ? "scale-y-[-1] text-primary"
+                            : "group-hover:text-primary"
+                        }`}
+                      />
+                    )}
+                  </div>
+
+                  {/* Dropdown */}
+                  {isActive && link.dropdown && (
+                    <div
+                      className="absolute left-0 top-full z-20 w-64 -translate-x-4" // shifted left
+                      onMouseEnter={() => openDropdown(link.label)}
+                      onMouseLeave={scheduleClose}
+                    >
+                      <div className="pt-2">
+                        <div className="bg-white shadow-lg rounded-md overflow-hidden">
+                          {/* Top border cap */}
+                          <div className="h-2 bg-primary rounded-t-md" />
+                          {link.items?.map((item) => (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary/8"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </div>
-
-                {/* Invisible buffer */}
-                {link.dropdown && (
-                  <div className="absolute top-full left-0 h-4 w-full bg-transparent"></div>
-                )}
-
-                {/* Dropdown menu */}
-                {activeDropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-4 w-64 bg-white shadow-lg rounded-md z-10 animate-fadeIn">
-                    <Link
-                      href="#"
-                      className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                    >
-                      Dropdown Item
-                    </Link>
-                    <Link
-                      href="#"
-                      className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                    >
-                      Another Item
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ))}
+              );
+            })}
 
           {/* Search / Close Icon */}
           <div className="flex items-center">
@@ -105,6 +166,7 @@ export default function Header() {
             <button
               onClick={() => setSearchOpen(!searchOpen)}
               className="ml-4 transition-opacity duration-300 cursor-pointer"
+              aria-label={searchOpen ? "Close search" : "Open search"}
             >
               {searchOpen ? (
                 <svg
@@ -136,7 +198,10 @@ export default function Header() {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center ml-auto">
-          <button onClick={() => setMobileOpen(!mobileOpen)}>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
             <svg
               className="w-6 h-6 text-gray-700"
               fill="none"
@@ -168,40 +233,34 @@ export default function Header() {
         <div className="md:hidden bg-white shadow-lg px-8 py-4 space-y-4">
           {navLinks.map((link) => (
             <div key={link.label}>
-              <div
-                className="flex items-center justify-between cursor-pointer"
+              <button
+                type="button"
+                className="w-full flex items-center justify-between text-left text-base font-medium text-gray-700"
                 onClick={() => toggleMobileDropdown(link.label)}
               >
-                <span className="text-base font-medium text-gray-700">
-                  {link.label}
-                </span>
+                <span>{link.label}</span>
                 {link.dropdown && (
-                  <Image
-                    src="/icons/chevron.svg"
-                    alt="Expand"
-                    width={12}
-                    height={12}
-                    className={`transition-transform duration-160 ${
-                      mobileDropdowns[link.label] ? "scale-y-[-1]" : ""
+                  <Chevron
+                    className={`h-3.5 w-3.5 transition-transform duration-160 ${
+                      mobileDropdowns[link.label]
+                        ? "scale-y-[-1] text-primary"
+                        : ""
                     }`}
                   />
                 )}
-              </div>
+              </button>
 
               {mobileDropdowns[link.label] && link.dropdown && (
                 <div className="mt-2 pl-4 space-y-2">
-                  <Link
-                    href="#"
-                    className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
-                  >
-                    Dropdown Item
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
-                  >
-                    Another Item
-                  </Link>
+                  {link.items?.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>

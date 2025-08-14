@@ -33,7 +33,7 @@ export default function Hero() {
             Our foundation exists to speed up finding the cure for <span className="font-semibold">small fiber neuropathy</span> and provide you the support you need along the way.
           </p>
           <div className="flex flex-wrap gap-8">
-            <Button variant="secondary" size="md" className="rounded-full">
+            <Button variant="outline" size="md" className="rounded-full border-white text-white hover:bg-white/10">
               Latest Research
             </Button>
             <Button
