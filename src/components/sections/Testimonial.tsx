@@ -24,7 +24,7 @@ export function Testimonial() {
 
           {/* Content */}
           <div className="flex-1 text-white lg:pt-8">
-            <blockquote className="text-2xl lg:text-3xl font-serif leading-relaxed mb-6" style={{ fontFamily: 'Lora, serif' }}>
+            <blockquote className="text-2xl lg:text-3xl font-serif leading-relaxed mb-6">
               "Small fiber neuropathy is a battle, but I have learned ways to cope with it from others."
             </blockquote>
             

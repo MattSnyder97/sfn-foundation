@@ -1,42 +1,35 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDownIcon } from "lucide-react";
-import clsx from "clsx";
+import * as RadixAccordion from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-interface AccordionProps {
-  title: string;
-  children: React.ReactNode;
-}
+export const Accordion = RadixAccordion.Root;
+export const AccordionItem = RadixAccordion.Item;
 
-export function Accordion({ title, children }: AccordionProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div
-      className="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white"
+export const AccordionTrigger = ({ children }: { children: React.ReactNode }) => (
+  <RadixAccordion.Header>
+    <RadixAccordion.Trigger
+      className={cn(
+        "flex w-full items-center justify-between rounded-t-xl bg-white shadow-md px-6 py-4",
+        "font-semibold text-lg text-gray-900 transition-colors",
+        "hover:text-primary focus:outline-none",
+        "radix-state-closed:rounded-xl" // fully rounded when closed
+      )}
     >
-      <button
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full flex justify-between items-center px-8 py-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors"
-      >
-        {title}
-        <ChevronDownIcon
-          className={clsx(
-            "h-5 w-5 text-gray-500 transition-transform duration-300",
-            { "rotate-180": isOpen }
-          )}
-        />
-      </button>
+      {children}
+      <ChevronDown className="h-5 w-5 text-gray-500 transition-transform duration-300 radix-state-open:rotate-180" />
+    </RadixAccordion.Trigger>
+  </RadixAccordion.Header>
+);
 
-      <div
-        className={clsx(
-          "overflow-hidden transition-all duration-300 ease-in-out",
-          isOpen ? "max-h-80 p-4 border-t border-gray-200" : "max-h-0 p-0"
-        )}
-      >
-        <div className="text-gray-600 text-sm">{children}</div>
-      </div>
-    </div>
-  );
-}
+export const AccordionContent = ({ children }: { children: React.ReactNode }) => (
+  <RadixAccordion.Content
+    className={cn(
+      "px-6 pb-4 text-sm text-gray-600 leading-relaxed bg-white shadow-md rounded-b-xl",
+      "radix-state-open:animate-slideDown radix-state-closed:animate-slideUp"
+    )}
+  >
+    {children}
+  </RadixAccordion.Content>
+);

@@ -12,15 +12,15 @@ export function FeaturedCards() {
     },
     {
       variant: "style3",
-      title: "Common Symptoms Associated with SFN",
-      description: "Unfortunately, small fiber neuropathy can cause a wide range of symptoms.",
+      title: "All the Symptoms Associated with SFN",
+      description: "Small fiber neuropathy can cause a huge range of symptoms.",
       imageSrc: "/images/painWoman.png",
       href: "#"
     },
     {
       variant: "style3",
       title: "SFN, ALA, EMG, oh my! Check Out Our Acronym Dictionary",
-      description: "Understanding all the terminology can be daunting, but our dictionary makes it easier.",
+      description: "All the acronyms and terminology can be daunting, so we created a dictionary.",
       imageSrc: "/images/confusedMan.png",
       href: "#"
     }
