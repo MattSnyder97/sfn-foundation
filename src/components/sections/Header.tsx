@@ -51,7 +51,7 @@ export default function Header() {
       dropdown: true,
       items: [
         { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
-        { label: "Support Group", href: "/resources/support-group" },
+        { label: "Support Group", href: "https://discord.gg/UGNhBMkBS7", target: "_blank" },
         { label: "Caregiver Tips", href: "/resources/caregiver-tips" },
         { label: "Approved Doctors", href: "/resources/doctors" },
         { label: "SFN Dictionary", href: "/resources/dictionary" },
@@ -81,7 +81,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white shadow-header relative">
+    <header className="w-full bg-white shadow-header relative md:sticky md:top-0 md:z-50">
       <div className="container-padding mx-auto flex items-center justify-between py-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -140,6 +140,8 @@ export default function Header() {
                             <Link
                               key={item.label}
                               href={item.href}
+                              target={item.target}
+                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                               className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary/8"
                             >
                               {item.label}
@@ -256,6 +258,8 @@ export default function Header() {
                     <Link
                       key={item.label}
                       href={item.href}
+                      target={item.target}
+                      rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                       className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
                     >
                       {item.label}
