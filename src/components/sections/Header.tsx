@@ -2,23 +2,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-function Chevron({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -116,7 +100,8 @@ export default function Header() {
                       {link.label}
                     </span>
                     {link.dropdown && (
-                      <Chevron
+                      <ChevronDown
+                        strokeWidth={2.5}
                         className={`h-3.5 w-3.5 transition-transform duration-160 ${
                           isActive
                             ? "scale-y-[-1] text-primary"
@@ -204,29 +189,26 @@ export default function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            className="relative w-6 h-6"
           >
-            <svg
-              className="w-6 h-6 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {mobileOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            <span className="sr-only">Toggle menu</span>
+            <div className="block w-6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span
+                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                  mobileOpen ? 'rotate-45' : '-translate-y-1.5'
+                }`}
+              />
+              <span
+                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                  mobileOpen ? 'opacity-0' : 'opacity-100'
+                }`}
+              />
+              <span
+                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                  mobileOpen ? '-rotate-45' : 'translate-y-1.5'
+                }`}
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -243,7 +225,8 @@ export default function Header() {
               >
                 <span>{link.label}</span>
                 {link.dropdown && (
-                  <Chevron
+                  <ChevronDown
+                    strokeWidth={2.5}
                     className={`h-3.5 w-3.5 transition-transform duration-160 ${
                       mobileDropdowns[link.label]
                         ? "scale-y-[-1] text-primary"

@@ -12,7 +12,7 @@ export const AccordionItem = ({
 }: RadixAccordion.AccordionItemProps) => (
   <RadixAccordion.Item
     {...props}
-    className="overflow-hidden rounded-xl bg-white shadow-md transition-all"
+    className="overflow-hidden rounded-2xl bg-white shadow-md/1 transition-all"
   >
     {children}
   </RadixAccordion.Item>
@@ -33,6 +33,7 @@ export const AccordionTrigger = ({
     >
       {children}
       <ChevronDown
+        strokeWidth={2.5} 
         className={cn(
           "h-5 w-5 text-gray-500 transition-transform duration-300",
           // mimic your header: flip with scale-y
