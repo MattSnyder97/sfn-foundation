@@ -12,7 +12,7 @@ export const AccordionTrigger = ({ children }: { children: React.ReactNode }) =>
     <RadixAccordion.Trigger
       className={cn(
         "flex w-full items-center justify-between rounded-t-xl bg-white shadow-md px-6 py-4",
-        "font-semibold text-lg text-gray-900 transition-colors",
+        "font-semibold text-lg text-gray transition-colors",
         "hover:text-primary focus:outline-none",
         "radix-state-closed:rounded-xl" // fully rounded when closed
       )}
