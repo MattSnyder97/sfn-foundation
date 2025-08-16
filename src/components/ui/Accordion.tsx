@@ -5,31 +5,55 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Accordion = RadixAccordion.Root;
-export const AccordionItem = RadixAccordion.Item;
 
-export const AccordionTrigger = ({ children }: { children: React.ReactNode }) => (
+export const AccordionItem = ({
+  children,
+  ...props
+}: RadixAccordion.AccordionItemProps) => (
+  <RadixAccordion.Item
+    {...props}
+    className="overflow-hidden rounded-xl bg-white shadow-md transition-all"
+  >
+    {children}
+  </RadixAccordion.Item>
+);
+
+export const AccordionTrigger = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => (
   <RadixAccordion.Header>
     <RadixAccordion.Trigger
       className={cn(
-        "flex w-full items-center justify-between rounded-t-xl bg-white shadow-md px-6 py-4",
-        "font-semibold text-lg text-gray transition-colors",
-        "hover:text-primary focus:outline-none",
-        "radix-state-closed:rounded-xl" // fully rounded when closed
+        "flex w-full items-center justify-between px-6 py-4",
+        "font-semibold text-lg text-gray transition-colors cursor-pointer",
+        "hover:text-primary focus:outline-none group"
       )}
     >
       {children}
-      <ChevronDown className="h-5 w-5 text-gray-500 transition-transform duration-300 radix-state-open:rotate-180" />
+      <ChevronDown
+        className={cn(
+          "h-5 w-5 text-gray-500 transition-transform duration-300",
+          // mimic your header: flip with scale-y
+          "group-data-[state=open]:scale-y-[-1] group-data-[state=open]:text-primary"
+        )}
+      />
     </RadixAccordion.Trigger>
   </RadixAccordion.Header>
 );
 
-export const AccordionContent = ({ children }: { children: React.ReactNode }) => (
+export const AccordionContent = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => (
   <RadixAccordion.Content
     className={cn(
-      "px-6 pb-4 text-sm text-gray-600 leading-relaxed bg-white shadow-md rounded-b-xl",
-      "radix-state-open:animate-slideDown radix-state-closed:animate-slideUp"
+      "px-6 pb-4 text-sm text-gray-600 leading-relaxed overflow-hidden",
+      "data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp"
     )}
   >
-    {children}
+    <div className="pt-1">{children}</div>
   </RadixAccordion.Content>
 );

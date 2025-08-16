@@ -55,7 +55,8 @@ export default function Header() {
         { label: "Caregiver Tips", href: "/resources/caregiver-tips" },
         { label: "Approved Doctors", href: "/resources/doctors" },
         { label: "SFN Dictionary", href: "/resources/dictionary" },
-        { label: "Living With SFN", href: "/resources/living-with-sfn" },
+        { label: "Supplements", href: "/resources/supplements" },
+        { label: "FAQs", href: "/#faqs" },
       ],
     },
   ];

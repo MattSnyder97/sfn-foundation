@@ -4,7 +4,7 @@ import Hero from "@/components/sections/Hero";
 import { FeaturedCards } from "@/components/sections/FeaturedCards";
 import { Testimonial } from "@/components/sections/Testimonial";
 import { FAQs } from "@/components/sections/FAQs";
-
+import { LatestNews } from "@/components/sections/LatestNews";
 import Footer from "@/components/sections/Footer";
 
 export default function Home() {
@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
+       <main className="space-y-18 pb-18"> 
         <Hero />
         <FeaturedCards />
-        <Testimonial />
         <FAQs />
-
+        <Testimonial />
+        <LatestNews />
       </main>
 
       <Footer />

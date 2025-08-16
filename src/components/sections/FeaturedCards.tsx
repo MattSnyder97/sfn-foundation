@@ -27,7 +27,7 @@ export function FeaturedCards() {
   ];
 
   return (
-    <section className="py-18 bg-offWhite">
+    <section className="bg-offWhite">
       <div className="container-padding mx-auto">
         <CardGrid cards={featured} />
       </div>

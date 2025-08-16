@@ -3,8 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
-
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -14,9 +12,9 @@ export default function Footer() {
     <footer className="w-full bg-primary text-white">
       <div className="container-padding mx-auto py-20">
         {/* Main Footer Content */}
-        <div>
+        <div className="text-center md:text-left">
           {/* Logo and Branding */}
-          <div className="flex items-center space-x-3 mb-8">
+          <div className="flex items-center justify-center md:justify-start space-x-3 mb-8">
             <Link href="/" className="flex items-center">
               <Image
                 src="/logos/logoWhite.svg"
@@ -26,21 +24,19 @@ export default function Footer() {
               />
             </Link>
           </div>
-
           {/* Copyright and Legal */}
           <div className="mb-8">
             <p className="text-sm opacity-70 mb-4">
               © Copyright 2025 the Small Fiber Neuropathy Foundation. All rights reserved.
             </p>
             <p className="text-sm opacity-60 leading-relaxed">
-              The SFN Foundation does not provide advice of health conditions. It solely passes 
-              factual information exclusively related topics. Unless otherwise indicated, the information 
-              provided is based on professional published research and expert opinion. However, the 
-              information does not constitute medical or legal advice. For specific medical advice, 
+              The SFN Foundation does not provide advice of health conditions. It solely passes
+              factual information exclusively related topics. Unless otherwise indicated, the information
+              provided is based on professional published research and expert opinion. However, the
+              information does not constitute medical or legal advice. For specific medical advice,
               consult a qualified physician. For specific legal advice, consult a qualified attorney.
             </p>
           </div>
-
           {/* Scroll to Top Button */}
           <div className="flex justify-center">
             <button
