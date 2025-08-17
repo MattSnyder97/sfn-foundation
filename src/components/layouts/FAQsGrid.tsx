@@ -8,7 +8,7 @@ import {
 interface FAQ {
   value: string;
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 interface FAQsGridProps {

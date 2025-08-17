@@ -1,4 +1,5 @@
 import { FAQsGrid } from "@/components/layouts/FAQsGrid";
+import Link from "next/link";
 
 export function FAQs() {
   const faqs = [
@@ -7,7 +8,23 @@ export function FAQs() {
     { value: "faq-3", question: "How is SFN diagnosed?", answer: "The most reliable diagnosis currently is a skin punch biopsy. This reveals how many small fiber nerves are in an area and if it's below the threshold to warrant a diagnosis." },
     { value: "faq-4", question: "What causes SFN?", answer: "While there is no cure, treatment focuses on symptom relief..." },
     { value: "faq-5", question: "Is there a cure for SFN?", answer: "Right now, there is no cure. If the underlying issue causing SFN is removed then people have recovered. There are several drugs in clinical trials that are hopeful. With all the recent advancements in AI we are closer than ever so please don't give up hope." },
-    { value: "faq-6", question: "What are my treatment options for SFN?", answer: "Regular exercise, balanced diet, and managing underlying conditions. Many people take pain medications or supplements to help as well." },
+    {
+      value: "faq-6",
+      question: "What are my treatment options for SFN?",
+      answer: (
+        <>
+          Regular exercise, balanced diet, and managing underlying conditions.
+          Many people take pain medications or supplements to help as well.<br></br><br></br>{" "}
+          <Link
+            href="/treatments"
+            className="text-primary underline hover:text-primary/80"
+          >
+            Read more on our Treatments page
+          </Link>
+          .
+        </>
+      ),
+    },
   ];
 
   return (

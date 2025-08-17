@@ -19,7 +19,7 @@ export function FeaturedCards() {
     },
     {
       variant: "style3",
-      title: "SFN, ALA, EMG, oh my! Check Out Our Acronym Dictionary",
+      title: "SFN, ALA, EMG—oh my! Check out our Acronym Dictionary",
       description: "All the acronyms and terminology can be daunting, so we created a dictionary.",
       imageSrc: "/images/confusedMan.png",
       href: "#"

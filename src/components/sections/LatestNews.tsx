@@ -46,7 +46,7 @@ export function LatestNews() {
             <p className="text-lg text-gray mb-10 leading-relaxed">
               Stay updated with the latest breakthroughs and research in small fiber neuropathy treatment and management.
             </p>
-            <Button variant="primary" size="md">
+            <Button variant="outlinePrimary" size="md">
               See More
             </Button>
           </div>

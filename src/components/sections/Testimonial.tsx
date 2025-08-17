@@ -10,9 +10,9 @@ export function Testimonial() {
       <div className="container-padding mx-auto relative">
         {/* Desktop Layout */}
         <div className="hidden lg:flex items-start gap-16 py-6 pb-12">
-          {/* Profile Image - bigger and positioned to hang way off bottom */}
+          {/* Profile Image */}
           <div className="flex-shrink-0 relative">
-            <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 shadow-2xl relative z-10">
+            <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 shadow-xl relative z-10">
               <Image
                 src="/images/testimonial.png"
                 alt="Matt testimonial"
@@ -23,13 +23,13 @@ export function Testimonial() {
             </div>
           </div>
           
-          {/* Content - positioned much higher */}
+          {/* Content */}
           <div className="flex-1 text-white pt-8">
-            <blockquote className="text-3xl font-normal leading-relaxed mb-6">
+            <blockquote className="font-serif text-3xl font-bold leading-relaxed mb-6">
               &quot;Small fiber neuropathy is a battle, but I have learned ways to cope with it from others.&quot;
             </blockquote>
            
-            <p className="text-lg opacity-80 mb-6">
+            <p className="text-lg opacity-70 mb-6">
               — Matt, 28 years old, diagnosed in 2024
             </p>
             
@@ -43,9 +43,9 @@ export function Testimonial() {
           </div>
         </div>
 
-        {/* Mobile Layout - Simple rectangular background */}
+        {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center gap-6 py-12 text-center">
-          {/* Profile Image - smaller on mobile */}
+          {/* Profile Image */}
           <div className="flex-shrink-0">
             <div className="w-88 h-88 rounded-xl overflow-hidden bg-primary shadow-2xl">
               <Image
@@ -59,11 +59,11 @@ export function Testimonial() {
           
           {/* Content */}
           <div className="text-white">
-            <blockquote className="text-xl font-normal leading-relaxed mb-6">
+            <blockquote className="font-serif text-xl font-extrabold leading-relaxed mb-6">
               &quot;Small fiber neuropathy is a battle, but I have learned ways to cope with it from others.&quot;
             </blockquote>
            
-            <p className="text-base opacity-80 mb-8">
+            <p className="text-base opacity-70 mb-8">
               Matt, 28 years old, diagnosed in 2024
             </p>
             
