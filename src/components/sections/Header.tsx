@@ -26,7 +26,7 @@ export default function Header() {
       label: "Research",
       dropdown: true,
       items: [
-        { label: "Latest Research", href: "/research/latest" },
+        { label: "Latest Research", href: "/#news" },
         { label: "Clinical Trials", href: "/research/clinical-trials" },
       ],
     },
@@ -102,10 +102,10 @@ export default function Header() {
                     {link.dropdown && (
                       <ChevronDown
                         strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-transform duration-160 ${
+                        className={`h-3.5 w-3.5 transition-all duration-160 ${
                           isActive
                             ? "scale-y-[-1] text-primary"
-                            : "group-hover:text-primary"
+                            : "text-dark group-hover:text-primary"
                         }`}
                       />
                     )}
@@ -128,7 +128,7 @@ export default function Header() {
                               href={item.href}
                               target={item.target}
                               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary/8"
+                              className="block px-4 py-3 text-sm text-gray-700 hover:text-primary hover:underline transition-colors duration-200"
                             >
                               {item.label}
                             </Link>
@@ -159,7 +159,7 @@ export default function Header() {
               {searchOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-gray-700 animate-fadeIn"
+                  className="h-5 w-5 text-gray-700 animate-fadeIn"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -175,8 +175,8 @@ export default function Header() {
                 <Image
                   src="/icons/search.svg"
                   alt="Search"
-                  width={20}
-                  height={20}
+                  width={16}
+                  height={16}
                   className="animate-fadeIn"
                 />
               )}
@@ -215,36 +215,46 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white shadow-lg px-8 py-4 space-y-4">
+        <div className="md:hidden bg-white shadow-lg container-padding py-4 space-y-4">
+          {/* Mobile Search Bar */}
+          <div className="mb-6">
+            <input
+              type="text"
+              placeholder="Search by keyword or phrase"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            />
+          </div>
+
+          {/* Navigation Links */}
           {navLinks.map((link) => (
-            <div key={link.label}>
+            <div key={link.label} className="text-right">
               <button
                 type="button"
-                className="w-full flex items-center justify-between text-left text-base font-medium text-gray-700"
+                className="w-full flex items-center justify-end text-right text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3"
                 onClick={() => toggleMobileDropdown(link.label)}
               >
                 <span>{link.label}</span>
                 {link.dropdown && (
                   <ChevronDown
                     strokeWidth={2.5}
-                    className={`h-3.5 w-3.5 transition-transform duration-160 ${
+                    className={`h-3.5 w-3.5 transition-all duration-160 ${
                       mobileDropdowns[link.label]
                         ? "scale-y-[-1] text-primary"
-                        : ""
+                        : "text-gray-700 group-hover:text-primary"
                     }`}
                   />
                 )}
               </button>
 
               {mobileDropdowns[link.label] && link.dropdown && (
-                <div className="mt-2 pl-4 space-y-2">
+                <div className="mt-2 pr-4 space-y-2 text-right mb-8">
                   {link.items?.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
                       target={item.target}
                       rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                      className="block text-sm text-gray-700 hover:bg-gray-100 rounded-md px-2 py-2"
+                      className="block text-sm text-gray-700 hover:text-primary hover:underline transition-colors duration-200 rounded-md px-2 py-2"
                     >
                       {item.label}
                     </Link>

@@ -18,37 +18,31 @@ export const AccordionItem = ({
   </RadixAccordion.Item>
 );
 
-export const AccordionTrigger = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => (
+export const AccordionTrigger = ({ children }: { children: React.ReactNode }) => (
   <RadixAccordion.Header>
     <RadixAccordion.Trigger
       className={cn(
-        "flex w-full items-center justify-between px-6 py-4",
-        "font-semibold text-lg text-gray transition-colors cursor-pointer",
-        "hover:text-primary focus:outline-none group"
+        "group flex w-full items-center justify-between px-6 py-4",
+        "font-medium text-lg text-gray transition-colors cursor-pointer",
+        "hover:text-primary focus:outline-none"
       )}
     >
       {children}
       <ChevronDown
-        strokeWidth={2.5} 
+        strokeWidth={2.5}
         className={cn(
           "h-5 w-5 text-gray-500 transition-transform duration-300",
-          // mimic your header: flip with scale-y
-          "group-data-[state=open]:scale-y-[-1] group-data-[state=open]:text-primary"
+          // Flip + color on open
+          "group-data-[state=open]:scale-y-[-1] group-data-[state=open]:text-primary",
+          // Also color on hover
+          "group-hover:text-primary"
         )}
       />
     </RadixAccordion.Trigger>
   </RadixAccordion.Header>
 );
 
-export const AccordionContent = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => (
+export const AccordionContent = ({ children }: { children: React.ReactNode }) => (
   <RadixAccordion.Content
     className={cn(
       "px-6 pb-4 text-sm text-gray-600 leading-relaxed overflow-hidden",
@@ -58,3 +52,4 @@ export const AccordionContent = ({
     <div className="pt-1">{children}</div>
   </RadixAccordion.Content>
 );
+

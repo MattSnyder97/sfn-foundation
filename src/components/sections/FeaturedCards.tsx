@@ -12,7 +12,7 @@ export function FeaturedCards() {
     },
     {
       variant: "style3",
-      title: "All the Symptoms Associated with SFN",
+      title: "All of the Symptoms Associated with Small Fiber Neuropathy",
       description: "Small fiber neuropathy can cause a huge range of symptoms.",
       imageSrc: "/images/painWoman.png",
       href: "#"
