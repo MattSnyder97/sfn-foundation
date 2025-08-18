@@ -29,7 +29,7 @@ export function LatestNews() {
   ];
 
   return (
-    <section id="news" className="bg-offWhite py-20 scroll-mt-48">
+    <section id="news" className="bg-offWhite py-8 scroll-mt-48">
       <div className="container-padding mx-auto">
         {/* Mobile Layout - Stacked */}
         <div className="lg:hidden space-y-12">
@@ -41,11 +41,11 @@ export function LatestNews() {
           </div>
 
           {/* Mobile News Articles */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center">
             {newsArticles.map((article, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
                 <p className="text-sm text-gray-500 mb-2">{article.date}</p>
-                <h3 className="text-lg font-medium text-dark hover:text-primary hover:underline transition-colors">
+                <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
                   <a href={article.href}>{article.title}</a>
                 </h3>
               </div>
@@ -96,7 +96,7 @@ export function LatestNews() {
               {newsArticles.map((article, index) => (
                 <div key={index} className="border-b border-gray-200 pb-4">
                   <p className="text-sm text-gray-500 mb-2">{article.date}</p>
-                  <h3 className="text-lg font-medium text-dark hover:text-primary hover:underline transition-colors">
+                  <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
                     <a href={article.href}>{article.title}</a>
                   </h3>
                 </div>

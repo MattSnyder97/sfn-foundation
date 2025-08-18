@@ -48,9 +48,7 @@ export default function Hero() {
             </Button>
                         <Button variant="outline" size="md" className="w-2/3 md:w-auto rounded-full border-white text-white hover:bg-white/10">
                 <a
-                    href="/research/latest"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#news"
                 >
                     Latest Research
                 </a>
