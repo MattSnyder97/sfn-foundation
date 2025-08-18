@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export default function Hero() {
@@ -46,12 +47,10 @@ export default function Hero() {
                     Support Group
                 </a>
             </Button>
-                        <Button variant="outline" size="md" className="w-2/3 md:w-auto rounded-full border-white text-white hover:bg-white/10">
-                <a
-                    href="/#news"
-                >
+            <Button variant="outline" size="md" className="w-2/3 md:w-auto rounded-full border-white text-white hover:bg-white/10">
+                <Link href="/#news">
                     Latest Research
-                </a>
+                </Link>
             </Button>
           </div>
         </div>

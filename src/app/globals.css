@@ -48,8 +48,8 @@ html {
 /* ===== Utilities ===== */
 @layer utilities {
   .container-padding {
-    max-width: 80rem; /* max-w-7xl */
-    padding-left: 2rem; /* px-8 */
+    max-width: 80rem;
+    padding-left: 2rem;
     padding-right: 2rem;
   }
 
