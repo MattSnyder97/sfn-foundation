@@ -45,7 +45,7 @@ export function FAQs() {
       answer: (
         <>
           The most reliable diagnosis currently is a skin punch biopsy. This reveals how
-          many small fiber nerves are in an area and if it's below the threshold to
+          many small fiber nerves are in an area and if it is below the threshold to
           warrant a diagnosis.
           <br />
           <br />
@@ -84,7 +84,7 @@ export function FAQs() {
           Right now, there is no cure. If the underlying issue causing SFN is removed then
           people have recovered. There are several drugs in clinical trials that are
           hopeful. With all the recent advancements in AI we are closer than ever so
-          please don't give up hope.
+          please do not give up hope.
           <br />
           <br />
           <Link
