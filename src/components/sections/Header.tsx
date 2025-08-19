@@ -27,7 +27,7 @@ export default function Header() {
       dropdown: true,
       items: [
         { label: "Latest Research", href: "/#news" },
-        { label: "Clinical Trials", href: "/research/clinical-trials" },
+        { label: "Clinical Trials", href: "https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy", target: "_blank" },
       ],
     },
     {
@@ -148,7 +148,7 @@ export default function Header() {
                 type="text"
                 placeholder="Search by keyword or phrase"
                 autoFocus
-                className="border border-gray-300 rounded-lg px-4 py-1.5 w-128 animate-fadeSlideIn"
+                className="border border-gray-300 rounded-lg px-4 py-1.5 w-128 animate-fadeSlideIn focus:ring-primary focus:border-primary"
               />
             )}
             <button

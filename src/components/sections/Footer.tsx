@@ -19,22 +19,22 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about-sfn" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/about/sfn" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   What is SFN?
                 </Link>
               </li>
               <li>
-                <Link href="/symptoms" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources/newly-diagnosed" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Newly Diagnosed
                 </Link>
               </li>
               <li>
-                <Link href="/treatments" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/about/treatments" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Find a Specialist
                 </Link>
               </li>
               <li>
-                <Link href="/newly-diagnosed" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources/dictionary" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   SFN Dictionary
                 </Link>
               </li>
@@ -92,7 +92,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://www.mayo.edu/research/clinical-trials/diseases-conditions/neuropathies" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Clinical Trials
                 </Link>
               </li>
