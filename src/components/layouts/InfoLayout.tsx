@@ -13,15 +13,15 @@ export default function InfoLayout({ children, tableOfContents }: InfoLayoutProp
         <div className="flex gap-12 lg:gap-16">
           {/* Sidebar - On this page */}
           {tableOfContents && (
-            <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-8">
+            <aside className="hidden lg:block w-56 flex-shrink-0">
+              <div className="sticky" style={{ top: "calc(var(--header-height) - 30px)" }}>
                 <h3 className="text-lg font-semibold text-dark mb-4">On this page</h3>
                 <nav className="space-y-2">
                   {tableOfContents.map((item) => (
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className="block text-sm text-gray hover:text-primary transition-colors duration-200 py-1"
+                      className="block text-sm text-gray hover:text-primary hover:underline transition-all duration-200 py-1"
                     >
                       {item.title}
                     </a>
@@ -33,7 +33,7 @@ export default function InfoLayout({ children, tableOfContents }: InfoLayoutProp
           
           {/* Main Content */}
           <div className="flex-1 max-w-4xl">
-            <article className="bg-white rounded-[24px] px-8 md:px-12 py-12 shadow-sm">
+            <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/5">
               {children}
             </article>
           </div>

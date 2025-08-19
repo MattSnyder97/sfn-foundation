@@ -9,7 +9,7 @@ import InfoReferences from "@/components/info/InfoReferences";
 
 // Table of contents for the sidebar
 const tableOfContents = [
-  { id: "overview", title: "Treatment Overview" },
+  { id: "overview", title: "Overview" },
   { id: "medications", title: "Medication Options" },
   { id: "lifestyle", title: "Lifestyle Interventions" },
   { id: "emerging", title: "Emerging Therapies" }
@@ -25,15 +25,9 @@ export default function TreatmentsPage() {
       />
 
       <InfoLayout tableOfContents={tableOfContents}>
-        {/* Metadata */}
-        <InfoMeta
-          title="Compiled from peer-reviewed research"
-          author="SFN Foundation Editorial Team"
-          lastUpdated="August 18, 2025"
-        />
 
         {/* Treatment Overview */}
-        <InfoParagraphTitle id="overview">Treatment Overview</InfoParagraphTitle>
+        <InfoParagraphTitle id="overview">Overview</InfoParagraphTitle>
         
         <InfoParagraph>
           Treatments for Small Fiber Neuropathy primarily focus on symptom relief,
@@ -91,6 +85,13 @@ export default function TreatmentsPage() {
           regenerative medicine approaches. These emerging treatments offer 
           hope for more effective interventions in the future.
         </InfoParagraph>
+
+        {/* Metadata */}
+        <InfoMeta
+          title="Compiled from peer-reviewed research"
+          author="SFN Foundation Team"
+          lastUpdated="August 18, 2025"
+        />
 
         {/* References */}
         <InfoReferences
