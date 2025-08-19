@@ -1,12 +1,20 @@
 // src/components/layouts/InfoLayout.tsx
 import { ReactNode } from "react";
+import InfoActions from "@/components/info/InfoActions";
 
 interface InfoLayoutProps {
   children: ReactNode;
   tableOfContents?: { id: string; title: string }[];
+  title?: string; // For sharing
+  showActions?: boolean; // Option to hide actions if needed
 }
 
-export default function InfoLayout({ children, tableOfContents }: InfoLayoutProps) {
+export default function InfoLayout({ 
+  children, 
+  tableOfContents, 
+  title,
+  showActions = true 
+}: InfoLayoutProps) {
   return (
     <main className="bg-offWhite">
       <div className="container-padding mx-auto py-16">
@@ -30,11 +38,14 @@ export default function InfoLayout({ children, tableOfContents }: InfoLayoutProp
               </div>
             </aside>
           )}
-          
+         
           {/* Main Content */}
           <div className="flex-1 max-w-auto">
             <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4">
               {children}
+              
+              {/* Print and Share Actions */}
+              {showActions && <InfoActions title={title} />}
             </article>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-primary text-white">
+    <footer className="w-full bg-primary text-white print:hidden">
       <div className="container-padding mx-auto py-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
