@@ -29,7 +29,7 @@ export function LatestNews() {
   ];
 
   return (
-    <section id="news" className="bg-offWhite py-8 scroll-mt-48">
+    <section id="news" className="bg-offWhite py-8">
       <div className="container-padding mx-auto">
         {/* Mobile Layout - Stacked */}
         <div className="lg:hidden space-y-12">

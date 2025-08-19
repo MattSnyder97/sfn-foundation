@@ -1,0 +1,59 @@
+[INTRO] 
+
+Hey how's it going Sky? It's Matt. I wanted to showcase something I've been working on to you and get your feedback if you have the time.
+
+I'll throw in a brief introduction about me to give more context here. Professionally, I work as a software engineer for my state government. That said, I’ve also been living with SFN for about two years, so I know firsthand what the daily challenges can feel like.   
+
+Over these two years, one thing I’ve really noticed is how little support and awareness there is for people with SFN. There’s no centralized, reliable resource to provide the help we need—or that validates what we go through.   
+
+That’s why I finally decided to stop waiting and take action. This month, I put my skills to work and started building the SFN Foundation.   
+
+This is the start of what I hope will be a central hub of information, support, and collaboration for people living with SFN. 
+
+[VISION]   
+
+Before I show you the actual app, let me quickly give you the high-level vision that inspired it. Of course, this is just a first draft, and I want it to evolve based on your feedback (and anyone else who’s interested in contributing).   
+
+Right now, this app has two major goals:   
+
+     
+
+    To support people living with SFN, whether it’s by sharing useful information, connecting them to this SFN Discord group, or just validating their experiences. I want it to be a space people turn to for hope—because I know how powerful it is to feel understood and supported.   
+     
+
+    To cure SFN.
+     Yes, it’s a bold goal, but I think it’s achievable with collaboration and the right tools.   
+
+     My idea is to build a separate section of this web app called the Research Portal (we can brainstorm a cooler name later). This would be a secure space where SFN specialists—like Sebe, neurologists, and researchers—can log in and upload the latest studies and research on SFN.   
+
+     Here’s the exciting part: Once we’ve built up that data, we could use cutting-edge AI to analyze it. Now, I’m generally skeptical of AI, but it’s incredible at processing huge datasets and finding patterns that humans might miss.   
+
+     Right now, the problem with AI in medicine is that it relies on outdated, general datasets. For example, if you ask ChatGPT how to cure SFN, it wouldn’t offer much insight because it’s missing the specifics. But if we had a centralized, validated dataset—all the latest research uploaded by human experts—we could feed that into a Medical-Specific AI Model.   
+
+     This isn’t about replacing human researchers—it’s about giving them better tools. Could AI cure SFN? Maybe not on its own, but it could help us identify trends, cross-reference findings, and move the needle in ways we can’t even predict yet.   
+
+     I know this sounds lofty and futuristic, but these advancements are happening faster than we realize. If we start building this foundation today, we could be years ahead when the tools are ready. 
+     
+
+[SHOWCASE] 
+
+Okay, now let me show you what I’ve built so far.   
+
+[Screen Recording of App]   
+
+     Walk through each section:  
+         Homepage: Highlight the design (clean, simple, modular). Talk about how the consistent spacing, fonts, and intuitive navigation make the site accessible and user-friendly.  
+         Information Pages: Show placeholder sections for FAQs, resources, and links to the SFN Discord. 
+         Research Portal (Mockup): Explain the vision again briefly—only experts can log in to upload research, and the long-term goal is an AI-supported analysis tool.
+         
+     
+
+[WRAP-UP & CALL TO ACTION]   
+
+So, that’s where I’m at with this project. It’s still in its early stages, but I strongly believe this app could make a huge difference.   
+
+Before moving forward, I wanted to share it with you first to get your thoughts. If you’re on board with the vision, I’d love to hear your feedback—or even present this to the wider SFN Discord group.   
+
+One last thing: I’m pushing all of this code to GitHub. If the community is interested, I can share access to the repository so this project becomes larger than just me. That way, it’s something we can build collaboratively—and ensure it’s never reliant on any single person.   
+
+I hope this excites you as much as it excites me! Thanks so much for taking the time to hear me out, and I can’t wait to hear your thoughts.   

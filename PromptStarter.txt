@@ -50,6 +50,9 @@ html {
   /* Animations */
   --animate-slideDown: slideDown 150ms cubic-bezier(0.87, 0, 0.13, 1);
   --animate-slideUp: slideUp 150ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* Miscellaneous */
+  --header-height: 137px;
 }
 
 

@@ -32,6 +32,9 @@ html {
   /* Animations */
   --animate-slideDown: slideDown 150ms cubic-bezier(0.87, 0, 0.13, 1);
   --animate-slideUp: slideUp 150ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* Miscellaneous */
+  --header-height: 200px;
 }
 
 
@@ -51,6 +54,13 @@ html {
     max-width: 80rem;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  /* Responsive Scroll Margin */
+  @media (min-width: 1025px) {
+    [id] {
+      scroll-margin-top: var(--header-height);
+    }
   }
 
   /* Mobile/tablet overrides */

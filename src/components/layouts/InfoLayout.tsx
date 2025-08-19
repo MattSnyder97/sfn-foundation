@@ -1,38 +1,44 @@
+// src/components/layouts/InfoLayout.tsx
 import { ReactNode } from "react";
 
 interface InfoLayoutProps {
-  title: string;
-  description?: string;
-  toc?: { label: string; href: string }[];
   children: ReactNode;
+  tableOfContents?: { id: string; title: string }[];
 }
 
-export default function InfoLayout({ title, description, toc, children }: InfoLayoutProps) {
+export default function InfoLayout({ children, tableOfContents }: InfoLayoutProps) {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
-        <div className="container-padding text-center">
-          <h1 className="text-4xl font-bold">{title}</h1>
-          {description && <p className="mt-4 text-lg max-w-2xl mx-auto">{description}</p>}
-        </div>
-      </section>
-
-      {/* Table of Contents */}
-      {toc && (
-        <section className="bg-offWhite py-6 border-b border-gray/20">
-          <div className="container-padding flex flex-wrap gap-6 justify-center text-primary font-medium">
-            {toc.map((item) => (
-              <a key={item.href} href={item.href} className="hover:underline">
-                {item.label}
-              </a>
-            ))}
+    <main className="bg-offWhite">
+      <div className="container-padding mx-auto py-16">
+        <div className="flex gap-12 lg:gap-16">
+          {/* Sidebar - On this page */}
+          {tableOfContents && (
+            <aside className="hidden lg:block w-64 flex-shrink-0">
+              <div className="sticky top-8">
+                <h3 className="text-lg font-semibold text-dark mb-4">On this page</h3>
+                <nav className="space-y-2">
+                  {tableOfContents.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className="block text-sm text-gray hover:text-primary transition-colors duration-200 py-1"
+                    >
+                      {item.title}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </aside>
+          )}
+          
+          {/* Main Content */}
+          <div className="flex-1 max-w-4xl">
+            <article className="bg-white rounded-[24px] px-8 md:px-12 py-12 shadow-sm">
+              {children}
+            </article>
           </div>
-        </section>
-      )}
-
-      {/* Main Content */}
-      <main className="container-padding py-12 space-y-12">{children}</main>
-    </div>
+        </div>
+      </div>
+    </main>
   );
 }

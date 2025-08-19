@@ -13,7 +13,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/about"
+            href="/about/sfn"
             className="text-primary underline hover:text-primary/80"
           >
             Learn more on our About SFN page
@@ -31,7 +31,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/symptoms"
+            href="/about/symptoms"
             className="text-primary underline hover:text-primary/80"
           >
             Read more on our Symptoms page
@@ -50,7 +50,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/diagnosis"
+            href="/about/diagnosis"
             className="text-primary underline hover:text-primary/80"
           >
             Learn more on our Diagnosis page
@@ -68,7 +68,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/causes"
+            href="/about/causes"
             className="text-primary underline hover:text-primary/80"
           >
             Explore more on our Causes page
@@ -88,7 +88,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/research"
+            href="#news"
             className="text-primary underline hover:text-primary/80"
           >
             Stay updated on our Research page
@@ -106,7 +106,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/treatments"
+            href="/about/treatments"
             className="text-primary underline hover:text-primary/80"
           >
             Read more on our Treatments page
@@ -117,7 +117,7 @@ export function FAQs() {
   ];
 
   return (
-    <section id="faqs" className="bg-offWhite scroll-mt-48">
+    <section id="faqs" className="bg-offWhite">
       <div className="container-padding mx-auto">
         <h2 className="text-3xl font-bold mb-10 text-center md:text-left text-primary">
           Frequently Asked Questions
