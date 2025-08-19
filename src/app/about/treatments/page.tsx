@@ -5,12 +5,12 @@ import InfoParagraph from "@/components/info/InfoParagraph";
 import InfoParagraphTitle from "@/components/info/InfoParagraphTitle";
 import InfoImage from "@/components/info/InfoImage";
 import InfoMeta from "@/components/info/InfoMeta";
-import InfoReferences from "@/components/info/InfoReferences";
+import InfoList from "@/components/info/InfoList";
 
 // Table of contents for the sidebar
 const tableOfContents = [
   { id: "overview", title: "Overview" },
-  { id: "medications", title: "Medication Options" },
+  { id: "medications", title: "Medications" },
   { id: "lifestyle", title: "Lifestyle Interventions" },
   { id: "emerging", title: "Emerging Therapies" }
 ];
@@ -20,8 +20,8 @@ export default function TreatmentsPage() {
     <>
       {/* Hero/Header */}
       <InfoHero
-        title="Treatments for Small Fiber Neuropathy"
-        subtitle="Exploring current approaches to managing SFN symptoms and underlying causes."
+        title="Treatments"
+        subtitle="Exploring current approaches to managing small fiber neuropathy"
       />
 
       <InfoLayout tableOfContents={tableOfContents}>
@@ -44,7 +44,7 @@ export default function TreatmentsPage() {
         </InfoParagraph>
 
         {/* Medication Options */}
-        <InfoParagraphTitle id="medications">Medication Options</InfoParagraphTitle>
+        <InfoParagraphTitle id="medications">Medications</InfoParagraphTitle>
         
         <InfoParagraph>
           Common pharmacological treatments include anticonvulsants such as 
@@ -52,6 +52,17 @@ export default function TreatmentsPage() {
           neuropathic pain. Tricyclic antidepressants and certain newer 
           antidepressants may also provide relief.
         </InfoParagraph>
+
+        {/* Example List under Medications */}
+        <InfoList
+          ordered
+          items={[
+            "Anticonvulsants (gabapentin, pregabalin)",
+            "Tricyclic antidepressants",
+            "SNRIs (duloxetine, venlafaxine)",
+            "Topical treatments (capsaicin, lidocaine)",
+          ]}
+        />
 
         <InfoImage
           src="/images/doctorMan.png"
@@ -76,6 +87,16 @@ export default function TreatmentsPage() {
           can slow disease progression.
         </InfoParagraph>
 
+        {/* Example bulleted list under Lifestyle */}
+        <InfoList
+          items={[
+            "Regular low-impact exercise (e.g., swimming, walking)",
+            "Physical therapy for mobility and pain management",
+            "Nutritional support and balanced diet",
+            "Blood sugar management for diabetic patients",
+          ]}
+        />
+
         {/* Emerging Therapies */}
         <InfoParagraphTitle id="emerging">Emerging Therapies</InfoParagraphTitle>
         
@@ -88,20 +109,15 @@ export default function TreatmentsPage() {
 
         {/* Metadata */}
         <InfoMeta
-          title="Compiled from peer-reviewed research"
-          author="SFN Foundation Team"
+          author="Matt Snyder"
           lastUpdated="August 18, 2025"
-        />
-
-        {/* References */}
-        <InfoReferences
           references={[
             {
-              title: "Oaklander AL, et al. Treatment approaches for small fiber neuropathy. Journal of Peripheral Nervous System 2024.",
+              title: "Oaklander AL, et al. Treatment approaches for small fiber neuropathy.",
               link: "https://example.com/research1",
             },
             {
-              title: "Smith J. Neuropathic Pain Management Strategies. Journal of Pain 2023.",
+              title: "Smith J, Neuropathic Pain Management Strategies, Journal of Pain 2023",
               link: "https://example.com/research2",
             },
           ]}

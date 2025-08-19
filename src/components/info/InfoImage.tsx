@@ -8,14 +8,15 @@ interface InfoImageProps {
 
 export default function InfoImage({ src, alt, caption }: InfoImageProps) {
   return (
-    <figure className="my-10">
-      <div className="relative w-full h-80 rounded-[4px] overflow-hidden shadow-md/5">
+    <figure className="my-10 w-full lg:w-2/3">
+      <div className="relative rounded-[4px] overflow-hidden shadow-md/5 aspect-[3/2]">
         <Image
           src={src}
           alt={alt}
           fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 800px"
+          className="object-contain"
+          sizes="100vw"
+          priority
         />
       </div>
       {caption && (

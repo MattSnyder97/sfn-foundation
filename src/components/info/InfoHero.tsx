@@ -14,9 +14,9 @@ export default function InfoHero({ title, subtitle }: InfoHeroProps) {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-secondary/30"/>
      
       {/* Content */}
-      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-24">
+      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-16">
         <div className="text-left text-offWhite max-w-5xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
             {title}
           </h1>
           {subtitle && (

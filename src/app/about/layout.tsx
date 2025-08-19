@@ -8,7 +8,7 @@ export default function AboutLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-offWhite">
+    <div className="min-h-screen bg-White">
       <Header />
       {children}
       <Footer />

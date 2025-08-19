@@ -20,6 +20,7 @@ export default function Header() {
         { label: "Symptoms", href: "/about/symptoms" },
         { label: "Causes", href: "/about/causes" },
         { label: "Treatments", href: "/about/treatments" },
+        { label: "Diagnosis", href: "/about/diagnosis" },
       ],
     },
     {

@@ -10,7 +10,7 @@ export default function InfoLayout({ children, tableOfContents }: InfoLayoutProp
   return (
     <main className="bg-offWhite">
       <div className="container-padding mx-auto py-16">
-        <div className="flex gap-12 lg:gap-16">
+        <div className="flex gap-4">
           {/* Sidebar - On this page */}
           {tableOfContents && (
             <aside className="hidden lg:block w-56 flex-shrink-0">
@@ -32,8 +32,8 @@ export default function InfoLayout({ children, tableOfContents }: InfoLayoutProp
           )}
           
           {/* Main Content */}
-          <div className="flex-1 max-w-4xl">
-            <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/5">
+          <div className="flex-1 max-w-auto">
+            <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4">
               {children}
             </article>
           </div>
