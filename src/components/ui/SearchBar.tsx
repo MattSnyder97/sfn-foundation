@@ -7,14 +7,41 @@ import { Search } from "lucide-react";
 
 import { allContent } from "@/content"; // central index
 
+// --- Define types ---
+interface Section {
+  id: string;
+  title: string;
+  paragraphs?: string[];
+  paragraphsAfterImage?: string[];
+  list?: { items: string[] };
+}
+
+interface Page {
+  slug: string;
+  hero?: {
+    title?: string;
+    subtitle?: string;
+  };
+  sections: Section[];
+}
+
+interface IndexedItem {
+  slug: string;
+  pageTitle?: string;
+  pageSubtitle?: string;
+  sectionId: string;
+  sectionTitle: string;
+  text: string;
+}
+
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<IndexedItem[]>([]);
 
   // --- Flatten content into searchable index ---
-  const indexedData = allContent.flatMap((page: any) =>
-    page.sections.map((section: any) => ({
-      slug: page.slug, // fallback slug
+  const indexedData: IndexedItem[] = allContent.flatMap((page: Page) =>
+    page.sections.map((section) => ({
+      slug: page.slug,
       pageTitle: page.hero?.title,
       pageSubtitle: page.hero?.subtitle,
       sectionId: section.id,
@@ -51,7 +78,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl"> {/* doubled width */}
+    <div className="relative w-full max-w-2xl">
       {/* Input box */}
       <div className="flex items-center gap-2 rounded-xl border border-dark/20 bg-white px-3 py-2 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary">
         <Search className="h-4 w-4 text-gray-500" />
