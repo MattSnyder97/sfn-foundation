@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Header from "@/components/sections/Header";
-import Hero from "@/components/sections/Hero";
-import { FeaturedCards } from "@/components/sections/FeaturedCards";
-import { Testimonial } from "@/components/sections/Testimonial";
-import { FAQs } from "@/components/sections/FAQs";
-import { LatestNews } from "@/components/sections/LatestNews";
-import Footer from "@/components/sections/Footer";
+import Header from "@/components/common/Header";
+import Hero from "@/components/common/Hero";
+import { FeaturedCards } from "@/components/common/FeaturedCards";
+import { Testimonial } from "@/components/common/Testimonial";
+import { FAQs } from "@/components/common/FAQs";
+import { LatestNews } from "@/components/common/LatestNews";
+import Footer from "@/components/common/Footer";
 
 export default function Home() {
   return (
