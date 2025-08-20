@@ -10,6 +10,42 @@ import InfoList from "@/components/info/InfoList";
 import { treatmentsContent } from "@/content/treatments";
 
 export default function InfoPage() {
+  // Function to render individual content blocks
+  const renderContentBlock = (block: any, index: number) => {
+    switch (block.type) {
+      case 'paragraph':
+        return (
+          <div key={index} className="mb-8">
+            <InfoParagraph>{block.text}</InfoParagraph>
+          </div>
+        );
+      
+      case 'list':
+        return (
+          <div key={index} className="mb-6">
+            <InfoList 
+              ordered={block.ordered} 
+              items={block.items} 
+            />
+          </div>
+        );
+      
+      case 'image':
+        return (
+          <div key={index} className="mb-6">
+            <InfoImage
+              src={block.src}
+              alt={block.alt}
+              caption={block.caption}
+            />
+          </div>
+        );
+      
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
       {/* Hero/Header */}
@@ -24,25 +60,10 @@ export default function InfoPage() {
               {section.title}
             </InfoParagraphTitle>
 
-            {section.paragraphs?.map((p, i) => (
-              <InfoParagraph key={i}>{p}</InfoParagraph>
-            ))}
-
-            {section.list && (
-              <InfoList ordered={section.list.ordered} items={section.list.items} />
+            {/* Render all content blocks in order */}
+            {section.content?.map((block, index) => 
+              renderContentBlock(block, index)
             )}
-
-            {section.image && (
-              <InfoImage
-                src={section.image.src}
-                alt={section.image.alt}
-                caption={section.image.caption}
-              />
-            )}
-
-            {section.paragraphsAfterImage?.map((p, i) => (
-              <InfoParagraph key={i}>{p}</InfoParagraph>
-            ))}
           </div>
         ))}
 

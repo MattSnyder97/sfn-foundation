@@ -60,13 +60,13 @@ export default function InfoHero({ title }: InfoHeroProps) {
       <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-16">
         <div className="text-left text-offWhite max-w-5xl">
           {/* Breadcrumbs */}
-          <nav className="mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2 text-sm">
+          <nav className="mb-4" aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-1 text-sm">
               {breadcrumbs.map((crumb, index) => (
                 <li key={crumb.href} className="flex items-center">
                   {index > 0 && (
                     <ChevronRight 
-                      className="h-4 w-4 text-white/60 mx-2" 
+                      className="h-4 w-4 text-white/60 mx-2 translate-y-0.5" 
                       strokeWidth={2}
                     />
                   )}
@@ -77,7 +77,7 @@ export default function InfoHero({ title }: InfoHeroProps) {
                   ) : (
                     <Link 
                       href={crumb.href}
-                      className="text-white/80 hover:text-white transition-colors duration-200 hover:underline"
+                      className="text-white/60 hover:text-white transition-colors duration-200 hover:underline"
                     >
                       {crumb.label}
                     </Link>

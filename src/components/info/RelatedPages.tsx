@@ -32,7 +32,6 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
               className="block rounded-lg border border-gray-100 bg-gray-50 px-4 py-3 hover:bg-gray-100 hover:text-brand-primary transition"
             >
               <div className="font-medium">{page.hero?.title}</div>
-              <p className="text-xs text-gray-500">{page.hero?.subtitle}</p>
             </Link>
           </li>
         ))}
