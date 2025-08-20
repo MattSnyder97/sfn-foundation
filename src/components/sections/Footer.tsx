@@ -19,7 +19,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about/sfn" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/about" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   What is SFN?
                 </Link>
               </li>
@@ -29,7 +29,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about/treatments" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources/specialists" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Find a Specialist
                 </Link>
               </li>

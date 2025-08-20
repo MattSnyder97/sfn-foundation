@@ -56,17 +56,15 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
             variant="outlinePrimary"
             size="md"
             onClick={handlePrint}
-            className="flex items-center gap-2 px-6"
           >
             <Printer size={18} />
             Print
           </Button>
          
           <Button
-            variant="primary"
+            variant="outlinePrimary"
             size="md"
             onClick={handleShare}
-            className="flex items-center gap-2 px-6"
           >
             {copied ? (
               <>

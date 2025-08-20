@@ -36,7 +36,6 @@ export function Testimonial() {
             <Button
               variant="secondary"
               size="md"
-              className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
             >
               Read More
             </Button>

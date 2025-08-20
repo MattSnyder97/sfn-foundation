@@ -80,7 +80,7 @@ export default function SearchBar() {
   return (
     <div className="relative w-full max-w-2xl">
       {/* Input box */}
-      <div className="flex items-center gap-2 rounded-xl border border-dark/20 bg-white px-3 py-2 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary">
+      <div className="flex items-center gap-4 rounded-xl border-2 border-dark/20 bg-white px-4 py-2 shadow-md/4 focus-within:ring-2 focus-within:ring-primary">
         <Search className="h-4 w-4 text-gray-500" />
         <input
           type="text"
@@ -93,7 +93,7 @@ export default function SearchBar() {
 
       {/* Results dropdown */}
       {results.length > 0 && (
-        <ul className="absolute z-50 mt-4 w-full max-h-64 overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-lg">
+        <ul className="absolute z-50 mt-6 w-full max-h-64 overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-lg">
           {results.map((res, idx) => (
             <li key={idx} className="border-b border-gray-100 last:border-none">
               <Link

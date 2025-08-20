@@ -14,7 +14,7 @@ export default function InfoImage({ src, alt, caption }: InfoImageProps) {
           src={src}
           alt={alt}
           fill
-          className="object-contain"
+          className="object-contain filter hue-rotate-[8deg]"
           sizes="100vw"
           priority
         />

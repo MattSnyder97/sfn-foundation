@@ -12,42 +12,42 @@ export default function Header() {
   const [mobileDropdowns, setMobileDropdowns] = useState<Record<string, boolean>>({});
   const closeTimer = useRef<number | null>(null);
 
-  const navLinks = [
-    {
-      label: "About SFN",
-      href: "/about",
-      dropdown: true,
-      items: [
-        { label: "Symptoms", href: "/about/symptoms" },
-        { label: "Causes", href: "/about/causes" },
-        { label: "Treatments", href: "/about/treatments" },
-        { label: "Diagnosis", href: "/about/diagnosis" },
-      ],
-    },
-    {
-      label: "Research",
-      href: "/research",
-      dropdown: true,
-      items: [
-        { label: "Latest Research", href: "/#news" },
-        { label: "Clinical Trials", href: "https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy", target: "_blank" },
-      ],
-    },
-    {
-      label: "Resources",
-      href: "/resources",
-      dropdown: true,
-      items: [
-        { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
-        { label: "Support Group", href: "https://discord.gg/UGNhBMkBS7", target: "_blank" },
-        { label: "Caregiver Tips", href: "/resources/caregiver-tips" },
-        { label: "Approved Doctors", href: "/resources/doctors" },
-        { label: "SFN Dictionary", href: "/resources/dictionary" },
-        { label: "Supplements", href: "/resources/supplements" },
-        { label: "FAQs", href: "/#faqs" },
-      ],
-    },
-  ];
+const navLinks = [
+  {
+    label: "About SFN",
+    href: "/about",
+    dropdown: true,
+    items: [
+      { label: "Causes", href: "/about/causes" },
+      { label: "Diagnosis", href: "/about/diagnosis" },
+      { label: "Symptoms", href: "/about/symptoms" },
+      { label: "Treatments", href: "/about/treatments" },
+    ],
+  },
+  {
+    label: "Research",
+    href: "/research",
+    dropdown: true,
+    items: [
+      { label: "Clinical Trials", href: "https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy", target: "_blank" },
+      { label: "Latest Research", href: "/#news" },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+    dropdown: true,
+    items: [
+      { label: "Caregiver Tips", href: "/resources/caregiver-tips" },
+      { label: "FAQs", href: "/#faqs" },
+      { label: "Find a Specialist", href: "/resources/specialists" },
+      { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
+      { label: "SFN Dictionary", href: "/resources/dictionary" },
+      { label: "Support Group", href: "https://discord.gg/UGNhBMkBS7", target: "_blank" },
+      { label: "Supplements", href: "/resources/supplements" },
+    ],
+  },
+];
 
   const openDropdown = (label: string) => {
     if (closeTimer.current) {
@@ -133,7 +133,7 @@ export default function Header() {
                       onMouseEnter={() => openDropdown(link.label)}
                       onMouseLeave={scheduleClose}
                     >
-                      <div className="pt-2">
+                      <div className="pt-4">
                         <div className="bg-white shadow-lg rounded-md overflow-hidden">
                           {/* Top border cap */}
                           <div className="h-2 bg-primary rounded-t-md" />
@@ -227,7 +227,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-white shadow-lg container-padding py-4 space-y-4">
           {/* Mobile Search Bar */}
-          <div className="mb-6">
+          <div className="mb-8">
             <input
               type="text"
               placeholder="Search by keyword or phrase"

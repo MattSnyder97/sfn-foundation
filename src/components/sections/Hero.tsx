@@ -37,7 +37,6 @@ export default function Hero() {
             <Button
               variant="outline"
               size="md"
-              className="w-2/3 md:w-auto rounded-full border-white text-white hover:bg-white/10"
             >
                 <a
                     href="https://discord.gg/UGNhBMkBS7"
@@ -47,7 +46,7 @@ export default function Hero() {
                     Support Group
                 </a>
             </Button>
-            <Button variant="outline" size="md" className="w-2/3 md:w-auto rounded-full border-white text-white hover:bg-white/10">
+            <Button variant="outline" size="md">
                 <Link href="/#news">
                     Latest Research
                 </Link>
