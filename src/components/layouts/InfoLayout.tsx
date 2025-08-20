@@ -1,20 +1,50 @@
 // src/components/layouts/InfoLayout.tsx
+"use client";
 import { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import InfoActions from "@/components/info/InfoActions";
+import RelatedPages from "@/components/info/RelatedPages";
+import { allContent } from "@/content";
 
 interface InfoLayoutProps {
   children: ReactNode;
   tableOfContents?: { id: string; title: string }[];
   title?: string; // For sharing
   showActions?: boolean; // Option to hide actions if needed
+  showRelated?: boolean; // Option to show/hide related pages
+  // Optional overrides - if not provided, will auto-extract from pathname
+  customSlug?: string;
+  customTags?: string[];
 }
 
-export default function InfoLayout({ 
-  children, 
-  tableOfContents, 
+function getPageDataFromContent(pathname: string) {
+  // Find the current page in your allContent array
+  const currentPage = allContent.find(page => page.slug === pathname);
+  
+  return {
+    slug: pathname,
+    tags: currentPage?.tags || [],
+    title: currentPage?.hero?.title || ''
+  };
+}
+
+export default function InfoLayout({
+  children,
+  tableOfContents,
   title,
-  showActions = true 
+  showActions = true,
+  showRelated = true,
+  customSlug,
+  customTags
 }: InfoLayoutProps) {
+  const pathname = usePathname();
+  const pageData = getPageDataFromContent(pathname);
+  
+  // Use custom values if provided, otherwise use auto-extracted values
+  const currentSlug = customSlug || pageData.slug;
+  const currentTags = customTags || pageData.tags;
+  const pageTitle = title || pageData.title;
+
   return (
     <main className="bg-offWhite">
       <div className="container-padding mx-auto py-16">
@@ -41,12 +71,20 @@ export default function InfoLayout({
          
           {/* Main Content */}
           <div className="flex-1 max-w-auto">
-            <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4">
+            <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4 print-content">
               {children}
-              
+             
               {/* Print and Share Actions */}
-              {showActions && <InfoActions title={title} />}
+              {showActions && <InfoActions title={pageTitle} />}
             </article>
+
+            {/* Related Pages */}
+            {showRelated && currentTags.length > 0 && (
+              <RelatedPages 
+                currentSlug={currentSlug} 
+                currentTags={currentTags} 
+              />
+            )}
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export default function InfoList({ items, ordered = false }: InfoListProps) {
 
   return (
     <ListTag
-      className={`pl-6 space-y-2 text-gray text-sm leading-relaxed ${
+      className={`pl-6 space-y-2 text-gray text-sm leading-relaxed mb-4 ${
         ordered ? "list-decimal" : "list-disc"
       }`}
     >

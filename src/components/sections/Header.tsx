@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import SearchBar from "@/components/ui/SearchBar";
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -14,9 +15,9 @@ export default function Header() {
   const navLinks = [
     {
       label: "About SFN",
+      href: "/about",
       dropdown: true,
       items: [
-        { label: "What is SFN", href: "/about/sfn" },
         { label: "Symptoms", href: "/about/symptoms" },
         { label: "Causes", href: "/about/causes" },
         { label: "Treatments", href: "/about/treatments" },
@@ -25,6 +26,7 @@ export default function Header() {
     },
     {
       label: "Research",
+      href: "/research",
       dropdown: true,
       items: [
         { label: "Latest Research", href: "/#news" },
@@ -33,6 +35,7 @@ export default function Header() {
     },
     {
       label: "Resources",
+      href: "/resources",
       dropdown: true,
       items: [
         { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
@@ -91,19 +94,30 @@ export default function Header() {
                   onMouseEnter={() => openDropdown(link.label)}
                   onMouseLeave={scheduleClose}
                 >
-                  {/* Trigger */}
-                  <div className="flex items-center space-x-3 cursor-default">
-                    <span
-                      className={`text-base font-medium transition-colors duration-150 ${
-                        isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                      }`}
-                    >
-                      {link.label}
-                    </span>
+                  {/* Trigger - Now clickable if href exists */}
+                  <div className="flex items-center space-x-3">
+                    {link.href ? (
+                      <Link
+                        href={link.href}
+                        className={`text-base font-medium transition-colors duration-150 cursor-pointer ${
+                          isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span
+                        className={`text-base font-medium transition-colors duration-150 cursor-default ${
+                          isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                        }`}
+                      >
+                        {link.label}
+                      </span>
+                    )}
                     {link.dropdown && (
                       <ChevronDown
                         strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-all duration-160 ${
+                        className={`h-3.5 w-3.5 transition-all duration-160 cursor-pointer ${
                           isActive
                             ? "scale-y-[-1] text-primary"
                             : "text-dark group-hover:text-primary"
@@ -145,12 +159,7 @@ export default function Header() {
           {/* Search / Close Icon */}
           <div className="flex items-center">
             {searchOpen && (
-              <input
-                type="text"
-                placeholder="Search by keyword or phrase"
-                autoFocus
-                className="border border-gray-300 rounded-lg px-4 py-1.5 w-128 animate-fadeSlideIn focus:ring-primary focus:border-primary"
-              />
+              <SearchBar />
             )}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
@@ -229,23 +238,37 @@ export default function Header() {
           {/* Navigation Links */}
           {navLinks.map((link) => (
             <div key={link.label} className="text-right">
-              <button
-                type="button"
-                className="w-full flex items-center justify-end text-right text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3"
-                onClick={() => toggleMobileDropdown(link.label)}
-              >
-                <span>{link.label}</span>
-                {link.dropdown && (
-                  <ChevronDown
-                    strokeWidth={2.5}
-                    className={`h-3.5 w-3.5 transition-all duration-160 ${
-                      mobileDropdowns[link.label]
-                        ? "scale-y-[-1] text-primary"
-                        : "text-gray-700 group-hover:text-primary"
-                    }`}
-                  />
+              <div className="w-full flex items-center justify-end text-right text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
+                {/* Main link - clickable if href exists */}
+                {link.href ? (
+                  <Link
+                    href={link.href}
+                    className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <span>{link.label}</span>
                 )}
-              </button>
+                
+                {/* Dropdown toggle button */}
+                {link.dropdown && (
+                  <button
+                    type="button"
+                    onClick={() => toggleMobileDropdown(link.label)}
+                    className="flex items-center"
+                  >
+                    <ChevronDown
+                      strokeWidth={2.5}
+                      className={`h-3.5 w-3.5 transition-all duration-160 ${
+                        mobileDropdowns[link.label]
+                          ? "scale-y-[-1] text-primary"
+                          : "text-gray-700 group-hover:text-primary"
+                      }`}
+                    />
+                  </button>
+                )}
+              </div>
 
               {mobileDropdowns[link.label] && link.dropdown && (
                 <div className="mt-2 pr-4 space-y-2 text-right mb-8">
