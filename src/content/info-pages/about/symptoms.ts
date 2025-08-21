@@ -34,7 +34,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `SFN symptoms usually start in your [feet and hands](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061) 
+          text: `SFN symptoms usually start in your feet and hands 
           and can slowly spread up your legs and arms. This happens because the 
           longest nerves in your body are often affected first. The good news is 
           that recognizing these symptoms early can help you get treatment sooner.`,
@@ -55,7 +55,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `The most common symptoms include [burning pain](https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy), 
+          text: `The most common symptoms include burning pain, 
           tingling, and numbness. You might also notice that your skin becomes very 
           sensitive to light touch. Something as simple as bed sheets touching your 
           feet can feel uncomfortable or painful.`,
@@ -83,7 +83,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `Some people also have [autonomic symptoms](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6470332/) 
+          text: `Some people also have autonomic symptoms 
           because small fibers control automatic body functions. These might include 
           problems with sweating, digestion, or heart rate changes. You might sweat 
           too much or not at all, have stomach problems, or feel dizzy when you stand up.`,
@@ -112,7 +112,7 @@ export const symptomsContent = {
           type: "paragraph",
           text: `In the early stages, you might only have mild tingling or burning in 
           your toes or fingertips. These feelings might come and go, and you might 
-          not think much of them at first. As [nerve damage progresses](https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/symptoms-causes/syc-20371580), 
+          not think much of them at first. As nerve damage progresses, 
           the symptoms can become more constant and spread to larger areas.`,
         },
         {
@@ -153,7 +153,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `[Sleep problems](https://www.foundationforpn.org/living-well/sleep/) 
+          text: `Sleep problems 
           are very common with SFN. The burning pain often gets worse at night, 
           making it hard to fall asleep or stay asleep. Poor sleep can make pain 
           feel worse during the day, creating a difficult cycle.`,
@@ -180,7 +180,7 @@ export const symptomsContent = {
         {
           type: "paragraph",
           text: `The emotional impact of SFN is real and important. It's normal to feel 
-          frustrated, scared, or sad about having chronic symptoms. [Support groups](https://www.foundationforpn.org/living-well/support/) 
+          frustrated, scared, or sad about having chronic symptoms. Support groups 
           and counseling can help you cope with these feelings. Remember that you're 
           not alone, and there are people who understand what you're going through.`,
         },
@@ -207,7 +207,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `You should see a doctor if you have [persistent burning pain](https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy), 
+          text: `You should see a doctor if you have persistent burning pain, 
           tingling, or numbness in your hands or feet that lasts more than a few days. 
           Even if the symptoms seem mild, it's better to check with a healthcare 
           provider than to ignore them.`,
@@ -234,7 +234,7 @@ export const symptomsContent = {
         {
           type: "paragraph",
           text: `When you see your doctor, try to describe your symptoms as clearly as 
-          possible. Keep a [symptom diary](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/diagnosis-treatment/drc-20352061) 
+          possible. Keep a symptom diary 
           for a week or two before your appointment. Write down when symptoms happen, 
           how bad they are, and what makes them better or worse. This information 
           will help your doctor understand your condition and plan the best tests 

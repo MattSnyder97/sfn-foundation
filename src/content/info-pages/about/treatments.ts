@@ -30,7 +30,7 @@ export const treatmentsContent = {
           type: "paragraph",
           text: `Every person with SFN is different. What works well for one person might 
           not work as well for another. That's why doctors often use several treatments 
-          together. This [team approach](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/diagnosis-treatment/drc-20352061) 
+          together. This team approach 
           gives you the best chance of finding relief. The sooner you start treatment, 
           the better you're likely to feel.`,
         },
@@ -56,7 +56,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `The most common first medicines are called [anticonvulsants](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/in-depth/pain-medications/art-20045004). 
+          text: `The most common first medicines are called anticonvulsants. 
           Although they were made to treat seizures, they can be very
           effective at treating nerve pain too. The two main ones are gabapentin and 
           pregabalin (Lyrica).`,
@@ -81,7 +81,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `[Topical treatments](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4620290/) 
+          text: `Topical treatments 
           can be helpful because they work right where you put them. Lidocaine patches 
           can numb the area, while capsaicin cream (made from hot peppers) can reduce 
           pain signals over time. These might cause fewer side effects than pills.`,
@@ -108,7 +108,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `The most studied supplements for nerve pain are [alpha-lipoic acid](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3327300/) 
+          text: `The most studied supplements for nerve pain are alpha-lipoic acid 
           and B vitamins. These work as antioxidants, which means they help protect 
           your nerves from damage. Some people notice less pain and tingling after 
           taking these for several weeks.`,
@@ -155,7 +155,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `If you have diabetes, keeping your [blood sugar levels steady](https://www.diabetes.org/healthy-living/medication-treatments/blood-glucose-testing-and-control) 
+          text: `If you have diabetes, keeping your blood sugar levels steady 
           is one of the most important things you can do. High blood sugar can damage 
           your nerves even more. Work with your healthcare team to find the best ways 
           to manage your blood sugar.`,
@@ -182,14 +182,14 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `[Physical therapy](https://www.foundationforpn.org/living-well/physical-therapy/) 
+          text: `Physical therapy 
           can teach you exercises and techniques to manage pain and stay active. Some 
           people find that alternative treatments like acupuncture, massage, or TENS 
           units help with their pain.`,
         },
         {
           type: "paragraph",
-          text: `[Support groups](https://www.foundationforpn.org/living-well/support/), 
+          text: `Support groups, 
           either in person or online, can connect you with others who understand what 
           you're going through. Sometimes talking with people who have similar experiences 
           can be as helpful as any medicine.`,
@@ -290,12 +290,12 @@ export const treatmentsContent = {
         {
           type: "paragraph",
           text: `Researchers are looking at ways to help nerves grow back and heal themselves. 
-          They're also studying how the [immune system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6470332/) 
+          They're also studying how the immune system 
           might play a role in SFN and whether medicines that affect immunity could help.`,
         },
         {
           type: "paragraph",
-          text: `Some promising areas of research include [nerve growth factors](https://clinicaltrials.gov/search?cond=Small%20Fiber%20Neuropathy), 
+          text: `Some promising areas of research include nerve growth factors, 
           stem cell therapy, and new ways to deliver medicines directly to damaged 
           nerves. Clinical trials are testing these treatments to see if they're safe 
           and effective.`,
@@ -303,7 +303,7 @@ export const treatmentsContent = {
         {
           type: "paragraph",
           text: `If you're interested in trying new treatments, talk to your doctor about 
-          [clinical trials](https://clinicaltrials.gov/). 
+          clinical trials. 
           These studies help develop new medicines and give some patients access to 
           treatments before they're widely available. Your doctor can help you decide 
           if a clinical trial might be right for you.`,

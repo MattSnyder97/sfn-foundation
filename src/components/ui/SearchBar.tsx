@@ -85,8 +85,18 @@ export default function SearchBar() {
       return;
     }
 
-    const hits = fuse.search(q).map((r) => r.item).slice(0, 10);
-    setResults(hits);
+    const hits = fuse.search(q);
+
+    // If only 1 result → show just that.
+    // If >1 → take top 3 only.
+    let limited: IndexedItem[] = [];
+    if (hits.length === 1) {
+      limited = [hits[0].item];
+    } else if (hits.length > 1) {
+      limited = hits.slice(0, 3).map((r) => r.item);
+    }
+
+    setResults(limited);
   };
 
   return (

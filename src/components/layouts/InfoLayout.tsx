@@ -1,6 +1,5 @@
-// src/components/layouts/InfoLayout.tsx
 "use client";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import InfoActions from "@/components/info/InfoActions";
 import RelatedPages from "@/components/info/RelatedPages";
@@ -9,22 +8,20 @@ import { allContent } from "@/content";
 interface InfoLayoutProps {
   children: ReactNode;
   tableOfContents?: { id: string; title: string }[];
-  title?: string; // For sharing
-  showActions?: boolean; // Option to hide actions if needed
-  showRelated?: boolean; // Option to show/hide related pages
-  // Optional overrides - if not provided, will auto-extract from pathname
+  title?: string;
+  showActions?: boolean;
+  showRelated?: boolean;
   customSlug?: string;
   customTags?: string[];
 }
 
 function getPageDataFromContent(pathname: string) {
-  // Find the current page in your allContent array
-  const currentPage = allContent.find(page => page.slug === pathname);
-  
+  const currentPage = allContent.find((page) => page.slug === pathname);
+
   return {
     slug: pathname,
     tags: currentPage?.tags || [],
-    title: currentPage?.hero?.title || ''
+    title: currentPage?.hero?.title || "",
   };
 }
 
@@ -35,31 +32,66 @@ export default function InfoLayout({
   showActions = true,
   showRelated = true,
   customSlug,
-  customTags
+  customTags,
 }: InfoLayoutProps) {
   const pathname = usePathname();
   const pageData = getPageDataFromContent(pathname);
-  
-  // Use custom values if provided, otherwise use auto-extracted values
+
   const currentSlug = customSlug || pageData.slug;
   const currentTags = customTags || pageData.tags;
   const pageTitle = title || pageData.title;
+
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  // Track scroll position with IntersectionObserver
+  useEffect(() => {
+    if (!tableOfContents) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) {
+          setActiveId(visible.target.id);
+        }
+      },
+      {
+        rootMargin: "0px 0px -70% 0px", // triggers earlier/later depending on section height
+        threshold: 0.1,
+      }
+    );
+
+    tableOfContents.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [tableOfContents]);
 
   return (
     <main className="bg-offWhite">
       <div className="container-padding mx-auto py-16">
         <div className="flex gap-4">
-          {/* Sidebar - On this page */}
+          {/* Sidebar */}
           {tableOfContents && (
             <aside className="hidden lg:block w-56 flex-shrink-0">
-              <div className="sticky" style={{ top: "calc(var(--header-height) - 30px)" }}>
-                <h3 className="text-lg font-semibold text-dark mb-4">On this page</h3>
+              <div
+                className="sticky"
+                style={{ top: "calc(var(--header-height) - 30px)" }}
+              >
+                <h3 className="text-lg font-semibold text-dark mb-4">
+                  On this page
+                </h3>
                 <nav className="space-y-2">
                   {tableOfContents.map((item) => (
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className="block text-sm text-gray hover:text-primary hover:underline transition-all duration-200 py-1"
+                      className={`block text-sm py-1 transition-all duration-200 ${
+                        activeId === item.id
+                          ? "text-primary hover:underline"
+                          : "text-gray hover:text-primary hover:underline"
+                      }`}
                     >
                       {item.title}
                     </a>
@@ -68,21 +100,19 @@ export default function InfoLayout({
               </div>
             </aside>
           )}
-         
+
           {/* Main Content */}
           <div className="flex-1 max-w-auto">
             <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4 print-content">
               {children}
-             
-              {/* Print and Share Actions */}
+
               {showActions && <InfoActions title={pageTitle} />}
             </article>
 
-            {/* Related Pages */}
             {showRelated && currentTags.length > 0 && (
-              <RelatedPages 
-                currentSlug={currentSlug} 
-                currentTags={currentTags} 
+              <RelatedPages
+                currentSlug={currentSlug}
+                currentTags={currentTags}
               />
             )}
           </div>

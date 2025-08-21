@@ -35,7 +35,7 @@ export const diagnosisContent = {
         {
           type: "paragraph",
           text: `The good news is that doctors are getting better at recognizing and 
-          diagnosing SFN. [New testing methods](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/diagnosis-treatment/drc-20352061) 
+          diagnosing SFN. New testing methods 
           have made it easier to confirm the diagnosis. Getting the right diagnosis 
           is worth the wait because it opens the door to treatments that can help 
           you feel better.`,
@@ -57,7 +57,7 @@ export const diagnosisContent = {
         {
           type: "paragraph",
           text: `During your appointment, your doctor will ask detailed questions about 
-          your [pain and other symptoms](https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy). 
+          your pain and other symptoms. 
           They'll want to know where you feel pain, what it feels like, when it 
           happens, and what makes it better or worse. Be as specific as possible 
           about your symptoms.`,
@@ -93,7 +93,7 @@ export const diagnosisContent = {
         {
           type: "paragraph",
           text: `Your doctor will also want to know about other health conditions that 
-          can cause neuropathy. [Diabetes is the most common cause](https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/symptoms-causes/syc-20371580), 
+          can cause neuropathy. Diabetes is the most common cause, 
           but autoimmune diseases, vitamin deficiencies, and certain medications 
           can also damage small nerve fibers.`,
         },
@@ -112,7 +112,7 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a [skin biopsy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6470332/). 
+          text: `The most definitive test for SFN is a skin biopsy. 
           This involves taking tiny samples of skin to count the small nerve fibers. 
           It might sound scary, but it's a simple procedure that's usually done in 
           the doctor's office with local numbing medicine.`,
@@ -146,7 +146,7 @@ export const diagnosisContent = {
         {
           type: "paragraph",
           text: `Blood tests are important to find out what might be causing your neuropathy. 
-          Your doctor will usually check for [diabetes and prediabetes](https://www.mayoclinic.org/diseases-conditions/prediabetes/symptoms-causes/syc-20355278), 
+          Your doctor will usually check for diabetes and prediabetes, 
           vitamin B12 levels, thyroid function, and signs of autoimmune diseases. 
           Finding and treating the underlying cause can sometimes slow down or even 
           improve neuropathy symptoms.`,
@@ -174,7 +174,7 @@ export const diagnosisContent = {
           type: "paragraph",
           text: `Your family doctor might refer you to a neurologist if they suspect 
           you have SFN. Some neurologists have even more specialized training in 
-          [peripheral neuropathy](https://www.foundationforpn.org/understanding-peripheral-neuropathy/), 
+          peripheral neuropathy, 
           which means they focus specifically on nerve problems like SFN.`,
         },
         {
@@ -223,7 +223,7 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
-          text: `One of the biggest challenges is that [regular nerve tests are normal](https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy) 
+          text: `One of the biggest challenges is that regular nerve tests are normal 
           in people with SFN. These tests only check large nerve fibers, so if 
           you only have small fiber damage, the tests will look fine. This can 
           be frustrating for patients who know something is wrong but have normal test results.`,
@@ -257,7 +257,7 @@ export const diagnosisContent = {
           type: "paragraph",
           text: `Keep track of your symptoms, when they happen, and how they affect 
           your daily life. This information can help doctors understand your condition 
-          better. Consider joining [support groups](https://www.foundationforpn.org/living-well/support/) 
+          better. Consider joining support groups 
           where you can learn from others who have been through the diagnostic process.`,
         },
         {
