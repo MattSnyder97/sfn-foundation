@@ -18,17 +18,17 @@ export default function InfoHero({ title }: InfoHeroProps) {
     // Mapping for better display names
     const segmentLabels: Record<string, string> = {
       'about': 'About',
-      'research': 'Research', 
-      'resources': 'Resources',
-      'symptoms': 'Symptoms',
-      'causes': 'Causes',
-      'treatments': 'Treatments',
-      'diagnosis': 'Diagnosis',
-      'newly-diagnosed': 'Newly Diagnosed',
       'caregiver-tips': 'Caregiver Tips',
-      'doctors': 'Approved Doctors',
+      'causes': 'Causes',
+      'diagnosis': 'Diagnosis',
       'dictionary': 'SFN Dictionary',
-      'supplements': 'Supplements'
+      'doctors': 'Approved Doctors',
+      'newly-diagnosed': 'Newly Diagnosed',
+      'research': 'Research',
+      'resources': 'Resources',
+      'supplements': 'Supplements',
+      'symptoms': 'Symptoms',
+      'treatments': 'Treatments'
     };
     
     let currentPath = '';
@@ -60,7 +60,7 @@ export default function InfoHero({ title }: InfoHeroProps) {
       <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-16">
         <div className="text-left text-offWhite max-w-5xl">
           {/* Breadcrumbs */}
-          <nav className="mb-4" aria-label="Breadcrumb">
+          <nav className="mb-4 print:hidden" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-1 text-sm">
               {breadcrumbs.map((crumb, index) => (
                 <li key={crumb.href} className="flex items-center">
