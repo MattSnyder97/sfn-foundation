@@ -2,12 +2,35 @@ import InfoParagraph from "@/components/info/InfoParagraph";
 import InfoImage from "@/components/info/InfoImage";
 import InfoList from "@/components/info/InfoList";
 
-interface Block {
-  type: string;
-  [key: string]: any;
+interface ContentBlock {
+  type: "paragraph" | "list" | "image";
 }
 
-export default function BlockRenderer({ block }: { block: Block }) {
+interface ParagraphBlock extends ContentBlock {
+  type: "paragraph";
+  text: string;
+}
+
+interface ListBlock extends ContentBlock {
+  type: "list";
+  ordered: boolean;
+  items: string[];
+}
+
+interface ImageBlock extends ContentBlock {
+  type: "image";
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;
+
+interface BlockRendererProps {
+  block: ContentBlockType;
+}
+
+export default function BlockRenderer({ block }: BlockRendererProps) {
   switch (block.type) {
     case "paragraph":
       return <InfoParagraph>{block.text}</InfoParagraph>;
