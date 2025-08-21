@@ -35,8 +35,7 @@ export const symptomsContent = {
         {
           type: "paragraph",
           text: `SFN symptoms usually start in your feet and hands 
-          and can slowly spread up your legs and arms. This happens because the 
-          longest nerves in your body are often affected first. The good news is 
+          and can slowly spread throughout your entire body. The good news is 
           that recognizing these symptoms early can help you get treatment sooner.`,
         },
       ],
@@ -207,8 +206,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `You should see a doctor if you have persistent burning pain, 
-          tingling, or numbness in your hands or feet that lasts more than a few days. 
+          text: `You should see a doctor if you have persistent painful or unusual symptoms that lasts more than a few days. 
           Even if the symptoms seem mild, it's better to check with a healthcare 
           provider than to ignore them.`,
         },
@@ -224,12 +222,6 @@ export const symptomsContent = {
             "Weakness in your hands or feet",
             "Changes in sweating, digestion, or other automatic body functions",
           ],
-        },
-        {
-          type: "paragraph",
-          text: `Get medical help right away if you notice cuts or sores on your feet 
-          that you didn't feel happen. This could mean your numbness is getting worse, 
-          and untreated injuries can lead to serious infections.`,
         },
         {
           type: "paragraph",

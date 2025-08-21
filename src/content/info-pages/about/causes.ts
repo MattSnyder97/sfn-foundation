@@ -12,7 +12,6 @@ export const causesContent = {
     { id: "other-medical", title: "Other Medical Conditions" },
     { id: "medications", title: "Medications and Toxins" },
     { id: "genetic", title: "Genetic Factors" },
-    { id: "idiopathic", title: "Unknown Causes" },
   ],
 
   sections: [
@@ -31,14 +30,15 @@ export const causesContent = {
           type: "paragraph",
           text: `In about 53% of cases, doctors can't find a specific cause 
           even after thorough testing. This is called "idiopathic" small fiber neuropathy. 
-          But don't worry - even when the cause isn't clear, treatments can still help 
+          Even when the cause isn't clear, treatments can still help 
           manage your symptoms.`,
         },
         {
           type: "paragraph",
           text: `Finding the cause is important because treating the underlying condition 
-          can sometimes slow down or stop more nerve damage. Diabetes 
-          is the most common identifiable cause, but there are many other 
+          can sometimes slow down or stop more nerve damage so keep pushing for more testing if your
+          small fiber neuropathy has been labeled "idiopathic". Idiopathic ultimately means doctors have not
+          found the cause...yet. Diabetes is the most common identifiable cause, but there are many other 
           possibilities your doctor will check for.`,
         },
       ],
@@ -58,8 +58,7 @@ export const causesContent = {
         },
         {
           type: "paragraph",
-          text: `You don't need to have full diabetes to develop nerve problems. 
-          Impaired glucose tolerance and components of metabolic 
+          text: `Impaired glucose tolerance and components of metabolic 
           syndrome are often associated with small fiber neuropathy. This 
           means even pre-diabetes or insulin resistance can start damaging your nerves.`,
         },
@@ -148,7 +147,7 @@ export const causesContent = {
             "HIV/AIDS - The virus itself or some treatments can cause neuropathy",
             "Vitamin Deficiencies - Especially B12, B1, B6, and folate deficiencies",
             "Hypothyroidism - Low thyroid hormone levels can slow nerve function",
-            "Fibromyalgia - May overlap with or be misdiagnosed as small fiber neuropathy",
+            "Fibromyalgia - Often overlaps with small fiber neuropathy",
             "Amyloidosis - Abnormal protein deposits that can affect nerves",
             "Vasculitis - Inflammation of blood vessels that can reduce blood flow to nerves",
           ],
@@ -169,8 +168,7 @@ export const causesContent = {
         {
           type: "paragraph",
           text: `Some medications and toxic substances can damage small nerve fibers. 
-          This is called "toxic neuropathy." The good news is that stopping the 
-          harmful substance often prevents more damage and sometimes allows nerves 
+          The good news is that stopping the harmful substance often prevents more damage and sometimes allows nerves 
           to heal.`,
         },
         {
@@ -185,7 +183,7 @@ export const causesContent = {
           items: [
             "Chemotherapy drugs - Especially platinum-based drugs, taxanes, and vincristine",
             "HIV medications - Some older HIV drugs are more likely to cause neuropathy",
-            "Antibiotics - Including metronidazole (Flagyl) with long-term use",
+            "Antibiotics - Especially fluoroquinolones ",
             "Heart medications - Some drugs used for irregular heartbeat",
             "Seizure medications - Phenytoin (Dilantin) with long-term use",
             "Alcohol - Heavy, long-term alcohol use can damage nerves",
@@ -240,40 +238,6 @@ export const causesContent = {
       ],
     },
 
-    {
-      id: "idiopathic",
-      title: "Unknown Causes",
-      content: [
-        {
-          type: "paragraph",
-          text: `About 53% of people with small fiber neuropathy 
-          never find out what caused it. This can be frustrating, but 
-          it doesn't mean your symptoms aren't real or that treatment won't help.`,
-        },
-        {
-          type: "paragraph",
-          text: `Having "idiopathic" small fiber neuropathy means that even after 
-          thorough testing, doctors can't find a specific cause. This is actually 
-          quite common and doesn't mean you've been misdiagnosed or that something 
-          was missed.`,
-        },
-        {
-          type: "paragraph",
-          text: `Research is ongoing to better understand why some people develop 
-          small fiber neuropathy without an obvious cause. Scientists are studying 
-          the immune system, genetics, and other factors that might contribute to 
-          nerve damage.`,
-        },
-        {
-          type: "paragraph",
-          text: `Even without knowing the exact cause, many effective treatments can 
-          help manage your symptoms. Your doctor will focus on controlling your 
-          pain and helping you maintain your quality of life. Sometimes new causes 
-          are discovered as research advances, so staying in touch with your healthcare 
-          team is important.`,
-        },
-      ],
-    },
   ],
 
   meta: {

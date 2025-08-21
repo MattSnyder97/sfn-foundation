@@ -10,7 +10,6 @@ export const diagnosisContent = {
     { id: "medical-history", title: "Medical History and Physical Exam" },
     { id: "diagnostic-tests", title: "Diagnostic Tests" },
     { id: "specialists", title: "Working with Specialists" },
-    { id: "challenges", title: "Challenges in Diagnosis" },
   ],
 
   sections: [
@@ -20,16 +19,9 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time, but it's 
-          an important step toward feeling better. Unlike some conditions, SFN can 
-          be tricky to diagnose because it affects very small nerve fibers that 
-          don't show up on regular nerve tests.`,
-        },
-        {
-          type: "paragraph",
-          text: `Your doctor will use several different approaches to figure out if you 
+          text: `Your doctor may use several different approaches to figure out if you 
           have SFN. This usually includes talking about your symptoms, doing a 
-          physical exam, and running special tests. The process might seem slow, 
+          physical exam, and getting a skin punch biopsy. The process might seem slow, 
           but each step helps build a clear picture of what's happening with your nerves.`,
         },
         {
@@ -104,12 +96,6 @@ export const diagnosisContent = {
       id: "diagnostic-tests",
       title: "Diagnostic Tests",
       content: [
-        {
-          type: "paragraph",
-          text: `Several tests can help confirm a diagnosis of SFN. Unlike regular nerve 
-          conduction tests, which only check large nerve fibers, these special tests 
-          look specifically at the small fibers that are damaged in SFN.`,
-        },
         {
           type: "paragraph",
           text: `The most definitive test for SFN is a skin biopsy. 
@@ -211,63 +197,6 @@ export const diagnosisContent = {
       ],
     },
 
-    {
-      id: "challenges",
-      title: "Challenges in Diagnosis",
-      content: [
-        {
-          type: "paragraph",
-          text: `Getting a correct diagnosis of SFN can sometimes be challenging. This 
-          isn't because doctors don't care, but because SFN can be hard to recognize 
-          and the symptoms can be similar to other conditions.`,
-        },
-        {
-          type: "paragraph",
-          text: `One of the biggest challenges is that regular nerve tests are normal 
-          in people with SFN. These tests only check large nerve fibers, so if 
-          you only have small fiber damage, the tests will look fine. This can 
-          be frustrating for patients who know something is wrong but have normal test results.`,
-        },
-        {
-          type: "paragraph",
-          text: `SFN symptoms can also be similar to other conditions like fibromyalgia, 
-          restless leg syndrome, or circulation problems. Sometimes doctors need 
-          to rule out these other conditions before confirming an SFN diagnosis.`,
-        },
-        {
-          type: "list",
-          ordered: false,
-          items: [
-            "Normal nerve conduction studies - Standard nerve tests don't detect small fiber damage, which can delay diagnosis.",
-            "Symptom overlap - SFN symptoms can be similar to other conditions, making it harder to identify.",
-            "Doctor awareness - Not all healthcare providers are familiar with SFN and its specific diagnostic tests.",
-            "Insurance coverage - Some specialized tests might not be covered by all insurance plans.",
-            "Wait times - Getting appointments with specialists and scheduling special tests can take time.",
-            "Idiopathic cases - In about half of SFN cases, doctors can't find a specific cause, which can be frustrating.",
-          ],
-        },
-        {
-          type: "paragraph",
-          text: `If you're having trouble getting a diagnosis, don't give up. It's 
-          important to find a doctor who is familiar with SFN and takes your symptoms 
-          seriously. You might need to see several healthcare providers before 
-          finding one who can help you.`,
-        },
-        {
-          type: "paragraph",
-          text: `Keep track of your symptoms, when they happen, and how they affect 
-          your daily life. This information can help doctors understand your condition 
-          better. Consider joining support groups 
-          where you can learn from others who have been through the diagnostic process.`,
-        },
-        {
-          type: "paragraph",
-          text: `Remember that getting a diagnosis is just the first step. Even if 
-          the process takes time, having a name for your condition opens the door 
-          to treatments that can help you feel better and maintain your quality of life.`,
-        },
-      ],
-    },
   ],
 
   meta: {

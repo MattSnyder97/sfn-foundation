@@ -27,8 +27,8 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people realize. It can affect anyone, but 
-          it's often seen in people with diabetes, autoimmune conditions, or certain 
+          text: `SFN is more common than many people realize, with the lowest estimates guessing around 200K
+          people in the United States alone. It's often seen in people with diabetes, autoimmune conditions, or certain 
           genetic factors. The good news is that with proper diagnosis and treatment, 
           many people with SFN can find relief and maintain a good quality of life.`,
         },
@@ -75,13 +75,6 @@ export const aboutContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time because 
-          it affects very small nerve fibers that don't show up on regular nerve tests. 
-          Your doctor will use your symptoms, physical exam, and special tests to 
-          make the diagnosis.`,
-        },
-        {
-          type: "paragraph",
           text: `The most definitive test for SFN is a skin biopsy, where tiny samples 
           of skin are examined under a microscope to count small nerve fibers. Blood 
           tests help identify possible causes like diabetes or vitamin deficiencies. 
@@ -106,7 +99,7 @@ export const aboutContent = {
           text: `SFN symptoms are often described as burning, stabbing, or tingling 
           sensations. Many people say it feels like walking on hot coals or being 
           stuck with pins and needles. These symptoms usually start in the feet and 
-          hands and can gradually spread up the legs and arms.`,
+          hands and can gradually spread throughout the entire body.`,
         },
         {
           type: "paragraph",

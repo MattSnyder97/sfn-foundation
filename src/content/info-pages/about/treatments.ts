@@ -120,7 +120,6 @@ export const treatmentsContent = {
             "Alpha-Lipoic Acid - Helps reduce burning pain and may protect nerves from more damage. Typical dose: 300-600mg daily.",
             "Vitamin B12 - Important for nerve health. Many people with neuropathy have low B12 levels. Typical dose: 1000-2000mcg daily.",
             "Vitamin B1 (Thiamine) - Helps nerves work better. Some people benefit from a special form called benfotiamine. Typical dose: 300-600mg daily.",
-            "Vitamin B6 - Supports nerve function, but don't take too much as it can actually cause nerve problems. Typical dose: 50-100mg daily (don't exceed 200mg).",
             "Acetyl-L-Carnitine - May help reduce pain and support nerve repair. Typical dose: 1000-3000mg daily.",
             "Vitamin D3 - Many people with neuropathy have low vitamin D levels. Typical dose: 1000-4000 IU daily.",
           ],
@@ -242,7 +241,7 @@ export const treatmentsContent = {
           type: "paragraph",
           text: `**Medical Cannabis** is legal in many states for treating chronic pain. 
           Some people with neuropathy find it helps with pain and sleep, though the 
-          evidence is mixed and side effects can be significant.`,
+          evidence is mixed.`,
         },
         {
           type: "list",
@@ -259,13 +258,6 @@ export const treatmentsContent = {
           text: `Research suggests medical cannabis can be effective for nerve pain, 
           and some studies show it can help chronic neuropathic pain without severe side effects. 
           However, side effects like impaired thinking and breathing problems are common, especially at higher doses.`,
-        },
-        {
-          type: "paragraph",
-          text: `A major review found no high-quality evidence for cannabis in neuropathic pain, 
-          and some people find their symptoms actually get worse with use. It's important 
-          to discuss the risks and benefits with your doctor, especially if you have 
-          breathing problems, heart conditions, or mental health concerns.`,
         },
         {
           type: "paragraph",
