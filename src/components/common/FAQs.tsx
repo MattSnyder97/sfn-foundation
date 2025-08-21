@@ -13,7 +13,7 @@ export function FAQs() {
           <br />
           <br />
           <Link
-            href="/about/sfn"
+            href="/about/"
             className="text-primary underline hover:text-primary/80"
           >
             Learn more on our About SFN page

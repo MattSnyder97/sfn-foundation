@@ -22,7 +22,7 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
   if (related.length === 0) return null;
 
   return (
-    <div className="mt-12 border-t border-gray-200 pt-8">
+    <div className="mt-12 border-t border-gray-200 pt-8 print:hidden">
       <h3 className="text-lg font-semibold mb-4">Related Pages</h3>
       <ul className="space-y-3">
         {related.map((page) => (
