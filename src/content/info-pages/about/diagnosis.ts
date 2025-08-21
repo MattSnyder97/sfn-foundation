@@ -85,8 +85,8 @@ export const diagnosisContent = {
         },
         {
           type: "image",
-          src: "/images/doctor-exam.png",
-          alt: "Doctor performing a neurological examination on a patient's foot",
+          src: "/images/painWoman.png",
+          alt: "Doctor performing a physical exam on a patient",
           caption:
             "A thorough physical exam helps doctors assess nerve function and identify areas affected by SFN.",
         },
@@ -138,10 +138,10 @@ export const diagnosisContent = {
         },
         {
           type: "image",
-          src: "/images/diagnostic-tests.png",
-          alt: "Medical equipment used for nerve function testing",
+          src: "/images/blood.png",
+          alt: "Blood test tubes",
           caption:
-            "Various tests help doctors diagnose SFN by measuring nerve function and counting nerve fibers.",
+            "Getting blood tests helps identify potential underlying causes of SFN, guiding treatment options.",
         },
         {
           type: "paragraph",
@@ -245,13 +245,6 @@ export const diagnosisContent = {
             "Wait times - Getting appointments with specialists and scheduling special tests can take time.",
             "Idiopathic cases - In about half of SFN cases, doctors can't find a specific cause, which can be frustrating.",
           ],
-        },
-        {
-          type: "image",
-          src: "/images/patient-advocacy.png",
-          alt: "Patient discussing symptoms with healthcare provider",
-          caption:
-            "Being your own advocate and working closely with knowledgeable healthcare providers is key to getting an accurate diagnosis.",
         },
         {
           type: "paragraph",

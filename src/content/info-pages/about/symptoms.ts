@@ -76,7 +76,7 @@ export const symptomsContent = {
         },
         {
           type: "image",
-          src: "/images/feet-symptoms.png",
+          src: "/images/painfulFeet.png",
           alt: "Illustration showing areas where SFN symptoms commonly occur on feet and hands",
           caption:
             "SFN symptoms typically start in the feet and hands, often beginning at the tips of fingers and toes.",

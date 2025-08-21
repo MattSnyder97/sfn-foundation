@@ -1,4 +1,3 @@
-// src/app/about/[slug]/page.tsx
 import InfoPageTemplate from '@/components/info/InfoPageTemplate'
 import { getAboutPageData } from '@/content/contentLoader'
 import { notFound } from 'next/navigation'
@@ -11,11 +10,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return [
-    { slug: 'caregiver-tips' },
     { slug: 'specialists' },
-    { slug: 'newly-diagnosed' },
-    { slug: 'dictionary' },
-    { slug: 'supplements' }
   ]
 }
 

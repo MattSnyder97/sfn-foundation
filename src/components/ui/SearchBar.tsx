@@ -5,113 +5,130 @@ import Fuse from "fuse.js";
 import Link from "next/link";
 import { Search } from "lucide-react";
 
-import { allContent } from "@/content"; // central index
+import { allContent } from "@/content";
 
-// --- Define types ---
-interface Section {
-  id: string;
-  title: string;
-  paragraphs?: string[];
-  paragraphsAfterImage?: string[];
-  list?: { items: string[] };
-}
+/** Types that match your content blocks */
+type Block =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; ordered?: boolean; items: string[] }
+  | { type: "image"; src: string; alt: string; caption?: string };
 
-interface Page {
-  slug: string;
-  hero?: {
-    title?: string;
-    subtitle?: string;
-  };
-  sections: Section[];
-}
+type Section = { id: string; title: string; content: Block[] };
+type Page = { slug: string; hero?: { title?: string; subtitle?: string }; sections: Section[] };
 
-interface IndexedItem {
-  slug: string;
-  pageTitle?: string;
-  pageSubtitle?: string;
+type IndexedItem = {
+  pageSlug: string;
+  pageTitle: string;
+  pageSubtitle: string;
   sectionId: string;
   sectionTitle: string;
-  text: string;
-}
+  sectionText: string;
+};
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<IndexedItem[]>([]);
 
-  // --- Flatten content into searchable index ---
-  const indexedData: IndexedItem[] = allContent.flatMap((page: Page) =>
-    page.sections.map((section) => ({
-      slug: page.slug,
-      pageTitle: page.hero?.title,
-      pageSubtitle: page.hero?.subtitle,
-      sectionId: section.id,
-      sectionTitle: section.title,
-      text: [
-        ...(section.paragraphs || []),
-        ...(section.paragraphsAfterImage || []),
-        ...(section.list?.items || []),
-      ].join(" "),
-    }))
-  );
+  // Collect all searchable text from a section (paragraphs + list items + captions)
+  const collectSectionText = (section: Section) =>
+    (section.content || [])
+      .map((block) => {
+        if (block.type === "paragraph") return block.text || "";
+        if (block.type === "list") return (block.items || []).join(" ");
+        if (block.type === "image") return block.caption || "";
+        return "";
+      })
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
 
-  // --- Fuse.js setup ---
+  // Build the index once
+  const indexedData: IndexedItem[] = useMemo(() => {
+    return (allContent as Page[]).flatMap((page) =>
+      (page.sections || []).map((section) => ({
+        pageSlug: page.slug,
+        pageTitle: page.hero?.title || "",
+        pageSubtitle: page.hero?.subtitle || "",
+        sectionId: section.id,
+        sectionTitle: section.title,
+        sectionText: collectSectionText(section),
+      }))
+    );
+    // allContent is static; no deps needed
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Fuse config: weigh body text highest, keep matches forgiving
   const fuse = useMemo(() => {
     return new Fuse(indexedData, {
-      keys: ["pageTitle", "pageSubtitle", "sectionTitle", "text"],
+      keys: [
+        { name: "sectionText", weight: 0.6 },
+        { name: "sectionTitle", weight: 0.25 },
+        { name: "pageTitle", weight: 0.15 },
+      ],
       threshold: 0.35,
-      minMatchCharLength: 2,
       ignoreLocation: true,
+      minMatchCharLength: 2,
+      shouldSort: true,
+      includeScore: true,
+      useExtendedSearch: false,
     });
   }, [indexedData]);
 
-  // --- Handle user input ---
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
 
-    if (value.trim().length > 1) {
-      const searchResults = fuse.search(value);
-      setResults(searchResults.map((r) => r.item));
-    } else {
+    const q = value.trim();
+    if (q.length < 2) {
       setResults([]);
+      return;
     }
+
+    const hits = fuse.search(q).map((r) => r.item).slice(0, 10);
+    setResults(hits);
   };
 
   return (
     <div className="relative w-full max-w-2xl">
-      {/* Input box */}
-      <div className="flex items-center gap-4 rounded-xl border-2 border-dark/20 bg-white px-4 py-2 shadow-md/4 focus-within:ring-2 focus-within:ring-primary">
+      {/* Input (2x wide vs md) */}
+      <div className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 shadow-sm focus-within:ring-2 focus-within:ring-primary">
         <Search className="h-4 w-4 text-gray-500" />
         <input
           type="text"
           value={query}
-          onChange={handleSearch}
-          placeholder="Search..."
+          onChange={handleChange}
+          placeholder="Search by keyword or phrase…"
           className="w-full border-none bg-transparent text-sm focus:outline-none"
+          aria-label="Site search"
         />
       </div>
 
-      {/* Results dropdown */}
-      {results.length > 0 && (
-        <ul className="absolute z-50 mt-6 w-full max-h-64 overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-lg">
-          {results.map((res, idx) => (
-            <li key={idx} className="border-b border-gray-100 last:border-none">
-              <Link
-                href={`${res.slug}#${res.sectionId}`}
-                className="block px-4 py-2 text-sm hover:bg-gray-50"
-              >
-                <span className="font-medium">{res.sectionTitle}</span>
-                <p className="text-gray-500 text-xs">{res.pageTitle}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {/* Results dropdown — styled like your header dropdown */}
+      {query && (results.length > 0 || query.length >= 2) && (
+        <div className="absolute left-0 top-full z-50 mt-2 w-full">
+          <div className="bg-white shadow-lg rounded-md overflow-hidden border border-gray-200">
+            {/* top primary cap to match header dropdown */}
+            <div className="h-2 bg-primary rounded-t-md" />
 
-      {/* No results fallback */}
-      {query.length > 1 && results.length === 0 && (
-        <div className="absolute z-50 mt-2 w-full rounded-xl border border-gray-200 bg-white shadow-lg p-3 text-sm text-gray-500">
-          No results found
+            {results.length > 0 ? (
+              <ul className="max-h-80 overflow-y-auto">
+                {results.map((res, idx) => (
+                  <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="border-b border-gray-100 last:border-none">
+                    <Link
+                      href={`${res.pageSlug}#${res.sectionId}`}
+                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors duration-150"
+                    >
+                      <div className="font-medium text-dark">{res.sectionTitle}</div>
+                      <div className="text-xs text-gray-500">{res.pageTitle}</div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="px-4 py-3 text-sm text-gray-600">No results found</div>
+            )}
+          </div>
         </div>
       )}
     </div>

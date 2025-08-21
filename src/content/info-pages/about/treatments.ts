@@ -10,6 +10,7 @@ export const treatmentsContent = {
     { id: "medications", title: "Medications" },
     { id: "supplements", title: "Supplements" },
     { id: "lifestyle", title: "Lifestyle Changes" },
+    { id: "alternative", title: "Alternative Treatments" },
     { id: "emerging", title: "New and Future Treatments" },
   ],
 
@@ -56,8 +57,8 @@ export const treatmentsContent = {
         {
           type: "paragraph",
           text: `The most common first medicines are called [anticonvulsants](https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/in-depth/pain-medications/art-20045004). 
-          Don't worry - even though they were first made to treat seizures, they're 
-          very good at treating nerve pain too. The two main ones are gabapentin and 
+          Although they were made to treat seizures, they can be very
+          effective at treating nerve pain too. The two main ones are gabapentin and 
           pregabalin (Lyrica).`,
         },
         {
@@ -127,7 +128,7 @@ export const treatmentsContent = {
         {
           type: "paragraph",
           text: `Quality matters when choosing supplements. Look for brands that have been 
-          tested by [third parties](https://www.consumerlab.com/) 
+          tested by third parties
           for purity and strength. Some supplements can interact with medicines, so 
           it's important to tell your doctor about everything you're taking.`,
         },
@@ -197,6 +198,86 @@ export const treatmentsContent = {
     },
 
     {
+      id: "alternative",
+      title: "Alternative Treatments",
+      content: [
+        {
+          type: "paragraph",
+          text: `Some people with SFN find help from treatments that are "off-label" 
+          or not yet widely accepted as standard care. These alternative treatments 
+          might be worth discussing with your doctor, especially if standard treatments 
+          haven't given you enough relief. Always work with your healthcare provider 
+          before trying any new treatment.`,
+        },
+        {
+          type: "paragraph",
+          text: `Two alternative treatments that some people with neuropathy find helpful 
+          are Low Dose Naltrexone and medical cannabis. While research is still ongoing, 
+          some studies show promising results for nerve pain relief.`,
+        },
+        {
+          type: "paragraph",
+          text: `**Low Dose Naltrexone (LDN)** is a medication that was originally used 
+          at higher doses to treat addiction. At very low doses (1-5mg daily), it 
+          may help reduce inflammation and pain. Some studies suggest LDN could be helpful for small fiber neuropathy, 
+          though more research is needed.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "How it works - LDN may reduce inflammation in the nervous system and help the body's natural pain-fighting systems work better.",
+            "Dosing - Typical doses are 1.5-4.5mg taken at bedtime. It must be compounded by a special pharmacy.",
+            "Side effects - Most people have few side effects. Some report vivid dreams or trouble sleeping at first.",
+            "Cost - Usually not covered by insurance and must be made by compounding pharmacies, costing $30-60 per month.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: `Research on LDN for diabetic neuropathy shows mixed results, 
+          but some studies found it more helpful for neuropathic pain conditions. 
+          It may work by blocking inflammation pathways in the central nervous system.`,
+        },
+        {
+          type: "paragraph",
+          text: `**Medical Cannabis** is legal in many states for treating chronic pain. 
+          Some people with neuropathy find it helps with pain and sleep, though the 
+          evidence is mixed and side effects can be significant.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Forms available - Oils, capsules, edibles, topicals, and inhaled forms. Different forms work differently.",
+            "CBD vs THC - CBD (cannabidiol) may help with pain and inflammation without causing a \"high.\" THC can help with pain but causes mental effects.",
+            "Legal considerations - Laws vary widely by state. You typically need a medical marijuana card and qualifying condition.",
+            "Dosing - Start with very low doses and increase slowly. Effects can take 1-2 hours with edibles.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: `Research suggests medical cannabis can be effective for nerve pain, 
+          and some studies show it can help chronic neuropathic pain without severe side effects. 
+          However, side effects like impaired thinking and breathing problems are common, especially at higher doses.`,
+        },
+        {
+          type: "paragraph",
+          text: `A major review found no high-quality evidence for cannabis in neuropathic pain, 
+          and some people find their symptoms actually get worse with use. It's important 
+          to discuss the risks and benefits with your doctor, especially if you have 
+          breathing problems, heart conditions, or mental health concerns.`,
+        },
+        {
+          type: "paragraph",
+          text: `Remember that these alternative treatments are not right for everyone. 
+          They may interact with other medications or have side effects that make 
+          them unsuitable for some people. The best approach is to work with a 
+          healthcare provider who understands both your condition and these treatments.`,
+        },
+      ],
+    },
+
+    {
       id: "emerging",
       title: "New and Future Treatments",
       content: [
@@ -258,6 +339,21 @@ export const treatmentsContent = {
         title:
           "Diabetic neuropathy - Diagnosis & treatment - Mayo Clinic",
         link: "https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/diagnosis-treatment/drc-20371587",
+      },
+      {
+        title:
+          "Medical Marijuana - Cleveland Clinic",
+        link: "https://my.clevelandclinic.org/health/treatments/23425-medical-marijuana-medical-cannabis",
+      },
+      {
+        title:
+          "Low-dose naltrexone for treatment of pain - National Center for Biotechnology Information",
+        link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313374/",
+      },
+      {
+        title:
+          "Efficacy of medical cannabis for painful chemotherapy-induced peripheral neuropathy - Clinical Cancer Research",
+        link: "https://aacrjournals.org/clincancerres/article/30/8/1473/742502/Efficacy-of-Medical-Cannabis-for-Painful",
       },
     ],
   },

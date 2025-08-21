@@ -1,4 +1,3 @@
-// src/app/about/[slug]/page.tsx
 import InfoPageTemplate from '@/components/info/InfoPageTemplate'
 import { getAboutPageData } from '@/content/contentLoader'
 import { notFound } from 'next/navigation'

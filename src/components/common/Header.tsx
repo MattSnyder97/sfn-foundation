@@ -129,7 +129,7 @@ const navLinks = [
                   {/* Dropdown */}
                   {isActive && link.dropdown && (
                     <div
-                      className="absolute left-0 top-full z-20 w-56 -translate-x-4"
+                      className="absolute left-0 top-full z-20 w-48 -translate-x-4"
                       onMouseEnter={() => openDropdown(link.label)}
                       onMouseLeave={scheduleClose}
                     >

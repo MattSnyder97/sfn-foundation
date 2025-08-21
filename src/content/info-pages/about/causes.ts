@@ -75,6 +75,13 @@ export const causesContent = {
           ],
         },
         {
+          type: "image",
+          src: "/images/diabetes.png",
+          alt: "Image showing blood sugar",
+          caption:
+            "People with diabetes that keep their levels in check tend to see improvements in their neuropathic pain.",
+        },
+        {
           type: "paragraph",
           text: `The good news is that better blood sugar control can help prevent more 
           nerve damage and sometimes even improve symptoms. Work with your healthcare 
@@ -280,10 +287,6 @@ export const causesContent = {
       {
         title: "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
         link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
-      },
-      {
-        title: "Small Fiber Neuropathy: A Clinical and Practical Approach - ScienceDirect",
-        link: "https://www.sciencedirect.com/science/article/pii/S1555415523000107",
       },
     ],
   },
