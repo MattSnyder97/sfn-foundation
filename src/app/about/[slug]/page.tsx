@@ -1,5 +1,5 @@
 import InfoPageTemplate from '@/components/info/InfoPageTemplate'
-import { getAboutPageData } from '@/content/contentLoader'
+import { getPageData } from '@/content/contentLoader'
 import { notFound } from 'next/navigation'
 
 interface PageProps {
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getAboutPageData(slug)
+  const pageData = getPageData(slug)
  
   if (!pageData) {
     return {
@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: PageProps) {
   }
 }
 
-export default async function AboutPage({ params }: PageProps) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getAboutPageData(slug)
+  const pageData = getPageData(slug)
  
   if (!pageData) {
     notFound()

@@ -1,4 +1,3 @@
-// src/content/contentLoader.ts
 import { allContent } from './index'
 
 interface ContentBlock {
@@ -57,30 +56,19 @@ export interface PageContent {
 }
 
 // Helper functions to get content by category and slug
-export function getAboutPageData(slug: string): PageContent | null {
-  // Handle main about page
-  if (slug === 'about') {
-    return (allContent as PageContent[]).find((item) => item.slug === '/about') || null
+export function getPageData(slug: string): PageContent | null {
+  // Check for main section pages
+  const mainSections = ['about', 'research', 'resources'];
+  if (mainSections.includes(slug)) {
+    return (allContent as PageContent[]).find((item) => item.slug === `/${slug}`) || null;
   }
-  // Handle sub-pages like causes, treatments, etc.
-  const content = (allContent as PageContent[]).find((item) => item.slug === `/about/${slug}`)
-  return content || null
-}
-
-export function getResearchPageData(slug: string): PageContent | null {
-  if (slug === 'research') {
-    return (allContent as PageContent[]).find((item) => item.slug === '/research') || null
+  // Check for sub-pages in each section
+  for (const section of mainSections) {
+    const content = (allContent as PageContent[]).find((item) => item.slug === `/${section}/${slug}`);
+    if (content) return content;
   }
-  const content = (allContent as PageContent[]).find((item) => item.slug === `/research/${slug}`)
-  return content || null
-}
-
-export function getResourcesPageData(slug: string): PageContent | null {
-  if (slug === 'resources') {
-    return (allContent as PageContent[]).find((item) => item.slug === '/resources') || null
-  }
-  const content = (allContent as PageContent[]).find((item) => item.slug === `/resources/${slug}`)
-  return content || null
+  // Fallback: try to find by slug directly
+  return (allContent as PageContent[]).find((item) => item.slug === slug) || null;
 }
 
 // Generic function to get any content by full slug path

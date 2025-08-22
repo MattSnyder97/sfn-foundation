@@ -1,8 +1,8 @@
-export const specialistsContent = {
-  slug: "/resources/specialists",
+export const careGiverTipsContent = {
+  slug: "/resources/caregiver-tips",
   tags: ["neuropathy", "nerve", "overview", "small fiber"],
   hero: {
-    title: "Find a Specialist",
+    title: "Caregiver Tips",
   },
 
   tableOfContents: [

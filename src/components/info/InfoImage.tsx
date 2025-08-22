@@ -8,7 +8,7 @@ interface InfoImageProps {
 
 export default function InfoImage({ src, alt, caption }: InfoImageProps) {
   return (
-    <figure className="my-8 w-full lg:w-2/3">
+    <figure className="my-8  w-full lg:w-2/3">
       <div className="relative rounded-[8px] overflow-hidden shadow-md/5">
         <Image
           src={src}

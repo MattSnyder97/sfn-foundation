@@ -1,4 +1,3 @@
-import InfoHero from "@/components/info/InfoHero";
 import InfoLayout from "@/components/layouts/InfoLayout";
 import InfoParagraphTitle from "@/components/info/InfoParagraphTitle";
 import InfoMeta from "@/components/info/InfoMeta";
@@ -64,7 +63,6 @@ interface InfoPageTemplateProps {
 export default function InfoPageTemplate({ content }: InfoPageTemplateProps) {
   return (
     <>
-      <InfoHero title={content.hero.title} />
 
       <InfoLayout 
         tableOfContents={content.tableOfContents}
