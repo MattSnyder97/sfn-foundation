@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer Section */}
-        <div className="border-t border-white border-opacity-20 pt-8">
+        <div className="border-t border-white/16 border-opacity-20 pt-8">
           {/* Copyright and Legal */}
           <div className="text-center md:text-left mb-8">
             <p className="text-sm opacity-70 mb-4">

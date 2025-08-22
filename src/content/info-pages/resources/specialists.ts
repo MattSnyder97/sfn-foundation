@@ -1,158 +1,188 @@
 export const specialistsContent = {
   slug: "/resources/specialists",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["neuropathy", "specialists", "neurology", "small fiber"],
   hero: {
     title: "Find a Specialist",
   },
 
   tableOfContents: [
-    { id: "what-is-sfn", title: "What is SFN?" },
-    { id: "causes", title: "Causes" },
-    { id: "diagnosis", title: "Diagnosis" },
-    { id: "symptoms", title: "Symptoms" },
-    { id: "treatments", title: "Treatments" },
+    { id: "overview", title: "Overview" },
+    { id: "what-to-look-for", title: "What to Look For" },
+    { id: "approved-specialists", title: "Approved Specialists" },
+    { id: "preparation-tips", title: "Preparing for Your Visit" },
   ],
 
   sections: [
     {
-      id: "what-is-sfn",
-      title: "What is Small Fiber Neuropathy?",
+      id: "overview",
+      title: "Overview",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy (SFN) is a condition that affects the smallest 
-          nerves in your body. These tiny nerve fibers control how you feel pain, 
-          temperature, and touch. When they don't work properly, you might experience 
-          burning pain, tingling, numbness, or strange sensations in your hands and feet.`,
+          text: `Finding the right specialist for Small Fiber Neuropathy can be challenging 
+          because many doctors are not familiar with this condition. SFN is often 
+          misdiagnosed or overlooked, so it's important to work with healthcare 
+          providers who have specific experience with small fiber neuropathy and 
+          understand the latest diagnostic techniques.`,
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people realize. It can affect anyone, but 
-          it's often seen in people with diabetes, autoimmune conditions, or certain 
-          genetic factors. The good news is that with proper diagnosis and treatment, 
-          many people with SFN can find relief and maintain a good quality of life.`,
+          text: `The best specialists for SFN are typically neurologists who focus on 
+          peripheral neuropathy or autonomic disorders. Some pain management 
+          specialists and rheumatologists may also be knowledgeable about SFN, 
+          especially when it's related to autoimmune conditions.`,
         },
         {
           type: "paragraph",
-          text: `Understanding your condition is the first step toward feeling better. 
-          The sections below will help you learn about the different aspects of SFN, 
-          from what causes it to how it's treated. Remember, you're not alone in this 
-          journey, and there are many resources and treatments available to help you.`,
+          text: `Getting an accurate diagnosis and proper treatment often requires seeing 
+          a specialist who stays current with SFN research and has access to the right 
+          diagnostic tools, like skin biopsy capabilities and autonomic function testing. 
+          Don't be discouraged if you need to travel or wait to see the right doctor.`,
         },
       ],
     },
 
     {
-      id: "causes",
-      title: "Causes",
+      id: "what-to-look-for",
+      title: "What to Look For",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy can have many different causes. The most common 
-          cause is diabetes, which damages nerves over time through high blood sugar 
-          levels. However, many other conditions can lead to SFN, including autoimmune 
-          diseases, vitamin deficiencies, and genetic factors.`,
+          text: `When searching for a specialist, look for doctors who have specific 
+          experience with small fiber neuropathy and peripheral nerve disorders. 
+          The right specialist should be familiar with current diagnostic criteria 
+          and treatment options for SFN.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Board certification in neurology, with subspecialty training in peripheral neuropathy or autonomic disorders",
+            "Experience with skin biopsy for intraepidermal nerve fiber density testing",
+            "Access to autonomic function testing like QSART and tilt table testing",
+            "Knowledge of current SFN research and treatment protocols",
+            "Willingness to work with other specialists for comprehensive care",
+            "Experience with autoimmune causes of neuropathy if relevant to your case",
+            "Understanding of both the sensory and autonomic aspects of small fiber neuropathy",
+            "Familiarity with less common causes of SFN beyond diabetes",
+          ],
         },
         {
           type: "paragraph",
-          text: `In about half of all SFN cases, doctors can't find a specific cause. 
-          This is called "idiopathic" SFN, which simply means the cause is unknown. 
-          Even when the cause isn't clear, effective treatments are still available 
-          to help manage symptoms and improve quality of life.`,
+          text: `Look for doctors affiliated with major medical centers or universities, 
+          as they often have more experience with rare conditions like SFN. Academic 
+          medical centers typically have the specialized testing equipment needed 
+          for proper diagnosis and may be involved in research that could benefit you.`,
         },
         {
           type: "paragraph",
-          text: `Understanding what might have caused your SFN can help guide treatment 
-          decisions. Sometimes treating the underlying cause can slow down or even 
-          improve neuropathy symptoms. [Learn more about SFN causes →](/about/causes)`,
+          text: `Don't hesitate to ask potential doctors about their experience with SFN 
+          during your initial consultation. A good specialist should be able to discuss 
+          diagnostic criteria, explain testing procedures, and outline treatment options 
+          specific to small fiber neuropathy.`,
         },
       ],
     },
 
     {
-      id: "diagnosis",
-      title: "Diagnosis",
+      id: "approved-specialists",
+      title: "Approved Specialists",
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time because 
-          it affects very small nerve fibers that don't show up on regular nerve tests. 
-          Your doctor will use your symptoms, physical exam, and special tests to 
-          make the diagnosis.`,
+          text: `The following specialists have demonstrated expertise in Small Fiber 
+          Neuropathy and related conditions. They are recognized leaders in the field 
+          who stay current with the latest research and treatment approaches.`,
+        },
+        {
+          type: "image",
+          src: "/images/specialists/anneOaklander.png",
+          alt: "Dr. Anne Louise Oaklander, MD, PhD - Massachusetts General Hospital, Boston, MA",
+          caption: "Dr. Anne Louise Oaklander, MD, PhD - Massachusetts General Hospital, Boston, MA",
         },
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a skin biopsy, where tiny samples 
-          of skin are examined under a microscope to count small nerve fibers. Blood 
-          tests help identify possible causes like diabetes or vitamin deficiencies. 
-          Other tests might include quantitative sensory testing and autonomic function tests.`,
+          text: `Dr. Oaklander is widely recognized as one of the world's leading experts 
+          on Small Fiber Neuropathy. She is a Professor of Neurology at Harvard Medical 
+          School and Director of the Nerve Injury Unit at Massachusetts General Hospital. 
+          Her research has been instrumental in advancing our understanding of SFN, 
+          particularly autoimmune causes and the role of skin biopsy in diagnosis.`,
+        },
+        {
+          type: "image",
+          src: "/images/specialists/lawrenceZeidman.png",
+          alt: "Dr. Lawrence Zeidman, MD - Northwest Community Health Services, Glenview, IL",
+          caption: "Dr. Lawrence Zeidman, MD - Northwest Community Health Services, Glenview, IL",
         },
         {
           type: "paragraph",
-          text: `While the diagnostic process can be frustrating, getting the right 
-          diagnosis is important for finding effective treatments. Working with a 
-          neurologist who understands SFN can make a big difference. 
-          [Learn more about SFN diagnosis →](/about/diagnosis)`,
+          text: `Dr. Zeidman is a neurologist specializing in peripheral neuropathy and 
+          neuromuscular disorders. He has extensive experience diagnosing and treating 
+          Small Fiber Neuropathy and is known for his thorough approach to finding 
+          underlying causes. He stays current with the latest research and treatment 
+          options for SFN patients.`,
+        },
+        {
+          type: "image",
+          src: "/images/specialists/brentGoodman.png",
+          alt: "Dr. Brent Goodman, MD - Mayo Clinic, Scottsdale, AZ",
+          caption: "Dr. Brent Goodman, MD - Mayo Clinic, Scottsdale, AZ",
+        },
+        {
+          type: "paragraph",
+          text: `Dr. Goodman is a neurologist who specializes in autonomic disorders and 
+          dysautonomia. While his primary focus is on autonomic dysfunction, he has 
+          significant experience with the autonomic aspects of Small Fiber Neuropathy. 
+          This makes him particularly valuable for patients who have both sensory and 
+          autonomic symptoms.`,
         },
       ],
     },
 
     {
-      id: "symptoms",
-      title: "Symptoms",
+      id: "preparation-tips",
+      title: "Preparing for Your Visit",
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or tingling 
-          sensations. Many people say it feels like walking on hot coals or being 
-          stuck with pins and needles. These symptoms usually start in the feet and 
-          hands and can gradually spread up the legs and arms.`,
+          text: `Getting the most out of your specialist visit requires good preparation. 
+          Since appointments with experts are often limited and may involve long wait 
+          times, it's important to make the most of your time together.`,
         },
         {
           type: "paragraph",
-          text: `Common symptoms include burning pain, numbness, sensitivity to touch, 
-          and difficulty sensing temperature changes. Some people also experience 
-          problems with automatic body functions like sweating, digestion, or blood 
-          pressure changes.`,
+          text: `Before your appointment, gather all relevant medical records, including 
+          previous test results, imaging studies, and reports from other doctors. 
+          Create a detailed timeline of your symptoms and any treatments you've tried. 
+          This information will help the specialist understand your case quickly.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Bring all previous test results, including blood work, nerve conduction studies, and any previous skin biopsies",
+            "Create a detailed symptom diary noting when symptoms started, how they've progressed, and what makes them better or worse",
+            "List all medications and supplements you've tried, including doses and how long you took them",
+            "Write down your family medical history, including any relatives with neuropathy, diabetes, or autoimmune conditions",
+            "Prepare a list of specific questions you want to ask about your diagnosis and treatment options",
+            "Bring a list of all current medications, including over-the-counter drugs and supplements",
+            "Consider bringing a family member or friend to help remember important information",
+            "Be prepared to discuss how your symptoms affect your daily life and work",
+          ],
         },
         {
           type: "paragraph",
-          text: `Symptoms can vary greatly from person to person and may change over time. 
-          Some people have mild symptoms that come and go, while others have constant 
-          pain that affects daily activities. Understanding your symptoms helps you 
-          and your healthcare team develop the best treatment plan. 
-          [Learn more about SFN symptoms →](/about/symptoms)`,
-        },
-      ],
-    },
-
-    {
-      id: "treatments",
-      title: "Treatments",
-      content: [
-        {
-          type: "paragraph",
-          text: `While there's no cure for SFN yet, many treatments can help manage 
-          pain and improve quality of life. Treatment usually involves a combination 
-          of medications, lifestyle changes, and other therapies. The goal is to 
-          reduce symptoms and treat any underlying conditions that might be causing 
-          the neuropathy.`,
+          text: `Don't be afraid to ask questions during your visit. Good specialists 
+          welcome informed patients who want to understand their condition. Ask about 
+          the doctor's experience with SFN, what tests they recommend, and what 
+          treatment options are available for your specific situation.`,
         },
         {
           type: "paragraph",
-          text: `Common medications include anticonvulsants like gabapentin and pregabalin, 
-          antidepressants like duloxetine, and topical treatments like lidocaine patches. 
-          Supplements such as alpha-lipoic acid and B vitamins may also help. Lifestyle 
-          changes like regular exercise, good blood sugar control, and stress management 
-          play important roles too.`,
-        },
-        {
-          type: "paragraph",
-          text: `Finding the right treatment takes time and patience. What works for one 
-          person might not work for another, so doctors often try different combinations 
-          until they find what works best. The sooner treatment begins, the better 
-          the chances of managing symptoms effectively. 
-          [Learn more about SFN treatments →](/about/treatments)`,
+          text: `Remember that finding the right diagnosis and treatment for SFN often 
+          takes time. Be prepared for the possibility of additional testing and follow-up 
+          visits. The investment in seeing an experienced specialist is usually worth 
+          it for getting proper care and avoiding years of misdiagnosis.`,
         },
       ],
     },
@@ -160,25 +190,19 @@ export const specialistsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "August 22, 2025",
     references: [
       {
-        title:
-          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
-        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
+        title: "Small Fiber Neuropathy - Genetic and Rare Diseases Information Center",
+        link: "https://rarediseases.info.nih.gov/diseases/10750/small-fiber-neuropathy",
       },
       {
-        title: "Peripheral neuropathy - Overview - Mayo Clinic",
-        link: "https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061",
+        title: "Peripheral Neuropathy - National Institute of Neurological Disorders and Stroke",
+        link: "https://www.ninds.nih.gov/health-information/patient-caregiver-education/fact-sheets/peripheral-neuropathy-fact-sheet",
       },
       {
-        title:
-          "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
-      },
-      {
-        title: "Small fiber neuropathy - National Institute of Neurological Disorders",
-        link: "https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy",
+        title: "Finding a Doctor - National Organization for Rare Disorders",
+        link: "https://rarediseases.org/for-patients-and-families/information-resources/finding-a-doctor/",
       },
     ],
   },

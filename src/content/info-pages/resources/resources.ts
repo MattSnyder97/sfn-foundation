@@ -87,7 +87,7 @@ export const resourcesContent = {
         },
         {
           type: "paragraph",
-          text: `[Find SFN specialists in your area](/resources/specialists)`,
+          text: `[Find a SFN specialist](/resources/specialists)`,
         },
       ],
     },
