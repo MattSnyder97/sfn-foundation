@@ -12,24 +12,26 @@ export default function InfoParagraph({ children }: InfoParagraphProps) {
       <div className="text-md leading-relaxed text-dark mb-4">
         <ReactMarkdown
           components={{
-            // Style links to match your design system
-            a: ({ children, href }) => (
-              <a 
-                href={href} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:text-secondary underline font-medium transition-colors duration-200"
-              >
-                {children}
-              </a>
-            ),
-            // Style bold text
+            a: ({ children, href }) => {
+              const isInternal = href && href.startsWith('/');
+              return (
+                <a
+                  href={href}
+                  target={isInternal ? undefined : "_blank"}
+                  rel={isInternal ? undefined : "noopener noreferrer"}
+                  className="text-primary hover:text-secondary underline font-medium transition-colors duration-200 print:hidden"
+                >
+                  {children}
+                </a>
+              );
+            },
+
             strong: ({ children }) => (
               <strong className="font-bold text-black">
                 {children}
               </strong>
             ),
-            // Remove default paragraph wrapper since we handle it in the parent
+
             p: ({ children }) => <>{children}</>
           }}
         >
@@ -39,7 +41,6 @@ export default function InfoParagraph({ children }: InfoParagraphProps) {
     );
   }
 
-  // Fallback for non-string children (maintains backward compatibility)
   return (
     <p className="text-md leading-relaxed text-dark mb-4">
       {children}

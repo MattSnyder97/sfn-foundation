@@ -64,7 +64,7 @@ export const aboutContent = {
           type: "paragraph",
           text: `Understanding what might have caused your SFN can help guide treatment 
           decisions. Sometimes treating the underlying cause can slow down or even 
-          improve neuropathy symptoms. [Learn more about SFN causes →](/about/causes)`,
+          improve neuropathy symptoms. [Learn more about SFN causes](/about/causes)`,
         },
       ],
     },
@@ -85,7 +85,7 @@ export const aboutContent = {
           text: `While the diagnostic process can be frustrating, getting the right 
           diagnosis is important for finding effective treatments. Working with a 
           neurologist who understands SFN can make a big difference. 
-          [Learn more about SFN diagnosis →](/about/diagnosis)`,
+          [Learn more about SFN diagnosis](/about/diagnosis)`,
         },
       ],
     },
@@ -114,7 +114,7 @@ export const aboutContent = {
           Some people have mild symptoms that come and go, while others have constant 
           pain that affects daily activities. Understanding your symptoms helps you 
           and your healthcare team develop the best treatment plan. 
-          [Learn more about SFN symptoms →](/about/symptoms)`,
+          [Learn more about SFN symptoms](/about/symptoms)`,
         },
       ],
     },
@@ -145,14 +145,14 @@ export const aboutContent = {
           person might not work for another, so doctors often try different combinations 
           until they find what works best. The sooner treatment begins, the better 
           the chances of managing symptoms effectively. 
-          [Learn more about SFN treatments →](/about/treatments)`,
+          [Learn more about SFN treatments](/about/treatments)`,
         },
       ],
     },
   ],
 
   meta: {
-    author: "Matt Snyder",
+    author: "the SFN Foundation",
     lastUpdated: "August 20, 2025",
     references: [
       {

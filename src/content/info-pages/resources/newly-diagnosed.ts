@@ -1,210 +1,299 @@
 export const newlyDiagnosedContent = {
   slug: "/resources/newly-diagnosed",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["newly diagnosed", "next steps", "first steps", "beginning", "diagnosis", "what now"],
   hero: {
     title: "Newly Diagnosed",
   },
 
   tableOfContents: [
-    { id: "what-is-sfn", title: "What is SFN?" },
-    { id: "causes", title: "Causes" },
-    { id: "diagnosis", title: "Diagnosis" },
-    { id: "symptoms", title: "Symptoms" },
-    { id: "treatments", title: "Treatments" },
+    { id: "overview", title: "You Are Not Alone" },
+    { id: "understanding-diagnosis", title: "Understanding Your Diagnosis" },
+    { id: "immediate-steps", title: "Immediate Next Steps" },
+    { id: "building-team", title: "Building Your Healthcare Team" },
+    { id: "lifestyle-adjustments", title: "Lifestyle Adjustments" },
+    { id: "mental-health", title: "Mental Health" },
   ],
 
   sections: [
     {
-      id: "what-is-sfn",
-      title: "What is Small Fiber Neuropathy?",
+      id: "overview",
+      title: "You Are Not Alone",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy (SFN) is a condition that affects the smallest 
-          nerves in your body. These tiny nerve fibers control how you feel pain, 
-          temperature, and touch. When they don't work properly, you might experience 
-          burning pain, tingling, numbness, or strange sensations in your hands and feet.`,
+          text: `Getting diagnosed with small fiber neuropathy can feel overwhelming and 
+          scary. You might have many questions, concerns, and emotions right now. 
+          The good news is that you finally have answers 
+          for the symptoms you've been experiencing, and now you can start working 
+          toward feeling better.`,
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people realize. It can affect anyone, but 
-          it's often seen in people with diabetes, autoimmune conditions, or certain 
-          genetic factors. The good news is that with proper diagnosis and treatment, 
-          many people with SFN can find relief and maintain a good quality of life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Understanding your condition is the first step toward feeling better. 
-          The sections below will help you learn about the different aspects of SFN, 
-          from what causes it to how it's treated. Remember, you're not alone in this 
-          journey, and there are many resources and treatments available to help you.`,
+          text: `While SFN is a chronic condition, many people with this diagnosis go on 
+          to live full, active lives. With the right treatment plan and lifestyle 
+          adjustments, you can manage your symptoms and maintain your quality of life. 
+          This journey will have ups and downs, but you don't have to face it alone.`,
         },
       ],
     },
 
     {
-      id: "causes",
-      title: "Causes",
+      id: "understanding-diagnosis",
+      title: "Understanding Your Diagnosis",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy can have many different causes. The most common 
-          cause is diabetes, which damages nerves over time through high blood sugar 
-          levels. However, many other conditions can lead to SFN, including autoimmune 
-          diseases, vitamin deficiencies, and genetic factors.`,
+          text: `Small fiber neuropathy means that the smallest nerve fibers in your body 
+          have become damaged. These tiny nerves are responsible for carrying pain, 
+          temperature, and touch sensations from your skin to your brain. They also 
+          help control automatic body functions like sweating and blood pressure.`,
         },
         {
           type: "paragraph",
-          text: `In about half of all SFN cases, doctors can't find a specific cause. 
-          This is called "idiopathic" SFN, which simply means the cause is unknown. 
-          Even when the cause isn't clear, effective treatments are still available 
-          to help manage symptoms and improve quality of life.`,
+          text: `SFN can be caused by many different things, and sometimes the exact cause 
+          isn't found. Common causes include diabetes, autoimmune diseases, vitamin 
+          deficiencies, certain medications, and genetic factors. Understanding what 
+          might have caused your neuropathy can help guide your treatment.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Your symptoms are real and valid - SFN causes genuine pain and discomfort, even though others might not see it.",
+            "Symptoms can vary - You might experience burning, stabbing, tingling, numbness, or sensitivity to touch.",
+            "It typically starts in feet and hands - Most people notice symptoms in their extremities first.",
+            "Progression varies - Some people's symptoms stay stable, while others may worsen or even improve over time.",
+            "Treatment is available - While there's no cure, many effective treatments can help manage symptoms.",
+            "Research is ongoing - Scientists are continuously working to better understand and treat SFN.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Understanding what might have caused your SFN can help guide treatment 
-          decisions. Sometimes treating the underlying cause can slow down or even 
-          improve neuropathy symptoms. [Learn more about SFN causes →](/about/causes)`,
+          text: `It's important to understand that having SFN doesn't mean your life is over. 
+          While it's a chronic condition that requires ongoing management, many people 
+          with SFN continue to work, exercise, travel, and enjoy their relationships and hobbies.`,
         },
       ],
     },
 
     {
-      id: "diagnosis",
-      title: "Diagnosis",
+      id: "immediate-steps",
+      title: "Immediate Next Steps",
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time because 
-          it affects very small nerve fibers that don't show up on regular nerve tests. 
-          Your doctor will use your symptoms, physical exam, and special tests to 
-          make the diagnosis.`,
+          text: `Now that you have a diagnosis, there are several important steps you can 
+          take right away to start managing your condition effectively. These early 
+          actions can help set you up for the best possible outcomes and give you a 
+          sense of control over your health.`,
+        },
+        {
+          type: "list",
+          ordered: true,
+          items: [
+            "Ask questions about your diagnosis - Make sure you understand what SFN means for you specifically. Ask about the likely progression, treatment options, and what to expect.",
+            "Get copies of your test results - Keep copies of your skin biopsy, blood tests, and other diagnostic results for your records.",
+            "Research the underlying cause - If a cause was identified (like diabetes or vitamin deficiency), learn about managing that condition.",
+            "Start a symptom diary - Track your pain levels, symptoms, and what might trigger flare-ups. This information will be valuable for your healthcare team.",
+            "Review your medications - Go over all your current medications with your doctor to see if any might be contributing to nerve damage.",
+            "Get blood work if not done recently - Check for diabetes, vitamin B12, thyroid function, and other conditions that can affect nerves.",
+            "Schedule follow-up appointments - Plan regular check-ins with your healthcare team to monitor your condition and adjust treatments.",
+            "Connect with support resources - Look into patient organizations, online communities, and local support groups.",
+          ],
         },
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a skin biopsy, where tiny samples 
-          of skin are examined under a microscope to count small nerve fibers. Blood 
-          tests help identify possible causes like diabetes or vitamin deficiencies. 
-          Other tests might include quantitative sensory testing and autonomic function tests.`,
-        },
-        {
-          type: "paragraph",
-          text: `While the diagnostic process can be frustrating, getting the right 
-          diagnosis is important for finding effective treatments. Working with a 
-          neurologist who understands SFN can make a big difference. 
-          [Learn more about SFN diagnosis →](/about/diagnosis)`,
+          text: `Don't try to do everything at once. Take these steps gradually and at 
+          your own pace. Some days you might feel motivated to tackle several tasks, 
+          while other days you might only manage one small thing—both approaches are fine.`.replace('—', '-')
         },
       ],
     },
 
     {
-      id: "symptoms",
-      title: "Symptoms",
+      id: "building-team",
+      title: "Building Your Healthcare Team",
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or tingling 
-          sensations. Many people say it feels like walking on hot coals or being 
-          stuck with pins and needles. These symptoms usually start in the feet and 
-          hands and can gradually spread up the legs and arms.`,
+          text: `Managing SFN effectively often requires working with multiple healthcare 
+          providers. Building a good healthcare team can make a huge difference in your 
+          treatment outcomes and quality of life. Each team member brings different 
+          expertise to help address various aspects of your condition.`,
         },
         {
           type: "paragraph",
-          text: `Common symptoms include burning pain, numbness, sensitivity to touch, 
-          and difficulty sensing temperature changes. Some people also experience 
-          problems with automatic body functions like sweating, digestion, or blood 
-          pressure changes.`,
+          text: `Start with your current doctors and add specialists as needed. Good 
+          communication between team members is important, so make sure they can share 
+          information and coordinate your care effectively.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Primary care physician - Coordinates your overall care and manages general health issues.",
+            "Neurologist - Specializes in nerve disorders and can prescribe neuropathy medications.",
+            "Endocrinologist - Manages diabetes and other hormone-related causes of neuropathy.",
+            "Pain management specialist - Focuses on controlling chronic pain through various approaches.",
+            "Rheumatologist - Treats autoimmune diseases that might be causing nerve damage.",
+            "Physical therapist - Helps maintain mobility and teaches exercises to manage symptoms.",
+            "Mental health counselor - Supports emotional well-being and helps with coping strategies.",
+            "Pharmacist - Provides medication counseling and helps manage drug interactions.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Symptoms can vary greatly from person to person and may change over time. 
-          Some people have mild symptoms that come and go, while others have constant 
-          pain that affects daily activities. Understanding your symptoms helps you 
-          and your healthcare team develop the best treatment plan. 
-          [Learn more about SFN symptoms →](/about/symptoms)`,
+          text: `When choosing healthcare providers, look for those who are knowledgeable 
+          about neuropathy and who listen to your concerns. Don't hesitate to get second 
+          opinions if you're not satisfied with your care or if you want to explore 
+          different treatment options.`,
+        },
+        {
+          type: "paragraph",
+          text: `Prepare for appointments by writing down your questions beforehand and 
+          bringing someone with you if possible. Take notes during visits or ask if 
+          you can record the conversation to help you remember important information later.`,
         },
       ],
     },
 
     {
-      id: "treatments",
-      title: "Treatments",
+      id: "lifestyle-adjustments",
+      title: "Lifestyle Adjustments",
       content: [
         {
           type: "paragraph",
-          text: `While there's no cure for SFN yet, many treatments can help manage 
-          pain and improve quality of life. Treatment usually involves a combination 
-          of medications, lifestyle changes, and other therapies. The goal is to 
-          reduce symptoms and treat any underlying conditions that might be causing 
-          the neuropathy.`,
+          text: `Making certain lifestyle changes can help you manage SFN symptoms and 
+          potentially slow the progression of nerve damage. These adjustments might 
+          seem overwhelming at first, but start with small changes and build gradually. 
+          Even modest improvements can make a meaningful difference in how you feel.`,
         },
         {
           type: "paragraph",
-          text: `Common medications include anticonvulsants like gabapentin and pregabalin, 
-          antidepressants like duloxetine, and topical treatments like lidocaine patches. 
-          Supplements such as alpha-lipoic acid and B vitamins may also help. Lifestyle 
-          changes like regular exercise, good blood sugar control, and stress management 
-          play important roles too.`,
+          text: `Focus on changes that feel manageable and sustainable for you. You don't 
+          have to transform your entire life overnight. Pick one or two areas to work 
+          on first, and add more healthy habits as these become routine.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Blood sugar management - Keep blood sugar levels stable through diet and exercise, even if you don't have diabetes.",
+            "Regular gentle exercise - Walking, swimming, or yoga can improve circulation and reduce pain for many people.",
+            "Foot care routine - Inspect your feet daily, keep them clean and moisturized, and wear supportive shoes.",
+            "Stress management - Practice relaxation techniques like deep breathing, meditation, or mindfulness.",
+            "Sleep hygiene - Maintain regular sleep schedules and create a comfortable sleep environment.",
+            "Alcohol moderation - Limit alcohol consumption as it can worsen neuropathy symptoms.",
+            "Smoking cessation - If you smoke, quitting can improve circulation and nerve health.",
+            "Balanced nutrition - Eat a diet rich in B vitamins and antioxidants to support nerve health.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Finding the right treatment takes time and patience. What works for one 
-          person might not work for another, so doctors often try different combinations 
-          until they find what works best. The sooner treatment begins, the better 
-          the chances of managing symptoms effectively. 
-          [Learn more about SFN treatments →](/about/treatments)`,
+          text: `Pay attention to what triggers your symptoms and what provides relief. 
+          Some people find that heat makes their symptoms worse, while others find 
+          warmth soothing. Keep track of these patterns so you can adjust your 
+          environment and activities accordingly.`,
+        },
+        {
+          type: "paragraph",
+          text: `Consider working with a nutritionist or registered dietitian to develop 
+          an eating plan that supports nerve health. They can help you understand which 
+          foods might help reduce inflammation and provide the nutrients your nerves need to function their best.`,
+        },
+      ],
+    },
+
+    {
+      id: "mental-health",
+      title: "Mental Health",
+      content: [
+        {
+          type: "paragraph",
+          text: `Being diagnosed with a chronic condition like SFN can trigger many 
+          emotions—fear, anger, sadness, or anxiety are all normal responses. Dealing 
+          with chronic pain and symptoms can also affect your mood and mental health 
+          over time. It's important to address these emotional aspects as part of your overall care.`.replace('—', '-')
+        },
+        {
+          type: "paragraph",
+          text: `Many people find that their mental health improves as they learn to 
+          manage their SFN symptoms effectively. However, don't hesitate to seek 
+          professional help if you're struggling with depression, anxiety, or other 
+          emotional challenges.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Allow yourself to grieve - It's normal to feel sad about your diagnosis and any limitations it might bring.",
+            "Stay connected - Maintain relationships with family and friends who support you.",
+            "Join support groups - Connect with others who understand what you're going through.",
+            "Consider counseling - A therapist can help you develop coping strategies and process difficult emotions.",
+            "Practice self-compassion - Be patient and kind with yourself as you adjust to your diagnosis.",
+            "Focus on what you can control - Direct your energy toward managing your symptoms and maintaining your health.",
+            "Maintain hope - Remember that treatments are available and research is continuing.",
+            "Celebrate small victories - Acknowledge improvements and good days when they happen.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: `Consider cognitive behavioral therapy (CBT) or other counseling approaches 
+          that can help you develop better coping skills for managing chronic pain and 
+          the emotional challenges that come with it. Many people find these tools 
+          extremely helpful in maintaining their quality of life.`,
+        },
+        {
+          type: "paragraph",
+          text: `Remember that asking for help is a sign of strength, not weakness. 
+          Whether it's help with daily tasks, emotional support, or professional 
+          counseling, accepting assistance allows you to focus your energy on healing and recovery.`,
+        },
+        {
+          type: "image",
+          src: "/images/supportGroup.png",
+          alt: "People in a support group setting",
+          caption:
+            "Connecting with others who understand your experience can provide valuable emotional support and practical tips.",
+        },
+        {
+          type: "paragraph",
+          text: `Your journey with SFN will be unique to you. Some days will be better 
+          than others, and that's completely normal. Focus on taking things one day 
+          at a time and building the support systems and coping strategies that work best for your situation.`,
         },
       ],
     },
   ],
 
   meta: {
-    author: "Matt Snyder",
+    author: "the SFN Foundation",
     lastUpdated: "August 20, 2025",
     references: [
       {
-        title:
-          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
+        title: "Foundation for Peripheral Neuropathy - Newly Diagnosed Guide",
+        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/newly-diagnosed/",
+      },
+      {
+        title: "American Diabetes Association - Diabetic Neuropathy",
+        link: "https://www.diabetes.org/diabetes/complications/neuropathy",
+      },
+      {
+        title: "National Institute of Neurological Disorders and Stroke - Peripheral Neuropathy",
+        link: "https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy",
+      },
+      {
+        title: "Cleveland Clinic - Small Fiber Neuropathy: Next Steps After Diagnosis",
         link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
       },
       {
-        title: "Peripheral neuropathy - Overview - Mayo Clinic",
+        title: "Mayo Clinic - Peripheral Neuropathy: Living with the Condition",
         link: "https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061",
       },
       {
-        title:
-          "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
-      },
-      {
-        title: "Small fiber neuropathy - National Institute of Neurological Disorders",
-        link: "https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy",
+        title: "National Alliance on Mental Illness - Chronic Illness and Mental Health",
+        link: "https://www.nami.org/About-Mental-Illness/Common-with-Medical-Illnesses",
       },
     ],
   },
 };
-
-// ---- Types ----
-export interface ContentBlock {
-  type: "paragraph" | "list" | "image";
-}
-
-export interface ParagraphBlock extends ContentBlock {
-  type: "paragraph";
-  text: string;
-}
-
-export interface ListBlock extends ContentBlock {
-  type: "list";
-  ordered: boolean;
-  items: string[];
-}
-
-export interface ImageBlock extends ContentBlock {
-  type: "image";
-  src: string;
-  alt: string;
-  caption?: string;
-}
-
-export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;

@@ -1,184 +1,212 @@
 export const resourcesContent = {
   slug: "/resources",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["resources", "help", "support", "caregiver", "specialist"],
   hero: {
     title: "Resources",
   },
 
   tableOfContents: [
-    { id: "what-is-sfn", title: "What is SFN?" },
-    { id: "causes", title: "Causes" },
-    { id: "diagnosis", title: "Diagnosis" },
-    { id: "symptoms", title: "Symptoms" },
-    { id: "treatments", title: "Treatments" },
+    { id: "caregiver-tips", title: "Caregiver Tips" },
+    { id: "faqs", title: "FAQs" },
+    { id: "find-specialist", title: "Find a Specialist" },
+    { id: "newly-diagnosed", title: "Newly Diagnosed" },
+    { id: "sfn-dictionary", title: "SFN Dictionary" },
+    { id: "support-group", title: "Support Group" },
+    { id: "supplements", title: "Supplements" },
   ],
 
   sections: [
     {
-      id: "what-is-sfn",
-      title: "What is Small Fiber Neuropathy?",
+      id: "caregiver-tips",
+      title: "Caregiver Tips",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy (SFN) is a condition that affects the smallest 
-          nerves in your body. These tiny nerve fibers control how you feel pain, 
-          temperature, and touch. When they don't work properly, you might experience 
-          burning pain, tingling, numbness, or strange sensations in your hands and feet.`,
+          text: `Caring for someone with Small Fiber Neuropathy can be challenging, 
+          but your support makes a real difference in their quality of life. 
+          Understanding the condition and learning effective caregiving strategies 
+          can help both you and your loved one navigate this journey together.`,
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people realize. It can affect anyone, but 
-          it's often seen in people with diabetes, autoimmune conditions, or certain 
-          genetic factors. The good news is that with proper diagnosis and treatment, 
-          many people with SFN can find relief and maintain a good quality of life.`,
+          text: `Key areas to focus on include pain management support, helping with 
+          daily activities when symptoms flare, understanding medication schedules, 
+          and recognizing when professional help is needed. Remember to take care 
+          of yourself too – caregiver burnout is real and addressing it helps 
+          everyone involved.`,
         },
         {
           type: "paragraph",
-          text: `Understanding your condition is the first step toward feeling better. 
-          The sections below will help you learn about the different aspects of SFN, 
-          from what causes it to how it's treated. Remember, you're not alone in this 
-          journey, and there are many resources and treatments available to help you.`,
+          text: `[Read our complete caregiver guide](/resources/caregiver-tips)`,
         },
       ],
     },
 
     {
-      id: "causes",
-      title: "Causes",
+      id: "faqs",
+      title: "Frequently Asked Questions",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy can have many different causes. The most common 
-          cause is diabetes, which damages nerves over time through high blood sugar 
-          levels. However, many other conditions can lead to SFN, including autoimmune 
-          diseases, vitamin deficiencies, and genetic factors.`,
+          text: `We've compiled answers to the most common questions about Small Fiber 
+          Neuropathy. Whether you're newly diagnosed, exploring treatment options, 
+          or looking for practical advice on living with SFN, these FAQs address 
+          the concerns we hear most often from the community.`,
         },
         {
           type: "paragraph",
-          text: `In about half of all SFN cases, doctors can't find a specific cause. 
-          This is called "idiopathic" SFN, which simply means the cause is unknown. 
-          Even when the cause isn't clear, effective treatments are still available 
-          to help manage symptoms and improve quality of life.`,
+          text: `Topics covered include diagnosis processes, treatment effectiveness, 
+          lifestyle modifications, prognosis, and when to seek emergency care. 
+          If you don't find your question answered, consider joining our support 
+          group or consulting with a healthcare provider.`,
         },
         {
           type: "paragraph",
-          text: `Understanding what might have caused your SFN can help guide treatment 
-          decisions. Sometimes treating the underlying cause can slow down or even 
-          improve neuropathy symptoms. [Learn more about SFN causes →](/about/causes)`,
+          text: `[Browse all FAQs](/#faqs)`,
         },
       ],
     },
 
     {
-      id: "diagnosis",
-      title: "Diagnosis",
+      id: "find-specialist",
+      title: "Find a Specialist",
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time because 
-          it affects very small nerve fibers that don't show up on regular nerve tests. 
-          Your doctor will use your symptoms, physical exam, and special tests to 
-          make the diagnosis.`,
+          text: `Finding the right healthcare provider is crucial for effective SFN 
+          management. Neurologists who specialize in peripheral neuropathy typically 
+          have the most experience diagnosing and treating Small Fiber Neuropathy. 
+          Some pain management specialists and endocrinologists also have relevant expertise.`,
         },
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a skin biopsy, where tiny samples 
-          of skin are examined under a microscope to count small nerve fibers. Blood 
-          tests help identify possible causes like diabetes or vitamin deficiencies. 
-          Other tests might include quantitative sensory testing and autonomic function tests.`,
+          text: `When looking for a specialist, consider their experience with SFN, 
+          location, insurance acceptance, and approach to treatment. Don't hesitate 
+          to ask questions about their experience with your specific type of 
+          neuropathy and treatment philosophy during your consultation.`,
         },
         {
           type: "paragraph",
-          text: `While the diagnostic process can be frustrating, getting the right 
-          diagnosis is important for finding effective treatments. Working with a 
-          neurologist who understands SFN can make a big difference. 
-          [Learn more about SFN diagnosis →](/about/diagnosis)`,
+          text: `[Find SFN specialists in your area](/resources/specialists)`,
         },
       ],
     },
 
     {
-      id: "symptoms",
-      title: "Symptoms",
+      id: "newly-diagnosed",
+      title: "Newly Diagnosed",
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or tingling 
-          sensations. Many people say it feels like walking on hot coals or being 
-          stuck with pins and needles. These symptoms usually start in the feet and 
-          hands and can gradually spread up the legs and arms.`,
+          text: `Receiving an SFN diagnosis can feel overwhelming, but you're taking 
+          an important step by seeking information. Having a name for your symptoms 
+          means you can now focus on effective treatments and management strategies. 
+          Many people with SFN go on to live full, active lives with proper care.`,
         },
         {
           type: "paragraph",
-          text: `Common symptoms include burning pain, numbness, sensitivity to touch, 
-          and difficulty sensing temperature changes. Some people also experience 
-          problems with automatic body functions like sweating, digestion, or blood 
-          pressure changes.`,
+          text: `Your next steps typically include working with your healthcare team 
+          to identify any underlying causes, exploring treatment options, and learning 
+          about lifestyle modifications that can help. Remember that treatment often 
+          takes time to optimize, so patience with the process is important.`,
         },
         {
           type: "paragraph",
-          text: `Symptoms can vary greatly from person to person and may change over time. 
-          Some people have mild symptoms that come and go, while others have constant 
-          pain that affects daily activities. Understanding your symptoms helps you 
-          and your healthcare team develop the best treatment plan. 
-          [Learn more about SFN symptoms →](/about/symptoms)`,
+          text: `[Complete guide for newly diagnosed patients](/resources/newly-diagnosed)`,
         },
       ],
     },
 
     {
-      id: "treatments",
-      title: "Treatments",
+      id: "sfn-dictionary",
+      title: "SFN Dictionary",
       content: [
         {
           type: "paragraph",
-          text: `While there's no cure for SFN yet, many treatments can help manage 
-          pain and improve quality of life. Treatment usually involves a combination 
-          of medications, lifestyle changes, and other therapies. The goal is to 
-          reduce symptoms and treat any underlying conditions that might be causing 
-          the neuropathy.`,
+          text: `Medical terminology can be confusing, especially when dealing with 
+          a complex condition like Small Fiber Neuropathy. Our dictionary explains 
+          common terms you'll encounter in medical appointments, research articles, 
+          and online discussions about SFN.`,
         },
         {
           type: "paragraph",
-          text: `Common medications include anticonvulsants like gabapentin and pregabalin, 
-          antidepressants like duloxetine, and topical treatments like lidocaine patches. 
-          Supplements such as alpha-lipoic acid and B vitamins may also help. Lifestyle 
-          changes like regular exercise, good blood sugar control, and stress management 
-          play important roles too.`,
+          text: `From basic anatomy terms to medication names and diagnostic procedures, 
+          understanding the vocabulary helps you communicate more effectively with 
+          your healthcare team and make informed decisions about your care.`,
         },
         {
           type: "paragraph",
-          text: `Finding the right treatment takes time and patience. What works for one 
-          person might not work for another, so doctors often try different combinations 
-          until they find what works best. The sooner treatment begins, the better 
-          the chances of managing symptoms effectively. 
-          [Learn more about SFN treatments →](/about/treatments)`,
+          text: `[Browse the SFN dictionary](/resources/dictionary)`,
+        },
+      ],
+    },
+
+    {
+      id: "support-group",
+      title: "Support Group",
+      content: [
+        {
+          type: "paragraph",
+          text: `Connecting with others who understand what you're going through can 
+          provide emotional support, practical advice, and a sense of community. 
+          Our support group brings together people with SFN, their families, and 
+          caregivers in a safe, understanding environment.`,
+        },
+        {
+          type: "paragraph",
+          text: `Members share experiences with different treatments, coping strategies, 
+          and daily life tips. Whether you're looking for emotional support, practical 
+          advice, or just want to know you're not alone, the support group can be 
+          a valuable resource in your SFN journey.`,
+        },
+        {
+          type: "paragraph",
+          text: `[Join our support group](https://discord.gg/UGNhBMkBS7)`,
+        },
+      ],
+    },
+
+    {
+      id: "supplements",
+      title: "Supplements",
+      content: [
+        {
+          type: "paragraph",
+          text: `Many people with SFN explore supplements as part of their treatment 
+          plan. While supplements aren't a cure, some may help support nerve health 
+          or address underlying deficiencies that contribute to neuropathy symptoms. 
+          Common options include alpha-lipoic acid, B vitamins, and magnesium.`,
+        },
+        {
+          type: "paragraph",
+          text: `It's important to work with your healthcare provider before starting 
+          any supplement regimen, as they can interact with medications and aren't 
+          appropriate for everyone. Quality matters too – not all supplements are 
+          created equal, and choosing reputable brands is essential.`,
+        },
+        {
+          type: "paragraph",
+          text: `[Learn about supplements for SFN](/resources/supplements)`,
         },
       ],
     },
   ],
 
   meta: {
-    author: "Matt Snyder",
-    lastUpdated: "August 20, 2025",
+    author: "the SFN Foundation",
+    lastUpdated: "August 21, 2025",
     references: [
       {
-        title:
-          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
-        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
+        title: "Caregiver Resources - Foundation for Peripheral Neuropathy",
+        link: "https://www.foundationforpn.org/living-well/caregivers/",
       },
       {
-        title: "Peripheral neuropathy - Overview - Mayo Clinic",
-        link: "https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061",
+        title: "Finding the Right Doctor - American Diabetes Association",
+        link: "https://www.diabetes.org/diabetes/complications/neuropathy/finding-right-doctor",
       },
       {
-        title:
-          "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
-      },
-      {
-        title: "Small fiber neuropathy - National Institute of Neurological Disorders",
-        link: "https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy",
+        title: "Support Groups and Resources - The Neuropathy Association",
+        link: "https://www.neuropathy.org/support-groups-resources/",
       },
     ],
   },

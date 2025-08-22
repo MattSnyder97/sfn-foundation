@@ -305,7 +305,7 @@ export const treatmentsContent = {
   ],
 
   meta: {
-    author: "Matt Snyder",
+    author: "the SFN Foundation",
     lastUpdated: "August 20, 2025",
     references: [
       {

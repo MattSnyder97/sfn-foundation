@@ -8,7 +8,7 @@ export const symptomsContent = {
   tableOfContents: [
     { id: "overview", title: "Overview" },
     { id: "common", title: "Common Symptoms" },
-    { id: "progression", title: "How Symptoms Change Over Time" },
+    { id: "progression", title: "Symptoms Changing Over Time" },
     { id: "impact", title: "Impact on Daily Life" },
     { id: "when-to-see-doctor", title: "When to See a Doctor" },
   ],
@@ -98,7 +98,7 @@ export const symptomsContent = {
 
     {
       id: "progression",
-      title: "How Symptoms Change Over Time",
+      title: "Symptoms Changing Over Time",
       content: [
         {
           type: "paragraph",
@@ -245,7 +245,7 @@ export const symptomsContent = {
   ],
 
   meta: {
-    author: "Matt Snyder",
+    author: "the SFN Foundation",
     lastUpdated: "August 20, 2025",
     references: [
       {

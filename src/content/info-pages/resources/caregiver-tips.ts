@@ -1,210 +1,267 @@
 export const careGiverTipsContent = {
   slug: "/resources/caregiver-tips",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["caregiver", "family", "support", "help", "care", "assistance"],
   hero: {
     title: "Caregiver Tips",
   },
 
   tableOfContents: [
-    { id: "what-is-sfn", title: "What is SFN?" },
-    { id: "causes", title: "Causes" },
-    { id: "diagnosis", title: "Diagnosis" },
-    { id: "symptoms", title: "Symptoms" },
-    { id: "treatments", title: "Treatments" },
+    { id: "overview", title: "Overview" },
+    { id: "understanding-sfn", title: "Understanding SFN" },
+    { id: "daily-support", title: "Daily Support Strategies" },
+    { id: "communication", title: "Communication and Advocacy" },
+    { id: "self-care", title: "Taking Care of Yourself" },
   ],
 
   sections: [
     {
-      id: "what-is-sfn",
-      title: "What is Small Fiber Neuropathy?",
+      id: "overview",
+      title: "Overview",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy (SFN) is a condition that affects the smallest 
-          nerves in your body. These tiny nerve fibers control how you feel pain, 
-          temperature, and touch. When they don't work properly, you might experience 
-          burning pain, tingling, numbness, or strange sensations in your hands and feet.`,
+          text: `Caring for someone with small fiber neuropathy can be both rewarding 
+          and challenging. Your support makes a real difference in helping your loved one 
+          manage their symptoms and maintain their quality of life. Understanding SFN and 
+          learning effective care strategies can help both of you navigate this journey together.`,
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people realize. It can affect anyone, but 
-          it's often seen in people with diabetes, autoimmune conditions, or certain 
-          genetic factors. The good news is that with proper diagnosis and treatment, 
-          many people with SFN can find relief and maintain a good quality of life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Understanding your condition is the first step toward feeling better. 
-          The sections below will help you learn about the different aspects of SFN, 
-          from what causes it to how it's treated. Remember, you're not alone in this 
-          journey, and there are many resources and treatments available to help you.`,
+          text: `Remember that SFN affects everyone differently. What works for one person 
+          might not work for another, and symptoms can change over time. Being flexible, 
+          patient, and willing to learn will help you provide the best possible support 
+          for your loved one.`,
         },
       ],
     },
 
     {
-      id: "causes",
-      title: "Causes",
+      id: "understanding-sfn",
+      title: "Understanding SFN",
       content: [
         {
           type: "paragraph",
-          text: `Small Fiber Neuropathy can have many different causes. The most common 
-          cause is diabetes, which damages nerves over time through high blood sugar 
-          levels. However, many other conditions can lead to SFN, including autoimmune 
-          diseases, vitamin deficiencies, and genetic factors.`,
+          text: `Small fiber neuropathy is a condition where the smallest nerve fibers 
+          in the body become damaged. These nerves carry pain, temperature, and touch 
+          sensations, as well as control automatic functions like sweating and blood 
+          pressure regulation.`,
         },
         {
           type: "paragraph",
-          text: `In about half of all SFN cases, doctors can't find a specific cause. 
-          This is called "idiopathic" SFN, which simply means the cause is unknown. 
-          Even when the cause isn't clear, effective treatments are still available 
-          to help manage symptoms and improve quality of life.`,
+          text: `The pain from SFN is real and can be severe, even though it might not 
+          be visible to others. Many people describe it as burning, stabbing, or feeling 
+          like electric shocks. Some also experience numbness, tingling, or extreme 
+          sensitivity to touch.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Pain levels can change throughout the day: your loved one might feel okay in the morning but struggle in the evening.",
+            "Temperature sensitivity is common: heat or cold might make symptoms worse.",
+            "Fatigue is often a major issue: dealing with chronic pain is exhausting.",
+            "Mood changes are normal: chronic pain can lead to depression, anxiety, or irritability.",
+            "Good days and bad days happen: symptoms can be unpredictable.",
+            "Invisible illness challenges: others might not understand because symptoms aren't visible.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Understanding what might have caused your SFN can help guide treatment 
-          decisions. Sometimes treating the underlying cause can slow down or even 
-          improve neuropathy symptoms. [Learn more about SFN causes →](/about/causes)`,
+          text: `Understanding that SFN is a legitimate medical condition with real, 
+          often invisible symptoms is crucial. Your belief in what your loved one is 
+          experiencing provides important emotional support and validation.`,
         },
       ],
     },
 
     {
-      id: "diagnosis",
-      title: "Diagnosis",
+      id: "daily-support",
+      title: "Daily Support Strategies",
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of Small Fiber Neuropathy can take time because 
-          it affects very small nerve fibers that don't show up on regular nerve tests. 
-          Your doctor will use your symptoms, physical exam, and special tests to 
-          make the diagnosis.`,
+          text: `There are many practical ways you can help your loved one manage daily 
+          activities and reduce their pain. Small adjustments to the home environment 
+          and daily routines can make a big difference in their comfort and independence.`,
         },
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a skin biopsy, where tiny samples 
-          of skin are examined under a microscope to count small nerve fibers. Blood 
-          tests help identify possible causes like diabetes or vitamin deficiencies. 
-          Other tests might include quantitative sensory testing and autonomic function tests.`,
+          text: `Focus on creating a supportive environment while still encouraging 
+          independence when possible. The goal is to help without taking away your 
+          loved one's sense of control and autonomy.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Help with household tasks: Cleaning, cooking, and shopping can be difficult when dealing with pain and fatigue.",
+            "Assist with medication management: Help organize pills, set reminders, and track side effects.",
+            "Create a comfortable environment: Adjust room temperature, provide soft bedding, and reduce harsh lighting.",
+            "Help with foot care: Assist with gentle washing, drying, and moisturizing of feet and hands.",
+            "Support exercise routines: Encourage gentle activities like walking or swimming when they feel up to it.",
+            "Provide transportation: Drive to medical appointments and help navigate healthcare facilities.",
+            "Prepare comfortable clothing: Help choose loose-fitting clothes and supportive shoes.",
+            "Organize the home: Keep frequently used items within easy reach to reduce unnecessary movement.",
+          ],
         },
         {
           type: "paragraph",
-          text: `While the diagnostic process can be frustrating, getting the right 
-          diagnosis is important for finding effective treatments. Working with a 
-          neurologist who understands SFN can make a big difference. 
-          [Learn more about SFN diagnosis →](/about/diagnosis)`,
+          text: `Pay attention to environmental factors that might worsen symptoms. 
+          Many people with SFN are sensitive to temperature changes, so maintaining 
+          a comfortable home temperature and having blankets or fans available can help. 
+          Some find that certain fabrics or tight clothing make their symptoms worse.`,
+        },
+        {
+          type: "paragraph",
+          text: `Be flexible with plans and activities. Your loved one might feel good 
+          in the morning but struggle later in the day, or they might have to cancel 
+          plans due to a symptom flare-up. Having backup plans and being understanding 
+          about changes helps reduce stress for everyone.`,
+        },
+        {
+          type: "image",
+          src: "/images/caregiver.png",
+          alt: "Caregiver helping with daily tasks",
+          caption:
+            "Being a caregiver means providing practical support while respecting your loved one's independence.",
         },
       ],
     },
 
     {
-      id: "symptoms",
-      title: "Symptoms",
+      id: "communication",
+      title: "Communication and Advocacy",
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or tingling 
-          sensations. Many people say it feels like walking on hot coals or being 
-          stuck with pins and needles. These symptoms usually start in the feet and 
-          hands and can gradually spread up the legs and arms.`,
+          text: `Good communication is essential for providing effective support. Learn 
+          to recognize both verbal and non-verbal signs that your loved one is having 
+          a difficult day with their symptoms. Sometimes people with chronic pain don't 
+          want to complain constantly, so they might not always say when they're struggling.`,
         },
         {
           type: "paragraph",
-          text: `Common symptoms include burning pain, numbness, sensitivity to touch, 
-          and difficulty sensing temperature changes. Some people also experience 
-          problems with automatic body functions like sweating, digestion, or blood 
-          pressure changes.`,
+          text: `Being an advocate for your loved one, especially in healthcare settings, 
+          can make a huge difference in the quality of care they receive. Many healthcare 
+          providers are still learning about SFN, so having a knowledgeable supporter 
+          can help ensure proper treatment.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Listen without trying to fix: Sometimes your loved one just needs someone to understand their experience.",
+            "Ask how you can help: Don't assume you know what they need; let them tell you.",
+            "Learn about SFN: The more you understand, the better support you can provide.",
+            "Attend medical appointments: Take notes, ask questions, and help remember important information.",
+            "Help research treatments: Look up new therapies, clinical trials, and specialist doctors.",
+            "Communicate with other family members: Help educate relatives about SFN so they can be supportive too.",
+            "Validate their experience: Acknowledge that their pain is real and their feelings are valid.",
+            "Encourage without pushing: Support their goals while respecting their limitations.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Symptoms can vary greatly from person to person and may change over time. 
-          Some people have mild symptoms that come and go, while others have constant 
-          pain that affects daily activities. Understanding your symptoms helps you 
-          and your healthcare team develop the best treatment plan. 
-          [Learn more about SFN symptoms →](/about/symptoms)`,
+          text: `When attending medical appointments, come prepared with a list of questions 
+          and current symptoms. Keep a symptom diary or pain log that you can share with 
+          healthcare providers. This information helps doctors understand how SFN is 
+          affecting daily life and whether treatments are working.`,
+        },
+        {
+          type: "paragraph",
+          text: `Help your loved one research their condition and treatment options, but 
+          be careful about information overload. Focus on reputable medical sources and 
+          discuss new information with their healthcare team before making any changes 
+          to their treatment plan.`,
         },
       ],
     },
 
     {
-      id: "treatments",
-      title: "Treatments",
+      id: "self-care",
+      title: "Taking Care of Yourself",
       content: [
         {
           type: "paragraph",
-          text: `While there's no cure for SFN yet, many treatments can help manage 
-          pain and improve quality of life. Treatment usually involves a combination 
-          of medications, lifestyle changes, and other therapies. The goal is to 
-          reduce symptoms and treat any underlying conditions that might be causing 
-          the neuropathy.`,
+          text: `Caring for someone with a chronic condition like SFN can be emotionally 
+          and physically demanding. It's important to take care of your own health and 
+          well-being so you can continue to be a good caregiver. Remember that taking 
+          care of yourself isn't selfish—it's necessary.`.replace('—', '-')
         },
         {
           type: "paragraph",
-          text: `Common medications include anticonvulsants like gabapentin and pregabalin, 
-          antidepressants like duloxetine, and topical treatments like lidocaine patches. 
-          Supplements such as alpha-lipoic acid and B vitamins may also help. Lifestyle 
-          changes like regular exercise, good blood sugar control, and stress management 
-          play important roles too.`,
+          text: `Caregiver burnout is real and common. Watch for signs like feeling 
+          overwhelmed, irritable, or exhausted most of the time. If you notice these 
+          feelings, it's time to seek additional support or take a break.`,
+        },
+        {
+          type: "list",
+          ordered: false,
+          items: [
+            "Build a support network - Connect with other caregivers, family members, or support groups.",
+            "Take regular breaks - Even short breaks can help you recharge and avoid burnout.",
+            "Maintain your own health - Keep up with your medical appointments and exercise routine.",
+            "Set realistic expectations - You can't fix everything or take away all their pain.",
+            "Learn stress management - Practice relaxation techniques, meditation, or other stress-relief activities.",
+            "Accept help from others - Let friends and family members assist with caregiving tasks.",
+            "Keep your own interests - Continue activities you enjoy and maintain your friendships.",
+            "Consider counseling - Talking to a therapist can help you process difficult emotions.",
+          ],
         },
         {
           type: "paragraph",
-          text: `Finding the right treatment takes time and patience. What works for one 
-          person might not work for another, so doctors often try different combinations 
-          until they find what works best. The sooner treatment begins, the better 
-          the chances of managing symptoms effectively. 
-          [Learn more about SFN treatments →](/about/treatments)`,
+          text: `Don't hesitate to ask for help from other family members, friends, or 
+          community resources. Many communities have respite care services, support 
+          groups for caregivers, and other resources that can provide assistance and 
+          emotional support.`,
+        },
+        {
+          type: "paragraph",
+          text: `Remember that you're doing your best in a difficult situation. Some days 
+          will be harder than others, and that's normal. Celebrate the small victories 
+          and be patient with yourself as you learn how to best support your loved one.`,
+        },
+        {
+          type: "image",
+          src: "/images/calmGuy.png",
+          alt: "Caregiver taking a moment for self-care",
+          caption:
+            "Taking care of yourself is essential for being able to provide the best support for your loved one.",
+        },
+        {
+          type: "paragraph",
+          text: `Consider joining online or local support groups for caregivers of people 
+          with chronic pain or neuropathy. These groups can provide valuable tips, emotional 
+          support, and the reassurance that you're not alone in this journey.`,
         },
       ],
     },
   ],
 
   meta: {
-    author: "Matt Snyder",
+    author: "the SFN Foundation",
     lastUpdated: "August 20, 2025",
     references: [
       {
-        title:
-          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
-        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
+        title: "Family Caregiver Alliance - Taking Care of YOU: Self-Care for Family Caregivers",
+        link: "https://www.caregiver.org/resource/taking-care-you-self-care-family-caregivers/",
       },
       {
-        title: "Peripheral neuropathy - Overview - Mayo Clinic",
-        link: "https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061",
+        title: "National Institute on Aging - Caring for a Person with Chronic Pain",
+        link: "https://www.nia.nih.gov/health/pain/caring-person-chronic-pain",
       },
       {
-        title:
-          "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
+        title: "Foundation for Peripheral Neuropathy - Family and Friends Guide",
+        link: "https://www.foundationforpn.org/living-well/family-friends/",
       },
       {
-        title: "Small fiber neuropathy - National Institute of Neurological Disorders",
-        link: "https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy",
+        title: "American Chronic Pain Association - Family and Friends Guide",
+        link: "https://www.theacpa.org/family-friends-guide/",
+      },
+      {
+        title: "AARP - Family Caregiving Resources",
+        link: "https://www.aarp.org/caregiving/",
       },
     ],
   },
 };
-
-// ---- Types ----
-export interface ContentBlock {
-  type: "paragraph" | "list" | "image";
-}
-
-export interface ParagraphBlock extends ContentBlock {
-  type: "paragraph";
-  text: string;
-}
-
-export interface ListBlock extends ContentBlock {
-  type: "list";
-  ordered: boolean;
-  items: string[];
-}
-
-export interface ImageBlock extends ContentBlock {
-  type: "image";
-  src: string;
-  alt: string;
-  caption?: string;
-}
-
-export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;
