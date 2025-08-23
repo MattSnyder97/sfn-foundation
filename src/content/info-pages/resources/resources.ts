@@ -1,6 +1,6 @@
 export const resourcesContent = {
   slug: "/resources",
-  tags: ["resources", "help", "support", "caregiver", "specialist"],
+  tags: ["resources"],
   hero: {
     title: "Resources",
   },

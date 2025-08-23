@@ -1,6 +1,6 @@
 export const diagnosisContent = {
   slug: "/about/diagnosis",
-  tags: ["neuropathy", "diagnosis", "testing", "nerve", "biopsy", "doctor"],
+  tags: ["diagnosis", "about"],
   hero: {
     title: "Diagnosis",
   },

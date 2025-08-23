@@ -39,9 +39,7 @@ export default function Hero() {
               size="md"
             >
                 <a
-                    href="https://discord.gg/UGNhBMkBS7"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/resources/support-group"
                 >
                     Support Group
                 </a>

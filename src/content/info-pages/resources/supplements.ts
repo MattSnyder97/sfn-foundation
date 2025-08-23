@@ -1,6 +1,6 @@
 export const supplementsContent = {
   slug: "/resources/supplements",
-  tags: ["neuropathy", "nerve", "supplements", "vitamins", "nutrition"],
+  tags: ["resources", "treatments"],
   hero: {
     title: "Supplements",
   },

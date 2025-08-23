@@ -1,6 +1,6 @@
 export const aboutContent = {
   slug: "/about",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["about"],
   hero: {
     title: "About SFN",
   },

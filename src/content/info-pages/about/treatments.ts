@@ -1,6 +1,6 @@
 export const treatmentsContent = {
   slug: "/about/treatments",
-  tags: ["neuropathy", "nerve", "pain", "management", "therapy"],
+  tags: ["treatments", "about"],
   hero: {
     title: "Treatments",
   },

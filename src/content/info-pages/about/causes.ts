@@ -1,6 +1,6 @@
 export const causesContent = {
   slug: "/about/causes",
-  tags: ["neuropathy", "diabetes", "autoimmune", "causes", "genetics"],
+  tags: ["causes", "about"],
   hero: {
     title: "Causes",
   },

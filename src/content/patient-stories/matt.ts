@@ -2,7 +2,7 @@ export const mattContent = {
   slug: "/patient-stories/matt",
   tags: ["patient story"],
   hero: {
-    title: "Patient Story: Matt",
+    title: "Matt's Journey with Small Fiber Neuropathy",
   },
 
   tableOfContents: [

@@ -1,6 +1,6 @@
 export const careGiverTipsContent = {
   slug: "/resources/caregiver-tips",
-  tags: ["caregiver", "family", "support", "help", "care", "assistance"],
+  tags: ["resources"],
   hero: {
     title: "Caregiver Tips",
   },

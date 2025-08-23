@@ -1,6 +1,6 @@
 export const newlyDiagnosedContent = {
   slug: "/resources/newly-diagnosed",
-  tags: ["newly diagnosed", "next steps", "first steps", "beginning", "diagnosis", "what now"],
+  tags: ["resources"],
   hero: {
     title: "Newly Diagnosed",
   },

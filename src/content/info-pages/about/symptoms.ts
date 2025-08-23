@@ -1,6 +1,6 @@
 export const symptomsContent = {
   slug: "/about/symptoms",
-  tags: ["neuropathy", "nerve", "pain", "symptoms", "burning", "tingling"],
+  tags: ["symptoms", "about"],
   hero: {
     title: "Symptoms",
   },

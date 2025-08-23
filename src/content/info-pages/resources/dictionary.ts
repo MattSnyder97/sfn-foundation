@@ -1,6 +1,6 @@
 export const dictionaryContent = {
   slug: "/resources/dictionary",
-  tags: ["neuropathy", "nerve", "dictionary", "glossary", "medical terms"],
+  tags: ["resources"],
   hero: {
     title: "SFN Dictionary",
   },

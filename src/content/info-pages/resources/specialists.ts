@@ -1,6 +1,6 @@
 export const specialistsContent = {
   slug: "/resources/specialists",
-  tags: ["neuropathy", "specialists", "neurology", "small fiber"],
+  tags: ["resources"],
   hero: {
     title: "Find a Specialist",
   },

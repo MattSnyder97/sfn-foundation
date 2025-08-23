@@ -1,6 +1,6 @@
 export const supportGroupContent = {
   slug: "/resources/support-group",
-  tags: ["neuropathy", "nerve", "support", "group"],
+  tags: ["resources"],
   hero: {
     title: "Support Group",
   },
