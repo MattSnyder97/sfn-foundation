@@ -1,1 +1,4 @@
-Working On Next
+Working On Next:
+- Research Page
+- Latest News (getting that actually working to pull data)
+- Audit Research and Resources pages sources

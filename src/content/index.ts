@@ -5,6 +5,12 @@ import { diagnosisContent } from "./info-pages/about/diagnosis";
 import { symptomsContent } from "./info-pages/about/symptoms";
 import { treatmentsContent } from "./info-pages/about/treatments";
 
+// Legal Pages
+import { termsOfUseContent } from "./legal/terms-of-use";
+import { privacyPolicyContent } from "./legal/privacy-policy";
+import { disclaimerContent } from "./legal/disclaimer";
+import { accessibilityContent } from "./legal/accessibility";
+
 // Research Category Pages
 import { researchContent } from "./info-pages/research/research";
 
@@ -17,6 +23,9 @@ import { specialistsContent } from "./info-pages/resources/specialists";
 import { supplementsContent } from "./info-pages/resources/supplements";
 import { supportGroupContent } from "./info-pages/resources/support-group";
 
+// Patient Stories Pages
+import { mattContent } from "./patient-stories/matt";
+
 export const allContent = [
   // About Category Pages
   ...[aboutContent],
@@ -24,6 +33,12 @@ export const allContent = [
   ...[diagnosisContent],
   ...[symptomsContent],
   ...[treatmentsContent],
+
+  // Legal Pages
+  ...[termsOfUseContent],
+  ...[privacyPolicyContent],
+  ...[disclaimerContent],
+  ...[accessibilityContent],
 
   // Research Category Pages
     ...[researchContent],
@@ -36,4 +51,7 @@ export const allContent = [
   ...[specialistsContent],
   ...[supplementsContent],
   ...[supportGroupContent],
+
+  // Patient Stories Pages
+  ...[mattContent],
 ];

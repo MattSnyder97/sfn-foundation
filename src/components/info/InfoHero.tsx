@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import { segmentLabels } from '@/lib/utils';
 
 interface InfoHeroProps {
   title: string;
@@ -15,22 +16,6 @@ export default function InfoHero({ title }: InfoHeroProps) {
     const pathSegments = pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: Array<{ label: string; href: string; isLast?: boolean }> = [{ label: 'Home', href: '/' }];
     
-    // Mapping for better display names
-    const segmentLabels: Record<string, string> = {
-      'about': 'About',
-      'caregiver-tips': 'Caregiver Tips',
-      'causes': 'Causes',
-      'diagnosis': 'Diagnosis',
-      'dictionary': 'SFN Dictionary',
-      'doctors': 'Approved Doctors',
-      'newly-diagnosed': 'Newly Diagnosed',
-      'research': 'Research',
-      'resources': 'Resources',
-      'support-group': 'Support Group',
-      'supplements': 'Supplements',
-      'symptoms': 'Symptoms',
-      'treatments': 'Treatments'
-    };
     
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
