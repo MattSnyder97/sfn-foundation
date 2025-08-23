@@ -224,7 +224,7 @@ export const diagnosisContent = {
       {
         title:
           "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
+        link: "https://www.foundationforpn.org/wp-content/uploads/2024/10/Patient-Brochure-Final.pdf",
       },
       {
         title: "Prediabetes - Symptoms and causes - Mayo Clinic",

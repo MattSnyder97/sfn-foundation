@@ -1,6 +1,6 @@
 export const researchContent = {
   slug: "/research",
-  tags: ["neuropathy", "nerve", "overview", "small fiber"],
+  tags: ["neuropathy", "nerve", "research", "overview"],
   hero: {
     title: "Research",
   },

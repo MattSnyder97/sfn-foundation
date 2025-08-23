@@ -60,10 +60,10 @@ export const newlyDiagnosedContent = {
           ordered: false,
           items: [
             "Your symptoms are real and valid - SFN causes genuine pain and discomfort, even though others might not see it.",
-            "Symptoms can vary - You might experience burning, stabbing, tingling, numbness, or sensitivity to touch.",
+            "[Symptoms can vary](/about/symptoms) - You might experience burning, stabbing, tingling, numbness, or sensitivity to touch.",
             "It typically starts in feet and hands - Most people notice symptoms in their extremities first.",
             "Progression varies - Some people's symptoms stay stable, while others may worsen or even improve over time.",
-            "Treatment is available - While there's no cure, many effective treatments can help manage symptoms.",
+            "Treatment is available - While there's no cure, many [effective treatments](/about/treatments) can help manage symptoms.",
             "Research is ongoing - Scientists are continuously working to better understand and treat SFN.",
           ],
         },
@@ -98,14 +98,14 @@ export const newlyDiagnosedContent = {
             "Review your medications - Go over all your current medications with your doctor to see if any might be contributing to nerve damage.",
             "Get blood work if not done recently - Check for diabetes, vitamin B12, thyroid function, and other conditions that can affect nerves.",
             "Schedule follow-up appointments - Plan regular check-ins with your healthcare team to monitor your condition and adjust treatments.",
-            "Connect with support resources - Look into patient organizations, online communities, and local support groups.",
+            "Connect with support resources - Look into patient organizations and [support groups](/resources/support-group).",
           ],
         },
         {
           type: "paragraph",
           text: `Don't try to do everything at once. Take these steps gradually and at 
           your own pace. Some days you might feel motivated to tackle several tasks, 
-          while other days you might only manage one small thing—both approaches are fine.`.replace('—', '-')
+          while other days you might only manage one small thing—both approaches are fine.`
         },
       ],
     },
@@ -143,8 +143,8 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `When choosing healthcare providers, look for those who are knowledgeable 
-          about neuropathy and who listen to your concerns. Don't hesitate to get second 
+          text: `When choosing healthcare providers, look for those who are [knowledgeable 
+          about SFN](/resources/specialists) and who listen to your concerns. Don't hesitate to get second 
           opinions if you're not satisfied with your care or if you want to explore 
           different treatment options.`,
         },
@@ -238,7 +238,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Consider cognitive behavioral therapy (CBT) or other counseling approaches 
+          text: `Acceptance and Commitment Therapy (ACT) or other counseling approaches 
           that can help you develop better coping skills for managing chronic pain and 
           the emotional challenges that come with it. Many people find these tools 
           extremely helpful in maintaining their quality of life.`,
@@ -260,7 +260,7 @@ export const newlyDiagnosedContent = {
           type: "paragraph",
           text: `Your journey with SFN will be unique to you. Some days will be better 
           than others, and that's completely normal. Focus on taking things one day 
-          at a time and building the support systems and coping strategies that work best for your situation.`,
+          at a time and building the support systems and coping strategies that work best for you.`,
         },
       ],
     },

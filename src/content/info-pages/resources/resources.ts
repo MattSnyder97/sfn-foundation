@@ -197,16 +197,16 @@ export const resourcesContent = {
     lastUpdated: "August 21, 2025",
     references: [
       {
-        title: "Caregiver Resources - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/living-well/caregivers/",
+        title: "Caregiver Tips - Foundation for Peripheral Neuropathy",
+        link: "https://www.foundationforpn.org/caregiver-tips/",
       },
       {
-        title: "Finding the Right Doctor - American Diabetes Association",
-        link: "https://www.diabetes.org/diabetes/complications/neuropathy/finding-right-doctor",
+        title: "Finding the Right Doctor - Foundation for Peripheral Neuropathy",
+        link: "https://www.foundationforpn.org/find-a-doctor/",
       },
       {
-        title: "Support Groups and Resources - The Neuropathy Association",
-        link: "https://www.neuropathy.org/support-groups-resources/",
+        title: "Peripheral Neuropathy Support Groups - Foundation for Peripheral Neuropathy",
+        link: "https://www.foundationforpn.org/support-groups/",
       },
     ],
   },

@@ -334,8 +334,8 @@ export const treatmentsContent = {
       },
       {
         title:
-          "Medical Marijuana - Cleveland Clinic",
-        link: "https://my.clevelandclinic.org/health/treatments/23425-medical-marijuana-medical-cannabis",
+          "Medical Marijuana - National Center for Biotechnology Information",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10716240/",
       },
       {
         title:
@@ -344,8 +344,8 @@ export const treatmentsContent = {
       },
       {
         title:
-          "Efficacy of medical cannabis for painful chemotherapy-induced peripheral neuropathy - Clinical Cancer Research",
-        link: "https://aacrjournals.org/clincancerres/article/30/8/1473/742502/Efficacy-of-Medical-Cannabis-for-Painful",
+          "Marijuana and Cannabidiol Use Prevalence and Symptom Management Among Patients with Cancer - Clinical Cancer Research",
+        link: "https://aacrjournals.org/cancerrescommun/article/3/9/1917/729182/Marijuana-and-Cannabidiol-Use-Prevalence-and?searchresult=1",
       },
     ],
   },

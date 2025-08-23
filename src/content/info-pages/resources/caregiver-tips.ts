@@ -20,8 +20,7 @@ export const careGiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Caring for someone with small fiber neuropathy can be both rewarding 
-          and challenging. Your support makes a real difference in helping your loved one 
+          text: `Caring for someone with small fiber neuropathy can be challenging. Your support makes a real difference in helping your loved one 
           manage their symptoms and maintain their quality of life. Understanding SFN and 
           learning effective care strategies can help both of you navigate this journey together.`,
         },
@@ -29,8 +28,7 @@ export const careGiverTipsContent = {
           type: "paragraph",
           text: `Remember that SFN affects everyone differently. What works for one person 
           might not work for another, and symptoms can change over time. Being flexible, 
-          patient, and willing to learn will help you provide the best possible support 
-          for your loved one.`,
+          patient, and willing to learn will help you provide the best possible support.`,
         },
       ],
     },
@@ -186,7 +184,7 @@ export const careGiverTipsContent = {
           text: `Caring for someone with a chronic condition like SFN can be emotionally 
           and physically demanding. It's important to take care of your own health and 
           well-being so you can continue to be a good caregiver. Remember that taking 
-          care of yourself isn't selfish—it's necessary.`.replace('—', '-')
+          care of yourself is necessary.`
         },
         {
           type: "paragraph",
@@ -251,16 +249,8 @@ export const careGiverTipsContent = {
         link: "https://www.nia.nih.gov/health/pain/caring-person-chronic-pain",
       },
       {
-        title: "Foundation for Peripheral Neuropathy - Family and Friends Guide",
-        link: "https://www.foundationforpn.org/living-well/family-friends/",
-      },
-      {
-        title: "American Chronic Pain Association - Family and Friends Guide",
-        link: "https://www.theacpa.org/family-friends-guide/",
-      },
-      {
-        title: "AARP - Family Caregiving Resources",
-        link: "https://www.aarp.org/caregiving/",
+        title: "Foundation for Peripheral Neuropathy - Caregiver Tips",
+        link: "https://www.foundationforpn.org/caregiver-tips/",
       },
     ],
   },

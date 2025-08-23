@@ -167,7 +167,7 @@ export const aboutContent = {
       {
         title:
           "Understanding Peripheral Neuropathy - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/",
+        link: "https://www.foundationforpn.org/wp-content/uploads/2024/10/Patient-Brochure-Final.pdf",
       },
       {
         title: "Small fiber neuropathy - National Institute of Neurological Disorders",

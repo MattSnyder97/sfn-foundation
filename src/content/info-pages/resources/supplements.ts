@@ -152,15 +152,7 @@ export const supplementsContent = {
             "Coenzyme Q10 - Helps cells produce energy and acts as an antioxidant. May be especially helpful for people taking statin medications. Typical dose: 100-300mg daily with food.",
             "Vitamin E - Protects cell membranes from oxidative damage. Mixed tocopherols form is better than just alpha-tocopherol. Typical dose: 400-800 IU daily.",
             "Vitamin C - Works with other antioxidants to protect nerves and helps regenerate vitamin E. Typical dose: 500-1000mg daily, divided into two doses.",
-            "Resveratrol - Found in red wine and grapes, may help protect nerves and reduce inflammation. Typical dose: 100-500mg daily.",
           ],
-        },
-        {
-          type: "paragraph",
-          text: `Antioxidants work better when taken together rather than individually. 
-          They help regenerate each other and provide more complete protection. 
-          This is why many doctors recommend a comprehensive antioxidant formula 
-          rather than taking each one separately.`,
         },
       ],
     },
@@ -264,7 +256,7 @@ export const supplementsContent = {
     references: [
       {
         title: "Alpha-lipoic acid - National Center for Complementary and Integrative Health",
-        link: "https://www.nccih.nih.gov/health/alpha-lipoic-acid",
+        link: "https://www.nccih.nih.gov/health/providers/digest/type-2-diabetes-and-dietary-supplements-science",
       },
       {
         title: "Vitamin B12 - Office of Dietary Supplements, National Institutes of Health",

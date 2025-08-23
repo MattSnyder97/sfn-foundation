@@ -26,6 +26,7 @@ export default function InfoHero({ title }: InfoHeroProps) {
       'newly-diagnosed': 'Newly Diagnosed',
       'research': 'Research',
       'resources': 'Resources',
+      'support-group': 'Support Group',
       'supplements': 'Supplements',
       'symptoms': 'Symptoms',
       'treatments': 'Treatments'

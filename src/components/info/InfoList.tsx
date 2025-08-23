@@ -1,5 +1,6 @@
 // src/components/info/InfoList.tsx
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 export interface InfoListProps {
   items: string[];
@@ -18,7 +19,33 @@ export default function InfoList({ items, ordered = false }: InfoListProps) {
       }`}
     >
       {items.map((item, idx) => (
-        <li key={idx}>{item}</li>
+        <li key={idx}>
+          <ReactMarkdown
+            components={{
+              a: ({ children, href }) => {
+                const isInternal = href && href.startsWith("/");
+                return (
+                  <a
+                    href={href}
+                    target={isInternal ? undefined : "_blank"}
+                    rel={isInternal ? undefined : "noopener noreferrer"}
+                    className="text-primary hover:text-secondary underline font-medium transition-colors duration-200 print:hidden"
+                  >
+                    {children}
+                  </a>
+                );
+              },
+              strong: ({ children }) => (
+                <strong className="font-bold text-black">
+                  {children}
+                </strong>
+              ),
+              p: ({ children }) => <>{children}</>
+            }}
+          >
+            {item}
+          </ReactMarkdown>
+        </li>
       ))}
     </ListTag>
   );
