@@ -15,6 +15,7 @@ import { newlyDiagnosedContent } from "./info-pages/resources/newly-diagnosed";
 import { resourcesContent } from "./info-pages/resources/resources";
 import { specialistsContent } from "./info-pages/resources/specialists";
 import { supplementsContent } from "./info-pages/resources/supplements";
+import { supportGroupContent } from "./info-pages/resources/support-group";
 
 export const allContent = [
   // About Category Pages
@@ -34,4 +35,5 @@ export const allContent = [
   ...[resourcesContent],
   ...[specialistsContent],
   ...[supplementsContent],
+  ...[supportGroupContent],
 ];

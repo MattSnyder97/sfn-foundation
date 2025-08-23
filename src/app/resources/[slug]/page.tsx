@@ -16,6 +16,7 @@ export async function generateStaticParams() {
     { slug: 'resources' },
     { slug: 'specialists' },
     { slug: 'supplements' },
+    { slug: 'support-group' },
   ]
 }
 

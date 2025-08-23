@@ -112,7 +112,7 @@ export const resourcesContent = {
         },
         {
           type: "paragraph",
-          text: `[Complete guide for newly diagnosed patients](/resources/newly-diagnosed)`,
+          text: `[Information for newly diagnosed patients](/resources/newly-diagnosed)`,
         },
       ],
     },
@@ -136,7 +136,7 @@ export const resourcesContent = {
         },
         {
           type: "paragraph",
-          text: `[Browse the SFN dictionary](/resources/dictionary)`,
+          text: `[Read the SFN dictionary](/resources/dictionary)`,
         },
       ],
     },
@@ -161,7 +161,7 @@ export const resourcesContent = {
         },
         {
           type: "paragraph",
-          text: `[Join our support group](https://discord.gg/UGNhBMkBS7)`,
+          text: `[Join our support group](/resources/support-group)`,
         },
       ],
     },

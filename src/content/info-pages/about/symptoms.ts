@@ -185,6 +185,10 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
+          text: `[Join the SFN support group](/resources/support-group)`,
+        },
+        {
+          type: "paragraph",
           text: `Many people with SFN find ways to adapt and continue doing the things 
           they love. This might mean using tools to help with daily tasks, changing 
           how you do certain activities, or finding new hobbies that work better 

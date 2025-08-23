@@ -43,7 +43,7 @@ const navLinks = [
       { label: "Find a Specialist", href: "/resources/specialists" },
       { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
       { label: "SFN Dictionary", href: "/resources/dictionary" },
-      { label: "Support Group", href: "https://discord.gg/UGNhBMkBS7", target: "_blank" },
+      { label: "Support Group", href: "/resources/support-group",},
       { label: "Supplements", href: "/resources/supplements" },
     ],
   },

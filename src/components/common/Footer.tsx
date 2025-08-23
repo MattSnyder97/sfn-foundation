@@ -56,7 +56,7 @@ export default function Footer() {
                 </Link>
               </li>
                 <li>
-                <Link href="https://discord.gg/UGNhBMkBS7" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources/support-group" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Support Group
                 </Link>
               </li>
