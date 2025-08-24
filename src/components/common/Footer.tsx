@@ -47,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/contact" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Contact Us
+                  Contact
                 </Link>
               </li>
               <li>

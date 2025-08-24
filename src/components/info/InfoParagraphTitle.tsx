@@ -10,7 +10,7 @@ export default function InfoParagraphTitle({ id, children }: InfoParagraphTitleP
   return (
     <h2 
       id={id}
-      className="text-2xl font-bold text-primary mb-6 mt-12 first:mt-0 scroll-mt-8"
+      className="text-2xl font-bold text-primary mb-6 mt-12 first:mt-0 scroll-mt-8 print:mb-0 print:mt-2"
     >
       {children}
     </h2>

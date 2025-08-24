@@ -14,7 +14,7 @@ interface InfoMetaProps {
 
 export default function InfoMeta({ lastUpdated, author, references }: InfoMetaProps) {
   return (
-    <section className="mt-16 pt-8 border-t border-offWhite">
+    <section className="mt-8 pt-8 border-t border-offWhite">
       {/* Author + Date */}
       <div className="text-sm text-gray mb-8">
         {author && <div>Written by {author}</div>}

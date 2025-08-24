@@ -74,7 +74,9 @@ export default function InfoPageTemplate({ content }: InfoPageTemplateProps) {
               {section.title}
             </InfoParagraphTitle>
             {section.content?.map((block: ContentBlockType, i: number) => (
-              <BlockRenderer key={i} block={block} />
+              <div key={i} className={i === section.content.length - 1 ? "" : "mb-4"}>
+                <BlockRenderer block={block} />
+              </div>
             ))}
           </div>
         ))}
