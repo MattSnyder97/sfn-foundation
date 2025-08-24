@@ -239,25 +239,15 @@ const navLinks = [
           {navLinks.map((link) => (
             <div key={link.label} className="text-right">
               <div className="w-full flex items-center justify-end text-right text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
-                {/* Main link - clickable if href exists */}
-                {link.href ? (
-                  <Link
-                    href={link.href}
-                    className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <span>{link.label}</span>
-                )}
-                
-                {/* Dropdown toggle button */}
-                {link.dropdown && (
+                {/* On mobile: if dropdown, use button to open dropdown only; if not, allow navigation */}
+                {link.dropdown ? (
                   <button
                     type="button"
                     onClick={() => toggleMobileDropdown(link.label)}
-                    className="flex items-center"
+                    className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                    aria-expanded={!!mobileDropdowns[link.label]}
                   >
+                    {link.label}
                     <ChevronDown
                       strokeWidth={2.5}
                       className={`h-3.5 w-3.5 transition-all duration-160 ${
@@ -267,6 +257,17 @@ const navLinks = [
                       }`}
                     />
                   </button>
+                ) : (
+                  link.href ? (
+                    <Link
+                      href={link.href}
+                      className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <span>{link.label}</span>
+                  )
                 )}
               </div>
 

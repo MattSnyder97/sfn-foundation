@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import Link from "next/link";
 
 export function LatestNews() {
   const featuredArticle = {
@@ -54,9 +55,9 @@ export function LatestNews() {
 
           {/* Mobile See More Button */}
           <div className="text-center mb-24">
-            <Button variant="outlinePrimary" size="md">
-              See More
-            </Button>
+            <Link href="/research">
+              <Button variant="outlinePrimary" size="md">See More</Button>
+            </Link>
           </div>
          
           {/* Mobile Card */}
@@ -103,9 +104,9 @@ export function LatestNews() {
               ))}
             </div>
 
-            <Button variant="outlinePrimary" size="md">
-              See More
-            </Button>
+            <Link href="/research">
+              <Button variant="outlinePrimary" size="md">See More</Button>
+            </Link>
           </div>
          
           {/* Right Card - Force style3 with inline styles as fallback */}
