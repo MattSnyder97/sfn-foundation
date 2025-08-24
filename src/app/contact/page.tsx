@@ -10,7 +10,7 @@ export default function ContactPage() {
 			<Header />
 			<section className="container-padding mx-auto py-16 max-w-xl">
 				<h1 className="text-4xl font-bold mb-6 text-primary">Contact</h1>
-				<p className="mb-8 text-lg text-gray-700">Fill out the form below and we'll get back to you as soon as possible.</p>
+				<p className="mb-8 text-lg text-gray-700">Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
 				<form
 					className="space-y-6"
 					action="https://formspree.io/f/xjkebokb"
