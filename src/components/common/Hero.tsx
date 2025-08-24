@@ -38,11 +38,9 @@ export default function Hero() {
               variant="outline"
               size="md"
             >
-                <a
-                    href="/resources/support-group"
-                >
-                    Support Group
-                </a>
+                <Link href="/resources/support-group">
+                  Support Group
+                </Link>
             </Button>
             <Button variant="outline" size="md">
                 <Link href="/#news">

@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/Card";
 export function LatestNews() {
   const featuredArticle = {
     variant: "style3",
-    title: "The Cure for Small Fiber Neuropathy is Closer Than Ever",
-    description: "We partner the most brilliant minds in the SFN space with AI to speed up the process to find a cure.",
+    title: "Placeholder Highlighted Research Article",
+    description: "This section is currently in development. Please check back soon for updates!",
     imageSrc: "/images/researchGuy.png",
     href: "/research/latest"
   };
@@ -14,17 +14,17 @@ export function LatestNews() {
     {
       date: "July 30th, 2025",
       title: "Placeholder Title Here as an Example for News Articles",
-      href: "/research/article-1"
+      href: "/research/"
     },
     {
       date: "July 29th, 2025", 
       title: "This is Another News Title Example to Show How it Looks",
-      href: "/research/article-2"
+      href: "/research/"
     },
     {
       date: "July 28th, 2025",
       title: "Here is a Third Example of a News Article Title", 
-      href: "/research/article-3"
+      href: "/research/"
     },
   ];
 
@@ -36,7 +36,7 @@ export function LatestNews() {
           {/* Mobile Header */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-primary mb-6">
-              Latest News and Research
+              Latest Research (in Development)
             </h2>
           </div>
 
@@ -88,7 +88,7 @@ export function LatestNews() {
           {/* Left Content */}
           <div className="flex-1 max-w-lg">
             <h2 className="text-4xl font-bold text-primary mb-6">
-              Latest News and Research
+              Latest Research
             </h2>
 
             {/* News Articles List */}
