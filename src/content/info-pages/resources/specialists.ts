@@ -125,8 +125,8 @@ export const specialistsContent = {
         {
           type: "image",
           src: "/images/specialists/brentGoodman.png",
-          alt: "Dr. Brent Goodman, MD - Mayo Clinic, Scottsdale, AZ",
-          caption: "Dr. Brent Goodman, MD - Mayo Clinic, Scottsdale, AZ",
+          alt: "Dr. Brent Goodman, MD - HonorHeath, Scottsdale, AZ",
+          caption: "Dr. Brent Goodman, MD - HonorHeath, Scottsdale, AZ",
         },
         {
           type: "paragraph",
