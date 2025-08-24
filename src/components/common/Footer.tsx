@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link 
-                  href="/research-portal" 
+                  href="/research/" 
                   className="opacity-80 hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2"
                 >
                   <Lock size={14} />
@@ -82,12 +82,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/medical-resources" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Medical Resources
                 </Link>
               </li>
               <li>
-                <Link href="/partnership" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Ask SFN Expert
                 </Link>
               </li>

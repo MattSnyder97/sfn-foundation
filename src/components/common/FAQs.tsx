@@ -83,12 +83,11 @@ export function FAQs() {
         <>
           Right now, there is no cure. If the underlying issue causing SFN is removed then
           people have recovered. There are several drugs in clinical trials that are
-          hopeful. With all the recent advancements in AI we are closer than ever so
-          please do not give up hope.
+          hopeful.
           <br />
           <br />
           <Link
-            href="#news"
+            href="/research/"
             className="text-primary underline hover:text-primary/80"
           >
             Stay updated on our Research page
