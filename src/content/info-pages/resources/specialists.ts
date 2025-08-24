@@ -193,16 +193,13 @@ export const specialistsContent = {
     lastUpdated: "August 22, 2025",
     references: [
       {
-        title: "Small Fiber Neuropathy - Genetic and Rare Diseases Information Center",
-        link: "https://rarediseases.info.nih.gov/diseases/10750/small-fiber-neuropathy",
+        title:
+          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
+        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
       },
       {
-        title: "Peripheral Neuropathy - National Institute of Neurological Disorders and Stroke",
-        link: "https://www.ninds.nih.gov/health-information/patient-caregiver-education/fact-sheets/peripheral-neuropathy-fact-sheet",
-      },
-      {
-        title: "Finding a Doctor - National Organization for Rare Disorders",
-        link: "https://rarediseases.org/for-patients-and-families/information-resources/finding-a-doctor/",
+        title: "How to Find the Right Specialists to Treat Your Neuropathic Pain - US Pain Foundation",
+        link: "https://uspainfoundation.org/neuropathic-pain-edition/neuropathic-pain-edition-articles/how-to-find-the-right-specialists-to-treat-your-neuropathic-pain/",
       },
     ],
   },

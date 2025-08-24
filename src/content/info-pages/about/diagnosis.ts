@@ -219,7 +219,7 @@ export const diagnosisContent = {
       {
         title:
           "Skin biopsy for the diagnosis of small fiber neuropathy - NIH",
-        link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6470332/",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9262281/",
       },
       {
         title:

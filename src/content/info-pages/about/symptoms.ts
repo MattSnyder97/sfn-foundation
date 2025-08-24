@@ -267,8 +267,8 @@ export const symptomsContent = {
       },
       {
         title:
-          "Small Fiber Neuropathy: A Burning Problem - Foundation for Peripheral Neuropathy",
-        link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/about-peripheral-neuropathy/types/small-fiber-neuropathy/",
+          "The Big Pain of Small-Fiber Neuropathy - Harvard Health",
+        link: "https://www.health.harvard.edu/diseases-and-conditions/the-big-pain-of-small-fiber-neuropathy",
       },
       {
         title:

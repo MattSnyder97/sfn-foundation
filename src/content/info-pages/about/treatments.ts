@@ -342,11 +342,6 @@ export const treatmentsContent = {
           "Low-dose naltrexone for treatment of pain - National Center for Biotechnology Information",
         link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313374/",
       },
-      {
-        title:
-          "Marijuana and Cannabidiol Use Prevalence and Symptom Management Among Patients with Cancer - Clinical Cancer Research",
-        link: "https://aacrjournals.org/cancerrescommun/article/3/9/1917/729182/Marijuana-and-Cannabidiol-Use-Prevalence-and?searchresult=1",
-      },
     ],
   },
 };

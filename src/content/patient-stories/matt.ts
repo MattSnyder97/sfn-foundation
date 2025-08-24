@@ -10,7 +10,6 @@ export const mattContent = {
     { id: "symptom-onset", title: "When It All Started" },
     { id: "diagnosis-journey", title: "Getting Answers" },
     { id: "current-treatment", title: "Looking Forward" },
-    { id: "community-support", title: "Finding Community" },
     { id: "foundation-mission", title: "Why I Started This Foundation" },
     { id: "life-beyond-sfn", title: "Life Beyond SFN" },
   ],
@@ -119,34 +118,6 @@ export const mattContent = {
           works and what doesn't. Every person's experience is different, and what 
           helps one person may not help another. That's why having access to specialists 
           and a supportive community is so important.`,
-        },
-      ],
-    },
-
-    {
-      id: "community-support",
-      title: "Finding Community",
-      content: [
-        {
-          type: "paragraph",
-          text: `One of the most valuable resources I've found has been connecting with 
-          others who understand what this condition is like. The [r/smallfiberneuropathy](https://www.reddit.com/r/smallfiberneuropathy/)
-          subreddit has been incredible - a place where people share their experiences, 
-          treatment updates, and support each other through the tough days.`,
-        },
-        {
-          type: "paragraph",
-          text: `The [Discord support group](/resources/support-group) has been equally important. Having real-time 
-          conversations with people who get it, whether it's celebrating small victories 
-          or venting about a particularly difficult flare, has made this journey 
-          less isolating.`,
-        },
-        {
-          type: "paragraph",
-          text: `These communities taught me that I'm not alone in this struggle and 
-          that there are people out there who truly understand the daily challenges 
-          of living with SFN. The knowledge sharing, emotional support, and practical 
-          tips have been invaluable.`,
         },
       ],
     },

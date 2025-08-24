@@ -197,20 +197,17 @@ export const dictionaryContent = {
     lastUpdated: "August 22, 2025",
     references: [
       {
-        title: "Peripheral Neuropathy Fact Sheet - National Institute of Neurological Disorders and Stroke",
-        link: "https://www.ninds.nih.gov/health-information/patient-caregiver-education/fact-sheets/peripheral-neuropathy-fact-sheet",
+        title: "The Influence of Dietary Supplementations on Neuropathic Pain - National Center for Biotechnology Information",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9410423/",
       },
       {
-        title: "Small Fiber Neuropathy - Genetic and Rare Diseases Information Center",
-        link: "https://rarediseases.info.nih.gov/diseases/10750/small-fiber-neuropathy",
+        title:
+          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
+        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
       },
       {
-        title: "Neuropathy - MedlinePlus",
-        link: "https://medlineplus.gov/peripheralnervedisorders.html",
-      },
-      {
-        title: "Alpha-Lipoic Acid - National Center for Complementary and Integrative Health",
-        link: "https://www.nccih.nih.gov/health/alpha-lipoic-acid",
+        title: "Alpha-Lipoic Acid - National Center for Biotechnology Information",
+        link: "https://www.ncbi.nlm.nih.gov/books/NBK564301/",
       },
     ],
   },

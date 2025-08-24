@@ -259,28 +259,17 @@ export const supplementsContent = {
         link: "https://www.nccih.nih.gov/health/providers/digest/type-2-diabetes-and-dietary-supplements-science",
       },
       {
-        title: "Vitamin B12 - Office of Dietary Supplements, National Institutes of Health",
-        link: "https://ods.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+        title: "The Influence of Dietary Supplementations on Neuropathic Pain - National Center for Biotechnology Information",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9410423/",
       },
       {
-        title: "Thiamin - Office of Dietary Supplements, National Institutes of Health",
-        link: "https://ods.nih.gov/factsheets/Thiamin-HealthProfessional/",
+        title:
+          "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
+        link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
       },
       {
-        title: "Vitamin D - Office of Dietary Supplements, National Institutes of Health",
-        link: "https://ods.nih.gov/factsheets/VitaminD-HealthProfessional/",
-      },
-      {
-        title: "Magnesium - Office of Dietary Supplements, National Institutes of Health",
-        link: "https://ods.nih.gov/factsheets/Magnesium-HealthProfessional/",
-      },
-      {
-        title: "Omega-3 Fatty Acids - Office of Dietary Supplements, National Institutes of Health",
-        link: "https://ods.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/",
-      },
-      {
-        title: "Dietary Supplements: What You Need to Know - FDA",
-        link: "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-dietary-supplements",
+        title: "Alpha-Lipoic Acid - National Center for Biotechnology Information",
+        link: "https://www.ncbi.nlm.nih.gov/books/NBK564301/",
       },
     ],
   },

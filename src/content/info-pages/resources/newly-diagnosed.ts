@@ -275,8 +275,8 @@ export const newlyDiagnosedContent = {
         link: "https://www.foundationforpn.org/understanding-peripheral-neuropathy/newly-diagnosed/",
       },
       {
-        title: "American Diabetes Association - Diabetic Neuropathy",
-        link: "https://www.diabetes.org/diabetes/complications/neuropathy",
+        title: "American Diabetes Association - Newly Diagnosed with Diabetes",
+        link: "https://diabetes.org/living-with-diabetes/newly-diagnosed",
       },
       {
         title: "National Institute of Neurological Disorders and Stroke - Peripheral Neuropathy",

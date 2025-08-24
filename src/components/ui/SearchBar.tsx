@@ -108,7 +108,7 @@ export default function SearchBar() {
           type="text"
           value={query}
           onChange={handleChange}
-          placeholder="Search by keyword or phrase…"
+          placeholder="Search…"
           className="w-full border-none bg-transparent text-sm focus:outline-none"
           aria-label="Site search"
         />
