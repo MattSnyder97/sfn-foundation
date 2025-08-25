@@ -1,4 +1,4 @@
-export const careGiverTipsContent = {
+export const caregiverTipsContent = {
   slug: "/resources/caregiver-tips",
   tags: ["resources"],
   hero: {

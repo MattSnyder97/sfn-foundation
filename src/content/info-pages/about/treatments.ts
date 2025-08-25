@@ -216,26 +216,22 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `**Low Dose Naltrexone (LDN)** is a medication that was originally used 
-          at higher doses to treat addiction. At very low doses (1-5mg daily), it 
-          may help reduce inflammation and pain. Some studies suggest LDN could be helpful for small fiber neuropathy, 
-          though more research is needed.`,
+          text: `**Low Dose Naltrexone (LDN)** is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "How it works - LDN may reduce inflammation in the nervous system and help the body's natural pain-fighting systems work better.",
-            "Dosing - Typical doses are 1.5-4.5mg taken at bedtime. It must be compounded by a special pharmacy.",
+            "How it works - LDN may reduce inflammation in the nervous system and help the body's natural pain-fighting systems work better. Some studies show improvement in sensory and autonomic symptoms for SFN.",
+            "Dosing - Typical doses are 1.5-4.5mg taken at bedtime. It must be compounded by a special pharmacy. Dosing may vary and is still being studied.",
             "Side effects - Most people have few side effects. Some report vivid dreams or trouble sleeping at first.",
             "Cost - Usually not covered by insurance and must be made by compounding pharmacies, costing $30-60 per month.",
+            "Evidence limitations - Research so far is limited by small sample sizes and variable dosing. More studies are needed to confirm benefits for SFN.",
           ],
         },
         {
           type: "paragraph",
-          text: `Research on LDN for diabetic neuropathy shows mixed results, 
-          but some studies found it more helpful for neuropathic pain conditions. 
-          It may work by blocking inflammation pathways in the central nervous system.`,
+          text: `Research on LDN for SFN is ongoing. The latest studies suggest it may be especially relevant for cryptogenic SFN, with improvements seen in pain and autonomic symptoms. LDN may also work by blocking inflammation pathways in the central nervous system, but its effectiveness for diabetic neuropathy and other neuropathic pain conditions is still being evaluated.`,
         },
         {
           type: "paragraph",
@@ -306,7 +302,7 @@ export const treatmentsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "August 25, 2025",
     references: [
       {
         title:
@@ -324,11 +320,6 @@ export const treatmentsContent = {
       },
       {
         title:
-          "Diabetic neuropathy: Can dietary supplements help? - Mayo Clinic",
-        link: "https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/in-depth/diabetic-neuropathy-and-dietary-supplements/art-20095406",
-      },
-      {
-        title:
           "Diabetic neuropathy - Diagnosis & treatment - Mayo Clinic",
         link: "https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/diagnosis-treatment/drc-20371587",
       },
@@ -339,7 +330,12 @@ export const treatmentsContent = {
       },
       {
         title:
-          "Low-dose naltrexone for treatment of pain - National Center for Biotechnology Information",
+          "Use of Low Dose Naltrexone in a Cohort of Patients with Cryptogenic Small Fiber Neuropathy - Neurology Journals",
+        link: "https://www.neurology.org/doi/10.1212/WNL.0000000000206418",
+      },
+      {
+        title:
+          "Low-Dose Naltrexone for Treatment of Pain - National Center for Biotechnology Information",
         link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313374/",
       },
     ],

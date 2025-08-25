@@ -42,6 +42,7 @@ const navLinks = [
       { label: "FAQs", href: "/#faqs" },
       { label: "Find a Specialist", href: "/resources/specialists" },
       { label: "Newly Diagnosed", href: "/resources/newly-diagnosed" },
+      { label: "Mutual Aid", href: "/resources/mutual-aid" },
       { label: "SFN Dictionary", href: "/resources/dictionary" },
       { label: "Support Group", href: "/resources/support-group",},
       { label: "Supplements", href: "/resources/supplements" },
