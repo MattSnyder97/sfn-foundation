@@ -1,9 +1,10 @@
 // node src/lib/tinypngReduce.js
 
-const fs = require("fs");
-const path = require("path");
-const axios = require("axios");
-const prompt = require("prompt-sync")({ sigint: true });
+import fs from "fs";
+import path from "path";
+import axios from "axios";
+import promptSync from "prompt-sync";
+const prompt = promptSync({ sigint: true });
 
 const TINYPNG_API_KEY = "6ZQqPSstkW0qyz7nkqmk6V9cZJmC8PhY";
 const imagesDir = path.join(__dirname, "../../public/images");
