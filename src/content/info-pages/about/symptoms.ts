@@ -34,9 +34,11 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `SFN symptoms usually start in your feet and hands 
-          and can slowly spread throughout your entire body. The good news is 
-          that recognizing these symptoms early can help you get treatment sooner.`,
+          text: `SFN symptoms often start in your feet and hands and can slowly spread throughout your body
+          (length-dependent or "stocking-glove" pattern). However, not all cases follow this pattern.
+          Some people experience symptoms that are patchy, asymmetric, migratory, or involve the face, trunk, or proximal limbs
+          (non–length-dependent, or NLD). These NLD symptoms are more common in immune-mediated causes like Sjögren syndrome or sarcoidosis.
+          Recognizing both types of symptom patterns can help you and your doctor get the right diagnosis and treatment sooner.`,
         },
       ],
     },
@@ -47,10 +49,12 @@ export const symptomsContent = {
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or electric-like 
-          sensations. Many people say it feels like walking on hot coals or being 
-          stuck with pins and needles. These feelings happen because your damaged 
-          nerves are sending wrong signals to your brain.`,
+          text: `SFN symptoms are often described as burning, stabbing, or electric-like sensations.
+          Many people say it feels like walking on hot coals or being stuck with pins and needles.
+          These feelings happen because your damaged nerves are sending wrong signals to your brain.
+          While many people experience symptoms in a symmetric, length-dependent pattern, others may have symptoms that are patchy, 
+          intermittent, migratory, or affect areas like the face, trunk, or one side of the body. These non–length-dependent symptoms can 
+          change location and intensity throughout the day.`,
         },
         {
           type: "paragraph",
@@ -71,6 +75,7 @@ export const symptomsContent = {
             "Temperature problems - Difficulty telling if something is hot or cold, or unusual sensitivity to temperature changes.",
             "Itching - Some people experience intense itching without any visible skin problems.",
             "Muscle weakness - Your hands or feet might feel weak, making it hard to grip things or walk normally.",
+            "Patchy, migratory, or asymmetric symptoms - Pain, tingling, or numbness that moves around, affects one side, or involves the face, trunk, or other areas. These patterns are more common in immune-related SFN.",
           ],
         },
         {
@@ -250,8 +255,13 @@ export const symptomsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "August 24, 2025",
     references: [
+      {
+        title:
+          "Office Approach to Small Fiber Neuropathy - Cleveland Clinic Journal of Medicine",
+        link: "https://www.ccjm.org/content/85/10/801",
+      },
       {
         title:
           "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
@@ -260,10 +270,6 @@ export const symptomsContent = {
       {
         title: "Peripheral neuropathy - Symptoms and causes - Mayo Clinic",
         link: "https://www.mayoclinic.org/diseases-conditions/peripheral-neuropathy/symptoms-causes/syc-20352061",
-      },
-      {
-        title: "Diabetic neuropathy - Symptoms and causes - Mayo Clinic",
-        link: "https://www.mayoclinic.org/diseases-conditions/diabetic-neuropathy/symptoms-causes/syc-20371580",
       },
       {
         title:
