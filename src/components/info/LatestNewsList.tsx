@@ -10,6 +10,25 @@ function sortByDateDesc(a: { date: string }, b: { date: string }) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
+// Helper to format date as 'Month Day, Year' with ordinal
+function formatDate(dateStr: string) {
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const [year, month, day] = dateStr.split("-").map(Number);
+  const getOrdinal = (n: number) => {
+    if (n > 3 && n < 21) return "th";
+    switch (n % 10) {
+      case 1: return "st";
+      case 2: return "nd";
+      case 3: return "rd";
+      default: return "th";
+    }
+  };
+  return `${months[month - 1]} ${day}${getOrdinal(day)}, ${year}`;
+}
+
 export default function LatestNewsList() {
   const [page, setPage] = useState(0);
   const pageSize = 5;
@@ -68,7 +87,7 @@ export default function LatestNewsList() {
             {article.title}
           </a>
           <p className="mb-2 text-sm text-dark">{article.summary}</p>
-          <div className="mb-2 text-xs text-gray/60">Published: {new Date(article.date).toLocaleDateString()}</div>
+          <div className="mb-2 text-xs text-gray/60">Published: {formatDate(article.date)}</div>
         </div>
       ))}
       <div className="flex gap-4 justify-center mt-4 items-center">
@@ -79,7 +98,7 @@ export default function LatestNewsList() {
               <button
                 key={btn}
                 onClick={() => handlePageChange(Number(btn))}
-                className={`px-2 py-1 rounded-full text-md font-semibold ${page === btn ? "text-primary" : "text-gray/60 hover:text-gray hover:underline cursor-pointer transition-all duration-160"}`}
+                className={`px-2 py-1 rounded-full text-md font-semibold ${page === btn ? "text-primary" : "text-gray/60 hover:text-primary hover:underline cursor-pointer transition-all duration-160"}`}
                 aria-current={page === btn ? "page" : undefined}
               >
                 {Number(btn) + 1}

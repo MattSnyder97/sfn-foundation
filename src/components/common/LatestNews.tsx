@@ -3,11 +3,33 @@ import { Card } from "@/components/ui/Card";
 import Link from "next/link";
 import { researchArticles } from "@/content/info-pages/research/research-articles";
 
+
+// Helper to format date as 'Month Day, Year' with ordinal
+function formatDate(dateStr: string) {
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const parts = dateStr.trim().split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return dateStr; // fallback to raw string
+  const [year, month, day] = parts;
+  const getOrdinal = (n: number) => {
+    if (n > 3 && n < 21) return "th";
+    switch (n % 10) {
+      case 1: return "st";
+      case 2: return "nd";
+      case 3: return "rd";
+      default: return "th";
+    }
+  };
+  return `${months[month - 1]} ${day}${getOrdinal(day)}, ${year}`;
+}
+
 export function LatestNews() {
   // Sort and get the 3 most recent articles
   const sortedArticles = [...researchArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const newsArticles = sortedArticles.slice(0, 3).map(article => ({
-    date: new Date(article.date).toLocaleDateString(),
+    date: formatDate(article.date),
     title: article.title,
     href: article.link
   }));
@@ -36,7 +58,7 @@ export function LatestNews() {
           <div className="space-y-6 text-center">
             {newsArticles.map((article, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
-                <p className="text-sm text-gray-500 mb-2">{article.date}</p>
+                <p className="text-sm text-gray/70 mb-2">{article.date}</p>
                 <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
                   <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
                 </h3>
@@ -87,7 +109,7 @@ export function LatestNews() {
             <div className="space-y-6 mb-10">
               {newsArticles.map((article, index) => (
                 <div key={index} className="border-b border-gray-200 pb-4">
-                  <p className="text-sm text-gray-500 mb-2">{article.date}</p>
+                  <p className="text-sm text-gray/70 mb-2">{formatDate(article.date)}</p>
                   <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
                     <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
                   </h3>
