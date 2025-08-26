@@ -82,7 +82,7 @@ export const supportGroupContent = {
           first appear. Discord works on computers, phones, and tablets, so you can stay 
           connected however you prefer to communicate. You can use Discord in your web 
           browser or [download the app](https://discord.com/download) for the best experience.
-          Feel free to read more about Discord and how it works in their [Beginner's Guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord)`,
+          Feel free to read more about Discord and how it works in their [Beginner's Guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord).`,
         },
         {
           type: "paragraph",

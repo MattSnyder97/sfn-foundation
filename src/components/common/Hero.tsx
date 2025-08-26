@@ -31,7 +31,7 @@ export default function Hero() {
                 Through Community and Research
             </h2>
           <p className="text-base md:text-lg leading-relaxed text-offWhite/80 max-w-prose mb-8 mx-auto md:mx-0">
-            Our foundation exists to speed up finding the cure for small fiber neuropathy and provide you the support you need along the way.
+            Our foundation strives to cure small fiber neuropathy and give you the support you need until that day comes.
           </p>
           <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:flex-wrap md:gap-8 md:justify-start">
             <Button

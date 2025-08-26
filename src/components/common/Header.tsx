@@ -96,35 +96,41 @@ const navLinks = [
                   onMouseLeave={scheduleClose}
                 >
                   {/* Trigger - Now clickable if href exists */}
-                  <div className="flex items-center space-x-3">
-                    {link.href ? (
-                      <Link
-                        href={link.href}
-                        className={`text-base font-medium transition-colors duration-150 cursor-pointer ${
-                          isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <span
-                        className={`text-base font-medium transition-colors duration-150 cursor-default ${
-                          isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                        }`}
-                      >
-                        {link.label}
-                      </span>
-                    )}
-                    {link.dropdown && (
-                      <ChevronDown
-                        strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-all duration-160 cursor-pointer ${
-                          isActive
-                            ? "scale-y-[-1] text-primary"
-                            : "text-dark group-hover:text-primary"
-                        }`}
-                      />
-                    )}
+                  <div className="flex flex-col items-center relative group/nav">
+                    <div className="flex items-center space-x-3">
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className={`text-base font-medium transition-colors duration-150 cursor-pointer ${
+                            isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                          }`}
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <span
+                          className={`text-base font-medium transition-colors duration-150 cursor-default ${
+                            isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                          }`}
+                        >
+                          {link.label}
+                        </span>
+                      )}
+                      {link.dropdown && (
+                        <ChevronDown
+                          strokeWidth={2.5}
+                          className={`h-3.5 w-3.5 transition-all duration-160 cursor-pointer ${
+                            isActive
+                              ? "scale-y-[-1] text-primary"
+                              : "text-dark group-hover:text-primary"
+                          }`}
+                        />
+                      )}
+                    </div>
+                    {/* Animated underline */}
+                    <span
+                      className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-160 origin-left rounded-full"
+                    />
                   </div>
 
                   {/* Dropdown */}
@@ -237,9 +243,9 @@ const navLinks = [
           </div>
 
           {/* Navigation Links */}
-          {navLinks.map((link) => (
-            <div key={link.label} className="text-right">
-              <div className="w-full flex items-center justify-end text-right text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
+          {navLinks.map((link, idx) => (
+            <div key={link.label} className={`text-right ${idx === navLinks.length - 1 && mobileDropdowns[link.label] ? 'pt-6' : ''}`}>
+              <div className="w-full flex items-center justify-end text-right text-lg font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
                 {/* On mobile: if dropdown, use button to open dropdown only; if not, allow navigation */}
                 {link.dropdown ? (
                   <button
@@ -271,7 +277,6 @@ const navLinks = [
                   )
                 )}
               </div>
-
               {mobileDropdowns[link.label] && link.dropdown && (
                 <div className="mt-2 pr-4 space-y-2 text-right mb-8">
                   {link.items?.map((item) => (
