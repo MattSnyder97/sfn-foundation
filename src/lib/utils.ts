@@ -10,6 +10,7 @@ export const segmentLabels: Record<string, string> = {
   'dictionary': 'SFN Dictionary',
   'disclaimer': 'Medical Disclaimer',
   'doctors': 'Approved Doctors',
+  'mutual-aid': 'Mutual Aid',
   'newly-diagnosed': 'Newly Diagnosed',
   'patient-stories': 'Patient Stories',
   'privacy-policy': 'Privacy Policy',

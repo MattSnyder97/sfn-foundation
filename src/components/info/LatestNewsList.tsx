@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { researchArticles } from "../../content/info-pages/research/research-articles";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function sortByDateDesc(a: { date: string }, b: { date: string }) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -91,6 +91,17 @@ export default function LatestNewsList() {
         </div>
       ))}
       <div className="flex gap-4 justify-center mt-4 items-center">
+        {page > 0 && (
+          <Button
+            variant="primary"
+            size="sm"
+            className="rounded-full p-2 flex items-center justify-center"
+            onClick={() => handlePageChange(page - 1)}
+            aria-label="Previous page"
+          >
+            <FaArrowLeft />
+          </Button>
+        )}
         {getPageButtons().map((btn, idx) =>
           btn === '...'
             ? <span key={"ellipsis-" + idx} className="px-2">...</span>
@@ -108,6 +119,7 @@ export default function LatestNewsList() {
         {page < totalPages - 1 && (
           <Button
             variant="primary"
+            size="sm"
             className="rounded-full p-2 flex items-center justify-center"
             onClick={() => handlePageChange(page + 1)}
             aria-label="Next page"
