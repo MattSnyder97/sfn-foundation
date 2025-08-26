@@ -7,8 +7,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "border-2 border-primary bg-primary text-white hover:bg-offWhite hover:border-primary hover:text-primary",
-        secondary: "bg-offWhite text-primary hover:bg-offWhite/80",
-        outline: "bg-primary border-2 border-offWhite text-offWhite hover:bg-offWhite/10",
+        secondary: "bg-offWhite border-2 border-offWhite text-primary hover:bg-primary hover:text-offWhite",
+        outline: "bg-primary border-2 border-offWhite text-offWhite hover:bg-offWhite hover:text-primary",
         outlinePrimary: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
       },
       size: {

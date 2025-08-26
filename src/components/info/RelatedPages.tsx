@@ -25,7 +25,7 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
   return (
     <div className="mt-4 border-gray-200 pt-8 print:hidden">
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-6">
-        <h3 className="text-md text-gray sm:mb-0">Related Pages</h3>
+        <h3 className="text-sm text-gray/80 sm:mb-0">Related Pages</h3>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
           {related.map((page) => (
             <Link key={page.slug} href={page.slug}>
