@@ -52,8 +52,7 @@ export const mattContent = {
         {
           type: "paragraph",
           text: `By April, what started as localized burning had spread throughout my 
-          entire body. The burning pain was now accompanied by shooting pains that 
-          would strike without warning. Simple activities became challenging, and 
+          entire body. The burning pain was now accompanied by shooting pains. Simple activities became challenging, and 
           sleep became elusive as the symptoms seemed to worsen at night.`,
         },
         {
@@ -80,17 +79,10 @@ export const mattContent = {
         {
           type: "paragraph",
           text: `In June 2024, I finally got the test that provided answers: a skin 
-          punch biopsy. This small procedure confirmed what I had begun to suspect 
-          - Small Fiber Neuropathy. Having a diagnosis was both a relief and a new 
+          punch biopsy. This small procedure confirmed what I had begun to suspect...small fiber neuropathy.
+          Having a diagnosis was both a relief and a new 
           challenge. Finally, I knew what was wrong, but now I had to figure out 
           how to manage it.`,
-        },
-        {
-          type: "paragraph",
-          text: `The timing correlation between starting Finasteride and developing 
-          symptoms was too significant to ignore. While every person's situation 
-          is different, and correlation doesn't always mean causation, it's important 
-          to be aware of potential medication-related triggers.`,
         },
       ],
     },
@@ -144,9 +136,8 @@ export const mattContent = {
           type: "paragraph",
           text: `My bigger goal is ambitious but important: I want to help find a cure 
           for this condition. I believe that by bringing together the expertise of 
-          specialists with the power of artificial intelligence and the experiences 
-          of patients, we can accelerate research and find better treatments, maybe 
-          even a cure.`,
+          specialists with the data processing power of artificial intelligence, we can accelerate research 
+          and find better treatments, maybe even a cure.`,
         },
         {
           type: "paragraph",
@@ -164,62 +155,36 @@ export const mattContent = {
       content: [
         {
           type: "paragraph",
-          text: `While SFN is a significant part of my daily reality, I'm determined 
-          not to let it define everything about my life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Woodworking has become both a creative outlet and a form of therapy. 
-          There's something satisfying about creating something beautiful and functional 
-          with my hands.`,
+          text: `While SFN is a significant part of my daily reality, I'm determined not to let it define everything about my life. I've found new ways to adapt and enjoy the things I love, even if it means doing them a little differently. Woodworking has become both a creative outlet and a form of therapy—there's something satisfying about creating something beautiful and functional with my hands. I also picked up drawing again after years away from it, which helps me express myself and find moments of peace amidst the chaos.`,
         },
         {
           type: "image",
           src: "/images/patient-stories/woodworking.jpg",
           alt: "Stardew Valley themed woodworking project",
-          caption:
-            "My Stardew Valley chicken woodworking project.",
-        },
-        {
-          type: "paragraph",
-          text: `I picked up drawing again after years away from it. It's a way to express myself 
-          and find moments of peace amidst the chaos.`,
+          caption: "My Stardew Valley chicken woodworking project.",
         },
         {
           type: "image",
           src: "/images/patient-stories/umbreon.png",
           alt: "Umbreon drawing",
-          caption:
-            "My drawing of the best Pokémon, Umbreon.",
+          caption: "My drawing of the best Pokémon, Umbreon.",
         },
         {
           type: "paragraph",
-          text: `My cat, Bug, provides daily companionship and comfort. There's something 
-          therapeutic about petting a purring cat, and the unconditional love helps 
-          on difficult days.`,
-        },
-        {
-          type: "paragraph",
-          text: `Rock climbing is another passion of mine. It's such a supportive community, 
-          and the physical challenge helps me focus on what my body can do rather than 
-          what it can't.`,
-        },
-        {
-          type: "paragraph",
-          text: `Living with SFN means adapting, not giving up. It means finding new 
-          ways to enjoy old hobbies and being kind to yourself when your body doesn't 
-          cooperate. Most importantly, it means holding onto hope that tomorrow might 
-          be better than today.`,
+          text: `My cat, Bug, provides daily companionship and comfort. There's something therapeutic about petting a purring cat, and the unconditional love helps on difficult days. Rock climbing is another passion of mine—the supportive community and physical challenge help me focus on what my body can do, rather than what it can't.`,
         },
         {
           type: "image",
           src: "/images/patient-stories/mattFriends.jpg",
           alt: "Matt and friends at Red River Gorge",
-          caption:
-            "Me and my friends at Red River Gorge, one of my favorite places to go hiking and climbing.",
+          caption: "Me and my friends at Red River Gorge, one of my favorite places to go hiking and climbing.",
+        },
+        {
+          type: "paragraph",
+          text: `Living with SFN means adapting, not giving up. It means finding new ways to enjoy old hobbies and being kind to yourself when your body doesn't cooperate. Most importantly, it means holding onto hope that tomorrow might be better than today.`,
         },
       ],
-    },
+    }
   ],
 
   meta: {

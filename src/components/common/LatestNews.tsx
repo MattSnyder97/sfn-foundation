@@ -1,33 +1,24 @@
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
+import { researchArticles } from "@/content/info-pages/research/research-articles";
 
 export function LatestNews() {
+  // Sort and get the 3 most recent articles
+  const sortedArticles = [...researchArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const newsArticles = sortedArticles.slice(0, 3).map(article => ({
+    date: new Date(article.date).toLocaleDateString(),
+    title: article.title,
+    href: article.link
+  }));
+
   const featuredArticle = {
     variant: "style3",
-    title: "Placeholder Highlighted Research Article",
-    description: "This section is currently in development. Please check back soon for updates!",
+    title: newsArticles[0]?.title || "Placeholder Highlighted Research Article",
+    description: researchArticles[0]?.summary || "This section is currently in development. Please check back soon for updates!",
     imageSrc: "/images/common/researchGuy.png",
-    href: "/research/latest"
+    href: newsArticles[0]?.href || "/research/latest"
   };
-
-  const newsArticles = [
-    {
-      date: "July 30th, 2025",
-      title: "Placeholder Title Here as an Example for News Articles",
-      href: "/research/"
-    },
-    {
-      date: "July 29th, 2025", 
-      title: "This is Another News Title Example to Show How it Looks",
-      href: "/research/"
-    },
-    {
-      date: "July 28th, 2025",
-      title: "Here is a Third Example of a News Article Title", 
-      href: "/research/"
-    },
-  ];
 
   return (
     <section id="news" className="bg-offWhite py-8">

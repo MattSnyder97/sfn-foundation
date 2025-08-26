@@ -1,9 +1,11 @@
 import InfoParagraph from "@/components/info/InfoParagraph";
 import InfoImage from "@/components/info/InfoImage";
 import InfoList from "@/components/info/InfoList";
+import LatestNewsList from "@/components/info/LatestNewsList";
 
 interface ContentBlock {
-  type: "paragraph" | "list" | "image";
+  type: "paragraph" | "list" | "image" | "component";
+  name?: string;
 }
 
 interface ParagraphBlock extends ContentBlock {
@@ -24,7 +26,12 @@ interface ImageBlock extends ContentBlock {
   caption?: string;
 }
 
-type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;
+interface ComponentBlock extends ContentBlock {
+  type: "component";
+  name: string;
+}
+
+type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock | ComponentBlock;
 
 interface BlockRendererProps {
   block: ContentBlockType;
@@ -33,11 +40,16 @@ interface BlockRendererProps {
 export default function BlockRenderer({ block }: BlockRendererProps) {
   switch (block.type) {
     case "paragraph":
-      return <InfoParagraph>{block.text}</InfoParagraph>;
+      return <InfoParagraph>{(block as ParagraphBlock).text}</InfoParagraph>;
     case "list":
-      return <InfoList ordered={block.ordered} items={block.items} />;
+      return <InfoList ordered={(block as ListBlock).ordered} items={(block as ListBlock).items} />;
     case "image":
-      return <InfoImage src={block.src} alt={block.alt} caption={block.caption} />;
+      return <InfoImage src={(block as ImageBlock).src} alt={(block as ImageBlock).alt} caption={(block as ImageBlock).caption} />;
+    case "component":
+      if ((block as ComponentBlock).name === "LatestNewsList") {
+        return <LatestNewsList />;
+      }
+      return null;
     default:
       return null;
   }

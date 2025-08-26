@@ -1,6 +1,7 @@
 // src/components/info/RelatedPages.tsx
 import Link from "next/link";
 import { allContent } from "@/content";
+import { Button } from "@/components/ui/Button";
 
 interface RelatedPagesProps {
   currentSlug: string;
@@ -27,12 +28,10 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
         <h3 className="text-md text-gray sm:mb-0">Related Pages</h3>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
           {related.map((page) => (
-            <Link
-              key={page.slug}
-              href={page.slug}
-              className="px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors duration-200 w-full text-center sm:w-auto"
-            >
-              {page.hero?.title}
+            <Link key={page.slug} href={page.slug}>
+              <Button variant="primary" className="w-full text-center sm:w-auto">
+                {page.hero?.title}
+              </Button>
             </Link>
           ))}
         </div>

@@ -5,23 +5,34 @@ export const researchContent = {
     title: "Research",
   },
   tableOfContents: [
-    { id: "overview", title: "Overview" }
+    { id: "overview", title: "Overview" },
+    { id: "latest-research", title: "Latest Research" },
   ],
   sections: [
     {
       id: "overview",
-      title: "Latest Research Coming Soon",
+      title: "Overview",
       content: [
         {
           type: "paragraph",
-          text: `This page will be the home for the latest research, studies, and scientific updates about Small Fiber Neuropathy. The functionality to post and display new research is currently being developed. Please check back soon for updates!`,
+          text: `This page is dedicated to sharing the latest research, studies, and scientific updates about Small Fiber Neuropathy. Our goal is to make it easy for you to find new discoveries, clinical trials, and expert insights in one place. We regularly update this page with new articles and breakthroughs, so check back often for the most current information.`,
+        },
+      ],
+    },
+    {
+      id: "latest-research",
+      title: "Latest Research",
+      content: [
+        {
+          type: "component",
+          name: "LatestNewsList",
         },
       ],
     },
   ],
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 24, 2025",
+    lastUpdated: "August 26, 2025",
     references: [],
   },
 };
