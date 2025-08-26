@@ -36,7 +36,7 @@ export default function InfoList({ items, ordered = false }: InfoListProps) {
                 );
               },
               strong: ({ children }) => (
-                <strong className="font-bold text-black">
+                <strong className="font-bold text-dark">
                   {children}
                 </strong>
               ),

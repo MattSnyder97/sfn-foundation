@@ -38,7 +38,7 @@ export function LatestNews() {
               <div key={index} className="border-b border-gray-200 pb-4">
                 <p className="text-sm text-gray-500 mb-2">{article.date}</p>
                 <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
-                  <a href={article.href}>{article.title}</a>
+                  <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
                 </h3>
               </div>
             ))}
@@ -89,7 +89,7 @@ export function LatestNews() {
                 <div key={index} className="border-b border-gray-200 pb-4">
                   <p className="text-sm text-gray-500 mb-2">{article.date}</p>
                   <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
-                    <a href={article.href}>{article.title}</a>
+                    <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
                   </h3>
                 </div>
               ))}

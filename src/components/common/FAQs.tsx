@@ -14,7 +14,7 @@ export function FAQs() {
           <br />
           <Link
             href="/about/"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Learn more on our About SFN page
           </Link>
@@ -32,7 +32,7 @@ export function FAQs() {
           <br />
           <Link
             href="/about/symptoms"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Read more on our Symptoms page
           </Link>
@@ -51,7 +51,7 @@ export function FAQs() {
           <br />
           <Link
             href="/about/diagnosis"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Learn more on our Diagnosis page
           </Link>
@@ -69,7 +69,7 @@ export function FAQs() {
           <br />
           <Link
             href="/about/causes"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Explore more on our Causes page
           </Link>
@@ -88,7 +88,7 @@ export function FAQs() {
           <br />
           <Link
             href="/research/"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Stay updated on our Research page
           </Link>
@@ -106,7 +106,7 @@ export function FAQs() {
           <br />
           <Link
             href="/about/treatments"
-            className="text-primary underline hover:text-primary/80"
+            className="text-primary hover:underline"
           >
             Read more on our Treatments page
           </Link>

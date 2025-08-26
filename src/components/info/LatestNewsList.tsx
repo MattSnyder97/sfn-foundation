@@ -31,6 +31,26 @@ export default function LatestNewsList() {
     setPage(newPage);
   };
 
+  // Pagination logic
+  const getPageButtons = () => {
+    if (totalPages <= 5) {
+      return [...Array(totalPages).keys()];
+    }
+    const buttons = [];
+    if (page > 1) {
+      buttons.push(0);
+      if (page > 2) buttons.push('...');
+    }
+    if (page > 0) buttons.push(page - 1);
+    buttons.push(page);
+    if (page < totalPages - 1) buttons.push(page + 1);
+    if (page < totalPages - 2) {
+      if (page < totalPages - 3) buttons.push('...');
+      buttons.push(totalPages - 1);
+    }
+    return buttons;
+  };
+
   if (!sortedArticles || sortedArticles.length === 0) {
     return <div className="text-gray-500">No research articles available yet.</div>;
   }
@@ -43,25 +63,29 @@ export default function LatestNewsList() {
             href={article.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-lg mb-2 block hover:text-primary hover:underline transition-colors duration-160"
+            className="font-semibold text-lg text-dark mb-2 block hover:text-primary hover:underline transition-colors duration-160"
           >
             {article.title}
           </a>
-          <p className="mb-2 text-sm text-gray-700">{article.summary}</p>
-          <div className="mb-2 text-xs text-gray-400">Published: {new Date(article.date).toLocaleDateString()}</div>
+          <p className="mb-2 text-sm text-dark">{article.summary}</p>
+          <div className="mb-2 text-xs text-gray/60">Published: {new Date(article.date).toLocaleDateString()}</div>
         </div>
       ))}
       <div className="flex gap-4 justify-center mt-4 items-center">
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i}
-            onClick={() => handlePageChange(i)}
-            className={`px-2 py-1 rounded-full text-md font-semibold ${page === i ? "text-primary" : "text-gray/60 hover:text-gray hover:underline cursor-pointer transition-all duration-160"}`}
-            aria-current={page === i ? "page" : undefined}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {getPageButtons().map((btn, idx) =>
+          btn === '...'
+            ? <span key={"ellipsis-" + idx} className="px-2">...</span>
+            : (
+              <button
+                key={btn}
+                onClick={() => handlePageChange(Number(btn))}
+                className={`px-2 py-1 rounded-full text-md font-semibold ${page === btn ? "text-primary" : "text-gray/60 hover:text-gray hover:underline cursor-pointer transition-all duration-160"}`}
+                aria-current={page === btn ? "page" : undefined}
+              >
+                {Number(btn) + 1}
+              </button>
+            )
+        )}
         {page < totalPages - 1 && (
           <Button
             variant="primary"

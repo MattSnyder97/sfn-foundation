@@ -27,7 +27,7 @@ export default function InfoParagraph({ children }: InfoParagraphProps) {
             },
 
             strong: ({ children }) => (
-              <strong className="font-bold text-black">
+              <strong className="font-bold text-dark">
                 {children}
               </strong>
             ),

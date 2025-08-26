@@ -13,7 +13,7 @@ export const researchArticles: ResearchArticle[] = [
       date: "2025-08-20",
     },
     {
-      title: "Peripheral Neuropathy in Pots: GI Symptom Links",
+      title: "Peripheral Neuropathy in POTS: GI Symptom Links",
       summary: "Study finds small and large fiber neuropathy in Swedish POTS patients, with links to GI symptoms.",
       link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327549",
       date: "2025-07-03",
