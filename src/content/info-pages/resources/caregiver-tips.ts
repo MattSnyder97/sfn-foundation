@@ -118,7 +118,7 @@ export const caregiverTipsContent = {
         },
         {
           type: "image",
-          src: "/images/caregiver.png",
+          src: "/images/common/caregiver.png",
           alt: "Caregiver helping with daily tasks",
           caption:
             "Being a caregiver means providing practical support while respecting your loved one's independence.",
@@ -221,7 +221,7 @@ export const caregiverTipsContent = {
         },
         {
           type: "image",
-          src: "/images/calmGuy.png",
+          src: "/images/common/calmGuy.png",
           alt: "Caregiver taking a moment for self-care",
           caption:
             "Taking care of yourself is essential for being able to provide the best support for your loved one.",

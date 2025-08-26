@@ -15,7 +15,7 @@ export function PatientStory() {
           <div className="flex-shrink-0 relative">
             <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 shadow-xl relative z-10">
               <Image
-                src="/images/testimonial.png"
+                src="/images/common/testimonial.png"
                 alt="Matt testimonial"
                 width={500}
                 height={500}
@@ -51,7 +51,7 @@ export function PatientStory() {
           <div className="flex-shrink-0">
             <div className="w-88 h-88 rounded-xl overflow-hidden bg-primary shadow-2xl">
               <Image
-                src="/images/testimonial.png"
+                src="/images/common/testimonial.png"
                 alt="Matt testimonial"
                 width={500}
                 height={500}

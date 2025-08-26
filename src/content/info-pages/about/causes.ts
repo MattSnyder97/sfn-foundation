@@ -75,7 +75,7 @@ export const causesContent = {
         },
         {
           type: "image",
-          src: "/images/diabetes.png",
+          src: "/images/common/diabetes.png",
           alt: "Image showing blood sugar",
           caption:
             "People with diabetes that keep their levels in check tend to see improvements in their neuropathic pain.",

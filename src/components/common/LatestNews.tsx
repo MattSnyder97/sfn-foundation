@@ -7,7 +7,7 @@ export function LatestNews() {
     variant: "style3",
     title: "Placeholder Highlighted Research Article",
     description: "This section is currently in development. Please check back soon for updates!",
-    imageSrc: "/images/researchGuy.png",
+    imageSrc: "/images/common/researchGuy.png",
     href: "/research/latest"
   };
 
@@ -65,7 +65,7 @@ export function LatestNews() {
             <div className="w-full">
               <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
                 <img 
-                  src="/images/researchGuy.png" 
+                  src="/images/common/researchGuy.png" 
                   alt="The Cure for SFN Has Never Been Closer"
                   className="w-full object-cover h-64"
                 />
@@ -113,7 +113,7 @@ export function LatestNews() {
           <div className="flex-shrink-0 w-full max-w-sm">
             <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
               <img 
-                src="/images/researchGuy.png" 
+                src="/images/common/researchGuy.png" 
                 alt="The Cure for SFN Has Never Been Closer"
                 className="w-full object-cover h-64"
               />

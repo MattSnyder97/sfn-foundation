@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background image with opacity */}
       <div className="absolute inset-0">
         <Image
-          src="/images/heroBackground.jpg"
+          src="/images/common/heroBackground.jpg"
           alt="small fiber neuropathy"
           fill
           priority

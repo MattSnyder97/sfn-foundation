@@ -74,7 +74,7 @@ export const treatmentsContent = {
         },
         {
           type: "image",
-          src: "/images/drugs.png",
+          src: "/images/common/drugs.png",
           alt: "Healthcare professional discussing treatment options with a patient",
           caption:
             "Working with your doctor helps you find the right medicines for your pain.",
@@ -174,7 +174,7 @@ export const treatmentsContent = {
         },
         {
           type: "image",
-          src: "/images/exercisingWoman.png",
+          src: "/images/common/exercisingWoman.png",
           alt: "Woman doing gentle exercise outdoors",
           caption:
             "Regular gentle exercise like walking can help reduce nerve pain and improve your overall health.",

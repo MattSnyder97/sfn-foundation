@@ -80,7 +80,7 @@ export const symptomsContent = {
         },
         {
           type: "image",
-          src: "/images/painfulFeet.png",
+          src: "/images/common/painfulFeet.png",
           alt: "Illustration showing areas where SFN symptoms commonly occur on feet and hands",
           caption:
             "SFN symptoms typically start in the feet and hands, often beginning at the tips of fingers and toes.",
@@ -176,7 +176,7 @@ export const symptomsContent = {
         },
         {
           type: "image",
-          src: "/images/insomniaWoman.png",
+          src: "/images/common/insomniaWoman.png",
           alt: "Person sitting on bed at night, depicting sleep difficulties from neuropathy pain",
           caption:
             "Many people with SFN find that symptoms worsen at night, affecting sleep quality and daily functioning.",

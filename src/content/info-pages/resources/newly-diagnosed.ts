@@ -251,7 +251,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "image",
-          src: "/images/supportGroup.png",
+          src: "/images/common/supportGroup.png",
           alt: "People in a support group setting",
           caption:
             "Connecting with others who understand your experience can provide valuable emotional support and practical tips.",

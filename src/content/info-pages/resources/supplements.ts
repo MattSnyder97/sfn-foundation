@@ -81,7 +81,7 @@ export const supplementsContent = {
         },
         {
           type: "image",
-          src: "/images/supplements.png",
+          src: "/images/common/supplements.png",
           alt: "Various supplement bottles and capsules arranged on a table",
           caption: "Quality supplements can support nerve health when used as part of a comprehensive treatment plan.",
         },

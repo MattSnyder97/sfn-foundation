@@ -77,7 +77,7 @@ export const diagnosisContent = {
         },
         {
           type: "image",
-          src: "/images/painWoman.png",
+          src: "/images/common/painWoman.png",
           alt: "Doctor performing a physical exam on a patient",
           caption:
             "A thorough physical exam helps doctors assess nerve function and identify areas affected by SFN.",
@@ -124,7 +124,7 @@ export const diagnosisContent = {
         },
         {
           type: "image",
-          src: "/images/blood.png",
+          src: "/images/common/blood.png",
           alt: "Blood test tubes",
           caption:
             "Getting blood tests helps identify potential underlying causes of SFN, guiding treatment options.",
