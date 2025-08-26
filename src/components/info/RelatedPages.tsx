@@ -29,7 +29,7 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
           {related.map((page) => (
             <Link key={page.slug} href={page.slug}>
-              <Button variant="primary" className="w-full text-center sm:w-auto">
+              <Button variant="outlinePrimary" size="sm" className="w-full text-center sm:w-auto">
                 {page.hero?.title}
               </Button>
             </Link>

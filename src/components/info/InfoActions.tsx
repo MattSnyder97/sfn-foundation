@@ -1,7 +1,7 @@
 // src/components/info/InfoActions.tsx
 "use client";
 import { Button } from "@/components/ui/Button";
-import { Printer, Share2, Check } from "lucide-react";
+import { Printer, Share2, Check, MessageSquare } from "lucide-react";
 import { useState } from "react";
 
 interface InfoActionsProps {
@@ -48,19 +48,38 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
   };
 
   return (
-    <section className="mt-8 pt-8">
+    <section className="mt-4 pt-8">
+      {/* Feedback Section */}
+      <div className="mb-8 flex flex-col items-center justify-center bg-primary/5 rounded-xl py-5 px-4 border border-primary/20 shadow-gray-md/4">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="font-semibold text-lg text-primary">Have Feedback or Ideas?</span>
+        </div>
+        <p className="text-center text-gray mb-4 max-w-xl">
+          Share your feedback or ideas with our quick Google Form survey to help us improve the website for everyone.<br /><br />
+          Your feedback is anonymous and truly appreciated.
+        </p>
+        <a
+          href="https://forms.gle/p81P8LdPwcERfi4D8"
+          target="_blank"
+          rel="noopener"
+          aria-label="Leave feedback via Google Form"
+        >
+          <Button variant="primary" size="md" className="font-semibold">
+            Google Form Survey
+          </Button>
+        </a>
+      </div>
+      
       <div className="flex flex-col sm:flex-row gap-4 items-center justify-center sm:items-start sm:justify-start print:hidden">
-       
         <div className="flex gap-4">
           <Button
             variant="outlinePrimary"
-            size="md"
+            size="sm"
             onClick={handlePrint}
           >
-            <Printer size={18} />
+            <Printer size={16} />
             Print
           </Button>
-         
           <Button
             variant="outlinePrimary"
             size="md"
@@ -68,12 +87,12 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
           >
             {copied ? (
               <>
-                <Check size={18} />
+                <Check size={16} />
                 Copied!
               </>
             ) : (
               <>
-                <Share2 size={18} />
+                <Share2 size={16} />
                 Share
               </>
             )}
