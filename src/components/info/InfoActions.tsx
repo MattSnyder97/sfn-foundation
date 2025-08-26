@@ -50,13 +50,12 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
   return (
     <section className="mt-4 pt-8">
       {/* Feedback Section */}
-      <div className="mb-8 flex flex-col items-center justify-center bg-primary/5 rounded-xl py-5 px-4 border border-primary/20 shadow-gray-md/4">
+      <div className="mb-8 flex flex-col items-center justify-center bg-primary/5 rounded-xl py-5 px-4 border border-primary/20 shadow-gray-md/4 print:hidden">
         <div className="flex items-center gap-2 mb-2">
-          <span className="font-semibold text-lg text-primary">Have Feedback or Ideas?</span>
+          <span className="font-semibold text-2xl text-primary">Have Feedback or Ideas?</span>
         </div>
         <p className="text-center text-gray mb-4 max-w-xl">
-          Share your feedback or ideas with our quick Google Form survey to help us improve the website for everyone.<br /><br />
-          Your feedback is anonymous and truly appreciated.
+          Share your anonymous feedback or ideas with our quick Google Form survey to help us improve the website for everyone.
         </p>
         <a
           href="https://forms.gle/p81P8LdPwcERfi4D8"

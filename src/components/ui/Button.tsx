@@ -6,13 +6,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-primary text-white hover:bg-primary/80",
+        primary: "border-2 border-primary bg-primary text-white hover:bg-offWhite hover:border-primary hover:text-primary",
         secondary: "bg-offWhite text-primary hover:bg-offWhite/80",
         outline: "bg-primary border-2 border-offWhite text-offWhite hover:bg-offWhite/10",
-        outlinePrimary: "border-2 border-primary text-primary hover:bg-primary/12",
+        outlinePrimary: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
       },
       size: {
-        sm: "px-4 py-2 text-sm",
+        sm: "px-4 py-1 text-sm",
         md: "px-6 py-4 text-base",
         lg: "px-6 py-4 text-lg",
       },

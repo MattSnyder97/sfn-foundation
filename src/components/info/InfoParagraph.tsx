@@ -19,7 +19,7 @@ export default function InfoParagraph({ children }: InfoParagraphProps) {
                   href={href}
                   target={isInternal ? undefined : "_blank"}
                   rel={isInternal ? undefined : "noopener noreferrer"}
-                  className="text-primary hover:text-secondary underline font-medium transition-colors duration-200 print:hidden"
+                  className="text-primary hover:underline font-medium transition-colors duration-200 print:hidden"
                 >
                   {children}
                 </a>
