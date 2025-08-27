@@ -109,7 +109,7 @@ export default function LatestNewsList() {
               <button
                 key={btn}
                 onClick={() => handlePageChange(Number(btn))}
-                className={`px-2 py-1 rounded-full text-md font-semibold ${page === btn ? "text-primary" : "text-gray/60 hover:text-primary hover:underline cursor-pointer transition-all duration-160"}`}
+                className={`print:hidden px-2 py-1 rounded-full text-md font-semibold ${page === btn ? "text-primary" : "text-gray/60 hover:text-primary hover:underline cursor-pointer transition-all duration-160"}`}
                 aria-current={page === btn ? "page" : undefined}
               >
                 {Number(btn) + 1}
@@ -120,7 +120,7 @@ export default function LatestNewsList() {
           <Button
             variant="primary"
             size="sm"
-            className="rounded-full p-2 flex items-center justify-center"
+            className="print:hidden rounded-full p-2 flex items-center justify-center"
             onClick={() => handlePageChange(page + 1)}
             aria-label="Next page"
           >
