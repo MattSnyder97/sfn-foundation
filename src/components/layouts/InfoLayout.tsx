@@ -38,7 +38,7 @@ export default function InfoLayout({
   customTags,
 }: InfoLayoutProps) {
   const pathname = usePathname();
-  const pageData = getPageDataFromContent(pathname);
+  const pageData = pathname ? getPageDataFromContent(pathname) : { slug: '', tags: [], title: '' };
 
   const currentSlug = customSlug || pageData.slug;
   const currentTags = customTags || pageData.tags;

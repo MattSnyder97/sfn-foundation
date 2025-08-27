@@ -37,7 +37,7 @@ yarn-error.log*
 /src/pages/api/
 
 # Ignore Prisma folder
-/prisma/
+/prisma/*
 
 # Prisma SQLite database
 /dev.db
