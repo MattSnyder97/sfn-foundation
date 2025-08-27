@@ -12,7 +12,12 @@ const approvedSpecialists = [
 ];
 
 export default async function ResearchPortalPage() {
-  const session = await getServerSession(authOptions);
+  let session = null;
+  try {
+    session = await getServerSession(authOptions);
+  } catch (error) {
+    session = null;
+  }
 
   let isSpecialist = false;
   if (session?.user?.email) {
