@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SFN Foundation Website
+
+Giving Hope Through Community and Research
+
+The SFN Foundation website is dedicated to supporting individuals affected by Small Fiber Neuropathy (SFN) and related conditions. Our mission is to provide reliable information, research updates, community resources, and support to help patients, caregivers, and professionals navigate the challenges of chronic illness.
+
+## Features
+- **Educational Content:** Clear, accessible information about SFN, symptoms, diagnosis, treatments, and more.
+- **Latest Research:** Curated research articles and clinical trial updates.
+- **Support Group:** Community-driven support and resources for patients and caregivers.
+- **FAQs & Dictionary:** Answers to common questions and a glossary of terms.
+- **Specialists Directory:** Find professionals and experts in SFN care.
+- **Patient Stories:** Real experiences and advice from those living with SFN.
+- **Professional Portal:** Tools and resources for clinicians and researchers.
+
+## Open Source Mission
+This project is open source so that other chronic illness and disease communities can freely use, adapt, and improve it for their own needs. We believe that accessible, high-quality information and community support should be available to everyone—regardless of condition or background.
+
+If you represent a patient group, nonprofit, or advocacy organization, feel free to fork this repository and customize it for your community. Contributions, suggestions, and improvements are always welcome!
 
 ## Getting Started
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/sfn-foundation.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Customize content:**
+   - Update content in the `src/content/` folder.
+   - Add or edit pages, components, and styles as needed.
 
-First, run the development server:
+## License
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Contact & Support
+- [Website](https://sfnfoundation.org)
+- [Support Group](https://sfnfoundation.org/resources/support-group)
+- [Contact](mailto:info@sfnfoundation.org)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Together, we can build a more supportive and informed future for all chronic illness communities.*

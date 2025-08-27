@@ -165,6 +165,10 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
+          text: `[Find a SFN specialist](/resources/specialists)`,
+        },
+        {
+          type: "paragraph",
           text: `Depending on what might be causing your neuropathy, you might also 
           work with other specialists. If you have diabetes, an endocrinologist 
           can help manage your blood sugar. If autoimmune disease is suspected, 

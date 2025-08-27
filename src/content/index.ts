@@ -39,10 +39,8 @@ export const allContent = [
   ...[diagnosisContent],
   ...[symptomsContent],
   ...[treatmentsContent],
-
   // Research
   ...[researchContent],
-
   // Resources
   ...[caregiverTipsContent],
   ...[dictionaryContent],
@@ -52,14 +50,11 @@ export const allContent = [
   ...[specialistsContent],
   ...[supplementsContent],
   ...[supportGroupContent],
-
   // Legal
   ...[accessibilityContent],
   ...[disclaimerContent],
   ...[privacyPolicyContent],
   ...[termsOfUseContent],
-
   // Patient Stories
   ...[mattContent],
-
 ];
