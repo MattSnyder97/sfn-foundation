@@ -73,7 +73,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link 
-                  href="/research/" 
+                  href="/research/portal" 
                   className="opacity-80 hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2"
                 >
                   <Lock size={14} />

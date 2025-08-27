@@ -33,6 +33,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Prisma SQLite database
+/dev.db
+
+# Prisma migrations
+/prisma/migrations/
+
 # vercel
 .vercel
 
@@ -41,4 +47,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Ignore documentation folder
-/documentation/
+/documentation

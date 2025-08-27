@@ -1,0 +1,9 @@
+"use client";
+import { signIn } from "next-auth/react";
+import { Button } from "@/components/ui/Button";
+
+export default function EmailSignInButton() {
+  return (
+    <Button onClick={() => signIn("email")}>Sign in with Email</Button>
+  );
+}

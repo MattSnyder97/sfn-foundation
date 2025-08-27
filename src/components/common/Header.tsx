@@ -95,38 +95,38 @@ const navLinks = [
                   onMouseEnter={() => openDropdown(link.label)}
                   onMouseLeave={scheduleClose}
                 >
-                  {/* Trigger - Now clickable if href exists */}
+                  {/* Trigger - Wrap text and chevron in one container */}
                   <div className="flex flex-col items-center relative group/nav">
-                    <div className="flex items-center space-x-3">
+                    <button
+                      className={`flex items-center space-x-3 px-2 py-1 rounded transition-colors duration-150 cursor-pointer bg-transparent border-none outline-none focus:outline-none ${
+                        isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                      }`}
+                      style={{ background: "none" }}
+                      tabIndex={0}
+                      aria-haspopup={link.dropdown ? "true" : undefined}
+                      aria-expanded={isActive}
+                    >
                       {link.href ? (
                         <Link
                           href={link.href}
-                          className={`text-base font-medium transition-colors duration-150 cursor-pointer ${
-                            isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                          }`}
+                          className="text-base font-medium"
                         >
                           {link.label}
                         </Link>
                       ) : (
-                        <span
-                          className={`text-base font-medium transition-colors duration-150 cursor-default ${
-                            isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                          }`}
-                        >
-                          {link.label}
-                        </span>
+                        <span className="text-base font-medium cursor-default">{link.label}</span>
                       )}
                       {link.dropdown && (
                         <ChevronDown
                           strokeWidth={2.5}
-                          className={`h-3.5 w-3.5 transition-all duration-160 cursor-pointer ${
+                          className={`h-3.5 w-3.5 transition-all duration-160 ${
                             isActive
                               ? "scale-y-[-1] text-primary"
                               : "text-dark group-hover:text-primary"
                           }`}
                         />
                       )}
-                    </div>
+                    </button>
                     {/* Animated underline */}
                     <span
                       className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-160 origin-left rounded-full"
@@ -244,7 +244,16 @@ const navLinks = [
 
           {/* Navigation Links */}
           {navLinks.map((link, idx) => (
-            <div key={link.label} className={`text-right ${idx === navLinks.length - 1 && mobileDropdowns[link.label] ? 'pt-6' : ''}`}>
+            <div
+              key={link.label}
+              className={`text-right ${
+                idx !== 0 && idx !== navLinks.length - 1 && mobileDropdowns[link.label]
+                  ? "pt-6 pb-6"
+                  : idx === navLinks.length - 1 && mobileDropdowns[link.label]
+                  ? "pt-6"
+                  : ""
+              }`}
+            >
               <div className="w-full flex items-center justify-end text-right text-lg font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
                 {/* On mobile: if dropdown, use button to open dropdown only; if not, allow navigation */}
                 {link.dropdown ? (
