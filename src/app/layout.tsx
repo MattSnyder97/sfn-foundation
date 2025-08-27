@@ -7,14 +7,14 @@ import Script from "next/script";
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["100", "300", "400", "700", "900"],
+  weight: ["400", "700"], // Only load used weights for performance
 });
 
 // Load Lora as serif option
 const lora = Lora({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400", "400", "700",],
+  weight: ["400", "700"], // Only load used weights for performance
 });
 
 export const metadata: Metadata = {
@@ -31,11 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LBNGNC5J4V"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

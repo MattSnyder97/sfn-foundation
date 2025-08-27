@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import axios from "axios";
 import readline from "readline";
+import dotenv from "dotenv";
+dotenv.config();
 
 // --- generateContentIndex logic ---
 function generateContentIndex() {
@@ -69,7 +71,7 @@ function generateContentIndex() {
 
 // --- tinypngReduce logic ---
 function tinyPNGReduce() {
-  const TINYPNG_API_KEY = "6ZQqPSstkW0qyz7nkqmk6V9cZJmC8PhY";
+  const TINYPNG_API_KEY = process.env.TINYPING_API_KEY;
   const imagesDir = path.join(process.cwd(), "public/images");
   const subfolders = fs
     .readdirSync(imagesDir)
