@@ -39,7 +39,7 @@ export function PatientStory() {
               aria-label="Read Matt's full small fiber neuropathy story"
             >
               <Button variant="secondary" size="md">
-                Read Matt's Full Story
+                Read Matt&apos;s Full Story
               </Button>
             </Link>
           </div>
@@ -76,7 +76,7 @@ export function PatientStory() {
                 className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
                 aria-label="Read Matt's full small fiber neuropathy story"
               >
-                Read Matt's Story
+                Read Matt&apos;s Story
               </Button>
             </Link>
           </div>
