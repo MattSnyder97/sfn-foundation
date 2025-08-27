@@ -39,7 +39,7 @@ export function PatientStory() {
               aria-label="Read Matt's full small fiber neuropathy story"
             >
               <Button variant="secondary" size="md">
-                Read Matt&apos;s Full Story
+                Read Matt&apos;s Story
               </Button>
             </Link>
           </div>
