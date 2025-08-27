@@ -70,7 +70,7 @@ export function LatestNews() {
           {/* Mobile See More Button */}
           <div className="text-center mb-24">
             <Link href="/research">
-              <Button variant="outlinePrimary" size="md">See More</Button>
+              <Button variant="outlinePrimary" aria-label="Read more latest news articles about small fiber neuropathy" size="md">See More</Button>
             </Link>
           </div>
          
@@ -119,7 +119,7 @@ export function LatestNews() {
             </div>
 
             <Link href="/research">
-              <Button variant="outlinePrimary" size="md">See More</Button>
+              <Button variant="outlinePrimary" aria-label="Read more latest news articles about small fiber neuropathy" size="md">See More</Button>
             </Link>
           </div>
          

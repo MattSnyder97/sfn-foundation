@@ -34,11 +34,11 @@ export function PatientStory() {
               — Matt, 28 years old, diagnosed in 2024
             </p>
             
-            <Link href="/patient-stories/matt">
-              <Button
-                variant="secondary"
-                size="md"
-              >
+            <Link 
+              href="/patient-stories/matt" 
+              aria-label="Read more about Matt's small fiber neuropathy story"
+            >
+              <Button variant="secondary" size="md">
                 Read More
               </Button>
             </Link>
@@ -74,6 +74,7 @@ export function PatientStory() {
                 variant="secondary"
                 size="md"
                 className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
+                aria-label="Read more about Matt's small fiber neuropathy story"
               >
                 Read More
               </Button>
