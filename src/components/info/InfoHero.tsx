@@ -13,7 +13,8 @@ export default function InfoHero({ title }: InfoHeroProps) {
   
   // Generate breadcrumbs from pathname
   const generateBreadcrumbs = () => {
-    const pathSegments = pathname.split('/').filter(segment => segment !== '');
+  if (!pathname) return [];
+  const pathSegments = pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: Array<{ label: string; href: string; isLast?: boolean }> = [{ label: 'Home', href: '/' }];
     
     
