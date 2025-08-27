@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
+import Image from "next/image";
 import { researchArticles } from "@/content/info-pages/research/research-articles";
 
 
@@ -77,7 +78,7 @@ export function LatestNews() {
           <div className="flex justify-center">
             <div className="w-full">
               <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
-                <img 
+                <Image 
                   src="/images/common/researchGuy.png" 
                   alt="The Cure for SFN Has Never Been Closer"
                   className="w-full object-cover h-64"
@@ -125,7 +126,7 @@ export function LatestNews() {
           {/* Right Card - Force style3 with inline styles as fallback */}
           <div className="flex-shrink-0 w-full max-w-sm">
             <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
-              <img 
+              <Image
                 src="/images/common/researchGuy.png" 
                 alt="The Cure for SFN Has Never Been Closer"
                 className="w-full object-cover h-64"
