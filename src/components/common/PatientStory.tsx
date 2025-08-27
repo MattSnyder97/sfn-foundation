@@ -36,10 +36,10 @@ export function PatientStory() {
             
             <Link 
               href="/patient-stories/matt" 
-              aria-label="Read more about Matt's small fiber neuropathy story"
+              aria-label="Read Matt's full small fiber neuropathy story"
             >
               <Button variant="secondary" size="md">
-                Read More
+                Read Matt's Full Story
               </Button>
             </Link>
           </div>
@@ -74,9 +74,9 @@ export function PatientStory() {
                 variant="secondary"
                 size="md"
                 className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
-                aria-label="Read more about Matt's small fiber neuropathy story"
+                aria-label="Read Matt's full small fiber neuropathy story"
               >
-                Read More
+                Read Matt's Story
               </Button>
             </Link>
           </div>

@@ -81,6 +81,8 @@ export function LatestNews() {
                 <Image 
                   src="/images/common/researchGuy.png" 
                   alt="The Cure for SFN Has Never Been Closer"
+                  width={500}
+                  height={256}
                   className="w-full object-cover h-64"
                 />
                 <div className="px-8 py-6">
@@ -129,6 +131,8 @@ export function LatestNews() {
               <Image
                 src="/images/common/researchGuy.png" 
                 alt="The Cure for SFN Has Never Been Closer"
+                width={500}
+                height={256}
                 className="w-full object-cover h-64"
               />
               <div className="px-8 py-6">
