@@ -4,7 +4,7 @@ export function FeaturedCards() {
   const featured = [
     {
       variant: "style3",
-      title: "Research Backed Ways to Improve Your SFN Symptoms",
+      title: "Research Backed Treatments to Improve SFN",
       description: "Neuropathy is a complex condition, but there are ways to manage your symptoms effectively.",
       imageSrc: "/images/common/doctorMan.png",
       href: "/about/treatments"

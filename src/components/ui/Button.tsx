@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 
 const buttonVariants = cva(
-  "inline-flex items-center gap-2 justify-center font-semibold rounded-full transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-offset-1 shadow-md/4 cursor-pointer",
+  "inline-flex items-center gap-2 justify-center font-semibold rounded-3xl transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-offset-1 shadow-md/4 cursor-pointer",
   {
     variants: {
       variant: {
@@ -13,7 +13,7 @@ const buttonVariants = cva(
       },
       size: {
         sm: "px-4 py-1 text-sm",
-        md: "px-6 py-4 text-base",
+        md: "px-6 py-3 text-base",
         lg: "px-6 py-4 text-lg",
       },
     },
