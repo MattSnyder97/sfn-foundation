@@ -15,7 +15,7 @@ export const researchContent = {
       content: [
         {
           type: "paragraph",
-          text: `This page is dedicated to sharing the latest research, studies, and scientific updates about Small Fiber Neuropathy. Our goal is to make it easy for you to find new discoveries, clinical trials, and expert insights in one place. We regularly update this page with new articles and breakthroughs, so check back often for the most current information.`,
+          text: `Stay current with the latest Small Fiber Neuropathy research. We collect new studies, clinical trials, and expert findings in one place. This page updates regularly with fresh discoveries and breakthroughs.`,
         },
       ],
     },

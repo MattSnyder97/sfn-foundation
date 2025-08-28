@@ -77,18 +77,20 @@ export default function LatestNewsList() {
   return (
     <div className="flex flex-col gap-6">
       {articlesToShow.map((article, idx) => (
-        <div key={idx} className="border-dark rounded-lg p-4 shadow-sm bg-white">
-          <a
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-lg text-dark mb-2 block hover:text-primary hover:underline transition-colors duration-160"
-          >
-            {article.title}
-          </a>
-          <p className="mb-2 text-sm text-dark">{article.summary}</p>
-          <div className="mb-2 text-xs text-gray/60">Published: {formatDate(article.date)}</div>
-        </div>
+        <a
+          key={idx}
+          href={article.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-gray/20 border-1 rounded-xl p-8 shadow-md/2 bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          <p className="mb-2 text-sm text-dark">
+            <span className="font-semibold text-lg block mb-1">{article.title}</span>
+            <span className="text-md text-dark">{formatDate(article.date)}</span>
+            <span className="text-md mx-1 text-dark">∙</span>
+            <span>{article.summary}</span>
+          </p>
+        </a>
       ))}
       <div className="flex gap-4 justify-center mt-4 items-center">
         {page > 0 && (
