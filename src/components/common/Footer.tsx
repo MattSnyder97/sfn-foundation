@@ -12,6 +12,17 @@ export default function Footer() {
     <footer className="w-full bg-primary text-white print:hidden">
       <div className="container-padding mx-auto py-20">
         {/* Main Footer Content */}
+        {/* Logo */}
+        <div className="mb-12 flex justify-center md:justify-start">
+          <Link href="/">
+            <Image
+              src="/logos/logoWhite.svg"
+              alt="SFN Foundation Logo"
+              width={240}
+              height={41}
+            />
+          </Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Quick Links */}
           <div className="text-center md:text-left">

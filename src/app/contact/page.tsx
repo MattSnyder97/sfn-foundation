@@ -4,15 +4,17 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import { Button } from '@/components/ui/Button';
 
+import InfoHero from '@/components/info/InfoHero';
+
 export default function ContactPage() {
 	return (
 		<>
 			<Header />
-			<section className="container-padding mx-auto py-16 max-w-xl">
-				<h1 className="text-4xl font-bold mb-6 text-primary">Contact</h1>
-				<p className="mb-8 text-lg text-gray-700">Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
+			<section>
+				{/* InfoHero replaces the Contact title */}
+				<InfoHero title="Contact" />
 				<form
-					className="space-y-6"
+					className="space-y-6 container-padding mx-auto py-16"
 					action="https://formspree.io/f/xjkebokb"
 					method="POST"
 				>

@@ -36,19 +36,24 @@ export default function InfoHero({ title }: InfoHeroProps) {
   const breadcrumbs = generateBreadcrumbs();
 
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Primary background */}
-      <div className="absolute inset-0 bg-primary" />
-     
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-secondary/30"/>
-     
+  <section className="relative w-full overflow-hidden">
+      {/* Layer 1: Solid color */}
+      <div className="absolute inset-0" style={{ background: '#5159CF', zIndex: 0 }} />
+      {/* Layer 2: Linear gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(90deg, #5159CF 20%, #629FFB 100%)',
+          opacity: 0.5,
+          zIndex: 1,
+        }}
+      />
       {/* Content */}
-      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-16">
-        <div className="text-left text-offWhite max-w-5xl">
+      <div className="container-padding mx-auto relative z-10 flex items-center min-h-[160px] py-16 md:px-0">
+  <div className="w-full flex flex-col justify-center items-center text-offWhite max-w-5xl text-center md:items-start md:text-left">
           {/* Breadcrumbs */}
           <nav className="mb-4 print:hidden" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-1 text-sm">
+            <ol className="flex items-center justify-center md:justify-start space-x-1 text-sm">
               {breadcrumbs.map((crumb, index) => (
                 <li key={crumb.href} className="flex items-center">
                   {index > 0 && (
@@ -73,7 +78,6 @@ export default function InfoHero({ title }: InfoHeroProps) {
               ))}
             </ol>
           </nav>
-
           {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
             {title}
