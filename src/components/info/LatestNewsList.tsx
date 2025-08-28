@@ -85,7 +85,7 @@ export default function LatestNewsList() {
           className="border-gray/20 border-1 rounded-xl p-8 shadow-md/2 bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
         >
           <p className="mb-2 text-sm text-dark">
-            <span className="font-semibold text-lg block mb-1">{article.title}</span>
+            <span className="font-semibold text-lg block mb-2">{article.title}</span>
             <span className="text-md text-dark">{formatDate(article.date)}</span>
             <span className="text-md mx-1 text-dark">∙</span>
             <span>{article.summary}</span>
