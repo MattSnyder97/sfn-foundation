@@ -10,6 +10,7 @@ export const mattContent = {
     { id: "symptom-onset", title: "When It All Started" },
     { id: "diagnosis-journey", title: "Getting Answers" },
     { id: "current-treatment", title: "Looking Forward" },
+    { id: "my-treatments", title: "My Treatments" },
     { id: "foundation-mission", title: "Why I Started This Foundation" },
     { id: "life-beyond-sfn", title: "Life Beyond SFN" },
   ],
@@ -115,6 +116,48 @@ export const mattContent = {
     },
 
     {
+      id: "my-treatments",
+      title: "My Treatments",
+      content: [
+        {
+          type: "paragraph",
+          text: `The following is not professional medical advice. I am sharing my personal experience and what I am currently taking. Always consult your doctor before making any changes to your treatment.`,
+        },
+        {
+          type: "paragraph",
+          text: "**Medications**",
+        },
+        {
+          type: "list",
+          items: [
+            "Cetirizine (Zyrtec) 10mg",
+            "Methylphenidate (Concerta) 27mg",
+            "Naltrexone 0.5mg",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "**Supplements**",
+        },
+        {
+          type: "list",
+          items: [
+            "Acetyl L-Carnitine 500mg",
+            "B12 Methylcobalamin 2,000mcg",
+            "D3 50mcg",
+            "Fish Oil 1000mg 300mg Omega-3",
+            "Magnesium Glycinate 240mg",
+            "Seed Prebiotic Probiotic",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: 'For burning pain, I use [Apothecanna&apos;s Extra Strength CBD Body Creme](https://apothecanna.com/collections/extra-strength/products/extra-strength-relieving-creme). It completely gets rid of burning pains for 4 hours, but it does not get rid of shooting pains for me unfortunately.'
+        },
+      ],
+    },
+
+    {
       id: "foundation-mission",
       title: "Why I Started This Foundation",
       content: [
@@ -155,13 +198,7 @@ export const mattContent = {
       content: [
         {
           type: "paragraph",
-          text: `While SFN is a significant part of my daily reality, I'm determined not to let it define everything about my life. I've found new ways to adapt and enjoy the things I love, even if it means doing them a little differently. Woodworking has become both a creative outlet and a form of therapy—there's something satisfying about creating something beautiful and functional with my hands. I also picked up drawing again after years away from it, which helps me express myself and find moments of peace amidst the chaos.`,
-        },
-        {
-          type: "image",
-          src: "/images/patient-stories/woodworking.jpg",
-          alt: "Stardew Valley themed woodworking project",
-          caption: "My Stardew Valley chicken woodworking project.",
+          text: `While SFN is a significant part of my daily reality, I'm determined not to let it define everything about my life. I've found new ways to adapt and enjoy the things I love, even if it means doing them a little differently. Woodworking has become both a creative outlet and a form of therapy. There's something satisfying about creating something beautiful and functional with my hands. I also picked up drawing again after years away from it, which helps me express myself and find moments of peace amidst the chaos.`,
         },
         {
           type: "image",
@@ -171,7 +208,7 @@ export const mattContent = {
         },
         {
           type: "paragraph",
-          text: `My cat, Bug, provides daily companionship and comfort. There's something therapeutic about petting a purring cat, and the unconditional love helps on difficult days. Rock climbing is another passion of mine—the supportive community and physical challenge help me focus on what my body can do, rather than what it can't.`,
+          text: `Rock climbing is another passion of mine, the supportive community and physical challenge help me focus on what my body can do, rather than what it can't.`,
         },
         {
           type: "image",
@@ -189,6 +226,6 @@ export const mattContent = {
 
   meta: {
     author: "Matt, SFN Foundation Founder",
-    lastUpdated: "August 23, 2025",
+    lastUpdated: "August 28, 2025",
   },
 };

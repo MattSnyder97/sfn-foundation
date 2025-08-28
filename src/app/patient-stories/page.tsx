@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { allContent } from '@/content/index';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import InfoHero from '@/components/info/InfoHero';
 
 export default function PatientStoriesPage() {
   // Filter for patient stories
@@ -12,12 +13,9 @@ export default function PatientStoriesPage() {
   return (
     <>
       <Header />
-      <section className="container-padding mx-auto py-16">
-        <h1 className="text-4xl font-bold mb-8 text-primary">Patient Stories</h1>
-        <p className="mb-8 text-lg text-gray-700 max-w-2xl">
-          Read real experiences from people living with Small Fiber Neuropathy.
-        </p>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section>
+      <InfoHero title="Patient Stories" />
+        <div className="container-padding mx-auto py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {stories.length === 0 ? (
             <p>No stories have been added yet.</p>
           ) : (
