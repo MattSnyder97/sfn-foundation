@@ -30,12 +30,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/about" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  What is SFN?
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/newly-diagnosed" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Newly Diagnosed
+                  About SFN
                 </Link>
               </li>
               <li>
@@ -44,8 +39,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources/dictionary" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  SFN Dictionary
+                <Link href="/research" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Latest Research
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/newly-diagnosed" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Newly Diagnosed
                 </Link>
               </li>
             </ul>
@@ -61,49 +61,46 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#faqs" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  FAQs
+                <Link href="/resources/mutual-aid" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Mutual Aid
                 </Link>
               </li>
                 <li>
-                <Link href="/resources/support-group" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Support Group
+                <Link href="/patient-stories" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Patient Stories
                 </Link>
               </li>
               <li>
-                <Link href="https://988lifeline.org/" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Suicide Hotline
+                <Link href="/resources/support-group" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Support Group
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* For Professionals */}
+          {/* Specialists */}
           <div className="text-center md:text-left">
-            <h3 className="font-bold text-lg mb-4">For Professionals</h3>
+            <h3 className="font-bold text-lg mb-4">Specialists</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link 
-                  href="/research/portal" 
-                  className="opacity-80 hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2"
-                >
+                <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Clinical Trials
+                </Link>
+              </li>
+              <li>
+                <Link href="/research/portal" className="opacity-80 hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2">
                   <Lock size={14} />
                   Research Portal
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Medical Resources
+                <Link href="https://www.massgeneralbrigham.org/en/education-and-training/continuing-professional-development" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  Professional Development
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Ask SFN Expert
-                </Link>
-              </li>
-              <li>
-                <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
-                  Clinical Trials
+                <Link href="https://www.youtube.com/watch?v=KtNnlY6RUdA" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                  SFN Overview Video
                 </Link>
               </li>
             </ul>
@@ -120,17 +117,17 @@ export default function Footer() {
             
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-4 text-sm">
-              <Link href="/privacy-policy" className="opacity-70 hover:opacity-100 hover:underline transition-all">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-use" className="opacity-70 hover:opacity-100 hover:underline transition-all">
-                Terms of Use
-              </Link>
               <Link href="/accessibility" className="opacity-70 hover:opacity-100 hover:underline transition-all">
                 Accessibility
               </Link>
               <Link href="/disclaimer" className="opacity-70 hover:opacity-100 hover:underline transition-all">
                 Medical Disclaimer
+              </Link>
+              <Link href="/privacy-policy" className="opacity-70 hover:opacity-100 hover:underline transition-all">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-use" className="opacity-70 hover:opacity-100 hover:underline transition-all">
+                Terms of Use
               </Link>
             </div>
 

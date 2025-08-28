@@ -133,7 +133,7 @@ export const dictionaryContent = {
       content: [
         {
           type: "paragraph",
-          text: `These are common treatments, medications, and therapeutic approaches 
+          text: `These are common treatments, medications, and therapeutic approaches
           used to manage Small Fiber Neuropathy symptoms.`,
         },
         {
@@ -155,6 +155,10 @@ export const dictionaryContent = {
             "**Topical Treatments** - Creams, gels, or patches applied directly to the skin where pain occurs.",
             "**Tricyclic Antidepressants** - Older antidepressants like nortriptyline that can be effective for nerve pain.",
           ],
+        },
+        {
+          type: "paragraph",
+          text: `[Learn more about SFN treatments](/about/treatments)`,
         },
       ],
     },
@@ -187,6 +191,10 @@ export const dictionaryContent = {
             "**Tingling** - A light prickling sensation, often described as feeling like carbonation on the skin.",
             "**Warm/Cool Sensations** - Abnormal feelings of warmth or coolness in affected areas without actual temperature changes.",
           ],
+        },
+        {
+          type: "paragraph",
+          text: `[Learn more about SFN symptoms](/about/symptoms)`,
         },
       ],
     },
