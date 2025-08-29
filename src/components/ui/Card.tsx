@@ -71,7 +71,7 @@ export function Card({ variant, title, description, imageSrc, href }: CardProps)
   );
 
   const cardClasses = clsx(
-    "rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out",
+    "rounded-xl default-shadow overflow-hidden transition-all duration-300 ease-out",
     "hover:-translate-y-3 hover:shadow-xl",
     "cursor-pointer",
     variantClasses

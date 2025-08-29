@@ -12,7 +12,7 @@ export const AccordionItem = ({
 }: RadixAccordion.AccordionItemProps) => (
   <RadixAccordion.Item
     {...props}
-    className="overflow-hidden rounded-2xl bg-white shadow-md/1 transition-all"
+    className="overflow-hidden rounded-2xl bg-white default-shadow transition-all"
   >
     {children}
   </RadixAccordion.Item>

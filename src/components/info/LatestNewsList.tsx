@@ -82,7 +82,7 @@ export default function LatestNewsList() {
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="border-gray/20 border-1 rounded-xl p-8 shadow-md/2 bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+          className="border-gray/20 border-1 rounded-xl p-8 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
         >
           <p className="mb-2 text-sm text-dark">
             <span className="font-semibold text-lg block mb-2">{article.title}</span>

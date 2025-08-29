@@ -20,7 +20,7 @@ export default function PatientStoriesPage() {
             <p>No stories have been added yet.</p>
           ) : (
             stories.map((story) => (
-              <Link key={story.slug} href={story.slug} className="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
+              <Link key={story.slug} href={story.slug} className="block p-6 bg-white rounded-lg default-shadow hover:default-shadow transition">
                 <h2 className="text-2xl font-semibold text-primary mb-2">{story.hero.title}</h2>
                 <p className="text-gray-500 text-sm">Last updated: {story.meta?.lastUpdated}</p>
               </Link>

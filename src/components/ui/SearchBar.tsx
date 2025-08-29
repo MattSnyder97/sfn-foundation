@@ -102,7 +102,7 @@ export default function SearchBar() {
   return (
     <div className="relative w-full max-w-2xl">
       {/* Input (2x wide vs md) */}
-      <div className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 shadow-sm focus-within:ring-2 focus-within:ring-primary">
+      <div className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow focus-within:ring-2 focus-within:ring-primary">
         <Search className="h-4 w-4 text-gray-500" />
         <input
           type="text"
@@ -117,7 +117,7 @@ export default function SearchBar() {
       {/* Results dropdown — styled like your header dropdown */}
       {query && (results.length > 0 || query.length >= 2) && (
         <div className="absolute left-0 top-full z-50 mt-2 w-full">
-          <div className="bg-white shadow-lg rounded-md overflow-hidden border border-gray-200">
+          <div className="bg-white default-shadow rounded-md overflow-hidden border border-gray-200">
             {/* top primary cap to match header dropdown */}
             <div className="h-2 bg-primary rounded-t-md" />
 

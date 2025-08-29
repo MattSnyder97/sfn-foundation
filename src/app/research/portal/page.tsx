@@ -43,7 +43,9 @@ export default async function ResearchPortalPage() {
           /* Access Restricted View */
           <div className="max-w-md w-full text-center">
             <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
-            <p className="mb-4">You are signed in, but do not have permission to upload research. Please contact the SFN Foundation for access.</p>
+            <p className="mb-4">
+              You are signed in, but do not have permission to upload research. Please <a href="/contact" className="text-primary underline hover:text-primary/80">contact</a> the SFN Foundation for access.
+            </p>
           </div>
 
         ) : (

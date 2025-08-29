@@ -77,7 +77,7 @@ export function LatestNews() {
           {/* Mobile Card */}
           <div className="flex justify-center">
             <div className="w-full">
-              <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
+              <div className="rounded-xl default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 cursor-pointer bg-primary text-white">
                 <Image 
                   src="/images/common/researchGuy.png" 
                   alt="The Cure for SFN Has Never Been Closer"
@@ -127,7 +127,7 @@ export function LatestNews() {
          
           {/* Right Card - Force style3 with inline styles as fallback */}
           <div className="flex-shrink-0 w-full max-w-sm">
-            <div className="rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer bg-primary text-white">
+            <div className="rounded-xl default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 cursor-pointer bg-primary text-white">
               <Image
                 src="/images/common/researchGuy.png" 
                 alt="The Cure for SFN Has Never Been Closer"

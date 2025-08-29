@@ -13,7 +13,7 @@ export function PatientStory() {
         <div className="hidden lg:flex items-start gap-16 py-6 pb-12">
           {/* Profile Image */}
           <div className="flex-shrink-0 relative">
-            <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 shadow-xl relative z-10">
+            <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 default-shadow relative z-10">
               <Image
                 src="/images/common/testimonial.png"
                 alt="Matt testimonial"
@@ -49,7 +49,7 @@ export function PatientStory() {
         <div className="lg:hidden flex flex-col items-center gap-6 py-12 text-center">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className="w-88 h-88 rounded-xl overflow-hidden bg-primary shadow-2xl">
+            <div className="w-88 h-88 rounded-xl overflow-hidden bg-primary default-shadow">
               <Image
                 src="/images/common/testimonial.png"
                 alt="Matt testimonial"

@@ -10,7 +10,7 @@ export default function InfoImage({ src, alt, caption }: InfoImageProps) {
   return (
     <figure className="my-8 inline-block">
       <div
-        className="relative rounded-[8px] overflow-hidden shadow-md/5"
+        className="relative rounded-[8px] overflow-hidden default-shadow"
         style={{ maxHeight: 400, display: 'inline-block' }}
       >
         <Image

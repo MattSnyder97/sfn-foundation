@@ -50,7 +50,7 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
   return (
     <section className="mt-4 pt-8">
       {/* Feedback Section */}
-      <div className="mb-8 flex flex-col items-center justify-center bg-primary/5 rounded-xl py-8 px-8 border border-primary/20 shadow-gray-md/4 print:hidden">
+      <div className="mb-8 flex flex-col items-center justify-center bg-primary/5 rounded-xl py-8 px-8 border border-primary/20 default-shadow print:hidden">
         <div className="flex items-center gap-2 mb-2 justify-center text-center w-full">
           <span className="font-semibold text-2xl text-primary">Got Feedback or Ideas?</span>
         </div>

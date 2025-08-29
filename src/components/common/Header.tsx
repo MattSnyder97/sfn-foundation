@@ -71,7 +71,7 @@ const navLinks = [
   };
 
   return (
-    <header className="w-full bg-white shadow-header relative md:sticky md:top-0 md:z-50">
+    <header className="w-full bg-white default-shadow relative md:sticky md:top-0 md:z-50">
       <div className="container-padding mx-auto flex items-center justify-between py-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -141,7 +141,7 @@ const navLinks = [
                       onMouseLeave={scheduleClose}
                     >
                       <div className="pt-4">
-                        <div className="bg-white shadow-lg rounded-md overflow-hidden">
+                        <div className="bg-white default-shadow rounded-md overflow-hidden">
                           {/* Top border cap */}
                           <div className="h-2 bg-primary rounded-t-md" />
                           {link.items?.map((item) => (
@@ -232,7 +232,7 @@ const navLinks = [
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white shadow-lg container-padding py-4 space-y-4">
+        <div className="md:hidden bg-white default-shadow container-padding py-4 space-y-4">
           {/* Mobile Search Bar */}
           <div className="mb-8">
             <input

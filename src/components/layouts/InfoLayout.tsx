@@ -109,7 +109,7 @@ export default function InfoLayout({
 
             {/* Main Content */}
             <div className="flex-1 max-w-auto">
-              <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 shadow-sm/4 print-content">
+              <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 default-shadow print-content">
                 {children}
 
                 {showActions && <InfoActions title={pageTitle} />}
