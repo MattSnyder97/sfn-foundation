@@ -92,7 +92,7 @@ export default function LatestNewsList() {
           </p>
         </a>
       ))}
-      <div className="flex gap-4 justify-center mt-4 items-center">
+      <div className="flex gap-4 justify-center mt-4 items-center print:hidden">
         {page > 0 && (
           <Button
             variant="primary"
