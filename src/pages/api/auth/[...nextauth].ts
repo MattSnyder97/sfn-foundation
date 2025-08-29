@@ -62,6 +62,11 @@ export const authOptions = {
       },
     }),
   ],
+  pages: {
+    signIn: '/auth/signin',
+    verifyRequest: '/auth/check-email',
+    error: '/auth/error',
+  },
 };
 
 export default NextAuth(authOptions);
