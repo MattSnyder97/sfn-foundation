@@ -10,7 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 async function sendTestEmail() {
   await resend.emails.send({
     from: 'noreply@sfn-foundation.org',
-    to: 'snydermatt1997@gmail.com',
+    to: process.env.TEST_EMAIL,
     subject: 'SFN Foundation Account Verification',
     html: `
       <body style="background:#EFEEF5; margin:0; padding:0;">

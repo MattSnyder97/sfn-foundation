@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { researchArticles } from "../../content/info-pages/research/research-articles";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function sortByDateDesc(a: { date: string }, b: { date: string }) {

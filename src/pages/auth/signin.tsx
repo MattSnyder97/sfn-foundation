@@ -2,6 +2,7 @@ import { getProviders, signIn } from 'next-auth/react';
 import { Button } from '../../components/ui/Button';
 import { useState } from 'react';
 import { ClientSafeProvider } from 'next-auth/react';
+import Image from 'next/image';
 
 interface SignInProps {
   providers: Record<string, ClientSafeProvider>;
@@ -30,16 +31,15 @@ export default function SignIn({ providers }: SignInProps) {
 
   return (
     <div className="min-h-screen bg-offWhite flex flex-col items-center justify-center">
-      <div className="bg-white rounded-2xl default-shadow w-full max-w-md p-8 text-center">
-        <img src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className="mx-auto mb-6" />
-        <p className="text-gray-500 mb-6">Enter an authorized email to gain access.</p>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <div className="bg-white rounded-2xl default-shadow w-full max-w-md p-12 text-center">
+      <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className="mx-auto mb-12" />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
           <input
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            placeholder="youremail@email.com"
-            className="border border-gray-300 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder="Enter your email address"
+            className="border border-gray-300 rounded-md px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary"
             autoFocus
           />
           {error && (

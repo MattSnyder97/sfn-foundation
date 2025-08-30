@@ -67,6 +67,16 @@ export const authOptions = {
     verifyRequest: '/auth/check-email',
     error: '/auth/error',
   },
+  callbacks: {
+  async session({ session, user }: { session: any; user: any }) {
+      // Get user from DB to fetch role
+      const dbUser = await prisma.user.findUnique({ where: { email: session.user.email } });
+      if (dbUser) {
+        session.user.role = dbUser.role;
+      }
+      return session;
+    },
+  },
 };
 
 export default NextAuth(authOptions);
