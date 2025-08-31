@@ -14,11 +14,29 @@ export default async function ResearchPortalPage() {
   } catch (error) {
     session = null;
   }
-  // Debug: log session and role
-  console.log('Session:', session);
-  console.log('Session user role:', session?.user?.role);
 
   const isSpecialist = session?.user?.role === 'Specialist';
+
+  // Send email to admin if user is signed in but not a Specialist
+  if (
+    session && session.user && !isSpecialist &&
+    process.env.RESEND_API_KEY &&
+    process.env.ADMIN_EMAIL &&
+    process.env.NEON_URL
+  ) {
+    const Resend = (await import('resend')).Resend;
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const neonUrl = process.env.NEON_URL;
+    const userEmail = session.user.email;
+    await resend.emails.send({
+      from: 'noreply@sfn-foundation.org',
+      to: adminEmail,
+      subject: 'Access Request: Research Portal',
+      html: `<p>User <strong>${userEmail}</strong> has signed in and requested access to the Research Portal.</p>
+        <p><a href="${neonUrl}" style="color:#2563eb;text-decoration:underline;font-weight:bold">Set Role</a></p>`
+    });
+  }
 
   // Helper to get greeting
   function getGreeting() {
