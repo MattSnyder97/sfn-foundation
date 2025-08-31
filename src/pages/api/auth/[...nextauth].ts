@@ -33,12 +33,12 @@ export const authOptions: NextAuthOptions = {
         await resend.emails.send({
           from: "noreply@sfn-foundation.org",
           to: identifier,
-          subject: "Your sign in link for SFN Foundation",
+          subject: "Sign in link for the SFN Foundation Research Portal",
           html: `<body style="background:#f9fafb;padding:40px 0;font-family:Arial,sans-serif">
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width:600px;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.05);overflow:hidden">
               <tr>
                 <td style="padding:40px;text-align:center">
-                  <h1 style="margin:0;font-size:24px;color:#111827">Sign in to SFN Foundation</h1>
+                  <h1 style="margin:0;font-size:24px;color:#111827">Sign in to the SFN Foundation<br />Research Portal</h1>
                   <p style="margin:16px 0 24px;font-size:16px;color:#374151">
                     Click the button below to securely sign in to your account.
                   </p>
