@@ -11,7 +11,7 @@ export default function CheckEmail() {
           <h2 className="text-xl font-semibold text-gray">Email Sent</h2>
         </div>
         <p className="text-gray/80 text-sm">Please check your inbox and spam folder. 
-          <br />Follow the link to complete sign-in.</p>
+          <br />Follow the link to sign-in.</p>
       </div>
     </div>
   );
