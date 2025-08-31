@@ -1,50 +1,36 @@
+import { useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import InfoHero from '@/components/info/InfoHero';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import EmailSignInButton from '@/components/ui/EmailSignInButton';
 import { FiLock } from 'react-icons/fi';
 
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good morning';
+  if (hour < 18) return 'Good afternoon';
+  return 'Good evening';
+}
 
-export default async function ResearchPortalPage() {
-  let session = null;
-  try {
-    session = await getServerSession(authOptions);
-  } catch (error) {
-    session = null;
-  }
-
+export default function ResearchPortalPage() {
+  const { data: session } = useSession();
   const isSpecialist = session?.user?.role === 'Specialist';
 
-  // Send email to admin if user is signed in but not a Specialist
-  if (
-    session && session.user && !isSpecialist &&
-    process.env.RESEND_API_KEY &&
-    process.env.ADMIN_EMAIL &&
-    process.env.NEON_URL
-  ) {
-    const Resend = (await import('resend')).Resend;
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const adminEmail = process.env.ADMIN_EMAIL;
-    const neonUrl = process.env.NEON_URL;
-    const userEmail = session.user.email;
-    await resend.emails.send({
-      from: 'noreply@sfn-foundation.org',
-      to: adminEmail,
-      subject: 'Access Request: Research Portal',
-      html: `<p>User <strong>${userEmail}</strong> has signed in and requested access to the Research Portal.</p>
-        <p><a href="${neonUrl}" style="color:#2563eb;text-decoration:underline;font-weight:bold">Set Role</a></p>`
-    });
-  }
-
-  // Helper to get greeting
-  function getGreeting() {
-    const hour = new Date().getHours();
-    if (hour < 12) return 'Good morning';
-    if (hour < 18) return 'Good afternoon';
-    return 'Good evening';
-  }
+  useEffect(() => {
+    if (session && session.user && !isSpecialist) {
+      // Only send once per session
+      const sentKey = `access-request-sent-${session.user.email}`;
+      if (!window.localStorage.getItem(sentKey)) {
+        fetch('/api/request-access', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userEmail: session.user.email }),
+        });
+        window.localStorage.setItem(sentKey, 'true');
+      }
+    }
+  }, [session, isSpecialist]);
 
   return (
     <>
