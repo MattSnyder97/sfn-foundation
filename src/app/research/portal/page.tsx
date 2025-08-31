@@ -14,6 +14,9 @@ export default async function ResearchPortalPage() {
   } catch (error) {
     session = null;
   }
+  // Debug: log session and role
+  console.log('Session:', session);
+  console.log('Session user role:', session?.user?.role);
 
   const isSpecialist = session?.user?.role === 'Specialist';
 

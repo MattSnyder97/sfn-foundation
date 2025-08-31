@@ -1,81 +1,100 @@
-import NextAuth from "next-auth";
-import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
+import NextAuth, { NextAuthOptions } from "next-auth";
+import EmailProvider from "next-auth/providers/email";
 import { Resend } from "resend";
 
 const prisma = new PrismaClient();
-const resend = new Resend(process.env.RESEND_API_KEY);
+declare module "next-auth" {
+  interface Session {
+    user?: {
+      id: string;
+      name?: string | null;
+      email?: string | null;
+      role?: "Specialist" | "User";
+    };
+  }
 
-export const authOptions = {
+  interface User {
+    id: string;
+    role?: "Specialist" | "User";
+  }
+}
+
+export const authOptions: NextAuthOptions = {
+  session: {
+    strategy: 'jwt',
+  },
   adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({
       async sendVerificationRequest({ identifier, url }) {
+        const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
           from: "noreply@sfn-foundation.org",
           to: identifier,
-          subject: "SFN Foundation Account Verification",
-          html: `
-            <body style="background:#EFEEF5; margin:0; padding:0;">
-              <table width="100%" bgcolor="#EFEEF5" cellpadding="0" cellspacing="0" style="padding:0; margin:0;">
-                <tr>
-                  <td align="center">
-                    <div style="height:40px;"></div>
-                    <table width="480" bgcolor="#ffffff" cellpadding="0" cellspacing="0" style="border-bottom-left-radius:16px; border-bottom-right-radius:16px; box-shadow:0 4px 12px rgba(33,26,63,0.05); margin:0 auto;">
-                      <tr>
-                        <td style="padding:0;">
-                          <div style="height:4px; background:#5159CF; border-top-left-radius:16px; border-top-right-radius:16px; margin-top:-2px;"></div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="padding:32px 32px 0 32px;">
-                          <table width="100%" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td align="center" style="padding-bottom:32px;">
-                                <img src="https://sfn-foundation.org/logos/logo.png" alt="SFN Foundation" width="285" height="41" style="display:block;" />
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="padding:0 32px 32px 32px;">
-                          <h3 style="color:#5B5D70; font-family:Lato,sans-serif; text-align:center; font-size:18px; font-weight:600; margin:0 0 16px 0;">Please confirm your sign-in request</h3>
-                          <p style="color:#5B5D70; font-family:Lato,sans-serif; text-align:center; font-size:16px; margin:0 0 32px 0;">We have detected an account sign-in request from a device we don't recognize.</p>
-                          <div style="text-align:center; margin-top:32px;">
-                            <a href="${url}" style="display:inline-block; border-radius:16px; border:2px solid #5159CF; background:#5159CF; color:#FBF8F8; font-weight:600; font-family:Lato,sans-serif; padding:16px 12px; text-decoration:none; font-size:16px;">Approve Sign In</a>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                    <div style="height:40px;"></div>
-                    <div style="max-width:480px; text-align:center;">
-                      <span style="color:#B0B2C3; font-size:12px; font-family:Lato,sans-serif;">© Copyright 2025 the Small Fiber Neuropathy Foundation. All rights reserved.</span>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </body>
-          `
+          subject: "Your sign in link for SFN Foundation",
+          html: `<body style="background:#f9fafb;padding:40px 0;font-family:Arial,sans-serif">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width:600px;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.05);overflow:hidden">
+              <tr>
+                <td style="padding:40px;text-align:center">
+                  <h1 style="margin:0;font-size:24px;color:#111827">Sign in to SFN Foundation</h1>
+                  <p style="margin:16px 0 24px;font-size:16px;color:#374151">
+                    Click the button below to securely sign in to your account.
+                  </p>
+                  <a href="${url}" style="display:inline-block;padding:12px 24px;background:#2563eb;color:#ffffff;text-decoration:none;font-weight:bold;border-radius:8px;font-size:16px">
+                    Sign in
+                  </a>
+                  <p style="margin:32px 0 0;font-size:14px;color:#6b7280">
+                    If you did not request this email, you can safely ignore it.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </body>`,
         });
       },
     }),
   ],
-  pages: {
-    signIn: '/auth/signin',
-    verifyRequest: '/auth/check-email',
-    error: '/auth/error',
-  },
+
   callbacks: {
-  async session({ session, user }: { session: any; user: any }) {
-      // Get user from DB to fetch role
-      const dbUser = await prisma.user.findUnique({ where: { email: session.user.email } });
-      if (dbUser) {
-        session.user.role = dbUser.role;
+    async session({ session, token }) {
+      if (session.user && token && typeof token.sub === 'string') {
+        session.user.id = token.sub;
+      }
+      if (session.user && token && typeof token.role === 'string') {
+        session.user.role = token.role;
       }
       return session;
     },
+    async jwt({ token, user }) {
+      // On initial sign in, user object is available
+      if (user && user.id) {
+        token.sub = user.id;
+      } else if (!token.sub) {
+        token.sub = '';
+      }
+      // Always ensure role is present in token
+      if (user && user.role) {
+        token.role = user.role;
+      } else if (token.sub && !token.role) {
+        // Fetch user from DB if role missing
+        const dbUser = await prisma.user.findUnique({
+          where: { id: token.sub },
+          select: { role: true },
+        });
+        if (dbUser?.role === 'Specialist') {
+          token.role = 'Specialist';
+        } else {
+          token.role = 'User';
+        }
+      }
+      return token;
+    },
+  },
+
+  pages: {
+    signIn: "/auth/signin",
   },
 };
 
