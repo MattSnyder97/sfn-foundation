@@ -1,14 +1,12 @@
-# SFN Foundation Website
-
-<img src="public/logos/logo.svg" alt="SFN Foundation logo" width="285" />
-
-Giving hope through community and research.
+<img src="public/logos/logoWhite.svg" alt="SFN Foundation logo" width="285" />
 
 ## Overview
 This project has two focused goals:
 
 - Provide clear, evidence-based information and awareness for people affected by Small Fiber Neuropathy (SFN), caregivers, and clinicians.
 - Host a clinician/researcher portal where specialists can upload and curate the latest research; that corpus will be used (with consent and privacy safeguards) to train models and tools aimed at accelerating research toward effective treatments for SFN.
+
+![Screenshot of site](public/images/screenshots/screenshot1.png)
 
 ## Research portal & ethics
 The research portal is designed for specialists to contribute primary research, reviews, and clinical findings. Any use of contributed data for model training will follow privacy, consent, and ethics best practices. This repository documents the project — operational details, governance, and data-use policies should be configured by the foundation and participating institutions.
@@ -39,5 +37,3 @@ Contact: info@sfnfoundation.org
 
 ## Summary
 This repo is a Next.js site that combines public-facing educational content with a specialist research portal intended to power research tooling (including model training) under responsible, consent-driven governance.
-
-![Screenshot of site](public/images/screenshots/screenshot1.png)
