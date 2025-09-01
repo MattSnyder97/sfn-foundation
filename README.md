@@ -1,48 +1,43 @@
 # SFN Foundation Website
 
-Giving Hope Through Community and Research
+<img src="public/logos/logo.svg" alt="SFN Foundation logo" width="180" />
 
-The SFN Foundation website is dedicated to supporting individuals affected by Small Fiber Neuropathy (SFN) and related conditions. Our mission is to provide reliable information, research updates, community resources, and support to help patients, caregivers, and professionals navigate the challenges of chronic illness.
+![Screenshot of site](public/images/screenshots/screenshot1.png)
 
-## Features
-- **Educational Content:** Clear, accessible information about SFN, symptoms, diagnosis, treatments, and more.
-- **Latest Research:** Curated research articles and clinical trial updates.
-- **Support Group:** Community-driven support and resources for patients and caregivers.
-- **FAQs & Dictionary:** Answers to common questions and a glossary of terms.
-- **Specialists Directory:** Find professionals and experts in SFN care.
-- **Patient Stories:** Real experiences and advice from those living with SFN.
-- **Professional Portal:** Tools and resources for clinicians and researchers.
+Giving hope through community and research.
 
-## Open Source Mission
-This project is open source so that other chronic illness and disease communities can freely use, adapt, and improve it for their own needs. We believe that accessible, high-quality information and community support should be available to everyone—regardless of condition or background.
+## Overview
+This project has two focused goals:
 
-If you represent a patient group, nonprofit, or advocacy organization, feel free to fork this repository and customize it for your community. Contributions, suggestions, and improvements are always welcome!
+- Provide clear, evidence-based information and awareness for people affected by Small Fiber Neuropathy (SFN), caregivers, and clinicians.
+- Host a clinician/researcher portal where specialists can upload and curate the latest research; that corpus will be used (with consent and privacy safeguards) to train models and tools aimed at accelerating research toward effective treatments for SFN.
 
-## Getting Started
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/sfn-foundation.git
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-4. **Customize content:**
-   - Update content in the `src/content/` folder.
-   - Add or edit pages, components, and styles as needed.
+## Research portal & ethics
+The research portal is designed for specialists to contribute primary research, reviews, and clinical findings. Any use of contributed data for model training will follow privacy, consent, and ethics best practices. This repository documents the project — operational details, governance, and data-use policies should be configured by the foundation and participating institutions.
 
-## License
-This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+## Quick start
+Clone, install, and run the dev server:
 
-## Contact & Support
-- [Website](https://sfnfoundation.org)
-- [Support Group](https://sfnfoundation.org/resources/support-group)
-- [Contact](mailto:info@sfnfoundation.org)
+```bash
+git clone https://github.com/YOUR-USERNAME/sfn-foundation.git
+cd sfn-foundation
+npm install
+npm run dev
+```
 
----
+## Where to edit
+- Site pages and components: `src/app` and `src/components`
+- Content and data: `src/content`
+- Public assets (logo, screenshots): `public/logos` and `public/images`
 
-*Together, we can build a more supportive and informed future for all chronic illness communities.*
+## Contributing
+Contributions are welcome. Please open issues or pull requests for fixes, content updates, or feature suggestions. For research uploads and data governance, contact the foundation to arrange contributor agreements and data-use terms.
+
+## License & contact
+MIT License — see `LICENSE`.
+
+Website: https://sfn-foundation.org
+Contact: info@sfnfoundation.org
+
+## Summary
+This repo is a Next.js site that combines public-facing educational content with a specialist research portal intended to power research tooling (including model training) under responsible, consent-driven governance.
