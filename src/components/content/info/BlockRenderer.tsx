@@ -1,7 +1,7 @@
-import InfoParagraph from "@/components/info/InfoParagraph";
-import InfoImage from "@/components/info/InfoImage";
-import InfoList from "@/components/info/InfoList";
-import LatestNewsList from "@/components/info/LatestNewsList";
+import InfoParagraph from "@/components/content/info/InfoParagraph";
+import InfoImage from "@/components/content/info/InfoImage";
+import InfoList from "@/components/content/info/InfoList";
+import LatestNewsList from "@/components/content/info/LatestNewsList";
 
 interface ContentBlock {
   type: "paragraph" | "list" | "image" | "component";

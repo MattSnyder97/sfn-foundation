@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-import InfoHero from '@/components/info/InfoHero';
-import EmailSignInButton from '@/components/ui/EmailSignInButton';
+import InfoHero from '@/components/content/info/InfoHero';
+import EmailSignInButton from '@/components/primitives/EmailSignInButton';
 import { FiLock } from 'react-icons/fi';
 
 function getGreeting() {

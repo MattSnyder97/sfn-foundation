@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import SearchBar from "@/components/ui/SearchBar";
+import SearchBar from "@/components/primitives/SearchBar";
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);

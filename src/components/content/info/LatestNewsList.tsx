@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { researchArticles } from "../../content/info-pages/research/research-articles";
-import { Button } from "@/components/ui/Button";
+import { researchArticles } from "../../../content/info-pages/research/research-articles";
+import { Button } from "@/components/primitives/Button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function sortByDateDesc(a: { date: string }, b: { date: string }) {

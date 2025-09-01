@@ -1,10 +1,10 @@
-import Header from "@/components/common/Header";
-import Hero from "@/components/common/Hero";
-import { FeaturedCards } from "@/components/common/FeaturedCards";
-import { PatientStory } from "@/components/common/PatientStory";
-import { FAQs } from "@/components/common/FAQs";
-import { LatestNews } from "@/components/common/LatestNews";
-import Footer from "@/components/common/Footer";
+import Header from "@/components/core/Header";
+import Hero from "@/components/content/home/Hero";
+import { FeaturedCards } from "@/components/content/home/FeaturedCards";
+import { PatientStory } from "@/components/content/home/PatientStory";
+import { FAQs } from "@/components/content/home/FAQs";
+import { LatestNews } from "@/components/content/home/LatestNews";
+import Footer from "@/components/core/Footer";
 
 export default function Home() {
   return (

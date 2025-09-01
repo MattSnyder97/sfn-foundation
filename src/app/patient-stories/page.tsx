@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { allContent } from '@/content/index';
-import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer';
-import InfoHero from '@/components/info/InfoHero';
+import Header from '@/components/core/Header';
+import Footer from '@/components/core/Footer';
+import InfoHero from '@/components/content/info/InfoHero';
 
 export default function PatientStoriesPage() {
   // Filter for patient stories

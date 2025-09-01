@@ -1,10 +1,10 @@
 "use client";
 
-import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer';
-import { Button } from '@/components/ui/Button';
+import Header from '@/components/core/Header';
+import Footer from '@/components/core/Footer';
+import { Button } from '@/components/primitives/Button';
 
-import InfoHero from '@/components/info/InfoHero';
+import InfoHero from '@/components/content/info/InfoHero';
 
 export default function ContactPage() {
 	return (

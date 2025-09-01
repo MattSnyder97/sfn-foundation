@@ -1,11 +1,11 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import InfoActions from "@/components/info/InfoActions";
-import RelatedPages from "@/components/info/RelatedPages";
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
-import InfoHero from "@/components/info/InfoHero";
+import InfoActions from "@/components/content/info/InfoActions";
+import RelatedPages from "@/components/content/info/RelatedPages";
+import Header from "@/components/core/Header";
+import Footer from "@/components/core/Footer";
+import InfoHero from "@/components/content/info/InfoHero";
 import { allContent } from "@/content";
 
 interface InfoLayoutProps {

@@ -1,7 +1,7 @@
 import InfoLayout from "@/components/layouts/InfoLayout";
-import InfoParagraphTitle from "@/components/info/InfoParagraphTitle";
-import InfoMeta from "@/components/info/InfoMeta";
-import BlockRenderer from "@/components/info/BlockRenderer";
+import InfoParagraphTitle from "@/components/content/info/InfoParagraphTitle";
+import InfoMeta from "@/components/content/info/InfoMeta";
+import BlockRenderer from "@/components/content/info/BlockRenderer";
 
 interface ContentBlock {
   type: "paragraph" | "list" | "image";

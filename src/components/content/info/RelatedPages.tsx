@@ -1,7 +1,7 @@
 // src/components/info/RelatedPages.tsx
 import Link from "next/link";
 import { allContent } from "@/content";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/primitives/Button";
 
 interface RelatedPagesProps {
   currentSlug: string;

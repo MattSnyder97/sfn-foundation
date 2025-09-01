@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
-import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer';
+import Header from '@/components/core/Header';
+import Footer from '@/components/core/Footer';
 import PortalClient from './PortalClient';
 
 export default function ResearchPortalPage() {

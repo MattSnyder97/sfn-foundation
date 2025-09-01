@@ -1,6 +1,6 @@
 "use client";
 import { signIn } from "next-auth/react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/primitives/Button";
 
 export default function EmailSignInButton() {
   return (

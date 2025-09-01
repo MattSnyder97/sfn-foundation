@@ -1,5 +1,5 @@
 
-import InfoPageTemplate from "@/components/info/InfoPageTemplate";
+import InfoPageTemplate from "@/components/content/info/InfoPageTemplate";
 import { getMainPageData } from "@/content/contentLoader";
 import { notFound } from 'next/navigation';
 

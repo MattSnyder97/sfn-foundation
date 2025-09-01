@@ -1,8 +1,6 @@
 # SFN Foundation Website
 
-<img src="public/logos/logo.svg" alt="SFN Foundation logo" width="180" />
-
-![Screenshot of site](public/images/screenshots/screenshot1.png)
+<img src="public/logos/logo.svg" alt="SFN Foundation logo" width="285" />
 
 Giving hope through community and research.
 
@@ -41,3 +39,5 @@ Contact: info@sfnfoundation.org
 
 ## Summary
 This repo is a Next.js site that combines public-facing educational content with a specialist research portal intended to power research tooling (including model training) under responsible, consent-driven governance.
+
+![Screenshot of site](public/images/screenshots/screenshot1.png)

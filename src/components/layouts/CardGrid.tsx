@@ -1,4 +1,4 @@
-import { Card, CardProps } from "@/components/ui/Card";
+import { Card, CardProps } from "@/components/primitives/Card";
 
 interface CardGridProps {
   cards: CardProps[];

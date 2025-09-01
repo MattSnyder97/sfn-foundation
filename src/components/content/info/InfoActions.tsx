@@ -1,6 +1,6 @@
 // src/components/info/InfoActions.tsx
 "use client";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/primitives/Button";
 import { Printer, Share2, Check, MessageSquare } from "lucide-react";
 import { useState } from "react";
 
