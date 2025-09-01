@@ -13,9 +13,8 @@ function getGreeting() {
 }
 
 export default function PortalClient() {
-  const { data: session } = useSession();
-  // Consider a session 'signed-in' only if it contains an identifying field (email or id).
-  const isSignedIn = Boolean(session && session.user && (session.user.email || session.user.id));
+  const { data: session, status } = useSession();
+  const isSignedIn = status === 'authenticated' && Boolean(session && session.user && (session.user.email || session.user.id));
   const isSpecialist = session?.user?.role === 'Specialist';
 
   useEffect(() => {
@@ -31,6 +30,17 @@ export default function PortalClient() {
       }
     }
   }, [session, isSpecialist]);
+
+  if (status === 'loading') {
+    return (
+      <main className="flex-1 flex items-center justify-center">
+        <div role="status" aria-label="Loading" className="flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+          <span className="sr-only">Loading</span>
+        </div>
+      </main>
+    );
+  }
 
   if (isSignedIn && isSpecialist) {
     return (

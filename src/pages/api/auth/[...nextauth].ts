@@ -8,8 +8,22 @@ const prisma = new PrismaClient();
 
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
+  useSecureCookies: process.env.NODE_ENV === 'production',
   session: {
     strategy: 'jwt',
+  },
+
+  cookies: {
+    sessionToken: {
+      name: process.env.NODE_ENV === 'production' ? '__Host-next-auth.session-token' : 'next-auth.session-token',
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production',
+      },
+    },
   },
   adapter: PrismaAdapter(prisma),
   providers: [
@@ -45,7 +59,6 @@ export const authOptions: NextAuthOptions = {
 
   callbacks: {
     async session({ session, token }) {
-      // If token.sub is empty, treat as signed-out and clear user info to avoid showing restricted UI.
       if (!token || !token.sub) {
         session.user = undefined;
         return session;
@@ -60,7 +73,6 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
     async jwt({ token, user }) {
-      // On initial sign in, user object is available
       if (user && user.id) {
         token.sub = user.id;
       } else if (!token.sub) {
@@ -73,27 +85,24 @@ export const authOptions: NextAuthOptions = {
         return token;
       }
 
-      // If token.sub exists, verify the user still exists in the DB and refresh role
       if (token.sub) {
         const dbUser = await prisma.user.findUnique({
           where: { id: token.sub },
           select: { role: true },
         });
         if (!dbUser) {
-          // User was removed from the database; invalidate identifying fields so session won't grant access
+
           token.sub = '';
           delete token.role;
-          // Remove other identifying claims that may be present on the token
-          delete (token as any).email;
-          delete (token as any).name;
+          Reflect.deleteProperty(token, 'email');
+          Reflect.deleteProperty(token, 'name');
         } else {
-          // Narrow runtime value to the known role literals
+
           token.role = dbUser.role === 'Specialist' ? 'Specialist' : 'User';
         }
         return token;
       }
 
-      // No identifying subject; ensure role is not present
       delete token.role;
       return token;
     },
