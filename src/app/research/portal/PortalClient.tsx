@@ -14,6 +14,8 @@ function getGreeting() {
 
 export default function PortalClient() {
   const { data: session } = useSession();
+  // Consider a session 'signed-in' only if it contains an identifying field (email or id).
+  const isSignedIn = Boolean(session && session.user && (session.user.email || session.user.id));
   const isSpecialist = session?.user?.role === 'Specialist';
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function PortalClient() {
     }
   }, [session, isSpecialist]);
 
-  if (session && isSpecialist) {
+  if (isSignedIn && isSpecialist) {
     return (
       <>
         <div className="w-full">
@@ -50,7 +52,7 @@ export default function PortalClient() {
 
   return (
     <main className="flex-1 flex items-center justify-center">
-      {!session ? (
+  {!isSignedIn ? (
         <div className="max-w-md w-full text-center">
           <h1 className="text-2xl font-bold mb-4">Sign in to access the Research Portal</h1>
           <div className="mt-4">

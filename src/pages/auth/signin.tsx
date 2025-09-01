@@ -2,7 +2,7 @@ import { getProviders, signIn } from 'next-auth/react';
 import { Button } from '../../components/primitives/Button';
 import { useState } from 'react';
 import { ClientSafeProvider } from 'next-auth/react';
-import Image from 'next/image';
+import Login, { LoginInput, LoginError } from '@/components/content/research/Login';
 
 interface SignInProps {
   providers: Record<string, ClientSafeProvider>;
@@ -30,23 +30,20 @@ export default function SignIn({ providers }: SignInProps) {
   };
 
   return (
-    <div className="min-h-screen bg-offWhite flex flex-col items-center justify-center">
-      <div className="bg-white rounded-2xl default-shadow w-full max-w-md p-12 text-center">
-      <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className="mx-auto mb-12" />
-        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-          <input
+    <Login
+      subtitle={<>Enter your email address to receive a sign-in link.</>}
+      form
+      formOnSubmit={handleSubmit}
+      actions={(
+        <>
+          <LoginInput
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="border border-gray-300 rounded-md px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary"
             autoFocus
           />
-          {error && (
-            <div className="bg-primary text-offWhite text-sm mb-2 px-4 py-2 rounded-xl">
-              {error}
-            </div>
-          )}
+          {error && <LoginError>{error}</LoginError>}
           <Button
             type="submit"
             variant="primary"
@@ -56,9 +53,9 @@ export default function SignIn({ providers }: SignInProps) {
           >
             {loading ? 'Sending...' : 'Send Verification Email'}
           </Button>
-        </form>
-      </div>
-    </div>
+        </>
+      )}
+    />
   );
 }
 

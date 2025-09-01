@@ -5,21 +5,7 @@ import EmailProvider from "next-auth/providers/email";
 import { Resend } from "resend";
 
 const prisma = new PrismaClient();
-declare module "next-auth" {
-  interface Session {
-    user?: {
-      id: string;
-      name?: string | null;
-      email?: string | null;
-      role?: "Specialist" | "User";
-    };
-  }
 
-  interface User {
-    id: string;
-    role?: "Specialist" | "User";
-  }
-}
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -59,10 +45,16 @@ export const authOptions: NextAuthOptions = {
 
   callbacks: {
     async session({ session, token }) {
-      if (session.user && token && typeof token.sub === 'string') {
+      // If token.sub is empty, treat as signed-out and clear user info to avoid showing restricted UI.
+      if (!token || !token.sub) {
+        session.user = undefined;
+        return session;
+      }
+
+      if (session.user && typeof token.sub === 'string') {
         session.user.id = token.sub;
       }
-      if (session.user && token && typeof token.role === 'string') {
+      if (session.user && typeof token.role === 'string') {
         session.user.role = token.role;
       }
       return session;
@@ -74,21 +66,35 @@ export const authOptions: NextAuthOptions = {
       } else if (!token.sub) {
         token.sub = '';
       }
-      // Always ensure role is present in token
-      if (user && user.role) {
-        token.role = user.role;
-      } else if (token.sub && !token.role) {
-        // Fetch user from DB if role missing
+
+      const incomingRole = (user as { role?: unknown } | undefined)?.role;
+      if (incomingRole === 'Specialist' || incomingRole === 'User') {
+        token.role = incomingRole;
+        return token;
+      }
+
+      // If token.sub exists, verify the user still exists in the DB and refresh role
+      if (token.sub) {
         const dbUser = await prisma.user.findUnique({
           where: { id: token.sub },
           select: { role: true },
         });
-        if (dbUser?.role === 'Specialist') {
-          token.role = 'Specialist';
+        if (!dbUser) {
+          // User was removed from the database; invalidate identifying fields so session won't grant access
+          token.sub = '';
+          delete token.role;
+          // Remove other identifying claims that may be present on the token
+          delete (token as any).email;
+          delete (token as any).name;
         } else {
-          token.role = 'User';
+          // Narrow runtime value to the known role literals
+          token.role = dbUser.role === 'Specialist' ? 'Specialist' : 'User';
         }
+        return token;
       }
+
+      // No identifying subject; ensure role is not present
+      delete token.role;
       return token;
     },
   },

@@ -1,0 +1,62 @@
+import Image from 'next/image';
+import React, { ReactNode } from 'react';
+
+interface LoginProps {
+  title?: string;
+  subtitle?: ReactNode;
+  icon?: ReactNode;
+  actions?: ReactNode;
+  compact?: boolean; // use smaller padding when true
+  // form mode: if true, Login will render `actions` inside a <form> and call `formOnSubmit`
+  form?: boolean;
+  formOnSubmit?: (e: React.FormEvent) => void;
+}
+
+export default function Login({ title, subtitle, icon, actions, compact = false, form = false, formOnSubmit, }: LoginProps) {
+  const cardPadding = compact ? 'p-8' : 'p-12';
+  const logoMb = compact ? 'mb-6' : 'mb-12';
+
+  return (
+    <div className="min-h-screen bg-offWhite flex flex-col items-center justify-center">
+      <div className={`bg-white rounded-2xl default-shadow w-full max-w-md ${cardPadding} text-center`}>
+        <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className={`mx-auto ${logoMb}`} />
+
+        {icon && (
+          <div className="flex items-center justify-center mb-8">
+            {icon}
+            {title && <h2 className="text-xl font-semibold text-gray ml-2">{title}</h2>}
+          </div>
+        )}
+
+        {!icon && title && (
+          <h2 className="text-2xl font-bold text-primary mb-2">{title}</h2>
+        )}
+
+        {subtitle && <div className="text-gray/80 text-sm mb-6">{subtitle}</div>}
+
+        {form ? (
+          <form onSubmit={formOnSubmit} className="flex flex-col gap-8">
+            {actions}
+          </form>
+        ) : (
+          actions && <div className="mt-4">{actions}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Small form helpers so styling for inputs/errors lives in this file
+export function LoginInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
+  const { className, ...rest } = props;
+  return (
+    <input
+      {...rest}
+      className={`border border-gray-300 rounded-md px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary ${className ?? ''}`}
+    />
+  );
+}
+
+export function LoginError({ children }: { children: ReactNode }) {
+  return <div className="bg-primary text-offWhite text-sm mb-2 px-4 py-2 rounded-xl">{children}</div>;
+}
