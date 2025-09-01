@@ -20,6 +20,7 @@ export default function Footer() {
               alt="SFN Foundation Logo"
               width={240}
               height={41}
+              className="hover-scale"
             />
           </Link>
         </div>

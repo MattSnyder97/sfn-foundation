@@ -80,6 +80,7 @@ const navLinks = [
             alt="SFN Foundation Logo"
             width={285}
             height={41}
+            className="hover-scale"
           />
         </Link>
 
@@ -176,7 +177,7 @@ const navLinks = [
               {searchOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-700 animate-fadeIn"
+                  className="h-5 w-5 text-gray-700 animate-fadeIn hover-scale"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -194,7 +195,7 @@ const navLinks = [
                   alt="Search"
                   width={16}
                   height={16}
-                  className="animate-fadeIn"
+                  className="hover-scale"
                 />
               )}
             </button>
