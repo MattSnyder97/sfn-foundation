@@ -1,7 +1,7 @@
 // src/components/info/InfoActions.tsx
 "use client";
 import { Button } from "@/components/primitives/Button";
-import { Printer, Share2, Check, MessageSquare } from "lucide-react";
+import { Printer, Share2, Check } from "lucide-react";
 import { useState } from "react";
 
 interface InfoActionsProps {
@@ -27,7 +27,7 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
     if (navigator.share) {
       try {
         await navigator.share(shareData);
-      } catch (err) {
+      } catch {
         // Fallback to copying URL
         copyToClipboard(shareUrl);
       }

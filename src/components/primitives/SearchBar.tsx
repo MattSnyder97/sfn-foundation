@@ -55,7 +55,6 @@ export default function SearchBar() {
       }))
     );
     // allContent is static; no deps needed
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Fuse config: weigh body text highest, keep matches forgiving

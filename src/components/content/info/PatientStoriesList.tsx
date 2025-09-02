@@ -1,16 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { allContent } from '@/content/index';
+type ContentBlock = { type?: string; text?: string; src?: string };
+type ContentSection = { content?: ContentBlock[] };
+type Story = { slug: string; sections?: ContentSection[]; hero?: { title?: string }; meta?: { lastUpdated?: string } };
 
 export default function PatientStoriesList() {
   const stories = allContent.filter(
     (item) => item.slug.startsWith('/patient-stories/') && item.slug !== '/patient-stories'
   );
 
-  const excerptFrom = (story: any) => {
+  const excerptFrom = (story: Story) => {
     try {
       const firstSection = story.sections?.[0];
-      const firstBlock = firstSection?.content?.find((b: any) => b.type === 'paragraph');
+        const firstBlock = firstSection?.content?.find((b) => b.type === 'paragraph');
       if (firstBlock?.text) {
         const txt = firstBlock.text.replace(/\s+/g, ' ').trim();
         return txt.length > 240 ? txt.slice(0, 120).trim() + '…' : txt;
@@ -21,7 +24,7 @@ export default function PatientStoriesList() {
     return '';
   };
 
-  const findLastImage = (story: any) => {
+  const findLastImage = (story: Story) => {
     try {
       const sections = story.sections || [];
       for (let i = sections.length - 1; i >= 0; i--) {
