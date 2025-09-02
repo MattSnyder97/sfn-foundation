@@ -1,0 +1,74 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { allContent } from '@/content/index';
+
+export default function PatientStoriesList() {
+  const stories = allContent.filter(
+    (item) => item.slug.startsWith('/patient-stories/') && item.slug !== '/patient-stories'
+  );
+
+  const excerptFrom = (story: any) => {
+    try {
+      const firstSection = story.sections?.[0];
+      const firstBlock = firstSection?.content?.find((b: any) => b.type === 'paragraph');
+      if (firstBlock?.text) {
+        const txt = firstBlock.text.replace(/\s+/g, ' ').trim();
+        return txt.length > 240 ? txt.slice(0, 120).trim() + '…' : txt;
+      }
+    } catch (e) {
+      // ignore
+    }
+    return '';
+  };
+
+  const findLastImage = (story: any) => {
+    try {
+      const sections = story.sections || [];
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const content = section?.content || [];
+        for (let j = content.length - 1; j >= 0; j--) {
+          const b = content[j];
+          if (b?.type === 'image' && b.src) return b.src;
+        }
+      }
+    } catch (e) {
+      // ignore
+    }
+    return '/images/common/testimonial.png';
+  };
+
+  if (stories.length === 0) {
+    return <p>No stories have been added yet.</p>;
+  }
+
+  return (
+    <div className="flex flex-col gap-6">
+      {stories.map((story) => {
+  const imgSrc = findLastImage(story);
+        const dateText = story.meta?.lastUpdated || '';
+        return (
+          <Link
+            key={story.slug}
+            href={story.slug}
+            className="border-gray/20 border-1 rounded-xl p-6 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <div className="flex flex-col md:flex-row items-stretch gap-4">
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg mb-2 text-dark">{story.hero?.title}</h3>
+                <p className="text-md text-gray-700">
+                  <span className="text-sm text-gray-500 mr-2">{dateText}</span>
+                  <span className="text-md">{excerptFrom(story)}</span>
+                </p>
+              </div>
+
+              <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                <Image src={imgSrc} alt={story.hero?.title || 'Patient story image'} width={320} height={200} className="object-cover w-full h-full" />
+              </div>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}

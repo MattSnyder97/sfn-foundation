@@ -53,6 +53,28 @@ export default function SignIn({ providers }: SignInProps) {
           >
             {loading ? 'Sending...' : 'Send Verification Email'}
           </Button>
+          {/* Divider and social sign-in */}
+          <div className="flex items-center gap-4 my-4">
+            <hr className="flex-1 border-t border-gray-200" />
+            <span className="text-sm text-gray-400">or</span>
+            <hr className="flex-1 border-t border-gray-200" />
+          </div>
+
+          {providers && (() => {
+            const google = providers['google'] ?? Object.values(providers).find(p => p.id === 'google');
+            if (!google) return null;
+            return (
+              <Button
+                type="button"
+                variant="secondary"
+                size="md"
+                onClick={() => signIn(google.id, { callbackUrl: '/research/portal' })}
+                className="w-full"
+              >
+                Sign in with Google
+              </Button>
+            );
+          })()}
         </>
       )}
     />

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { researchArticles } from "../../../content/info-pages/research/research-articles";
 import { Button } from "@/components/primitives/Button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Image from 'next/image';
 
 function sortByDateDesc(a: { date: string }, b: { date: string }) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -75,22 +76,34 @@ export default function LatestNewsList() {
 
   return (
     <div className="flex flex-col gap-6">
-      {articlesToShow.map((article, idx) => (
-        <a
-          key={idx}
-          href={article.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="border-gray/20 border-1 rounded-xl p-8 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
-        >
-          <p className="mb-2 text-sm text-dark">
-            <span className="font-semibold text-lg block mb-2">{article.title}</span>
-            <span className="text-md text-dark">{formatDate(article.date)}</span>
-            <span className="text-md mx-1 text-dark">∙</span>
-            <span>{article.summary}</span>
-          </p>
-        </a>
-      ))}
+      {articlesToShow.map((article, idx) => {
+        // allow authors to accidentally include '/public' in the path; normalize to public root
+        const raw = article.image || '/images/researchWoman.png';
+        const imgSrc = raw.startsWith('/public/') ? raw.replace(/^\/public/, '') : raw;
+        return (
+          <a
+            key={idx}
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-gray/20 border-1 rounded-xl p-8 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <div className="flex flex-col md:flex-row items-stretch gap-4">
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg mb-2 text-dark">{article.title}</h3>
+                <p className="text-md text-gray-700">
+                  <span className="text-sm text-gray-500 mr-2">{formatDate(article.date)}</span>
+                  <span className="text-md">{article.summary}</span>
+                </p>
+              </div>
+
+              <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                <Image src={imgSrc} alt={article.title} width={320} height={200} className="object-cover w-full h-full" />
+              </div>
+            </div>
+          </a>
+        );
+      })}
       <div className="flex gap-4 justify-center mt-4 items-center print:hidden">
         {page > 0 && (
           <Button

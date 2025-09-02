@@ -30,6 +30,7 @@ import { privacyPolicyContent } from "./legal/privacy-policy";
 import { termsOfUseContent } from "./legal/terms-of-use";
 
 // ===== Patient Stories =====
+import { patientStoriesContent } from "./patient-stories/patient-stories";
 import { mattContent } from "./patient-stories/matt";
 
 export const allContent = [
@@ -56,5 +57,6 @@ export const allContent = [
   ...[privacyPolicyContent],
   ...[termsOfUseContent],
   // Patient Stories
+  ...[patientStoriesContent],
   ...[mattContent],
 ];

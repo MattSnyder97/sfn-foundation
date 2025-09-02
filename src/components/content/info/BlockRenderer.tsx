@@ -2,6 +2,7 @@ import InfoParagraph from "@/components/content/info/InfoParagraph";
 import InfoImage from "@/components/content/info/InfoImage";
 import InfoList from "@/components/content/info/InfoList";
 import LatestNewsList from "@/components/content/info/LatestNewsList";
+import PatientStoriesList from "@/components/content/info/PatientStoriesList";
 
 interface ContentBlock {
   type: "paragraph" | "list" | "image" | "component";
@@ -48,6 +49,9 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
     case "component":
       if ((block as ComponentBlock).name === "LatestNewsList") {
         return <LatestNewsList />;
+      }
+      if ((block as ComponentBlock).name === "PatientStoriesList") {
+        return <PatientStoriesList />;
       }
       return null;
     default:
