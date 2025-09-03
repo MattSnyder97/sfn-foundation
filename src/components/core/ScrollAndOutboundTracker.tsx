@@ -22,7 +22,7 @@ export default function ScrollAndOutboundTracker() {
             page_path: window.location.pathname,
           });
         }
-      } catch (err) {
+      } catch {
         // ignore
       }
     }

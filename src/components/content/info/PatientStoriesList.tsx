@@ -18,7 +18,7 @@ export default function PatientStoriesList() {
         const txt = firstBlock.text.replace(/\s+/g, ' ').trim();
         return txt.length > 240 ? txt.slice(0, 120).trim() + '…' : txt;
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
     return '';
@@ -35,7 +35,7 @@ export default function PatientStoriesList() {
           if (b?.type === 'image' && b.src) return b.src;
         }
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
     return '/images/common/testimonial.png';

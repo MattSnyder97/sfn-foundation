@@ -12,17 +12,16 @@ interface InfoActionsProps {
 export default function InfoActions({ title = "SFN Foundation Article", url }: InfoActionsProps) {
   const [copied, setCopied] = useState(false);
 
-  const handleSurveyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleSurveyClick = () => {
     try {
       const label = "Google Form Survey";
-      if (typeof window !== "undefined" && (window as any).gtag) {
-        // GA4 custom event
-        (window as any).gtag('event', 'survey_click', {
-          method: 'google_form',
-          event_label: label,
-        });
+      if (typeof window !== "undefined") {
+        const w = window as Window & { gtag?: (...args: unknown[]) => void };
+        if (w.gtag) {
+          w.gtag('event', 'survey_click', { method: 'google_form', event_label: label });
+        }
       }
-    } catch (err) {
+    } catch {
       // swallow errors to avoid breaking navigation
     }
   };
@@ -57,8 +56,8 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
       await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy to clipboard:', err);
+    } catch {
+      console.error('Failed to copy to clipboard');
     }
   };
 

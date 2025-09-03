@@ -104,7 +104,7 @@ export default function SearchBar() {
         results_count: hits.length,
         page_path: typeof window !== 'undefined' ? window.location.pathname : '',
       });
-    } catch (err) {
+    } catch {
       // noop
     }
   };

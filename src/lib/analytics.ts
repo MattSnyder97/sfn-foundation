@@ -1,13 +1,15 @@
 // Minimal typed wrapper around gtag for GA4 events
-export function trackEvent(name: string, params?: Record<string, any>) {
+export function trackEvent(name: string, params?: Record<string, unknown>) {
   try {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', name, params || {});
+    if (typeof window !== 'undefined') {
+      const w = window as Window & { gtag?: (...args: unknown[]) => void };
+      if (w.gtag) {
+        w.gtag('event', name, params || {});
+      }
     }
-  } catch (err) {
+  } catch {
     // swallow errors - analytics must not break UX
-    // eslint-disable-next-line no-console
-    console.debug('trackEvent failed', name, err);
+    console.debug('trackEvent failed', name);
   }
 }
 
