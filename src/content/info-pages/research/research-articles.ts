@@ -12,7 +12,7 @@ export const researchArticles: ResearchArticle[] = [
       summary: "This study aimed to characterize the symptomatic variability of SFN and determine whether patients can be stratified into clinically meaningful subgroups.",
       link: "https://onlinelibrary.wiley.com/doi/10.1111/ene.70321",
       date: "2025-08-25",
-      image: "/public/images/common/painfulFeet.png"
+      image: "/public/images/common/chestThroatPain.jpg"
     },  
     {
       title: "Low Dose Naltrexone Shows Promise for SFN",

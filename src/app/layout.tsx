@@ -3,6 +3,7 @@ import { Lato, Lora } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import AuthProvider from '@/components/providers/AuthProvider';
+import ScrollAndOutboundTracker from '@/components/core/ScrollAndOutboundTracker';
 
 // Load Lato as default sans
 const lato = Lato({
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${lato.variable} ${lora.variable} font-sans antialiased bg-offWhite text-dark`}
       >
         <AuthProvider>
+          <ScrollAndOutboundTracker />
           {children}
         </AuthProvider>
       </body>

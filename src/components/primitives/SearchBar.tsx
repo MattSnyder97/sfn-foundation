@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 
 import { allContent } from "@/content";
+import trackEvent from '@/lib/analytics';
 
 /** Types that match your content blocks */
 type Block =
@@ -96,6 +97,16 @@ export default function SearchBar() {
     }
 
     setResults(limited);
+
+    try {
+      trackEvent('search', {
+        query: q,
+        results_count: hits.length,
+        page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+      });
+    } catch (err) {
+      // noop
+    }
   };
 
   return (

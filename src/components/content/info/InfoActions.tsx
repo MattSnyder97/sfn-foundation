@@ -12,6 +12,21 @@ interface InfoActionsProps {
 export default function InfoActions({ title = "SFN Foundation Article", url }: InfoActionsProps) {
   const [copied, setCopied] = useState(false);
 
+  const handleSurveyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    try {
+      const label = "Google Form Survey";
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        // GA4 custom event
+        (window as any).gtag('event', 'survey_click', {
+          method: 'google_form',
+          event_label: label,
+        });
+      }
+    } catch (err) {
+      // swallow errors to avoid breaking navigation
+    }
+  };
+
   const handlePrint = () => {
     window.print();
   };
@@ -60,8 +75,9 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
         <a
           href="https://forms.gle/p81P8LdPwcERfi4D8"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="Leave feedback via Google Form"
+          onClick={handleSurveyClick}
         >
           <Button variant="primary" size="md" className="font-semibold">
             Google Form Survey
