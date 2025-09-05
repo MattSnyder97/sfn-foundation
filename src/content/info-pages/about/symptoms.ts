@@ -130,9 +130,9 @@ export const symptomsContent = {
           type: "list",
           ordered: true,
           items: [
-            "Early stage - Mild tingling or burning, usually in toes or fingertips. Symptoms may come and go.",
-            "Moderate stage - Pain becomes more constant. Symptoms spread up from toes to feet, from fingertips to hands.",
-            "Advanced stage - Pain and numbness can affect larger areas. Walking and using your hands might become more difficult.",
+            "**Early stage** - Mild tingling or burning, usually in toes or fingertips. Symptoms may come and go.",
+            "**Moderate stage** - Pain becomes more constant. Symptoms spread up from toes to feet, from fingertips to hands.",
+            "**Advanced stage** - Pain and numbness can affect larger areas. Walking and using your hands might become more difficult.",
           ],
         },
         {

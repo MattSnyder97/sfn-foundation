@@ -147,6 +147,7 @@ export const dictionaryContent = {
             "**Duloxetine (Cymbalta)** - An antidepressant medication that is also FDA-approved for treating diabetic nerve pain.",
             "**Gabapentin** - An anticonvulsant medication commonly used as a first-line treatment for nerve pain.",
             "**IRAK Inhibitors** - Interleukin-1 receptor-associated kinase inhibitors that play critical roles in controlling immune responses.",
+            "**JAK Inhibitors (JAKi)** - Janus kinase inhibitors are medications that modulate the immune system by blocking the activity of specific enzymes involved in inflammation.",
             "**Lidocaine** - A numbing medication that can be applied as a cream or patch to reduce localized nerve pain.",
             "**Multimodal Therapy** - Using several different treatments together for better pain control.",
             "**Opioids** - Strong pain medications that are sometimes used for severe neuropathic pain, but with caution due to addiction risks.",

@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import AuthProvider from '@/components/providers/AuthProvider';
 import ScrollAndOutboundTracker from '@/components/core/ScrollAndOutboundTracker';
+import TitleOverride from '@/components/core/TitleOverride';
 
 // Load Lato as default sans
 const lato = Lato({
@@ -20,9 +21,13 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "SFN Foundation",
+  title: "Small Fiber Neuropathy Foundation",
   description:
     "Our foundation exists to speed up finding the cure for small fiber neuropathy and provide you the support you need along the way.",
+  metadataBase: new URL('https://sfn-foundation.org'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -55,8 +60,17 @@ export default function RootLayout({
       >
         <AuthProvider>
           <ScrollAndOutboundTracker />
+            <TitleOverride />
           {children}
         </AuthProvider>
+        {/* JSON-LD Organization for SEO */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Small Fiber Neuropathy Foundation",
+          "url": "https://sfn-foundation.org",
+          "logo": "https://sfn-foundation.org/logos/logo.png"
+        }) }} />
       </body>
     </html>
   );
