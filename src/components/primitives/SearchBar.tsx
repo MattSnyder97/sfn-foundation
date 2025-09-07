@@ -1,6 +1,12 @@
 "use client";
+// Fix for window.__searchAutoFocus type
+declare global {
+  interface Window {
+    __searchAutoFocus?: boolean;
+  }
+}
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import { Search } from "lucide-react";
@@ -29,6 +35,15 @@ type IndexedItem = {
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<IndexedItem[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Autofocus support (parent can pass autoFocus prop)
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window.__searchAutoFocus || false)) {
+      inputRef.current?.focus();
+      window.__searchAutoFocus = false;
+    }
+  }, []);
 
   // Collect all searchable text from a section (paragraphs + list items + captions)
   const collectSectionText = (section: Section) =>
@@ -110,43 +125,49 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl">
-      {/* Input (2x wide vs md) */}
-      <div className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow focus-within:ring-2 focus-within:ring-primary">
+    <div className="relative w-full max-w-2xl h-full">
+      {/* Input (fills vertical space on desktop, 30% taller on mobile) */}
+      <div
+        className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow focus-within:ring-2 focus-within:ring-primary h-full"
+        style={{ minHeight: '3.5rem' }}
+      >
         <Search className="h-4 w-4 text-gray-500" />
         <input
+          ref={inputRef}
           type="text"
           value={query}
           onChange={handleChange}
           placeholder="Search…"
-          className="w-full border-none bg-transparent text-sm focus:outline-none"
+          className="w-full h-full border-none bg-transparent text-sm focus:outline-none"
           aria-label="Site search"
+          style={{ fontSize: '1.1rem' }}
         />
       </div>
 
-      {/* Results dropdown — styled like your header dropdown */}
+      {/* Results dropdown — improved appearance and distinctive hover */}
       {query && (results.length > 0 || query.length >= 2) && (
         <div className="absolute left-0 top-full z-50 mt-2 w-full">
-          <div className="bg-white default-shadow rounded-md overflow-hidden border border-gray-200">
+          <div className="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200">
             {/* top primary cap to match header dropdown */}
-            <div className="h-2 bg-primary rounded-t-md" />
+            <div className="h-2 bg-primary rounded-t-xl" />
 
             {results.length > 0 ? (
-              <ul className="max-h-80 overflow-y-auto">
+              <ul className="max-h-80 overflow-y-auto divide-y divide-gray-100">
                 {results.map((res, idx) => (
-                  <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="border-b border-gray-100 last:border-none">
+                  <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="last:border-none">
                     <Link
                       href={`${res.pageSlug}#${res.sectionId}`}
-                      className="block px-4 py-3 text-sm hover:bg-gray-50 transition-colors duration-150"
+                      className="block px-5 py-4 text-lg transition-colors duration-150 rounded-none hover:bg-primary/10 focus:bg-primary/20"
+                      style={{ fontSize: '1.15rem' }}
                     >
-                      <div className="font-medium text-dark">{res.sectionTitle}</div>
-                      <div className="text-xs text-gray-500">{res.pageTitle}</div>
+                      <div className="font-semibold text-dark mb-1">{res.sectionTitle}</div>
+                      <div className="text-base text-gray-500">{res.pageTitle}</div>
                     </Link>
                   </li>
                 ))}
               </ul>
             ) : (
-              <div className="px-4 py-3 text-sm text-gray-600">No results found</div>
+              <div className="px-5 py-4 text-sm text-gray-600">No results found</div>
             )}
           </div>
         </div>

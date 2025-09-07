@@ -86,92 +86,90 @@ const navLinks = [
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center justify-end flex-1 space-x-12">
-          {!searchOpen &&
-            navLinks.map((link) => {
-              const isActive = activeDropdown === link.label;
-              return (
-                <div
-                  key={link.label}
-                  className="relative group"
-                  onMouseEnter={() => openDropdown(link.label)}
-                  onMouseLeave={scheduleClose}
-                >
-                  {/* Trigger - Wrap text and chevron in one container */}
-                  <div className="flex flex-col items-center relative group/nav">
-                    <button
-                      className={`flex items-center space-x-3 px-2 py-1 rounded transition-colors duration-150 cursor-pointer bg-transparent border-none outline-none focus:outline-none ${
-                        isActive ? "text-primary" : "text-dark group-hover:text-primary"
-                      }`}
-                      style={{ background: "none" }}
-                      tabIndex={0}
-                      aria-haspopup={link.dropdown ? "true" : undefined}
-                      aria-expanded={isActive}
-                    >
-                      {link.href ? (
-                        <Link
-                          href={link.href}
-                          className="text-base font-medium"
-                        >
-                          {link.label}
-                        </Link>
-                      ) : (
-                        <span className="text-base font-medium cursor-default">{link.label}</span>
-                      )}
-                      {link.dropdown && (
-                        <ChevronDown
-                          strokeWidth={2.5}
-                          className={`h-3.5 w-3.5 transition-all duration-160 ${
-                            isActive
-                              ? "scale-y-[-1] text-primary"
-                              : "text-dark group-hover:text-primary"
-                          }`}
-                        />
-                      )}
-                    </button>
-                    {/* Animated underline */}
-                    <span
-                      className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-160 origin-left rounded-full"
-                    />
-                  </div>
-
-                  {/* Dropdown */}
-                  {isActive && link.dropdown && (
-                    <div
-                      className="absolute left-0 top-full z-20 w-48 -translate-x-4"
-                      onMouseEnter={() => openDropdown(link.label)}
-                      onMouseLeave={scheduleClose}
-                    >
-                      <div className="pt-4">
-                        <div className="bg-white default-shadow rounded-md overflow-hidden">
-                          {/* Top border cap */}
-                          <div className="h-2 bg-primary rounded-t-md" />
-                          {link.items?.map((item) => (
-                            <Link
-                              key={item.label}
-                              href={item.href}
-                              target={item.target}
-                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                              className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
-                        </div>
+        <div className="hidden md:flex items-center justify-end flex-1 space-x-12 relative">
+          {/* Hide category links when search is open */}
+          {!searchOpen && navLinks.map((link) => {
+            const isActive = activeDropdown === link.label;
+            return (
+              <div
+                key={link.label}
+                className="relative group"
+                onMouseEnter={() => openDropdown(link.label)}
+                onMouseLeave={scheduleClose}
+              >
+                {/* ...existing code for nav links... */}
+                <div className="flex flex-col items-center relative group/nav">
+                  <button
+                    className={`flex items-center space-x-3 px-2 py-1 rounded transition-colors duration-150 cursor-pointer bg-transparent border-none outline-none focus:outline-none ${
+                      isActive ? "text-primary" : "text-dark group-hover:text-primary"
+                    }`}
+                    style={{ background: "none" }}
+                    tabIndex={0}
+                    aria-haspopup={link.dropdown ? "true" : undefined}
+                    aria-expanded={isActive}
+                  >
+                    {link.href ? (
+                      <Link
+                        href={link.href}
+                        className="text-base font-medium"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span className="text-base font-medium cursor-default">{link.label}</span>
+                    )}
+                    {link.dropdown && (
+                      <ChevronDown
+                        strokeWidth={2.5}
+                        className={`h-3.5 w-3.5 transition-all duration-160 ${
+                          isActive
+                            ? "scale-y-[-1] text-primary"
+                            : "text-dark group-hover:text-primary"
+                        }`}
+                      />
+                    )}
+                  </button>
+                  <span
+                    className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-160 origin-left rounded-full"
+                  />
+                </div>
+                {isActive && link.dropdown && (
+                  <div
+                    className="absolute left-0 top-full z-20 w-48 -translate-x-4"
+                    onMouseEnter={() => openDropdown(link.label)}
+                    onMouseLeave={scheduleClose}
+                  >
+                    <div className="pt-4">
+                      <div className="bg-white default-shadow rounded-md overflow-hidden">
+                        <div className="h-2 bg-primary rounded-t-md" />
+                        {link.items?.map((item) => (
+                          <Link
+                            key={item.label}
+                            href={item.href}
+                            target={item.target}
+                            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                            className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
                       </div>
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
 
           {/* Search / Close Icon */}
           <div className="flex items-center">
-            {searchOpen && (
-              <SearchBar />
-            )}
             <button
-              onClick={() => setSearchOpen(!searchOpen)}
+              onClick={() => {
+                if (!searchOpen && typeof window !== 'undefined') {
+                  window.__searchAutoFocus = true;
+                }
+                setSearchOpen(!searchOpen);
+              }}
               className="ml-4 transition-opacity duration-300 cursor-pointer"
               aria-label={searchOpen ? "Close search" : "Open search"}
             >
@@ -200,6 +198,14 @@ const navLinks = [
                 />
               )}
             </button>
+            {/* Overlay search bar absolutely when open, shifted left to show close button */}
+            {searchOpen && (
+              <div className="absolute right-16 top-0 w-[28rem] max-w-full h-full flex items-center z-30 pointer-events-auto">
+                <div className="w-full h-[3.5rem] flex items-center">
+                  <SearchBar />
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -236,13 +242,9 @@ const navLinks = [
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white default-shadow container-padding py-4 space-y-4">
-          {/* Mobile Search Bar */}
+          {/* Mobile Search Bar (use primitives SearchBar) */}
           <div className="mb-8">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
+            <SearchBar />
           </div>
 
           {/* Navigation Links */}
