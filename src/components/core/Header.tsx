@@ -238,7 +238,7 @@ const navLinks = [
           <div className="mb-8">
             <input
               type="text"
-              placeholder="Search by keyword or phrase"
+              placeholder="Search..."
               className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
             />
           </div>

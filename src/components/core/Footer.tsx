@@ -133,10 +133,8 @@ export default function Footer() {
             </div>
 
             <p className="text-xs opacity-60 leading-relaxed">
-            The SFN Foundation does not provide advice on health conditions. It solely shares factual information on related topics. 
-            Unless otherwise noted, content is based on published research and expert opinion. The information does not constitute medical or 
-            legal advice; consult a qualified physician or attorney for specific guidance. The SFN Foundation does not collect or manage donations 
-            or money.
+              The SFN Foundation shares factual information based on published research and expert opinion. It does not provide medical or 
+              legal advice; consult a qualified professional for specific guidance. The SFN Foundation does not collect or manage donations or money.
             </p>
           </div>
 
