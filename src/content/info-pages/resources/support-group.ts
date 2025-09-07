@@ -19,23 +19,13 @@ export const supportGroupContent = {
       content: [
         {
           type: "paragraph",
-          text: `Living with Small Fiber Neuropathy can feel isolating, especially when 
-          friends and family don't fully understand what you're going through. Our 
-          support group connects people with SFN from around the world, creating a 
-          community where you can share experiences, ask questions, and find encouragement 
-          from others who truly understand your journey.`,
+          text: `Living with Small Fiber Neuropathy can feel isolating, but our support group on Discord connects people worldwide for real-time chat, advice, and encouragement. Whether you want to ask questions, share experiences, or just talk with others who understand, our community is here for you.`,
         },
         {
-          type: "paragraph",
-          text: `[Join the SFN support group](https://discord.gg/UGNhBMkBS7)`,
-        },
-        {
-          type: "paragraph",
-          text: `Our community is built on Discord, a modern communication platform that 
-          makes it easy to chat with other members, participate in group activities, 
-          and stay connected throughout the day. Whether you want to ask about a new 
-          symptom, share a treatment success, or just talk with people who get it, 
-          our Discord server provides a welcoming space for all aspects of living with SFN.`,
+          type: "button",
+          label: "Join the Support Group",
+          href: "https://discord.gg/UGNhBMkBS7",
+          variant: "outlinePrimary",
         },
       ],
     },
@@ -113,37 +103,30 @@ export const supportGroupContent = {
       id: "community-guidelines",
       title: "Community Guidelines",
       content: [
-        {
-          type: "paragraph",
-          text: `Our support group thrives because we maintain a respectful, supportive 
-          environment where everyone feels safe to share their experiences. We ask all 
-          members to be kind, patient, and understanding with each other, recognizing 
-          that chronic pain can affect mood and energy levels in different ways.`,
-        },
-        {
-          type: "paragraph",
-          text: `While we encourage sharing treatment experiences and what has worked 
-          for you, please remember that we're not medical professionals. Always consult 
-          with your healthcare provider before making changes to your treatment plan. 
-          We're here to support each other, share experiences, and provide emotional 
-          encouragement, not to replace medical advice.`,
-        },
-        {
-          type: "paragraph",
-          text: `We maintain a positive focus in our community while acknowledging that 
-          living with SFN includes difficult days. It's okay to share struggles and 
-          frustrations, and we're here to listen and support you through tough times. 
-          We also love celebrating victories, both big and small, from successful treatments 
-          to simply having a better day than expected.`,
-        },
-        {
-          type: "paragraph",
-          text: `Privacy and confidentiality are important to us. What's shared in our 
-          Discord stays in our Discord. We ask members to respect each other's privacy 
-          and not share personal information or conversations outside our community 
-          without permission. This helps maintain the trust that makes meaningful support 
-          possible.`,
-        },
+          {
+            type: "paragraph",
+            text: `Our Discord server is moderated to keep the community safe, supportive, and focused. Please follow these key guidelines, which mods enforce to protect everyone:`,
+          },
+          {
+            type: "list",
+            ordered: false,
+            items: [
+              "No minors allowed. The server is for adults only.",
+              "No hate, bigotry, or discrimination. Respect all members.",
+              "No unsolicited medical advice. Respect requests for no advice.",
+              "No recommending basic remedies (e.g., yoga, fad diets) as cures for severe conditions.",
+              "No politics, except in the healthcare-politics channel.",
+              "No minimizing or shaming anyone's experience or treatment choices.",
+              "No sourcing prescription or illicit drugs. Discuss only legal, medically prescribed treatments.",
+              "Respect pronouns and neurodiverse language preferences.",
+              "No pseudoscience or unsupported medical claims.",
+              "Inactive members may lose access to sensitive channels.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: `Remember: Nothing shared here is medical advice. Mods may take action if these rules are broken. For full details, see the guidelines in our Discord server.`,
+          },
       ],
     },
   ],
@@ -165,8 +148,9 @@ export const supportGroupContent = {
 };
 
 // ---- Types ----
+// Button margin note: The renderer should remove extra margin beneath a button if it is the last block in a section.
 export interface ContentBlock {
-  type: "paragraph" | "list" | "image";
+  type: "paragraph" | "list" | "image" | "button";
 }
 
 export interface ParagraphBlock extends ContentBlock {
@@ -187,4 +171,12 @@ export interface ImageBlock extends ContentBlock {
   caption?: string;
 }
 
-export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;
+export interface ButtonBlock extends ContentBlock {
+  type: "button";
+  label: string;
+  href: string;
+  icon?: string;
+  variant?: "primary" | "secondary" | "outline" | "outlinePrimary";
+}
+
+export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock | ButtonBlock;
