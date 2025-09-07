@@ -7,6 +7,9 @@ export const mutualAidContent = {
   tableOfContents: [
     { id: "overview", title: "Overview" },
     { id: "beth-kris", title: "Beth Kris" },
+    
+
+    { id: "disclaimer", title: "Disclaimer" },
   ],
   sections: [
     {
@@ -54,9 +57,20 @@ export const mutualAidContent = {
         },
       ],
     },
+    {
+      id: "disclaimer",
+      title: "Disclaimer",
+      content: [
+        {
+          type: "paragraph",
+          text: `The mutual aid links on this page go directly to individual fundraising campaigns. The SFN Foundation does not collect, 
+          manage, or receive any portion of these funds. Please use your own judgment before contributing.`,
+        },
+      ],
+    },
   ],
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 25, 2025",
+    lastUpdated: "September 7, 2025",
   },
 };

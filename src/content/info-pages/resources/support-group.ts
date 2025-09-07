@@ -133,7 +133,7 @@ export const supportGroupContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 22, 2025",
+    lastUpdated: "September 7, 2025",
     references: [
       {
         title: "Peer Support Groups - National Institute of Mental Health",
