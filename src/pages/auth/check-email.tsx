@@ -1,4 +1,4 @@
-import AnimatedCheck from '@/components/ui/AnimatedCheck';
+import AnimatedCheck from '@/components/primitives/AnimatedCheck';
 import Login from '@/components/content/research/Login';
 
 export default function CheckEmail() {
