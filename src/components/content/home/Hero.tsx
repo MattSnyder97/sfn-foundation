@@ -25,6 +25,7 @@ export default function Hero() {
           alt="small fiber neuropathy"
           fill
           priority
+          fetchPriority="high"
           className="object-cover"
           style={{ opacity: 0.03 }}
         />
