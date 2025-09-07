@@ -89,8 +89,8 @@ html {
 
   @media (max-width: 640px) {
     .container-padding {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 

@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
@@ -151,7 +152,7 @@ const navLinks = [
                               href={item.href}
                               target={item.target}
                               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:text-primary hover:underline transition-colors duration-200"
+                              className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"
                             >
                               {item.label}
                             </Link>
@@ -177,7 +178,7 @@ const navLinks = [
               {searchOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-700 animate-fadeIn hover-scale"
+                  className="h-5 w-5 text-gray animate-fadeIn hover-scale"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -207,22 +208,23 @@ const navLinks = [
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
-            className="relative w-6 h-6"
+            className="relative w-12 h-12"
+            style={{ minWidth: 48, minHeight: 48 }}
           >
             <span className="sr-only">Toggle menu</span>
             <div className="block w-6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <span
-                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                className={`block absolute h-0.5 w-6 bg-gray transform transition duration-300 ease-in-out ${
                   mobileOpen ? 'rotate-45' : '-translate-y-1.5'
                 }`}
               />
               <span
-                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                className={`block absolute h-0.5 w-6 bg-gray transform transition duration-300 ease-in-out ${
                   mobileOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`block absolute h-0.5 w-6 bg-gray-700 transform transition duration-300 ease-in-out ${
+                className={`block absolute h-0.5 w-6 bg-gray transform transition duration-300 ease-in-out ${
                   mobileOpen ? '-rotate-45' : 'translate-y-1.5'
                 }`}
               />
@@ -247,30 +249,27 @@ const navLinks = [
           {navLinks.map((link, idx) => (
             <div
               key={link.label}
-              className={`text-right ${
-                idx !== 0 && idx !== navLinks.length - 1 && mobileDropdowns[link.label]
-                  ? "pt-6 pb-6"
-                  : idx === navLinks.length - 1 && mobileDropdowns[link.label]
-                  ? "pt-6"
-                  : ""
-              }`}
+              className="text-left w-full"
             >
-              <div className="w-full flex items-center justify-end text-right text-lg font-medium text-gray-700 hover:text-primary transition-colors duration-200 group gap-3">
+              {/* Divider above each category except first */}
+              {idx !== 0 && <hr className="border-t border-gray-200 my-2" />}
+              <div className={`w-full flex items-center text-left group gap-3 ${mobileDropdowns[link.label] ? "" : ""}`}>
                 {/* On mobile: if dropdown, use button to open dropdown only; if not, allow navigation */}
                 {link.dropdown ? (
                   <button
                     type="button"
                     onClick={() => toggleMobileDropdown(link.label)}
-                    className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                    className={`w-full text-left text-xl flex items-center gap-2 transition-colors duration-200 ${mobileDropdowns[link.label] ? "font-bold text-primary" : "font-semibold text-dark hover:text-primary"}`}
                     aria-expanded={!!mobileDropdowns[link.label]}
+                    style={{padding: "0.5rem 0"}}
                   >
                     {link.label}
                     <ChevronDown
                       strokeWidth={2.5}
-                      className={`h-3.5 w-3.5 transition-all duration-160 ${
+                      className={`h-4 w-4 transition-all duration-160 ${
                         mobileDropdowns[link.label]
                           ? "scale-y-[-1] text-primary"
-                          : "text-gray-700 group-hover:text-primary"
+                          : "text-gray group-hover:text-primary"
                       }`}
                     />
                   </button>
@@ -278,27 +277,31 @@ const navLinks = [
                   link.href ? (
                     <Link
                       href={link.href}
-                      className="text-base font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                      className={`w-full text-left text-xl transition-colors duration-200 ${mobileDropdowns[link.label] ? "font-bold text-primary" : "font-semibold text-gray hover:text-primary"}`}
+                      style={{padding: "0.5rem 0"}}
                     >
                       {link.label}
                     </Link>
                   ) : (
-                    <span>{link.label}</span>
+                    <span className="text-xl font-semibold text-gray" style={{padding: "0.5rem 0"}}>{link.label}</span>
                   )
                 )}
               </div>
               {mobileDropdowns[link.label] && link.dropdown && (
-                <div className="mt-2 pr-4 space-y-2 text-right mb-8">
-                  {link.items?.map((item) => (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      target={item.target}
-                      rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                      className="block text-sm text-gray-700 hover:text-primary hover:underline transition-colors duration-200 rounded-md px-2 py-2"
-                    >
-                      {item.label}
-                    </Link>
+                <div className="mt-2 pl-2 space-y-2 text-left">
+                  {link.items?.map((item, subIdx) => (
+                    <React.Fragment key={item.label + '-' + subIdx}>
+                      {/* Divider above each sublink except first */}
+                      {subIdx !== 0 && <hr className="border-t border-gray-100 my-1" />}
+                      <Link
+                        href={item.href}
+                        target={item.target}
+                        rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                        className="block text-lg text-gray hover:text-primary hover:underline transition-colors duration-200 rounded-md px-2 py-2"
+                      >
+                        {item.label}
+                      </Link>
+                    </React.Fragment>
                   ))}
                 </div>
               )}
