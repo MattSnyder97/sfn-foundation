@@ -44,7 +44,9 @@ export default function InfoLayout({
   const currentTags = customTags || pageData.tags;
   const pageTitle = title || pageData.title;
 
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(
+    tableOfContents && tableOfContents.length > 0 ? tableOfContents[0].id : null
+  );
 
   // Track scroll position with IntersectionObserver
   useEffect(() => {
@@ -58,7 +60,7 @@ export default function InfoLayout({
         }
       },
       {
-        rootMargin: "0px 0px -70% 0px", // triggers earlier/later depending on section height
+        rootMargin: "0px 0px -32% 0px", // triggers earlier/later depending on section height
         threshold: 0.1,
       }
     );
@@ -83,7 +85,7 @@ export default function InfoLayout({
               <aside className="hidden lg:block w-56 flex-shrink-0">
                 <div
                   className="sticky"
-                  style={{ top: "calc(var(--header-height) - 30px)" }}
+                  style={{ top: "calc(var(--header-height) - 32px)" }}
                 >
                   <h3 className="text-lg font-semibold text-dark mb-4">
                     On this page
@@ -93,9 +95,9 @@ export default function InfoLayout({
                       <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className={`block text-sm py-1 transition-all duration-200 ${
+                        className={`block text-sm py-1 transition-all duration-200 pl-4 ${
                           activeId === item.id
-                            ? "text-primary hover:underline"
+                            ? "border-l-4 border-primary pl-6 text-primary bg-transparent"
                             : "text-gray hover:text-primary hover:underline"
                         }`}
                       >
