@@ -102,13 +102,31 @@ export default function SearchBar() {
 
     const hits = fuse.search(q);
 
-    // If only 1 result → show just that.
-    // If >1 → take top 3 only.
+    // Deprioritize results from certain folders/pages
+    const deprioritizedSlugs = [
+      '/patient-stories',
+      '/disclaimer',
+      '/accessibility',
+      '/terms-of-use',
+      '/privacy-policy',
+      '/research',
+    ];
+
+    const preferred = hits.filter(
+      (r) => !deprioritizedSlugs.some((slug) => r.item.pageSlug.startsWith(slug))
+    );
+    const deprioritized = hits.filter(
+      (r) => deprioritizedSlugs.some((slug) => r.item.pageSlug.startsWith(slug))
+    );
+
     let limited: IndexedItem[] = [];
-    if (hits.length === 1) {
-      limited = [hits[0].item];
-    } else if (hits.length > 1) {
-      limited = hits.slice(0, 3).map((r) => r.item);
+    if (preferred.length === 1) {
+      limited = [preferred[0].item];
+    } else if (preferred.length > 1) {
+      limited = preferred.slice(0, 3).map((r) => r.item);
+    } else if (deprioritized.length > 0) {
+      // Only show deprioritized if no preferred results
+      limited = deprioritized.slice(0, 3).map((r) => r.item);
     }
 
     setResults(limited);
