@@ -59,7 +59,6 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
       return <InfoImage src={(block as ImageBlock).src} alt={(block as ImageBlock).alt} caption={(block as ImageBlock).caption} />;
     case "button": {
       const { label, href, icon, variant } = block as ButtonBlock;
-      // Variant classes
       const variantClasses = {
         primary: "border-2 border-primary bg-primary text-white hover:bg-offWhite hover:border-primary hover:text-primary",
         secondary: "bg-offWhite border-2 border-offWhite text-primary hover:bg-primary hover:text-offWhite",
@@ -67,9 +66,7 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
         outlinePrimary: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
       };
       const buttonClass = `inline-flex items-center gap-2 justify-center font-semibold rounded-3xl transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-offset-1 default-shadow cursor-pointer px-5 py-3 text-base ${variantClasses[variant || "primary"]}`;
-      // Center on mobile
-  const wrapperClass = "w-full flex justify-center md:justify-start my-8";
-      // Track click for support group button
+      const wrapperClass = "w-full flex justify-center md:justify-start my-8";
       const handleClick = () => {
         if (label.toLowerCase().includes("support group")) {
           trackEvent("support_group_click", {
@@ -88,20 +85,30 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
             className={buttonClass}
             onClick={handleClick}
           >
-            {/* Icon removed as requested */}
             {label}
           </a>
         </div>
       );
     }
-    case "component":
+    case "component": {
       if ((block as ComponentBlock).name === "LatestNewsList") {
         return <LatestNewsList />;
       }
       if ((block as ComponentBlock).name === "PatientStoriesList") {
         return <PatientStoriesList />;
       }
+      if ((block as ComponentBlock).name === "PatientShortStory") {
+        // Dynamically import PatientShortStory
+        const PatientShortStory = require("@/components/content/info/PatientShortStory").default;
+        const props = (block as any).props || {};
+        return (
+          <PatientShortStory author={props.author} date={props.date}>
+            {props.children}
+          </PatientShortStory>
+        );
+      }
       return null;
+    }
     default:
       return null;
   }
