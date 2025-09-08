@@ -35,11 +35,11 @@ export function PatientStory() {
             </p>
             
             <Link 
-              href="/patient-stories/matt" 
+              href="/patient-stories/" 
               aria-label="Read Matt's full small fiber neuropathy story"
             >
               <Button variant="secondary" size="md">
-                Read Matt&apos;s Story
+                Read Patient Stories
               </Button>
             </Link>
           </div>
@@ -69,14 +69,14 @@ export function PatientStory() {
               Matt, 28 years old, diagnosed in 2024
             </p>
             
-            <Link href="/patient-stories/matt">
+            <Link href="/patient-stories/">
               <Button
                 variant="secondary"
                 size="md"
                 className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
                 aria-label="Read Matt's full small fiber neuropathy story"
               >
-                Read Matt&apos;s Story
+                Read Patient Stories
               </Button>
             </Link>
           </div>

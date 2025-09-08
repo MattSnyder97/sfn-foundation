@@ -69,7 +69,7 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
           <span className="font-semibold text-2xl text-primary">Got Feedback or Ideas?</span>
         </div>
         <p className="text-center text-gray mb-4 max-w-xl">
-          Share feedback, ideas, or information corrections in our quick anonymous survey to help us improve the SFN Foundation website.
+          Share feedback, ideas, or information corrections in our quick anonymous survey to help improve the SFN Foundation website.
         </p>
         <a
           href="https://forms.gle/p81P8LdPwcERfi4D8"
