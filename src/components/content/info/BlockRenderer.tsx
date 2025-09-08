@@ -98,9 +98,7 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
         return <PatientStoriesList />;
       }
       if ((block as ComponentBlock).name === "PatientShortStory") {
-        // Use static import for PatientShortStory
-        // @ts-ignore
-        // eslint-disable-next-line
+
         const PatientShortStory = require("@/components/content/info/PatientShortStory").default;
         const props: { author?: string; date?: string; children?: React.ReactNode } = (block as ComponentBlock & { props?: { author?: string; date?: string; children?: React.ReactNode } }).props || {};
         return (
