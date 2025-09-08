@@ -16,7 +16,7 @@ export default function PatientStoriesList() {
         const firstBlock = firstSection?.content?.find((b) => b.type === 'paragraph');
       if (firstBlock?.text) {
         const txt = firstBlock.text.replace(/\s+/g, ' ').trim();
-        return txt.length > 240 ? txt.slice(0, 120).trim() + '…' : txt;
+        return txt.length > 240 ? txt.slice(0, 200).trim() + '…' : txt;
       }
     } catch {
       // ignore
@@ -54,7 +54,7 @@ export default function PatientStoriesList() {
           <Link
             key={story.slug}
             href={story.slug}
-            className="border-gray/20 border-1 rounded-xl p-8 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="border-gray/20 border-1 rounded-xl p-6 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <div className="flex flex-col md:flex-row items-stretch gap-8">
               <div className="flex-1 p-2 md:p-4">
