@@ -5,7 +5,7 @@ import InfoImage from "@/components/content/info/InfoImage";
 import InfoList from "@/components/content/info/InfoList";
 import LatestNewsList from "@/components/content/info/LatestNewsList";
 import PatientStoriesList from "@/components/content/info/PatientStoriesList";
-// import { Button } from "@/components/primitives/Button";
+import PatientShortStory from "@/components/content/info/PatientShortStory";
 
 interface ContentBlock {
   type: "paragraph" | "list" | "image" | "component" | "button";
@@ -98,11 +98,9 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
         return <PatientStoriesList />;
       }
       if ((block as ComponentBlock).name === "PatientShortStory") {
-
-        const PatientShortStory = require("@/components/content/info/PatientShortStory").default;
         const props: { author?: string; date?: string; children?: React.ReactNode } = (block as ComponentBlock & { props?: { author?: string; date?: string; children?: React.ReactNode } }).props || {};
         return (
-          <PatientShortStory author={props.author} date={props.date}>
+          <PatientShortStory author={props.author}>
             {props.children}
           </PatientShortStory>
         );
