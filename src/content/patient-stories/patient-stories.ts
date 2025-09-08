@@ -16,7 +16,7 @@ export const patientStoriesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Read first-hand experiences from people living with Small Fiber Neuropathy. Stories offer detailed accounts of full journeys, while Short Stories are brief accounts for those wanting anonymity or sharing smaller parts of their experience.`,
+          text: `Read stories from people living with Small Fiber Neuropathy. We have divided them into two categories: Stories and Short Stories. Stories are longer, more complete accounts of life with SFN, and Short Stories share a smaller piece of someone's experience.`,
         },
       ],
     },
@@ -38,7 +38,7 @@ export const patientStoriesContent = {
             type: "component",
             name: "PatientShortStory",
             props: {
-              author: "u/retinolandevermore",
+              author: "Ashley, age 33, Massachusetts",
               children: `"I had neuropathy for 25 years and thought daily burning pain was a normal human experience until my 20s. My pediatrician when I was 7 said it was just \"growing pains.\" In 2023, I finally got diagnosed with small fiber neuropathy, which was then idiopathic, so they couldn't find the cause. \n\nDoctors didn't seem determined to help and insisted that I'm young and can bounce back. I kept pushing for answers, and a year later, at my request, I got a biopsy of my lip and was diagnosed with Sjögren's. My lifelong fatigue and neuropathy finally made sense."`
             }
           },
