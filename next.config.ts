@@ -48,7 +48,7 @@ module.exports = {
               "style-src 'self' 'unsafe-inline'; " +
               "img-src 'self' data: www.google-analytics.com; " +
               "font-src 'self'; " +
-              "connect-src 'self' www.google-analytics.com www.googletagmanager.com; " +
+              "connect-src 'self' www.google-analytics.com www.googletagmanager.com analytics.google.com stats.g.doubleclick.net; " +
               "frame-src 'none'; " +
               "object-src 'none'; " +
               "base-uri 'self'; " +
