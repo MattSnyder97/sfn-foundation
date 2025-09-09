@@ -35,11 +35,7 @@ export const causesContent = {
         },
         {
           type: "paragraph",
-          text: `Finding the cause is important because treating the underlying condition 
-          can sometimes slow down or stop more nerve damage so keep pushing for more testing if your
-          small fiber neuropathy has been labeled "idiopathic". Idiopathic ultimately means doctors have not
-          found the cause...yet. Diabetes is the most common identifiable cause, but there are many other 
-          possibilities your doctor will check for.`,
+          text: `Finding the cause is important. Treating it can sometimes slow or stop more nerve damage. If your small fiber neuropathy has been labeled "idiopathic", keep asking your doctor for tests. Idiopathic means doctors have not found the cause yet. Diabetes is the most common identifiable cause, but there are other possibilities your doctor will check for.`,
         },
       ],
     },

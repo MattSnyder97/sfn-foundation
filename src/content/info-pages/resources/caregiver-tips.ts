@@ -20,15 +20,11 @@ export const caregiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Caring for someone with small fiber neuropathy can be challenging. Your support makes a real difference in helping your loved one 
-          manage their symptoms and maintain their quality of life. Understanding SFN and 
-          learning effective care strategies can help both of you navigate this journey together.`,
+          text: `Caring for someone with small fiber neuropathy can be hard. Your support helps them manage symptoms and keep a better quality of life. Learning about SFN and helpful care strategies can make it easier for both of you.`,
         },
         {
           type: "paragraph",
-          text: `Remember that SFN affects everyone differently. What works for one person 
-          might not work for another, and symptoms can change over time. Being flexible, 
-          patient, and willing to learn will help you provide the best possible support.`,
+          text: `SFN affects people in different ways. What helps one person may not help another. Symptoms can change over time. Being flexible, patient, and willing to learn will help you provide good support.`,
         },
       ],
     },
@@ -39,28 +35,22 @@ export const caregiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Small fiber neuropathy is a condition where the smallest nerve fibers 
-          in the body become damaged. These nerves carry pain, temperature, and touch 
-          sensations, as well as control automatic functions like sweating and blood 
-          pressure regulation.`,
+          text: `Small fiber neuropathy is a condition in which the tiny nerve fibers in the body are damaged. These nerves carry pain, temperature, and touch signals and also help control automatic functions like sweating and blood pressure.`,
         },
         {
           type: "paragraph",
-          text: `The pain from SFN is real and can be severe, even though it might not 
-          be visible to others. Many people describe it as burning, stabbing, or feeling 
-          like electric shocks. Some also experience numbness, tingling, or extreme 
-          sensitivity to touch.`,
+          text: `Pain from SFN is real and can be severe, even if others cannot see it. Many people call it burning, stabbing, or electric shock-like. Some people also feel numbness, tingling, or strong sensitivity to touch.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Pain levels can change throughout the day: your loved one might feel okay in the morning but struggle in the evening.",
-            "Temperature sensitivity is common: heat or cold might make symptoms worse.",
-            "Fatigue is often a major issue: dealing with chronic pain is exhausting.",
-            "Mood changes are normal: chronic pain can lead to depression, anxiety, or irritability.",
-            "Good days and bad days happen: symptoms can be unpredictable.",
-            "Invisible illness challenges: others might not understand because symptoms aren't visible.",
+            "Pain levels can change during the day: mornings may be easier than evenings.",
+            "Temperature can affect symptoms: heat or cold may make them worse.",
+            "Fatigue is common: chronic pain can be very tiring.",
+            "Mood changes can happen: chronic pain can lead to depression, anxiety, or irritability.",
+            "Good days and bad days occur: symptoms can be unpredictable.",
+            "Invisible illness: others may not understand because symptoms are not visible.",
           ],
         },
         {
@@ -78,43 +68,33 @@ export const caregiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `There are many practical ways you can help your loved one manage daily 
-          activities and reduce their pain. Small adjustments to the home environment 
-          and daily routines can make a big difference in their comfort and independence.`,
+          text: `There are practical ways you can help with daily activities and ease pain. Small changes at home and in routines can make a big difference in comfort and independence.`,
         },
         {
           type: "paragraph",
-          text: `Focus on creating a supportive environment while still encouraging 
-          independence when possible. The goal is to help without taking away your 
-          loved one's sense of control and autonomy.`,
+          text: `Create a supportive environment while encouraging independence when possible. Help without taking away your loved one's sense of control.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Help with household tasks: Cleaning, cooking, and shopping can be difficult when dealing with pain and fatigue.",
-            "Assist with medication management: Help organize pills, set reminders, and track side effects.",
-            "Create a comfortable environment: Adjust room temperature, provide soft bedding, and reduce harsh lighting.",
-            "Help with foot care: Assist with gentle washing, drying, and moisturizing of feet and hands.",
-            "Support exercise routines: Encourage gentle activities like walking or swimming when they feel up to it.",
-            "Provide transportation: Drive to medical appointments and help navigate healthcare facilities.",
-            "Prepare comfortable clothing: Help choose loose-fitting clothes and supportive shoes.",
-            "Organize the home: Keep frequently used items within easy reach to reduce unnecessary movement.",
+            "Help with household tasks like cleaning, cooking, and shopping if pain and fatigue make them hard.",
+            "Help manage medications: organize pills, set reminders, and note side effects.",
+            "Make the home comfortable: adjust temperature, use soft bedding, and lower bright lights.",
+            "Assist with foot care: washing, drying, and moisturizing feet and hands gently.",
+            "Support gentle exercise: encourage walking or swimming when they feel up to it.",
+            "Provide transportation: drive to appointments and help with directions.",
+            "Choose comfortable clothing: loose clothes and supportive shoes.",
+            "Organize the home: keep common items within easy reach to reduce movement.",
           ],
         },
         {
           type: "paragraph",
-          text: `Pay attention to environmental factors that might worsen symptoms. 
-          Many people with SFN are sensitive to temperature changes, so maintaining 
-          a comfortable home temperature and having blankets or fans available can help. 
-          Some find that certain fabrics or tight clothing make their symptoms worse.`,
+          text: `Watch for things that make symptoms worse. Many people are sensitive to temperature, so having blankets or fans ready can help. Some fabrics or tight clothes may also increase discomfort.`,
         },
         {
           type: "paragraph",
-          text: `Be flexible with plans and activities. Your loved one might feel good 
-          in the morning but struggle later in the day, or they might have to cancel 
-          plans due to a symptom flare-up. Having backup plans and being understanding 
-          about changes helps reduce stress for everyone.`,
+          text: `Be flexible with plans. Your loved one may feel better in the morning and worse later, or they may cancel due to a flare. Have backup plans and stay understanding to reduce stress.`,
         },
         {
           type: "image",
@@ -132,45 +112,33 @@ export const caregiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Good communication is essential for providing effective support. Learn 
-          to recognize both verbal and non-verbal signs that your loved one is having 
-          a difficult day with their symptoms. Sometimes people with chronic pain don't 
-          want to complain constantly, so they might not always say when they're struggling.`,
+          text: `Good communication is key. Learn to notice verbal and non-verbal signs that your loved one is having a hard day. People with chronic pain may not always say when they are struggling.`,
         },
         {
           type: "paragraph",
-          text: `Being an advocate for your loved one, especially in healthcare settings, 
-          can make a huge difference in the quality of care they receive. Many healthcare 
-          providers are still learning about SFN, so having a knowledgeable supporter 
-          can help ensure proper treatment.`,
+          text: `Being an advocate in healthcare settings can improve the care your loved one gets. Many providers are still learning about SFN, so a knowledgeable supporter can help.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Listen without trying to fix: Sometimes your loved one just needs someone to understand their experience.",
-            "Ask how you can help: Don't assume you know what they need; let them tell you.",
-            "Learn about SFN: The more you understand, the better support you can provide.",
-            "Attend medical appointments: Take notes, ask questions, and help remember important information.",
-            "Help research treatments: Look up new therapies, clinical trials, and specialist doctors.",
-            "Communicate with other family members: Help educate relatives about SFN so they can be supportive too.",
-            "Validate their experience: Acknowledge that their pain is real and their feelings are valid.",
-            "Encourage without pushing: Support their goals while respecting their limitations.",
+            "Listen without trying to fix things: sometimes they just need understanding.",
+            "Ask how you can help: don't assume what they need; let them say.",
+            "Learn about SFN: knowing more helps you give better support.",
+            "Attend appointments: take notes, ask questions, and help remember details.",
+            "Help research treatments: look for new therapies, trials, and specialists.",
+            "Talk with family: help educate relatives so they can be supportive.",
+            "Validate their experience: say that their pain is real and their feelings matter.",
+            "Encourage without pushing: support their goals while respecting limits.",
           ],
         },
         {
           type: "paragraph",
-          text: `When attending medical appointments, come prepared with a list of questions 
-          and current symptoms. Keep a symptom diary or pain log that you can share with 
-          healthcare providers. This information helps doctors understand how SFN is 
-          affecting daily life and whether treatments are working.`,
+          text: `Bring a list of questions and note current symptoms to appointments. Keep a symptom diary or pain log to share with doctors. This helps them see how SFN affects daily life and if treatments help.`,
         },
         {
           type: "paragraph",
-          text: `Help your loved one research their condition and treatment options, but 
-          be careful about information overload. Focus on reputable medical sources and 
-          discuss new information with their healthcare team before making any changes 
-          to their treatment plan.`,
+          text: `Help research condition and treatments, but avoid too much information at once. Use trusted medical sources and talk with the healthcare team before changing treatments.`,
         },
       ],
     },
@@ -181,43 +149,33 @@ export const caregiverTipsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Caring for someone with a chronic condition like SFN can be emotionally 
-          and physically demanding. It's important to take care of your own health and 
-          well-being so you can continue to be a good caregiver. Remember that taking 
-          care of yourself is necessary.`
+          text: `Caring for someone with a chronic condition can be emotionally and physically demanding. It is important to take care of your own health so you can keep helping.`,
         },
         {
           type: "paragraph",
-          text: `Caregiver burnout is real and common. Watch for signs like feeling 
-          overwhelmed, irritable, or exhausted most of the time. If you notice these 
-          feelings, it's time to seek additional support or take a break.`,
+          text: `Caregiver burnout is real. Watch for signs like feeling overwhelmed, irritable, or tired most of the time. If you feel this way, seek extra help or take a break.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Build a support network - Connect with other caregivers, family members, or support groups.",
-            "Take regular breaks - Even short breaks can help you recharge and avoid burnout.",
-            "Maintain your own health - Keep up with your medical appointments and exercise routine.",
-            "Set realistic expectations - You can't fix everything or take away all their pain.",
-            "Learn stress management - Practice relaxation techniques, meditation, or other stress-relief activities.",
-            "Accept help from others - Let friends and family members assist with caregiving tasks.",
-            "Keep your own interests - Continue activities you enjoy and maintain your friendships.",
-            "Consider counseling - Talking to a therapist can help you process difficult emotions.",
+            "Build a support network - connect with other caregivers, family, or support groups.",
+            "Take regular breaks - even short breaks help you recharge.",
+            "Keep up your own health - attend medical appointments and move your body.",
+            "Set realistic expectations - you cannot fix everything or remove all pain.",
+            "Learn stress management - try relaxation, meditation, or other techniques.",
+            "Accept help - let friends and family assist with tasks.",
+            "Keep your interests - continue activities you enjoy and keep friendships.",
+            "Consider counseling - a therapist can help you process hard emotions.",
           ],
         },
         {
           type: "paragraph",
-          text: `Don't hesitate to ask for help from other family members, friends, or 
-          community resources. Many communities have respite care services, support 
-          groups for caregivers, and other resources that can provide assistance and 
-          emotional support.`,
+          text: `Ask for help from family, friends, or community resources. Many places offer respite care, caregiver support groups, and other services to help.`,
         },
         {
           type: "paragraph",
-          text: `Remember that you're doing your best in a difficult situation. Some days 
-          will be harder than others, and that's normal. Celebrate the small victories 
-          and be patient with yourself as you learn how to best support your loved one.`,
+          text: `You are doing your best. Some days will be harder than others. Celebrate small wins and be patient as you learn how to help your loved one.`,
         },
         {
           type: "image",

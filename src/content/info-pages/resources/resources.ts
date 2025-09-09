@@ -24,15 +24,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Caring for someone with Small Fiber Neuropathy can be hard, but 
-          your help makes a real difference. Learning about the condition and 
-          good caregiving tips can help both of you.`,
+          text: `Caring for someone with small fiber neuropathy can be hard. Your support makes a real difference. Learning about the condition and useful caregiving tips can help both of you.`,
         },
         {
           type: "paragraph",
-          text: `Focus on helping with pain, daily tasks during flares, medicine 
-          schedules, and knowing when to get professional help. Take care of 
-          yourself too to avoid burnout. [Read our complete caregiver guide](/resources/caregiver-tips)`,
+          text: `Help with pain, daily tasks during flares, and medicine schedules. Know when to get professional care. Take breaks and care for yourself to avoid burnout. [Read our complete caregiver guide](/resources/caregiver-tips)`,
         },
       ],
     },
@@ -43,14 +39,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `We answer the most common questions about Small Fiber Neuropathy. 
-          Find information about diagnosis, treatments, daily life tips, and 
-          what to expect.`,
+          text: `We answer common questions about small fiber neuropathy. Find information on diagnosis, treatments, daily life tips, and what to expect.`,
         },
         {
           type: "paragraph",
-          text: `Topics include how doctors diagnose SFN, which treatments work, 
-          lifestyle changes that help, and when to seek emergency care. [Browse all FAQs](/#faqs)`,
+          text: `Topics include how doctors diagnose SFN, which treatments can help, useful lifestyle changes, and when to seek urgent care. [Browse all FAQs](/#faqs)`,
         },
       ],
     },
@@ -61,15 +54,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Finding the right doctor is key for good SFN care. Neurologists 
-          who work with nerve problems usually have the most experience. Some 
-          pain doctors and hormone specialists also help with SFN.`,
+          text: `Finding the right doctor is important for SFN care. Neurologists who treat nerve problems often have the most experience. Some pain doctors and other specialists can help too.`,
         },
         {
           type: "paragraph",
-          text: `Look for doctors with SFN experience, good location, insurance 
-          coverage, and treatment styles that fit you. Ask about their experience 
-          during your visit. [Find a SFN specialist](/resources/specialists)`,
+          text: `Look for doctors with SFN experience, convenient location, and insurance that works for you. Ask about their experience during your visit. [Find a SFN specialist](/resources/specialists)`,
         },
       ],
     },
@@ -80,17 +69,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Mutual aid is about supporting each other in our community, 
-          especially when someone faces added challenges to an already difficult 
-          situation. This page helps people in our SFN community who need 
-          assistance with financial, accessibility, or other urgent needs.`,
+          text: `Mutual aid is about supporting each other. This page connects people who need help with those who can help. Help can include money, accessibility needs, or other urgent support.`,
         },
         {
           type: "paragraph",
-          text: `Find current opportunities to help community members, or connect 
-          if you need support. If you know someone who could use help or want 
-          to request assistance, contact us. Every act of kindness makes a difference. 
-          [Visit our mutual aid page](/resources/mutual-aid)`,
+          text: `Find current ways to help or get support. To request help or add someone, contact us. Small acts of kindness can matter. [Visit our mutual aid page](/resources/mutual-aid)`,
         },
       ],
     },
@@ -101,15 +84,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting an SFN diagnosis can feel scary, but now you can focus 
-          on treatments that work. Many people with SFN live full, active lives 
-          with good care.`,
+          text: `Getting an SFN diagnosis can feel scary. You can now focus on steps that may help. Many people with SFN live active lives with proper care.`,
         },
         {
           type: "paragraph",
-          text: `Next steps include finding what causes your SFN, trying different 
-          treatments, and learning lifestyle changes that help. Treatment takes 
-          time to work, so be patient. [Information for newly diagnosed patients](/resources/newly-diagnosed)`,
+          text: `Next steps include finding possible causes, trying treatments, and learning helpful lifestyle changes. Treatments can take time to work. [Information for newly diagnosed patients](/resources/newly-diagnosed)`,
         },
       ],
     },
@@ -120,15 +99,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Read real stories from people living with Small Fiber Neuropathy. 
-          These personal accounts share the ups and downs of diagnosis, treatment, 
-          and daily life with SFN.`,
+          text: `Read real stories from people living with small fiber neuropathy. These accounts share their experiences with diagnosis, treatment, and daily life.`,
         },
         {
           type: "paragraph",
-          text: `Each story offers hope, practical tips, and honest looks at what 
-          it's really like to live with this condition. Learn from others who 
-          understand your journey. [Read patient stories](/resources/patient-stories)`,
+          text: `Stories can give hope, practical tips, and real views on living with SFN. [Read patient stories](/resources/patient-stories)`,
         },
       ],
     },
@@ -139,15 +114,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Our dictionary explains medical terms related to Small Fiber 
-          Neuropathy that you'll encounter in appointments, research, and 
-          online discussions.`,
+          text: `Our dictionary explains medical terms related to small fiber neuropathy that you may hear in appointments, research, or online.`,
         },
         {
           type: "paragraph",
-          text: `Find definitions for anatomy terms, medication names, and 
-          diagnostic procedures. Having this reference helps you communicate 
-          more effectively with your healthcare team. [Read the SFN dictionary](/resources/dictionary)`,
+          text: `Find definitions for anatomy terms, medication names, and tests. This reference can help you talk with your healthcare team. [Read the SFN dictionary](/resources/dictionary)`,
         },
       ],
     },
@@ -158,15 +129,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Connect with others who understand what you're going through. 
-          Our support group brings together people with SFN, families, and 
-          caregivers in a safe space.`,
+          text: `Connect with others who understand what you're going through. Our support group brings together people with SFN, families, and caregivers in a safe space.`,
         },
         {
           type: "paragraph",
-          text: `Members share treatment experiences, coping tips, and daily life 
-          advice. Get emotional support and know you're not alone in your SFN journey. 
-          [Join our support group](/resources/support-group)`,
+          text: `Members share treatment experiences, coping tips, and daily life advice. Get emotional support and know you are not alone. [Join our support group](/resources/support-group)`,
         },
       ],
     },
@@ -177,15 +144,11 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Many people with SFN try supplements as part of their treatment. 
-          Some may help nerve health or fix vitamin problems that make symptoms 
-          worse. Common ones include alpha-lipoic acid, B vitamins, and magnesium.`,
+          text: `Many people with SFN try supplements as part of treatment. Some may help nerve health or fix vitamin problems. Common ones include alpha-lipoic acid, B vitamins, and magnesium.`,
         },
         {
           type: "paragraph",
-          text: `Talk to your doctor before starting supplements. They can interact 
-          with medicines and aren't right for everyone. Choose quality brands. 
-          [Learn about supplements for SFN](/resources/supplements)`,
+          text: `Talk to your doctor before starting supplements. They can interact with medicines and may not be right for everyone. Choose quality brands when possible. [Learn about supplements for SFN](/resources/supplements)`,
         },
       ],
     },

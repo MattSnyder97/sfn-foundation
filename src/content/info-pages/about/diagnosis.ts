@@ -19,18 +19,11 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `Your doctor may use several different approaches to figure out if you 
-          have SFN. This usually includes talking about your symptoms, doing a 
-          physical exam, and getting a skin punch biopsy. The process might seem slow, 
-          but each step helps build a clear picture of what's happening with your nerves.`,
+          text: `Your doctor will use several steps to find out if you have SFN. This usually includes talking about your symptoms, a physical exam, and a skin punch biopsy. The process can feel slow, but each step helps build a clearer picture of your nerves.`,
         },
         {
           type: "paragraph",
-          text: `The good news is that doctors are getting better at recognizing and 
-          diagnosing SFN. New testing methods 
-          have made it easier to confirm the diagnosis. Getting the right diagnosis 
-          is worth the wait because it opens the door to treatments that can help 
-          you feel better.`,
+          text: `Doctors are getting better at recognizing and diagnosing SFN. New tests make it easier to confirm the diagnosis. Getting the right diagnosis is worth the wait because it lets you access treatments that may help.`,
         },
       ],
     },
@@ -41,18 +34,11 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `Your diagnosis journey starts with telling your doctor about your 
-          symptoms. This conversation is very important because SFN symptoms can 
-          be different from person to person. Your doctor needs to understand exactly 
-          what you're feeling and when it started.`,
+          text: `Your diagnosis starts with telling your doctor about your symptoms. This conversation is important because SFN symptoms vary from person to person. Your doctor needs to know exactly what you feel and when it started.`,
         },
         {
           type: "paragraph",
-          text: `During your appointment, your doctor will ask detailed questions about 
-          your pain and other symptoms. 
-          They'll want to know where you feel pain, what it feels like, when it 
-          happens, and what makes it better or worse. Be as specific as possible 
-          about your symptoms.`,
+          text: `During your visit, your doctor will ask detailed questions about your pain and other symptoms. They will want to know where you feel pain, what it feels like, when it happens, and what helps or makes it worse. Be as specific as you can.`,
         },
         {
           type: "list",
@@ -98,10 +84,7 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `The most definitive test for SFN is a skin biopsy. 
-          This involves taking tiny samples of skin to count the small nerve fibers. 
-          It might sound scary, but it's a simple procedure that's usually done in 
-          the doctor's office with local numbing medicine.`,
+          text: `The most definitive test for SFN is a skin biopsy. This takes tiny skin samples to count small nerve fibers. It may sound scary, but it is a simple procedure done in the doctor's office with local numbing medicine.`,
         },
         {
           type: "list",
@@ -117,10 +100,7 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
-          text: `The skin biopsy is considered the gold standard for diagnosing SFN. 
-          During this test, your doctor takes a small circular piece of skin, usually 
-          from your lower leg. The sample is sent to a lab where specialists count 
-          the small nerve fibers and compare them to normal levels.`,
+          text: `The skin biopsy is the gold standard for diagnosing SFN. Your doctor takes a very small piece of skin, usually from the lower leg. A lab counts the small nerve fibers and compares them to normal levels.`,
         },
         {
           type: "image",
@@ -131,11 +111,7 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
-          text: `Blood tests are important to find out what might be causing your neuropathy. 
-          Your doctor will usually check for diabetes and prediabetes, 
-          vitamin B12 levels, thyroid function, and signs of autoimmune diseases. 
-          Finding and treating the underlying cause can sometimes slow down or even 
-          improve neuropathy symptoms.`,
+          text: `Blood tests help find possible causes of your neuropathy. Your doctor will usually check for diabetes or prediabetes, vitamin B12, thyroid function, and signs of autoimmune disease. Treating the underlying cause can sometimes slow or improve symptoms.`,
         },
         {
           type: "paragraph",
@@ -152,16 +128,11 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `Many people with SFN work with neurologists, doctors who specialize 
-          in conditions affecting the nervous system. Neurologists have special 
-          training in diagnosing and treating different types of neuropathy, including SFN.`,
+          text: `Many people with SFN work with neurologists, doctors who focus on the nervous system. Neurologists train to diagnose and treat types of neuropathy, including SFN.`,
         },
         {
           type: "paragraph",
-          text: `Your family doctor might refer you to a neurologist if they suspect 
-          you have SFN. Some neurologists have even more specialized training in 
-          peripheral neuropathy, 
-          which means they focus specifically on nerve problems like SFN. [Find a SFN specialist](/resources/specialists)`,
+          text: `Your family doctor may refer you to a neurologist if they suspect SFN. Some neurologists focus specifically on peripheral neuropathy. [Find a SFN specialist](/resources/specialists)`,
         },
         {
           type: "paragraph",

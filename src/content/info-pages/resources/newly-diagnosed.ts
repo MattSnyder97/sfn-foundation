@@ -21,18 +21,11 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting diagnosed with small fiber neuropathy can feel overwhelming and 
-          scary. You might have many questions, concerns, and emotions right now. 
-          The good news is that you finally have answers 
-          for the symptoms you've been experiencing, and now you can start working 
-          toward feeling better.`,
+          text: `Getting a diagnosis of small fiber neuropathy can feel overwhelming and scary. You may have many questions and strong emotions. The good news is you now have answers for your symptoms and can start taking steps to feel better.`,
         },
         {
           type: "paragraph",
-          text: `While SFN is a chronic condition, many people with this diagnosis go on 
-          to live full, active lives. With the right treatment plan and lifestyle 
-          adjustments, you can manage your symptoms and maintain your quality of life. 
-          This journey will have ups and downs, but you don't have to face it alone.`,
+          text: `SFN is a long-term condition, but many people live active lives with proper care. With the right treatments and lifestyle changes, you can manage symptoms and keep your quality of life. You do not have to face this alone.`,
         },
       ],
     },
@@ -43,35 +36,27 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Small fiber neuropathy means that the smallest nerve fibers in your body 
-          have become damaged. These tiny nerves are responsible for carrying pain, 
-          temperature, and touch sensations from your skin to your brain. They also 
-          help control automatic body functions like sweating and blood pressure.`,
+          text: `Small fiber neuropathy means the smallest nerve fibers in your body are damaged. These tiny nerves carry pain, temperature, and touch from your skin to your brain. They also help control automatic functions like sweating and blood pressure.`,
         },
         {
           type: "paragraph",
-          text: `SFN can be caused by many different things, and sometimes the exact cause 
-          isn't found. Common causes include diabetes, autoimmune diseases, vitamin 
-          deficiencies, certain medications, and genetic factors. Understanding what 
-          might have caused your neuropathy can help guide your treatment.`,
+          text: `SFN can have many causes, and sometimes no cause is found. Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Your symptoms are real and valid - SFN causes genuine pain and discomfort, even though others might not see it.",
-            "[Symptoms can vary](/about/symptoms) - You might experience burning, stabbing, tingling, numbness, or sensitivity to touch.",
-            "It typically starts in feet and hands - Most people notice symptoms in their extremities first.",
-            "Progression varies - Some people's symptoms stay stable, while others may worsen or even improve over time.",
-            "Treatment is available - While there's no cure, many [effective treatments](/about/treatments) can help manage symptoms.",
-            "Research is ongoing - Scientists are continuously working to better understand and treat SFN.",
+            "Your symptoms are real and valid: SFN causes real pain even if others cannot see it.",
+            "Symptoms can vary: you may have burning, stabbing, tingling, numbness, or sensitivity to touch.",
+            "It often starts in the feet and hands: many people notice symptoms in their extremities first.",
+            "Progression varies: symptoms may stay the same, get worse, or sometimes improve.",
+            "Treatment is available: while there is no cure, many treatments can help manage symptoms.",
+            "Research is ongoing: scientists continue to study SFN to find better treatments.",
           ],
         },
         {
           type: "paragraph",
-          text: `It's important to understand that having SFN doesn't mean your life is over. 
-          While it's a chronic condition that requires ongoing management, many people 
-          with SFN continue to work, exercise, travel, and enjoy their relationships and hobbies.`,
+          text: `Having SFN does not mean your life is over. Many people with SFN still work, exercise, travel, and enjoy hobbies with proper care.`,
         },
       ],
     },
@@ -82,30 +67,25 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Now that you have a diagnosis, there are several important steps you can 
-          take right away to start managing your condition effectively. These early 
-          actions can help set you up for the best possible outcomes and give you a 
-          sense of control over your health.`,
+          text: `Now that you have a diagnosis, there are steps you can take to manage your condition. These actions can help improve outcomes and give you more control over your health.`,
         },
         {
           type: "list",
           ordered: true,
           items: [
-            "Ask questions about your diagnosis - Make sure you understand what SFN means for you specifically. Ask about the likely progression, treatment options, and what to expect.",
-            "Get copies of your test results - Keep copies of your skin biopsy, blood tests, and other diagnostic results for your records.",
-            "Research the underlying cause - If a cause was identified (like diabetes or vitamin deficiency), learn about managing that condition.",
-            "Start a symptom diary - Track your pain levels, symptoms, and what might trigger flare-ups. This information will be valuable for your healthcare team.",
-            "Review your medications - Go over all your current medications with your doctor to see if any might be contributing to nerve damage.",
-            "Get blood work if not done recently - Check for diabetes, vitamin B12, thyroid function, and other conditions that can affect nerves.",
-            "Schedule follow-up appointments - Plan regular check-ins with your healthcare team to monitor your condition and adjust treatments.",
-            "Connect with support resources - Look into patient organizations and [support groups](/resources/support-group).",
+            "Ask questions about your diagnosis: make sure you understand how SFN affects you and what to expect.",
+            "Get copies of your test results: keep skin biopsy reports, blood tests, and other records.",
+            "Research possible causes: if a cause was found, learn how to manage it.",
+            "Start a symptom diary: track pain, symptoms, and triggers to share with your care team.",
+            "Review medications: check if any current medicines could affect your nerves.",
+            "Get blood work: test for diabetes, B12 levels, thyroid function, and other issues.",
+            "Schedule follow-ups: plan regular check-ins to monitor progress and adjust treatments.",
+            "Connect with support: explore patient groups and [support groups](/resources/support-group).",
           ],
         },
         {
           type: "paragraph",
-          text: `Don't try to do everything at once. Take these steps gradually and at 
-          your own pace. Some days you might feel motivated to tackle several tasks, 
-          while other days you might only manage one small thing—both approaches are fine.`
+          text: `Don't do everything at once. Take steps slowly and at your own pace. Some days you may do more, and other days less. Both are okay.`,
         },
       ],
     },
@@ -116,43 +96,33 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Managing SFN effectively often requires working with multiple healthcare 
-          providers. Building a good healthcare team can make a huge difference in your 
-          treatment outcomes and quality of life. Each team member brings different 
-          expertise to help address various aspects of your condition.`,
+          text: `Managing SFN often means working with several healthcare providers. A good care team can improve treatment and quality of life. Each provider adds different expertise to help your condition.`,
         },
         {
           type: "paragraph",
-          text: `Start with your current doctors and add specialists as needed. Good 
-          communication between team members is important, so make sure they can share 
-          information and coordinate your care effectively.`,
+          text: `Start with your current doctors and add specialists as needed. Make sure your providers can share information and coordinate care.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Primary care physician - Coordinates your overall care and manages general health issues.",
-            "Neurologist - Specializes in nerve disorders and can prescribe neuropathy medications.",
-            "Endocrinologist - Manages diabetes and other hormone-related causes of neuropathy.",
-            "Pain management specialist - Focuses on controlling chronic pain through various approaches.",
-            "Rheumatologist - Treats autoimmune diseases that might be causing nerve damage.",
-            "Physical therapist - Helps maintain mobility and teaches exercises to manage symptoms.",
-            "Mental health counselor - Supports emotional well-being and helps with coping strategies.",
-            "Pharmacist - Provides medication counseling and helps manage drug interactions.",
+            "Primary care doctor - coordinates overall care and general health.",
+            "Neurologist - treats nerve disorders and can prescribe neuropathy medicines.",
+            "Endocrinologist - treats diabetes and hormone issues linked to neuropathy.",
+            "Pain specialist - focuses on managing chronic pain with different approaches.",
+            "Rheumatologist - treats autoimmune diseases that may cause nerve damage.",
+            "Physical therapist - helps keep mobility and teaches exercises to manage symptoms.",
+            "Mental health counselor - supports emotional health and coping skills.",
+            "Pharmacist - advises on medicines and manages drug interactions.",
           ],
         },
         {
           type: "paragraph",
-          text: `When choosing healthcare providers, look for those who are [knowledgeable 
-          about SFN](/resources/specialists) and who listen to your concerns. Don't hesitate to get second 
-          opinions if you're not satisfied with your care or if you want to explore 
-          different treatment options.`,
+          text: `Choose providers who know about SFN and who listen to you. Get second opinions if you are not happy with your care or want to explore other options.`,
         },
         {
           type: "paragraph",
-          text: `Prepare for appointments by writing down your questions beforehand and 
-          bringing someone with you if possible. Take notes during visits or ask if 
-          you can record the conversation to help you remember important information later.`,
+          text: `Prepare for appointments by writing questions ahead of time and bringing someone if possible. Take notes during visits or ask to record the conversation to help you remember details later.`,
         },
       ],
     },
@@ -163,43 +133,33 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Making certain lifestyle changes can help you manage SFN symptoms and 
-          potentially slow the progression of nerve damage. These adjustments might 
-          seem overwhelming at first, but start with small changes and build gradually. 
-          Even modest improvements can make a meaningful difference in how you feel.`,
+          text: `Certain lifestyle changes can help manage SFN symptoms and may slow nerve damage. Start with small, manageable changes and add more over time. Small steps can make a big difference.`,
         },
         {
           type: "paragraph",
-          text: `Focus on changes that feel manageable and sustainable for you. You don't 
-          have to transform your entire life overnight. Pick one or two areas to work 
-          on first, and add more healthy habits as these become routine.`,
+          text: `Choose changes that you can keep up over time. You don't need to change everything at once. Start with one or two areas and add more when you are ready.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Blood sugar management - Keep blood sugar levels stable through diet and exercise, even if you don't have diabetes.",
-            "Regular gentle exercise - Walking, swimming, or yoga can improve circulation and reduce pain for many people.",
-            "Foot care routine - Inspect your feet daily, keep them clean and moisturized, and wear supportive shoes.",
-            "Stress management - Practice relaxation techniques like deep breathing, meditation, or mindfulness.",
-            "Sleep hygiene - Maintain regular sleep schedules and create a comfortable sleep environment.",
-            "Alcohol moderation - Limit alcohol consumption as it can worsen neuropathy symptoms.",
-            "Smoking cessation - If you smoke, quitting can improve circulation and nerve health.",
-            "Balanced nutrition - Eat a diet rich in B vitamins and antioxidants to support nerve health.",
+            "Control blood sugar - keep levels stable with diet and exercise when relevant.",
+            "Gentle regular exercise - walking, swimming, or yoga can help circulation and reduce pain.",
+            "Foot care - check feet daily, keep them clean and moisturized, and wear supportive shoes.",
+            "Stress management - try deep breathing, meditation, or mindfulness.",
+            "Sleep hygiene - keep a regular sleep schedule and a comfortable sleep space.",
+            "Limit alcohol - alcohol can worsen neuropathy for some people.",
+            "Quit smoking - stopping smoking can improve circulation and nerve health.",
+            "Balanced nutrition - eat foods with B vitamins and antioxidants to support nerves.",
           ],
         },
         {
           type: "paragraph",
-          text: `Pay attention to what triggers your symptoms and what provides relief. 
-          Some people find that heat makes their symptoms worse, while others find 
-          warmth soothing. Keep track of these patterns so you can adjust your 
-          environment and activities accordingly.`,
+          text: `Notice what triggers your symptoms and what helps. Some people find heat makes symptoms worse, while others find warmth soothing. Track these patterns to adjust your environment and activities.`,
         },
         {
           type: "paragraph",
-          text: `Consider working with a nutritionist or registered dietitian to develop 
-          an eating plan that supports nerve health. They can help you understand which 
-          foods might help reduce inflammation and provide the nutrients your nerves need to function their best.`,
+          text: `Consider working with a nutritionist to create a diet that supports nerve health. They can help identify foods that reduce inflammation and provide needed nutrients.`,
         },
       ],
     },
@@ -210,10 +170,7 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Being diagnosed with a chronic condition like SFN can trigger many 
-          emotions—fear, anger, sadness, or anxiety are all normal responses. Dealing 
-          with chronic pain and symptoms can also affect your mood and mental health 
-          over time. It's important to address these emotional aspects as part of your overall care.`.replace('—', '-')
+          text: `A diagnosis like SFN can cause many emotions such as fear, anger, sadness, or anxiety. Chronic pain can also affect your mood over time. It is important to address these feelings as part of your care.`,
         },
         {
           type: "paragraph",
@@ -226,28 +183,23 @@ export const newlyDiagnosedContent = {
           type: "list",
           ordered: false,
           items: [
-            "Allow yourself to grieve - It's normal to feel sad about your diagnosis and any limitations it might bring.",
-            "Stay connected - Maintain relationships with family and friends who support you.",
-            "Join support groups - Connect with others who understand what you're going through.",
-            "Consider counseling - A therapist can help you develop coping strategies and process difficult emotions.",
-            "Practice self-compassion - Be patient and kind with yourself as you adjust to your diagnosis.",
-            "Focus on what you can control - Direct your energy toward managing your symptoms and maintaining your health.",
-            "Maintain hope - Remember that treatments are available and research is continuing.",
-            "Celebrate small victories - Acknowledge improvements and good days when they happen.",
+            "Allow yourself to grieve - it's normal to feel sad about your diagnosis and limits.",
+            "Stay connected - keep relationships with family and friends who support you.",
+            "Join support groups - connect with others who understand your experience.",
+            "Consider counseling - a therapist can help with coping strategies.",
+            "Be kind to yourself - practice patience as you adjust to the diagnosis.",
+            "Focus on what you can control - manage symptoms and maintain health.",
+            "Keep hope - treatments exist and research continues.",
+            "Celebrate small wins - notice improvements and good days.",
           ],
         },
         {
           type: "paragraph",
-          text: `Acceptance and Commitment Therapy (ACT) or other counseling approaches 
-          that can help you develop better coping skills for managing chronic pain and 
-          the emotional challenges that come with it. Many people find these tools 
-          extremely helpful in maintaining their quality of life.`,
+          text: `Therapies like Acceptance and Commitment Therapy (ACT) can help you build coping skills for chronic pain and emotional challenges. Many people find these tools helpful for quality of life.`,
         },
         {
           type: "paragraph",
-          text: `Remember that asking for help is a sign of strength, not weakness. 
-          Whether it's help with daily tasks, emotional support, or professional 
-          counseling, accepting assistance allows you to focus your energy on healing and recovery.`,
+          text: `Asking for help is a sign of strength. Whether it is help with tasks, emotional support, or counseling, getting assistance lets you focus on healing and recovery.`,
         },
         {
           type: "image",

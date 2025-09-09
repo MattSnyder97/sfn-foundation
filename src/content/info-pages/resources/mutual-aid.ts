@@ -18,14 +18,11 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Mutual aid is about supporting each other in our community, especially when someone faces added challenges to an already difficult situation. 
-          This page is here to help people in our SFN community who need assistance, whether that's financial, accessibility, or other urgent needs. 
-          If you know someone who could use help, or if you want to contribute, this is the place to connect and make a difference.`,
+          text: `Mutual aid means we help each other in our community. This page connects people who need help with those who can give it. Help can include money, accessibility needs, or urgent support.`,
         },
         {
           type: "paragraph",
-          text: `Below you'll find current opportunities to help members of our community. If you would like to request to add someone to this page
-          please [contact us](/contact). Every act of kindness makes a difference.`,
+          text: `Below are current ways to help people in our community. To add someone, please [contact us](/contact). Small acts of kindness can make a big difference.`,
         },
       ],
     },
@@ -35,9 +32,7 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Beth Kris is a member of our SFN community who is currently facing significant barriers to accessibility and independence. 
-          Her story is one of resilience, enduring many health complications as a result of taking a fluoroquinolone antibiotic. Beth is working 
-          hard to overcome physical and financial challenges, but she needs our help to continue her fight.`,
+          text: `Beth Kris is a member of our community who faces major accessibility and health challenges after taking a fluoroquinolone antibiotic. She is working to regain independence but needs support from others.`,
         },
         {
           type: "image",
@@ -47,13 +42,11 @@ export const mutualAidContent = {
         },
         {
           type: "paragraph",
-          text: `Beth's GoFundMe campaign is raising funds to help her secure accessible housing, mobility aids, and essential resources. 
-          Your support can make a real difference in her life, helping her regain independence and improve her quality of life.`,
+          text: `Beth's GoFundMe is raising money for accessible housing, mobility aids, and essential needs. Your help can make a real difference.`,
         },
         {
           type: "paragraph",
-          text: `If you would like to support Beth, please visit her GoFundMe page: 
-          [Support Beth's Battle for Accessibility and Independence](https://www.gofundme.com/f/support-beths-battle-for-accessibility-and-independence)`,
+          text: `To support Beth, visit her GoFundMe page: [Support Beth's Battle for Accessibility and Independence](https://www.gofundme.com/f/support-beths-battle-for-accessibility-and-independence)`,
         },
       ],
     },
@@ -63,8 +56,7 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `The mutual aid links on this page go directly to individual fundraising campaigns. The SFN Foundation does not collect, 
-          manage, or receive any portion of these funds. Please use your own judgment before contributing.`,
+          text: `Links on this page go to individual fundraisers. The SFN Foundation does not handle or receive these funds. Please decide for yourself before donating.`,
         },
       ],
     },

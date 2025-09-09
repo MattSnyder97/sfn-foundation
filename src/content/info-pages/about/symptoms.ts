@@ -34,11 +34,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `SFN symptoms often start in your feet and hands and can slowly spread throughout your body
-          (length-dependent or "stocking-glove" pattern). However, not all cases follow this pattern.
-          Some people experience symptoms that are patchy, asymmetric, migratory, or involve the face, trunk, or proximal limbs
-          (non–length-dependent, or NLD). These NLD symptoms are more common in immune-mediated causes like Sjögren syndrome or sarcoidosis.
-          Recognizing both types of symptom patterns can help you and your doctor get the right diagnosis and treatment sooner.`,
+          text: `SFN symptoms often start in your feet and hands and can slowly spread up your limbs. This is called a stocking-glove pattern. Not everyone follows this pattern. Some people have patchy or changing symptoms that may affect the face, trunk, or other areas. These patterns are more common when the cause is immune-related, such as Sjögren syndrome or sarcoidosis. Knowing the pattern can help your doctor make the right diagnosis and plan treatment.`,
         },
       ],
     },
@@ -49,12 +45,7 @@ export const symptomsContent = {
       content: [
         {
           type: "paragraph",
-          text: `SFN symptoms are often described as burning, stabbing, or electric-like sensations.
-          Many people say it feels like walking on hot coals or being stuck with pins and needles.
-          These feelings happen because your damaged nerves are sending wrong signals to your brain.
-          While many people experience symptoms in a symmetric, length-dependent pattern, others may have symptoms that are patchy, 
-          intermittent, migratory, or affect areas like the face, trunk, or one side of the body. These non–length-dependent symptoms can 
-          change location and intensity throughout the day.`,
+          text: `People often describe SFN pain as burning, stabbing, or electric. Some say it feels like walking on hot coals or like pins and needles. These sensations happen when damaged nerves send wrong signals to the brain. Symptoms may be steady or may move around and change in intensity.`,
         },
         {
           type: "paragraph",
@@ -87,10 +78,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `Some people also have autonomic symptoms 
-          because small fibers control automatic body functions. These might include 
-          problems with sweating, digestion, or heart rate changes. You might sweat 
-          too much or not at all, have stomach problems, or feel dizzy when you stand up.`,
+          text: `Some people also have autonomic symptoms because small fibers control automatic body functions. These may cause problems with sweating, digestion, or heart rate. You might sweat too much or too little, have stomach problems, or feel dizzy when you stand up.`,
         },
         {
           type: "paragraph",
@@ -210,16 +198,11 @@ export const symptomsContent = {
       content: [
         {
           type: "paragraph",
-          text: `If you're having symptoms that might be SFN, it's important to see a 
-          healthcare provider. Early diagnosis and treatment can help manage your 
-          symptoms and might prevent them from getting worse. Don't wait if you're 
-          experiencing ongoing pain or unusual sensations.`,
+          text: `If you have symptoms that might be SFN, see a healthcare provider. Early diagnosis and treatment can help manage symptoms and may keep them from getting worse. Do not wait if you have ongoing pain or unusual sensations.`,
         },
         {
           type: "paragraph",
-          text: `You should see a doctor if you have persistent painful or unusual symptoms that lasts more than a few days. 
-          Even if the symptoms seem mild, it's better to check with a healthcare 
-          provider than to ignore them.`,
+          text: `See a doctor if painful or unusual symptoms last more than a few days. Even mild symptoms are worth checking.`,
         },
         {
           type: "list",
@@ -236,20 +219,11 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `When you see your doctor, try to describe your symptoms as clearly as 
-          possible. Keep a symptom diary 
-          for a week or two before your appointment. Write down when symptoms happen, 
-          how bad they are, and what makes them better or worse. This information 
-          will help your doctor understand your condition and plan the best tests 
-          and treatments.`,
+          text: `When you see your doctor, describe your symptoms clearly. Keep a symptom diary for a week or two before your visit. Note when symptoms happen, how bad they are, and what makes them better or worse. This helps your doctor plan tests and treatments.`,
         },
         {
           type: "paragraph",
-          text: `Remember that SFN can be hard to diagnose, and you might need to see 
-          a specialist called a neurologist. Don't give up if the first doctor you 
-          see doesn't have answers right away. Keep advocating for yourself and 
-          seeking help until you find a healthcare provider who takes your symptoms 
-          seriously. [Find a SFN specialist](/resources/specialists)`,
+          text: `SFN can be hard to diagnose. You may need to see a neurologist. If your first doctor does not have answers, keep looking for care and support. [Find a SFN specialist](/resources/specialists)`,
         },
       ],
     },

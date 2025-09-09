@@ -19,25 +19,15 @@ export const specialistsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Finding the right specialist for Small Fiber Neuropathy can be challenging 
-          because many doctors are not familiar with this condition. SFN is often 
-          misdiagnosed or overlooked, so it's important to work with healthcare 
-          providers who have specific experience with small fiber neuropathy and 
-          understand the latest diagnostic techniques.`,
+          text: `Finding a specialist for small fiber neuropathy (SFN) can be hard. Many doctors do not know much about SFN. It is often missed or misdiagnosed. Try to see a doctor who has experience with SFN and knows the common tests.`,
         },
         {
           type: "paragraph",
-          text: `The best specialists for SFN are typically neurologists who focus on 
-          peripheral neuropathy or autonomic disorders. Some pain management 
-          specialists and rheumatologists may also be knowledgeable about SFN, 
-          especially when it's related to autoimmune conditions.`,
+          text: `Neurologists who treat peripheral neuropathy or autonomic disorders are often the best choice. Pain specialists and rheumatologists can help too, especially if an autoimmune problem might be involved.`,
         },
         {
           type: "paragraph",
-          text: `Getting an accurate diagnosis and proper treatment often requires seeing 
-          a specialist who stays current with SFN research and has access to the right 
-          diagnostic tools, like skin biopsy capabilities and autonomic function testing. 
-          Don't be discouraged if you need to travel or wait to see the right doctor.`,
+          text: `Accurate diagnosis and care may mean seeing a specialist with access to skin biopsy or autonomic testing. You may need to travel or wait for an appointment, but getting the right care can help you in the long run.`,
         },
       ],
     },
@@ -48,38 +38,29 @@ export const specialistsContent = {
       content: [
         {
           type: "paragraph",
-          text: `When searching for a specialist, look for doctors who have specific 
-          experience with small fiber neuropathy and peripheral nerve disorders. 
-          The right specialist should be familiar with current diagnostic criteria 
-          and treatment options for SFN.`,
+          text: `When looking for a specialist, choose doctors who have worked with SFN or peripheral nerve problems. They should know the common tests and treatment options.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Board certification in neurology, with subspecialty training in peripheral neuropathy or autonomic disorders",
-            "Experience with skin biopsy for intraepidermal nerve fiber density testing",
-            "Access to autonomic function testing like QSART and tilt table testing",
-            "Knowledge of current SFN research and treatment protocols",
-            "Willingness to work with other specialists for comprehensive care",
-            "Experience with autoimmune causes of neuropathy if relevant to your case",
-            "Understanding of both the sensory and autonomic aspects of small fiber neuropathy",
-            "Familiarity with less common causes of SFN beyond diabetes",
+            "Board certified in neurology, ideally with training in peripheral neuropathy or autonomic disorders",
+            "Experience with skin biopsy for nerve fiber testing",
+            "Access to autonomic tests such as QSART or tilt table",
+            "Awareness of current SFN research and treatment options",
+            "Willingness to coordinate with other specialists",
+            "Experience evaluating autoimmune causes of neuropathy when relevant",
+            "Knowledge of both sensory and autonomic symptoms",
+            "Familiarity with causes of SFN beyond diabetes",
           ],
         },
         {
           type: "paragraph",
-          text: `Look for doctors affiliated with major medical centers or universities, 
-          as they often have more experience with rare conditions like SFN. Academic 
-          medical centers typically have the specialized testing equipment needed 
-          for proper diagnosis and may be involved in research that could benefit you.`,
+          text: `Doctors at major medical centers or universities often see more rare conditions. They usually have the testing equipment needed and may take part in research that could help patients.`,
         },
         {
           type: "paragraph",
-          text: `Don't hesitate to ask potential doctors about their experience with SFN 
-          during your initial consultation. A good specialist should be able to discuss 
-          diagnostic criteria, explain testing procedures, and outline treatment options 
-          specific to small fiber neuropathy.`,
+          text: `Ask doctors about their experience with SFN during your first visit. A good specialist should explain how they diagnose SFN, what tests they use, and which treatments they recommend.`,
         },
       ],
     },
@@ -90,9 +71,7 @@ export const specialistsContent = {
       content: [
         {
           type: "paragraph",
-          text: `The following specialists have demonstrated expertise in Small Fiber 
-          Neuropathy and related conditions. They are recognized leaders in the field 
-          who stay current with the latest research and treatment approaches.`,
+          text: `The specialists listed below have experience with small fiber neuropathy and related conditions. They work in centers that often use current tests and treatments.`,
         },
         {
           type: "image",
@@ -102,11 +81,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Oaklander is widely recognized as one of the world's leading experts 
-          on Small Fiber Neuropathy. She is a Professor of Neurology at Harvard Medical 
-          School and Director of the Nerve Injury Unit at Massachusetts General Hospital. 
-          Her research has been instrumental in advancing our understanding of SFN, 
-          particularly autoimmune causes and the role of skin biopsy in diagnosis.`,
+          text: `Dr. Anne Louise Oaklander is a professor of neurology at Harvard Medical School and director of the Nerve Injury Unit at Massachusetts General Hospital. Her research has helped improve how we understand and diagnose SFN, especially autoimmune causes and skin biopsy use.`,
         },
         {
           type: "image",
@@ -116,11 +91,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Zeidman is a neurologist specializing in peripheral neuropathy and 
-          neuromuscular disorders. He has extensive experience diagnosing and treating 
-          Small Fiber Neuropathy and is known for his thorough approach to finding 
-          underlying causes. He stays current with the latest research and treatment 
-          options for SFN patients.`,
+          text: `Dr. Lawrence Zeidman is a neurologist who focuses on peripheral neuropathy and neuromuscular disorders. He has experience diagnosing and treating SFN and looks for underlying causes when possible.`,
         },
         {
           type: "image",
@@ -130,11 +101,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Goodman is a neurologist who specializes in autonomic disorders and 
-          dysautonomia. While his primary focus is on autonomic dysfunction, he has 
-          significant experience with the autonomic aspects of Small Fiber Neuropathy. 
-          This makes him particularly valuable for patients who have both sensory and 
-          autonomic symptoms.`,
+          text: `Dr. Brent Goodman specializes in autonomic disorders and dysautonomia. He has experience with the autonomic symptoms of SFN, which can help people who have both sensory and autonomic problems.`,
         },
       ],
     },
@@ -145,44 +112,33 @@ export const specialistsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting the most out of your specialist visit requires good preparation. 
-          Since appointments with experts are often limited and may involve long wait 
-          times, it's important to make the most of your time together.`,
+          text: `Prepare well for your specialist visit so you can use the time wisely. Appointments with experts may be limited and can have long wait times.`,
         },
         {
           type: "paragraph",
-          text: `Before your appointment, gather all relevant medical records, including 
-          previous test results, imaging studies, and reports from other doctors. 
-          Create a detailed timeline of your symptoms and any treatments you've tried. 
-          This information will help the specialist understand your case quickly.`,
+          text: `Before the visit, gather medical records, test results, and reports from other doctors. Make a timeline of your symptoms and treatments. This helps the specialist understand your case faster.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
-            "Bring all previous test results, including blood work, nerve conduction studies, and any previous skin biopsies",
-            "Create a detailed symptom diary noting when symptoms started, how they've progressed, and what makes them better or worse",
-            "List all medications and supplements you've tried, including doses and how long you took them",
-            "Write down your family medical history, including any relatives with neuropathy, diabetes, or autoimmune conditions",
-            "Prepare a list of specific questions you want to ask about your diagnosis and treatment options",
-            "Bring a list of all current medications, including over-the-counter drugs and supplements",
-            "Consider bringing a family member or friend to help remember important information",
-            "Be prepared to discuss how your symptoms affect your daily life and work",
+            "Bring previous test results like blood work, nerve studies, or skin biopsies",
+            "Keep a simple symptom diary with start dates, changes, and triggers",
+            "List medications and supplements you have tried with doses and dates",
+            "Note family history of neuropathy, diabetes, or autoimmune conditions",
+            "Write down the questions you want to ask the doctor",
+            "Bring a list of current medications, including over-the-counter items",
+            "Consider bringing a friend or family member for support",
+            "Be ready to explain how symptoms affect your daily life",
           ],
         },
         {
           type: "paragraph",
-          text: `Don't be afraid to ask questions during your visit. Good specialists 
-          welcome informed patients who want to understand their condition. Ask about 
-          the doctor's experience with SFN, what tests they recommend, and what 
-          treatment options are available for your specific situation.`,
+          text: `Ask questions during your visit. Good specialists welcome patients who want to understand their condition. Ask about the doctor's SFN experience, recommended tests, and treatment choices.`,
         },
         {
           type: "paragraph",
-          text: `Remember that finding the right diagnosis and treatment for SFN often 
-          takes time. Be prepared for the possibility of additional testing and follow-up 
-          visits. The investment in seeing an experienced specialist is usually worth 
-          it for getting proper care and avoiding years of misdiagnosis.`,
+          text: `Finding the right diagnosis and treatment can take time. You may need extra tests and follow-up visits. Seeing an experienced specialist can help you avoid long delays in care.`,
         },
       ],
     },

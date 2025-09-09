@@ -8,14 +8,12 @@ export function FAQs() {
       question: "What is Small Fiber Neuropathy (SFN)?",
       answer: (
         <>
-          Small fiber neuropathy (SFN) is a type of peripheral neuropathy that occurs from
-          damage to the small unmyelinated and myelinated peripheral nerve fibers.
+          Small fiber neuropathy is a condition that damages the small nerve
+          fibers in the peripheral nervous system. These fibers carry pain, temperature,
+          and automatic body signals.
           <br />
           <br />
-          <Link
-            href="/about/"
-            className="text-primary hover:underline"
-          >
+          <Link href="/about/" className="text-primary hover:underline">
             Learn more on our About SFN page
           </Link>
         </>
@@ -27,13 +25,10 @@ export function FAQs() {
       answer: (
         <>
           Common symptoms include burning pain, numbness, tingling, twitching, vibrations,
-          shooting pains, stabbing pains, GI issues, and cognitive impairments.
+          shooting or stabbing pains, stomach or bowel problems, and brain fog.
           <br />
           <br />
-          <Link
-            href="/about/symptoms"
-            className="text-primary hover:underline"
-          >
+          <Link href="/about/symptoms" className="text-primary hover:underline">
             Read more on our Symptoms page
           </Link>
         </>
@@ -44,15 +39,11 @@ export function FAQs() {
       question: "How is SFN diagnosed?",
       answer: (
         <>
-          The most reliable diagnosis currently is a skin punch biopsy. This reveals how
-          many small fiber nerves are in an area and if it is below the threshold to
-          warrant a diagnosis.
+          A skin punch biopsy is the most reliable test. It measures how many small
+          nerve fibers are in the skin and helps confirm a diagnosis of SFN.
           <br />
           <br />
-          <Link
-            href="/about/diagnosis"
-            className="text-primary hover:underline"
-          >
+          <Link href="/about/diagnosis" className="text-primary hover:underline">
             Learn more on our Diagnosis page
           </Link>
         </>
@@ -63,14 +54,11 @@ export function FAQs() {
       question: "What causes SFN?",
       answer: (
         <>
-          SFN has many potential causes including autoimmune disorders, diabetes,
-          infections, toxins, and genetic factors.
+          SFN can have many causes, such as autoimmune disease, diabetes, infections,
+          toxins, and genetic factors.
           <br />
           <br />
-          <Link
-            href="/about/causes"
-            className="text-primary hover:underline"
-          >
+          <Link href="/about/causes" className="text-primary hover:underline">
             Explore more on our Causes page
           </Link>
         </>
@@ -81,15 +69,11 @@ export function FAQs() {
       question: "Is there a cure for SFN?",
       answer: (
         <>
-          Right now, there is no cure. If the underlying issue causing SFN is removed then
-          people have recovered. There are several drugs in clinical trials that are
-          hopeful.
+          There is no cure right now. If the cause is found and treated, some people
+          do improve. Research and clinical trials are ongoing and give hope.
           <br />
           <br />
-          <Link
-            href="/research/"
-            className="text-primary hover:underline"
-          >
+          <Link href="/research/" className="text-primary hover:underline">
             Stay updated on our Research page
           </Link>
         </>
@@ -100,14 +84,12 @@ export function FAQs() {
       question: "What are my treatment options for SFN?",
       answer: (
         <>
-          Regular exercise, balanced diet, and managing underlying conditions. Many people
-          take pain medications or supplements to help as well.
+          Treatment focuses on regular exercise, a healthy diet, and treating any
+          underlying conditions. Many people also use pain medicines or supplements
+          to help manage symptoms.
           <br />
           <br />
-          <Link
-            href="/about/treatments"
-            className="text-primary hover:underline"
-          >
+          <Link href="/about/treatments" className="text-primary hover:underline">
             Read more on our Treatments page
           </Link>
         </>

@@ -21,18 +21,11 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Living with Small Fiber Neuropathy can feel scary, but you have options. 
-          While there's no cure yet, many treatments can help manage your pain and 
-          help you feel better. The goal is to reduce symptoms, improve your daily 
-          life, and treat any health problems that might be causing your neuropathy.`,
+          text: `Living with Small Fiber Neuropathy can feel scary, but there are options. While there is no cure yet, many treatments can help control pain and improve daily life. The goal is to reduce symptoms and treat any health problems that may be causing your neuropathy.`,
         },
         {
           type: "paragraph",
-          text: `Every person with SFN is different. What works well for one person might 
-          not work as well for another. That's why doctors often use several treatments 
-          together. This team approach 
-          gives you the best chance of finding relief. The sooner you start treatment, 
-          the better you're likely to feel.`,
+          text: `Every person with SFN is different. What helps one person may not help another. Doctors often use several treatments together. This gives you a better chance of finding relief. The sooner you start treatment, the better you may feel.`,
         },
         {
           type: "paragraph",
@@ -50,16 +43,11 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Several types of medicine can help reduce nerve pain. Your doctor will 
-          usually start with medicines that work well for nerve pain. These medicines 
-          work differently than regular pain relievers like ibuprofen or Tylenol.`,
+          text: `Several types of medicine can help nerve pain. Your doctor will usually start with medicines that work for nerve pain. These work differently than regular pain relievers like ibuprofen or acetaminophen.`,
         },
         {
           type: "paragraph",
-          text: `The most common first medicines are called anticonvulsants. 
-          Although they were made to treat seizures, they can be very
-          effective at treating nerve pain too. The two main ones are gabapentin and 
-          pregabalin (Lyrica).`,
+          text: `The most common first medicines are anticonvulsants. They were made to treat seizures but can also help nerve pain. The two main ones are gabapentin and pregabalin (Lyrica).`,
         },
         {
           type: "list",
@@ -81,16 +69,11 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Topical treatments 
-          can be helpful because they work right where you put them. Lidocaine patches 
-          can numb the area, while capsaicin cream (made from hot peppers) can reduce 
-          pain signals over time. These might cause fewer side effects than pills.`,
+          text: `Topical treatments work where you put them. Lidocaine patches can numb the area. Capsaicin cream can reduce pain signals over time. These may cause fewer side effects than pills.`,
         },
         {
           type: "paragraph",
-          text: `Remember, finding the right medicine takes time. You might need to try 
-          different ones or different amounts. Some people do better with a mix of 
-          medicines. Always talk to your doctor before making changes to your medicines.`,
+          text: `Finding the right medicine takes time. You may need to try different drugs or doses. Some people do better with a mix of medicines. Always talk to your doctor before changing your medicines.`,
         },
       ],
     },
@@ -101,17 +84,11 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Some supplements may help reduce nerve pain and support nerve health. 
-          While supplements aren't a cure, research shows that certain vitamins and 
-          nutrients can be helpful when used with other treatments. Always talk to 
-          your doctor before starting any supplements, especially if you take other medicines.`,
+          text: `Some supplements may help reduce nerve pain and support nerve health. They are not a cure, but some vitamins and nutrients can help when used with other treatments. Talk to your doctor before starting supplements, especially if you take other medicines.`,
         },
         {
           type: "paragraph",
-          text: `The most studied supplements for nerve pain are alpha-lipoic acid 
-          and B vitamins. These work as antioxidants, which means they help protect 
-          your nerves from damage. Some people notice less pain and tingling after 
-          taking these for several weeks.`,
+          text: `The most studied supplements for nerve pain are alpha-lipoic acid and B vitamins. These act as antioxidants and may help protect nerves. Some people notice less pain and tingling after taking them for several weeks.`,
         },
         {
           type: "list",
@@ -126,10 +103,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Quality matters when choosing supplements. Look for brands that have been 
-          tested by third parties
-          for purity and strength. Some supplements can interact with medicines, so 
-          it's important to tell your doctor about everything you're taking.`,
+          text: `Quality matters when choosing supplements. Look for brands tested by third parties for purity and strength. Some supplements can interact with medicines, so tell your doctor about everything you take.`,
         },
         {
           type: "paragraph",
@@ -147,17 +121,11 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `The choices you make every day can have a big impact on how you feel. 
-          While lifestyle changes won't cure your neuropathy, they can help reduce 
-          your pain and keep your nerves as healthy as possible. Small changes can 
-          add up to make a real difference.`,
+          text: `Daily choices can affect how you feel. Lifestyle changes won't cure neuropathy, but they can reduce pain and help keep nerves healthy. Small changes can add up.`,
         },
         {
           type: "paragraph",
-          text: `If you have diabetes, keeping your blood sugar levels steady 
-          is one of the most important things you can do. High blood sugar can damage 
-          your nerves even more. Work with your healthcare team to find the best ways 
-          to manage your blood sugar.`,
+          text: `If you have diabetes, keeping blood sugar steady is one of the most important things you can do. High blood sugar can damage nerves. Work with your healthcare team to find the best ways to manage it.`,
         },
         {
           type: "list",
@@ -181,10 +149,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Physical therapy 
-          can teach you exercises and techniques to manage pain and stay active. Some 
-          people find that alternative treatments like acupuncture, massage, or TENS 
-          units help with their pain.`,
+          text: `Physical therapy can teach exercises and techniques to manage pain and stay active. Some people find relief with acupuncture, massage, or TENS units.`,
         },
         {
           type: "paragraph",
@@ -202,17 +167,11 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Some people with SFN find help from treatments that are "off-label" 
-          or not yet widely accepted as standard care. These alternative treatments 
-          might be worth discussing with your doctor, especially if standard treatments 
-          haven't given you enough relief. Always work with your healthcare provider 
-          before trying any new treatment.`,
+          text: `Some people find help from treatments that are not yet standard care. These may be worth discussing with your doctor if other treatments do not help enough. Always work with your healthcare provider before trying new treatments.`,
         },
         {
           type: "paragraph",
-          text: `Two alternative treatments that some people with neuropathy find helpful 
-          are Low Dose Naltrexone and medical cannabis. While research is still ongoing, 
-          some studies show promising results for nerve pain relief.`,
+          text: `Two alternative options some people try are Low Dose Naltrexone and medical cannabis. Research continues, but some studies show possible benefit for nerve pain.`,
         },
         {
           type: "paragraph",
@@ -231,13 +190,11 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Research on LDN for SFN is ongoing. The latest studies suggest it may be especially relevant for cryptogenic SFN, with improvements seen in pain and autonomic symptoms. LDN may also work by blocking inflammation pathways in the central nervous system, but its effectiveness for diabetic neuropathy and other neuropathic pain conditions is still being evaluated.`,
+          text: `Research on LDN for SFN is ongoing. Recent studies suggest it may help some people with cryptogenic SFN, with improvements in pain and autonomic symptoms. More research is needed to confirm its benefits.`,
         },
         {
           type: "paragraph",
-          text: `**Medical Cannabis** is legal in many states for treating chronic pain. 
-          Some people with neuropathy find it helps with pain and sleep, though the 
-          evidence is mixed.`,
+          text: `Medical cannabis is legal in many states for chronic pain. Some people with neuropathy find it helps with pain and sleep, though the evidence is mixed.`,
         },
         {
           type: "list",
@@ -251,16 +208,11 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Research suggests medical cannabis can be effective for nerve pain, 
-          and some studies show it can help chronic neuropathic pain without severe side effects. 
-          However, side effects like impaired thinking and breathing problems are common, especially at higher doses.`,
+          text: `Research suggests medical cannabis can help nerve pain for some people. Side effects such as impaired thinking and breathing problems can occur, especially at higher doses.`,
         },
         {
           type: "paragraph",
-          text: `Remember that these alternative treatments are not right for everyone. 
-          They may interact with other medications or have side effects that make 
-          them unsuitable for some people. The best approach is to work with a 
-          healthcare provider who understands both your condition and these treatments.`,
+          text: `Alternative treatments are not right for everyone. They can interact with medicines or have side effects that make them unsafe for some people. Work with a healthcare provider who knows your condition and these treatments.`,
         },
       ],
     },
@@ -290,11 +242,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `If you're interested in trying new treatments, talk to your doctor about 
-          clinical trials. 
-          These studies help develop new medicines and give some patients access to 
-          treatments before they're widely available. Your doctor can help you decide 
-          if a clinical trial might be right for you. [View clinical trials for SFN](https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy)`,
+          text: `If you are interested in new treatments, talk to your doctor about clinical trials. These studies help develop new medicines and can give some patients access to treatments before they are widely available. Your doctor can help decide if a trial might be right for you. [View clinical trials for SFN](https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy)`,
         },
       ],
     },
