@@ -48,29 +48,39 @@ export default function InfoLayout({
     tableOfContents && tableOfContents.length > 0 ? tableOfContents[0].id : null
   );
 
-  // Track scroll position with IntersectionObserver
+  // Track scroll position with manual scroll event for precise control
   useEffect(() => {
     if (!tableOfContents) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
-        if (visible) {
-          setActiveId(visible.target.id);
+    const handleScroll = () => {
+      const headerHeight = typeof window !== 'undefined'
+        ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
+        : 0;
+      let closestId = null;
+      let minDistance = Infinity;
+      tableOfContents.forEach((item) => {
+        const el = document.getElementById(item.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const distance = Math.abs(rect.top - headerHeight);
+          if (rect.top - headerHeight <= 2 && distance < minDistance) {
+            minDistance = distance;
+            closestId = item.id;
+          }
         }
-      },
-      {
-        rootMargin: "0px 0px -32% 0px", // triggers earlier/later depending on section height
-        threshold: 0.1,
+      });
+      if (closestId) {
+        setActiveId(closestId);
       }
-    );
+    };
 
-    tableOfContents.forEach((item) => {
-      const el = document.getElementById(item.id);
-      if (el) observer.observe(el);
-    });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial check in case user reloads mid-scroll
+    handleScroll();
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [tableOfContents]);
 
   return (
