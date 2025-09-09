@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 export async function generateMetadata() {
   const canonical = 'https://sfn-foundation.org/research';
   return {
-    title: 'Research — Small Fiber Neuropathy Foundation',
+    title: 'Research',
     description: 'Research news, studies, and resources related to small fiber neuropathy.',
     alternates: { canonical },
     openGraph: { url: canonical }

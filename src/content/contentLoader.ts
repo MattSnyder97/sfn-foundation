@@ -66,8 +66,17 @@ export function getPageData(slug: string): PageContent | null {
   for (const section of mainSections) {
     // Special handling for patient-stories subpages
     if (section === 'patient-stories') {
-      const content = (allContent as PageContent[]).find((item) => item.slug === `/resources/patient-stories/${slug}`);
-      if (content) return content;
+      // Handle nested slugs like patient-stories/matt
+      if (slug.startsWith('patient-stories/')) {
+        const subSlug = slug.split('/')[1];
+        const content = (allContent as PageContent[]).find((item) => item.slug === `/resources/patient-stories/${subSlug}`);
+        if (content) return content;
+      }
+      // Main patient-stories page
+      if (slug === 'patient-stories') {
+        const content = (allContent as PageContent[]).find((item) => item.slug === `/resources/patient-stories`);
+        if (content) return content;
+      }
     } else {
       const content = (allContent as PageContent[]).find((item) => item.slug === `/${section}/${slug}`);
       if (content) return content;
