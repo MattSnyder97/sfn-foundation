@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
-  let pageData = getPageData(`/resources/${slugPath}`);
+  const pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
     return { title: 'Page Not Found' };
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
   const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
-  let pageData = getPageData(`/resources/${slugPath}`);
+  const pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
     notFound();
