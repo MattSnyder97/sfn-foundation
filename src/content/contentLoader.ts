@@ -58,7 +58,7 @@ export interface PageContent {
 // Helper functions to get content by category and slug
 export function getPageData(slug: string): PageContent | null {
   // Check for main section pages
-  const mainSections = ['about', 'research', 'resources', 'patient-stories'];
+  const mainSections = ['about', 'research', 'resources', '/resources/patient-stories'];
   if (mainSections.includes(slug)) {
     return (allContent as PageContent[]).find((item) => item.slug === `/${slug}`) || null;
   }

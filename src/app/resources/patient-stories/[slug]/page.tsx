@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps) {
       title: 'Page Not Found'
     }
   }
-  const canonical = `https://sfn-foundation.org${pageData.slug}`;
+  const canonical = `https://sfn-foundation.org/resources/patient-stories/${slug}`;
 
   return {
     title: pageData.hero.title,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getPageData(slug)
+  const pageData = getPageData(`/resources/patient-stories/${slug}`)
  
   if (!pageData) {
     notFound()
@@ -63,8 +63,8 @@ export default async function Page({ params }: PageProps) {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sfn-foundation.org/" },
-      { "@type": "ListItem", "position": 2, "name": "Patient Stories", "item": "https://sfn-foundation.org/patient-stories" },
-      { "@type": "ListItem", "position": 3, "name": pageData.hero.title, "item": `https://sfn-foundation.org${pageData.slug}` }
+      { "@type": "ListItem", "position": 2, "name": "Patient Stories", "item": "https://sfn-foundation.org/resources/patient-stories" },
+      { "@type": "ListItem", "position": 3, "name": pageData.hero.title, "item": `https://sfn-foundation.org/resources/patient-stories/${slug}` }
     ]
   }
 

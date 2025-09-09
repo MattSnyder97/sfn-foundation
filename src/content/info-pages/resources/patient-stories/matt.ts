@@ -1,5 +1,5 @@
 export const mattContent = {
-  slug: "/patient-stories/matt",
+  slug: "/resources/patient-stories/matt",
   tags: ["patient story"],
   hero: {
     title: "Matt's Journey with Small Fiber Neuropathy",

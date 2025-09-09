@@ -257,6 +257,12 @@ export const newlyDiagnosedContent = {
             "Connecting with others who understand your experience can provide valuable emotional support and practical tips.",
         },
         {
+          type: "button",
+          label: "Join the Support Group",
+          href: "https://discord.gg/UGNhBMkBS7",
+          variant: "outlinePrimary",
+          },
+        {
           type: "paragraph",
           text: `Your journey with SFN will be unique to you. Some days will be better 
           than others, and that's completely normal. Focus on taking things one day 

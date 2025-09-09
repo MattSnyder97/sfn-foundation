@@ -29,13 +29,6 @@ export const researchArticles: ResearchArticle[] = [
       image: "/public/images/common/sadFamilyDoctor.png"
     },
     {
-      title: "Ibudilast For ALS: Combat-ALS Study",
-      summary: "Phase 2b/3 trial tests MN-166 for ALS over 12 months, followed by 6-month open-label extension.",
-      link: "https://www.neurology.org/doi/10.1212/WNL.0000000000206418",
-      date: "2025-05-08",
-      image: "/public/images/common/injection.png"
-    },
-    {
       title: "FDA Clears ST-503 for Neuropathic Pain Trials",
       summary: "FDA clears Sangamo’s ST-503 for Phase I/II trial in idiopathic SFN and chronic neuropathic pain.",
       link: "https://www.insideprecisionmedicine.com/topics/precision-medicine/fda-clears-sangamos-st-503-for-chronic-neuropathic-pain-clinical-trials/",

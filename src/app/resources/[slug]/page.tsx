@@ -13,6 +13,7 @@ export async function generateStaticParams() {
     { slug: 'caregiver-tips' },
     { slug: 'dictionary' },
     { slug: 'newly-diagnosed' },
+    { slug: 'patient-stories' },
     { slug: 'resources' },
     { slug: 'specialists' },
     { slug: 'supplements' },
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getPageData(slug)
+  const pageData = getPageData(`/resources/${slug}`)
  
   if (!pageData) {
     return {
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getPageData(slug)
+  const pageData = getPageData(`/resources/${slug}`)
  
   if (!pageData) {
     notFound()

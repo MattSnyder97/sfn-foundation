@@ -15,7 +15,7 @@ export const researchContent = {
       content: [
         {
           type: "paragraph",
-          text: `Stay current with the latest Small Fiber Neuropathy research. We collect new studies, clinical trials, and expert findings in one place. This page updates regularly with fresh discoveries and breakthroughs.`,
+          text: `Stay current with the latest Small Fiber Neuropathy research. We collect new studies, clinical trials, and expert findings in one place. This page updates regularly with discoveries and breakthroughs.`,
         },
       ],
     },

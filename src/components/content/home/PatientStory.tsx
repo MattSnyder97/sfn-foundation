@@ -16,7 +16,7 @@ export function PatientStory() {
             <div className="w-88 h-88 rounded-full overflow-hidden bg-primary p-2 default-shadow relative z-10">
               <Image
                 src="/images/common/testimonial.png"
-                alt="Matt testimonial"
+                alt="Matt's Journey with SFN"
                 width={500}
                 height={500}
                 className="w-full h-full rounded-full object-cover"
@@ -33,9 +33,9 @@ export function PatientStory() {
             <p className="text-lg opacity-70 mb-6">
               — Matt, 28 years old, diagnosed in 2024
             </p>
-            
-            <Link 
-              href="/patient-stories/" 
+
+            <Link
+              href="/resources/patient-stories/"
               aria-label="Read Matt's full small fiber neuropathy story"
             >
               <Button variant="secondary" size="md">
@@ -52,7 +52,7 @@ export function PatientStory() {
             <div className="w-88 h-88 rounded-xl overflow-hidden bg-primary default-shadow">
               <Image
                 src="/images/common/testimonial.png"
-                alt="Matt testimonial"
+                alt="Matt's Journey with SFN"
                 width={500}
                 height={500}
               />
@@ -68,8 +68,8 @@ export function PatientStory() {
             <p className="text-base opacity-70 mb-8">
               Matt, 28 years old, diagnosed in 2024
             </p>
-            
-            <Link href="/patient-stories/">
+
+            <Link href="/resources/patient-stories/">
               <Button
                 variant="secondary"
                 size="md"

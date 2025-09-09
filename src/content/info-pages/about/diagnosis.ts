@@ -161,11 +161,7 @@ export const diagnosisContent = {
           text: `Your family doctor might refer you to a neurologist if they suspect 
           you have SFN. Some neurologists have even more specialized training in 
           peripheral neuropathy, 
-          which means they focus specifically on nerve problems like SFN.`,
-        },
-        {
-          type: "paragraph",
-          text: `[Find a SFN specialist](/resources/specialists)`,
+          which means they focus specifically on nerve problems like SFN. [Find a SFN specialist](/resources/specialists)`,
         },
         {
           type: "paragraph",

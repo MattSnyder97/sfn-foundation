@@ -189,8 +189,10 @@ export const symptomsContent = {
           not alone, and there are people who understand what you're going through.`,
         },
         {
-          type: "paragraph",
-          text: `[Join the SFN support group](/resources/support-group)`,
+        type: "button",
+        label: "Join the Support Group",
+        href: "https://discord.gg/UGNhBMkBS7",
+        variant: "outlinePrimary",
         },
         {
           type: "paragraph",
@@ -247,7 +249,7 @@ export const symptomsContent = {
           a specialist called a neurologist. Don't give up if the first doctor you 
           see doesn't have answers right away. Keep advocating for yourself and 
           seeking help until you find a healthcare provider who takes your symptoms 
-          seriously.`,
+          seriously. [Find a SFN specialist](/resources/specialists)`,
         },
       ],
     },

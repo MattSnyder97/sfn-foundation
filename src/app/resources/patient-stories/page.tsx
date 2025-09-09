@@ -3,7 +3,7 @@ import { getMainPageData } from '@/content/contentLoader';
 import { notFound } from 'next/navigation';
 
 export default function Page() {
-  const pageContent = getMainPageData('patient-stories');
+  const pageContent = getMainPageData('resources/patient-stories');
 
   if (!pageContent) {
     notFound();

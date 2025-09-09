@@ -67,7 +67,7 @@ export default function Footer() {
                 </Link>
               </li>
                 <li>
-                <Link href="/patient-stories" className="opacity-80 hover:opacity-100 hover:underline transition-all">
+                <Link href="/resources/patient-stories" className="opacity-80 hover:opacity-100 hover:underline transition-all">
                   Patient Stories
                 </Link>
               </li>

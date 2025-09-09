@@ -136,7 +136,7 @@ export const treatmentsContent = {
           text: `Remember that supplements work slowly. It may take 6-12 weeks to notice 
           any benefits. Don't expect them to work as quickly as prescription medicines. 
           Think of supplements as one part of your overall treatment plan, not a 
-          replacement for medical care.`,
+          replacement for medical care. [Learn more about supplements for SFN](/resources/supplements)`,
         },
       ],
     },
@@ -286,7 +286,7 @@ export const treatmentsContent = {
           text: `Some promising areas of research include nerve growth factors, 
           stem cell therapy, and new ways to deliver medicines directly to damaged 
           nerves. Clinical trials are testing these treatments to see if they're safe 
-          and effective.`,
+          and effective. [Check out the latest research for SFN](/research)`,
         },
         {
           type: "paragraph",
@@ -294,7 +294,7 @@ export const treatmentsContent = {
           clinical trials. 
           These studies help develop new medicines and give some patients access to 
           treatments before they're widely available. Your doctor can help you decide 
-          if a clinical trial might be right for you.`,
+          if a clinical trial might be right for you. [View clinical trials for SFN](https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy)`,
         },
       ],
     },

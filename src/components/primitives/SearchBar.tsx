@@ -109,7 +109,7 @@ export default function SearchBar() {
       '/accessibility',
       '/terms-of-use',
       '/privacy-policy',
-      '/research',
+      '/resources'
     ];
 
     const preferred = hits.filter(

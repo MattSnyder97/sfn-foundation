@@ -127,6 +127,12 @@ export const supportGroupContent = {
             type: "paragraph",
             text: `Remember: Nothing shared here is medical advice. Mods may take action if these rules are broken. For full details, see the guidelines in our Discord server.`,
           },
+          {
+          type: "button",
+          label: "Join the Support Group",
+          href: "https://discord.gg/UGNhBMkBS7",
+          variant: "outlinePrimary",
+          },
       ],
     },
   ],
