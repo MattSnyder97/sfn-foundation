@@ -192,7 +192,7 @@ export default function SearchBar() {
                       style={{ fontSize: '1.15rem' }}
                     >
                       <div className="text-sm text-gray-600 mb-1">
-                        <span className="font-medium text-primary">"{query}"</span> on <span className="text-dark">{res.pageTitle} Page</span>
+                        <span className="font-medium text-primary">&quot;{query}&quot;</span> on <span className="text-dark">{res.pageTitle} Page</span>
                       </div>
                       <div className="font-semibold text-dark mb-1">{res.sectionTitle}</div>
                     </Link>
