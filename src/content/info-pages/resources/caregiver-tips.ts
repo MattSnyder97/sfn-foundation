@@ -43,7 +43,7 @@ export const caregiverTipsContent = {
         },
         {
           type: "paragraph",
-          text: `Symptoms can change during the day and with temperature. Fatigue and mood changes are common, and good days and bad days happen. Because SFN is often an invisible illness, others may not understand.`,
+          text: `Symptoms can change during the day and with temperature. Fatigue and mood changes are common, and good days and bad days happen. Because SFN is often an invisible illness, others may not understand. [Read more about SFN Symptoms](/about/symptoms)`,
         },
         {
           type: "paragraph",
@@ -110,7 +110,7 @@ export const caregiverTipsContent = {
         },
         {
           type: "paragraph",
-          text: `Help research condition and treatments, but avoid too much information at once. Use trusted medical sources and talk with the healthcare team before changing treatments.`,
+          text: `Help research condition and treatments, but avoid too much information at once. Use trusted medical sources and talk with the healthcare team before changing treatments. [Read more about SFN Treatments](/about/treatments)`,
         },
       ],
     },

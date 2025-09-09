@@ -70,7 +70,6 @@ export default function SearchBar() {
         sectionText: collectSectionText(section),
       }))
     );
-    // allContent is static; no deps needed
   }, []);
 
   // Fuse config: weigh body text highest, keep matches forgiving
@@ -102,22 +101,17 @@ export default function SearchBar() {
 
     const hits = fuse.search(q);
 
-    // Deprioritize results from certain folders/pages
-    const deprioritizedSlugs = [
-      '/patient-stories',
-      '/disclaimer',
-      '/accessibility',
-      '/terms-of-use',
-      '/privacy-policy',
-      '/resources'
-    ];
+    // Deprioritize certain pages/folders.
+    // Exact-page deprioritizations (parents only): '/resources' and '/about'
+    const deprioritizedExact = ['/resources', '/about'];
+    // Prefix matches (entire folder and its children)
+    const deprioritizedPrefix = ['/patient-stories', '/disclaimer', '/accessibility', '/terms-of-use', '/privacy-policy'];
 
-    const preferred = hits.filter(
-      (r) => !deprioritizedSlugs.some((slug) => r.item.pageSlug.startsWith(slug))
-    );
-    const deprioritized = hits.filter(
-      (r) => deprioritizedSlugs.some((slug) => r.item.pageSlug.startsWith(slug))
-    );
+    const isDeprioritized = (slug: string) =>
+      deprioritizedExact.includes(slug) || deprioritizedPrefix.some((p) => slug.startsWith(p));
+
+    const preferred = hits.filter((r) => !isDeprioritized(r.item.pageSlug));
+    const deprioritized = hits.filter((r) => isDeprioritized(r.item.pageSlug));
 
     let limited: IndexedItem[] = [];
     if (preferred.length === 1) {
@@ -178,8 +172,10 @@ export default function SearchBar() {
                       className="block px-5 py-4 text-lg transition-colors duration-150 rounded-none hover:bg-primary/10 focus:bg-primary/20"
                       style={{ fontSize: '1.15rem' }}
                     >
+                      <div className="text-sm text-gray-600 mb-1">
+                        <span className="font-medium text-primary">"{query}"</span> on <span className="text-dark">{res.pageTitle} Page</span>
+                      </div>
                       <div className="font-semibold text-dark mb-1">{res.sectionTitle}</div>
-                      <div className="text-base text-gray-500">{res.pageTitle}</div>
                     </Link>
                   </li>
                 ))}

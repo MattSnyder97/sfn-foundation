@@ -27,6 +27,12 @@ export const newlyDiagnosedContent = {
           type: "paragraph",
           text: `SFN is a long-term condition, but many people live active lives with proper care. With the right treatments and lifestyle changes, you can manage symptoms and keep your quality of life. You do not have to face this alone.`,
         },
+        {
+        type: "button",
+        label: "Join the Support Group",
+        href: "https://discord.gg/UGNhBMkBS7",
+        variant: "outlinePrimary",
+        },
       ],
     },
 
@@ -40,11 +46,11 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `SFN can have many causes, and sometimes no cause is found. Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment.`,
+          text: `Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment.`,
         },
         {
           type: "paragraph",
-          text: `Your symptoms are real. SFN can cause burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options.`,
+          text: `Your symptoms are real. SFN can cause a huge variety of symptoms like burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options. [Read more about SFN Symptoms](/about/symptoms)`,
         },
         {
           type: "paragraph",
@@ -106,7 +112,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Choose providers who know about SFN and who listen to you. Get second opinions if you are not happy with your care or want to explore other options.`,
+          text: `Choose providers who know about SFN and who listen to you. Get second opinions if you are not happy with your care or want to explore other options. [Find an SFN Specialist](/resources/specialists)`,
         },
         {
           type: "paragraph",
