@@ -183,7 +183,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Research on LDN for SFN is ongoing. Recent studies suggest it may help some people with cryptogenic SFN, with improvements in pain and autonomic symptoms. More research is needed to confirm its benefits.`,
+          text: `Recent studies suggest it may help some people with cryptogenic SFN, with improvements in pain and autonomic symptoms. More research is needed to confirm its benefits.`,
         },
         {
           type: "paragraph",

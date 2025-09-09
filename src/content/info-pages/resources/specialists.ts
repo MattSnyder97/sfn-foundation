@@ -109,8 +109,18 @@ export const specialistsContent = {
           text: `Before the visit, gather medical records, test results, and reports from other doctors. Make a timeline of your symptoms and treatments. This helps the specialist understand your case faster.`,
         },
         {
-          type: "paragraph",
-          text: `Prepare by bringing past test results, a simple symptom diary, a list of medications and supplements with doses, family history, and the questions you want to ask. Consider bringing someone for support and be ready to explain how symptoms affect daily life.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Bring previous test results like blood work, nerve studies, or skin biopsies",
+            "Keep a simple symptom diary with start dates, changes, and triggers",
+            "List medications and supplements you have tried with doses and dates",
+            "Note family history of neuropathy, diabetes, or autoimmune conditions",
+            "Write down the questions you want to ask the doctor",
+            "Bring a list of current medications, including over-the-counter items",
+            "Consider bringing a friend or family member for support",
+            "Be ready to explain how symptoms affect your daily life",
+          ],
         },
         {
           type: "paragraph",

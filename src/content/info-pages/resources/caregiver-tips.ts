@@ -128,8 +128,18 @@ export const caregiverTipsContent = {
           text: `Caregiver burnout is real. Watch for signs like feeling overwhelmed, irritable, or tired most of the time. If you feel this way, seek extra help or take a break.`,
         },
         {
-          type: "paragraph",
-          text: `Protect your own health by building a support network, taking regular breaks, keeping up with medical care and exercise, setting realistic expectations, learning stress management, accepting help, keeping hobbies and friendships, and considering counseling if needed.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Build a support network - connect with other caregivers, family, or support groups.",
+            "Take regular breaks - even short breaks help you recharge.",
+            "Keep up your own health - attend medical appointments and move your body.",
+            "Set realistic expectations - you cannot fix everything or remove all pain.",
+            "Learn stress management - try relaxation, meditation, or other techniques.",
+            "Accept help - let friends and family assist with tasks.",
+            "Keep your interests - continue activities you enjoy and keep friendships.",
+            "Consider counseling - a therapist can help you process hard emotions.",
+          ],
         },
         {
           type: "paragraph",

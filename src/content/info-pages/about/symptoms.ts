@@ -118,7 +118,6 @@ export const symptomsContent = {
           type: "list",
           ordered: true,
           items: [
-            // Converted to a paragraph below; list removed
           ],
         },
         {
@@ -153,8 +152,16 @@ export const symptomsContent = {
           feel worse during the day, creating a difficult cycle.`,
         },
         {
-          type: "paragraph",
-          text: `SFN can affect many parts of daily life. Foot pain and numbness can make walking uncomfortable or unsafe and may increase fall risk. Work and activities that need standing or fine motor skills can become harder. Pain often reduces sleep quality and can lead to sadness, frustration, or anxiety. Some people avoid social activities or exercise because of pain, even though gentle activity often helps.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Walking and mobility - Foot pain and numbness can make walking uncomfortable or unsafe. You might worry about falls.",
+            "Work and activities - It can be harder to stand for long periods, type, or do tasks that require fine motor skills.",
+            "Sleep quality - Pain and discomfort can keep you awake or wake you up during the night.",
+            "Emotional health - Chronic pain can lead to feelings of sadness, frustration, or anxiety about the future.",
+            "Social activities - You might avoid activities you used to enjoy because of pain or fear of making symptoms worse.",
+            "Exercise - Pain might make you want to avoid physical activity, even though gentle exercise can help.",
+          ],
         },
         {
           type: "image",

@@ -142,8 +142,15 @@ export const diagnosisContent = {
           a rheumatologist might get involved.`,
         },
         {
-          type: "paragraph",
-          text: `You may see several specialists depending on your needs. A neurologist can diagnose and manage neuropathy. An endocrinologist helps with diabetes and hormone issues. A rheumatologist treats autoimmune conditions. Pain specialists and physical therapists can help manage symptoms and improve function.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Neurologist - Specializes in diagnosing and treating nerve disorders. They can perform nerve tests and manage neuropathy medications.",
+            "Endocrinologist - Helps manage diabetes and other hormone-related conditions that can cause neuropathy.",
+            "Rheumatologist - Treats autoimmune diseases that might be causing nerve damage.",
+            "Pain management specialist - Focuses on different ways to control chronic pain from neuropathy.",
+            "Physical therapist - Helps you stay active and teaches exercises that can reduce pain and improve function.",
+          ],
         },
         {
           type: "paragraph",

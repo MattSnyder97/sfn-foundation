@@ -96,8 +96,17 @@ export const causesContent = {
           conditions are more likely to cause neuropathy than others.`,
         },
         {
-          type: "paragraph",
-          text: `Autoimmune conditions linked to SFN include sarcoidosis, Sjögren's syndrome, lupus, celiac disease, rheumatoid arthritis, inflammatory bowel disease, and some thyroid disorders. Treating the underlying immune condition can sometimes improve nerve health.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Sarcoidosis - A condition causing inflammation in various organs. Up to 40% of sarcoidosis patients develop small fiber neuropathy",
+            "Sjögren's Syndrome - Affects glands that make tears and saliva, but can also damage nerves",
+            "Systemic Lupus Erythematosus (SLE) - Can affect many body systems including the nervous system",
+            "Celiac Disease - Sensitivity to gluten that can cause nerve damage in some people",
+            "Rheumatoid Arthritis - Joint inflammation that can sometimes affect nerves too",
+            "Inflammatory Bowel Disease - Including Crohn's disease and ulcerative colitis",
+            "Thyroid Disorders - Both overactive and underactive thyroid can affect nerves",
+          ],
         },
         {
           type: "paragraph",
@@ -119,8 +128,18 @@ export const causesContent = {
           result in similar symptoms of pain, burning, and numbness.`,
         },
         {
-          type: "paragraph",
-          text: `Other medical causes include kidney or liver disease, HIV or its treatments, vitamin deficiencies (especially B vitamins), hypothyroidism, fibromyalgia, amyloidosis, and vasculitis. Your doctor will test for these conditions when looking for causes.`,
+          type: "list",
+          ordered: false,
+          items: [
+            "Kidney Disease - Waste products that build up when kidneys don't work well can damage nerves",
+            "Liver Disease - Can cause toxic substances to build up and affect nerve function",
+            "HIV/AIDS - The virus itself or some treatments can cause neuropathy",
+            "Vitamin Deficiencies - Especially B12, B1, B6, and folate deficiencies",
+            "Hypothyroidism - Low thyroid hormone levels can slow nerve function",
+            "Fibromyalgia - Often overlaps with small fiber neuropathy",
+            "Amyloidosis - Abnormal protein deposits that can affect nerves",
+            "Vasculitis - Inflammation of blood vessels that can reduce blood flow to nerves",
+          ],
         },
         {
           type: "paragraph",
