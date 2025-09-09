@@ -1,12 +1,8 @@
+
 import InfoPageTemplate from '@/components/content/info/InfoPageTemplate';
 import { getPageData } from '@/content/contentLoader';
 import { notFound } from 'next/navigation';
 
-interface PageProps {
-  params: {
-    slug: string[];
-  };
-}
 
 export async function generateStaticParams() {
   return [
@@ -22,9 +18,10 @@ export async function generateStaticParams() {
   ];
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
-  const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }) {
+  const awaitedParams = await params;
+  const slugPath = Array.isArray(awaitedParams.slug) ? awaitedParams.slug.join('/') : awaitedParams.slug;
   const pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
@@ -40,9 +37,9 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params;
-  const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
+export default async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
+  const awaitedParams = await params;
+  const slugPath = Array.isArray(awaitedParams.slug) ? awaitedParams.slug.join('/') : awaitedParams.slug;
   const pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
