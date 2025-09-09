@@ -53,7 +53,7 @@ export default function PatientStoriesList() {
         return (
           <Link
             key={story.slug}
-            href={story.slug.replace('/patient-stories', '/resources/patient-stories')}
+            href={story.slug}
             className="border-gray/20 border-1 rounded-xl p-6 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <div className="flex flex-col md:flex-row items-stretch gap-8">
