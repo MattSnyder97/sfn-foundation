@@ -41,18 +41,8 @@ export const specialistsContent = {
           text: `When looking for a specialist, choose doctors who have worked with SFN or peripheral nerve problems. They should know the common tests and treatment options.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Board certified in neurology, ideally with training in peripheral neuropathy or autonomic disorders",
-            "Experience with skin biopsy for nerve fiber testing",
-            "Access to autonomic tests such as QSART or tilt table",
-            "Awareness of current SFN research and treatment options",
-            "Willingness to coordinate with other specialists",
-            "Experience evaluating autoimmune causes of neuropathy when relevant",
-            "Knowledge of both sensory and autonomic symptoms",
-            "Familiarity with causes of SFN beyond diabetes",
-          ],
+          type: "paragraph",
+          text: `Look for a board-certified neurologist with experience in peripheral neuropathy or autonomic disorders, access to skin biopsy and autonomic testing (like QSART or tilt table), familiarity with current SFN research and treatments, and a willingness to coordinate with other specialists when needed.`,
         },
         {
           type: "paragraph",
@@ -119,18 +109,8 @@ export const specialistsContent = {
           text: `Before the visit, gather medical records, test results, and reports from other doctors. Make a timeline of your symptoms and treatments. This helps the specialist understand your case faster.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Bring previous test results like blood work, nerve studies, or skin biopsies",
-            "Keep a simple symptom diary with start dates, changes, and triggers",
-            "List medications and supplements you have tried with doses and dates",
-            "Note family history of neuropathy, diabetes, or autoimmune conditions",
-            "Write down the questions you want to ask the doctor",
-            "Bring a list of current medications, including over-the-counter items",
-            "Consider bringing a friend or family member for support",
-            "Be ready to explain how symptoms affect your daily life",
-          ],
+          type: "paragraph",
+          text: `Prepare by bringing past test results, a simple symptom diary, a list of medications and supplements with doses, family history, and the questions you want to ask. Consider bringing someone for support and be ready to explain how symptoms affect daily life.`,
         },
         {
           type: "paragraph",

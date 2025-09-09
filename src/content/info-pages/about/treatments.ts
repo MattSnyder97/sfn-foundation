@@ -178,15 +178,8 @@ export const treatmentsContent = {
           text: `**Low Dose Naltrexone (LDN)** is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "How it works - LDN may reduce inflammation in the nervous system and help the body's natural pain-fighting systems work better. Some studies show improvement in sensory and autonomic symptoms for SFN.",
-            "Dosing - Typical doses are 1.5-4.5mg taken at bedtime. It must be compounded by a special pharmacy. Dosing may vary and is still being studied.",
-            "Side effects - Most people have few side effects. Some report vivid dreams or trouble sleeping at first.",
-            "Cost - Usually not covered by insurance and must be made by compounding pharmacies, costing $30-60 per month.",
-            "Evidence limitations - Research so far is limited by small sample sizes and variable dosing. More studies are needed to confirm benefits for SFN.",
-          ],
+          type: "paragraph",
+          text: `Low Dose Naltrexone (LDN) may reduce inflammation and help the body's pain control systems. Typical doses are small (often 1.5–4.5 mg at bedtime) and it usually requires a compounding pharmacy. Side effects are often mild, like vivid dreams or sleep changes. LDN is not usually covered by insurance and costs can vary. Current studies are small, so more research is needed to confirm benefits for SFN.`,
         },
         {
           type: "paragraph",
@@ -197,14 +190,8 @@ export const treatmentsContent = {
           text: `Medical cannabis is legal in many states for chronic pain. Some people with neuropathy find it helps with pain and sleep, though the evidence is mixed.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Forms available - Oils, capsules, edibles, topicals, and inhaled forms. Different forms work differently.",
-            "CBD vs THC - CBD (cannabidiol) may help with pain and inflammation without causing a \"high.\" THC can help with pain but causes mental effects.",
-            "Legal considerations - Laws vary widely by state. You typically need a medical marijuana card and qualifying condition.",
-            "Dosing - Start with very low doses and increase slowly. Effects can take 1-2 hours with edibles.",
-          ],
+          type: "paragraph",
+          text: `Medical cannabis comes in many forms (oils, capsules, edibles, topicals, inhaled). CBD may reduce pain and inflammation without causing a high, while THC can help pain but causes mental effects. Laws and access vary by state; dosing starts low and increases slowly, especially with edibles where effects can take 1–2 hours.`,
         },
         {
           type: "paragraph",

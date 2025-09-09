@@ -118,10 +118,12 @@ export const symptomsContent = {
           type: "list",
           ordered: true,
           items: [
-            "**Early stage** - Mild tingling or burning, usually in toes or fingertips. Symptoms may come and go.",
-            "**Moderate stage** - Pain becomes more constant. Symptoms spread up from toes to feet, from fingertips to hands.",
-            "**Advanced stage** - Pain and numbness can affect larger areas. Walking and using your hands might become more difficult.",
+            // Converted to a paragraph below; list removed
           ],
+        },
+        {
+          type: "paragraph",
+          text: `Symptoms often follow stages. Early on you might have mild tingling or burning in your toes or fingertips that comes and goes. Over time pain can become more constant and spread from toes to feet or from fingertips to hands. In advanced cases, pain and numbness can affect larger areas and make walking or using your hands harder.`,
         },
         {
           type: "paragraph",
@@ -151,16 +153,8 @@ export const symptomsContent = {
           feel worse during the day, creating a difficult cycle.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Walking and mobility - Foot pain and numbness can make walking uncomfortable or unsafe. You might worry about falls.",
-            "Work and activities - It can be harder to stand for long periods, type, or do tasks that require fine motor skills.",
-            "Sleep quality - Pain and discomfort can keep you awake or wake you up during the night.",
-            "Emotional health - Chronic pain can lead to feelings of sadness, frustration, or anxiety about the future.",
-            "Social activities - You might avoid activities you used to enjoy because of pain or fear of making symptoms worse.",
-            "Exercise - Pain might make you want to avoid physical activity, even though gentle exercise can help.",
-          ],
+          type: "paragraph",
+          text: `SFN can affect many parts of daily life. Foot pain and numbness can make walking uncomfortable or unsafe and may increase fall risk. Work and activities that need standing or fine motor skills can become harder. Pain often reduces sleep quality and can lead to sadness, frustration, or anxiety. Some people avoid social activities or exercise because of pain, even though gentle activity often helps.`,
         },
         {
           type: "image",

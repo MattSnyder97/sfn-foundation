@@ -47,14 +47,8 @@ export const supplementsContent = {
           text: `Alpha-lipoic acid is one of the most studied supplements for neuropathy. It is an antioxidant that may protect nerves and reduce burning pain. Studies show benefits for diabetic neuropathy and other nerve conditions.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Alpha-Lipoic Acid - may reduce burning pain and protect nerves. Typical dose: 300-600mg daily.",
-            "Acetyl-L-Carnitine - may help nerve cells make energy and support repair. Typical dose: 1000-3000mg daily.",
-            "Curcumin - the active part of turmeric with anti-inflammatory effects. Look for forms with better absorption. Typical dose: 500-1000mg daily.",
-            "Omega-3 Fatty Acids - EPA and DHA from fish oil can reduce inflammation, including in nerves. Typical dose: 1000-2000mg combined EPA and DHA daily.",
-          ],
+          type: "paragraph",
+          text: `Some evidence-backed supplements include alpha-lipoic acid (often 300–600 mg daily), acetyl-L-carnitine (1000–3000 mg), curcumin (look for enhanced absorption forms), and omega-3 fish oils (1000–2000 mg combined EPA/DHA). These may help reduce nerve pain over weeks to months.`,
         },
         {
           type: "paragraph",
@@ -82,14 +76,8 @@ export const supplementsContent = {
           text: `B vitamins matter for nerve health. Nerves need these vitamins to work and repair. Low B vitamin levels can make neuropathy worse over time.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Vitamin B12 - important for nerve function and myelin. Some people with neuropathy are low in B12. Typical dose: 1000-2000mcg daily when needed.",
-            "Vitamin B1 (Thiamine) - helps nerves use glucose for energy. Benfotiamine may be more effective than regular thiamine. Typical dose: 300-600mg daily of benfotiamine.",
-            "Folate - works with B12 to support nerves. Important for people on metformin. Typical dose: 400-800mcg daily of methylfolate.",
-            "Vitamin D3 - many people have low vitamin D. It is important for nerves and immune health. Typical dose: 1000-4000 IU daily based on blood tests.",
-          ],
+          type: "paragraph",
+          text: `Key vitamins for nerves include B12 (often 1000–2000 mcg when deficient), thiamine/benfotiamine (300–600 mg), folate (400–800 mcg), and vitamin D3 (1000–4000 IU based on tests). Check blood levels before starting high doses.`,
         },
         {
           type: "paragraph",
@@ -114,14 +102,8 @@ export const supplementsContent = {
           protection where it's needed most.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "N-Acetyl Cysteine (NAC) - helps the body make glutathione, a key antioxidant. Typical dose: 600-1200mg daily.",
-            "Coenzyme Q10 - helps cells make energy and acts as an antioxidant. Typical dose: 100-300mg daily with food.",
-            "Vitamin E - protects cell membranes from damage. Mixed tocopherols may be better. Typical dose: 400-800 IU daily.",
-            "Vitamin C - works with other antioxidants to protect nerves and help regenerate vitamin E. Typical dose: 500-1000mg daily.",
-          ],
+          type: "paragraph",
+          text: `Antioxidants that may help include N-acetyl cysteine (NAC), coenzyme Q10, vitamin E, and vitamin C. These support cellular health and may reduce oxidative stress that harms nerves.`,
         },
       ],
     },
@@ -142,14 +124,8 @@ export const supplementsContent = {
           often helps reduce symptoms.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Magnesium - may calm overactive nerves and reduce pain signals. Glycinate or citrate forms absorb better. Typical dose: 200-400mg daily at bedtime.",
-            "Zinc - supports nerve healing and immune function. Too much zinc can affect copper absorption. Typical dose: 15-30mg daily with food.",
-            "Chromium - helps blood sugar control, which can protect nerves. Typical dose: 200-400mcg daily.",
-            "Selenium - an antioxidant that supports immune and thyroid health. Typical dose: 100-200mcg daily.",
-          ],
+          type: "paragraph",
+          text: `Important minerals include magnesium (often 200–400 mg), zinc (15–30 mg), chromium (200–400 mcg), and selenium (100–200 mcg). Too much of some minerals can be harmful, so check with your provider.`,
         },
         {
           type: "paragraph",
@@ -171,16 +147,8 @@ export const supplementsContent = {
           text: `Look for supplements tested by independent groups for purity and potency. Organizations like USP, NSF, and ConsumerLab test supplements to check labels and contaminants.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Third-party testing - look for seals from USP, NSF, or other testing groups.",
-            "Good Manufacturing Practices (GMP) - choose brands that follow GMP guidelines.",
-            "Check expiration dates - store supplements correctly to keep potency.",
-            "Avoid mega-doses - more is not always better and can be harmful.",
-            "Drug interactions - tell your doctor about all supplements you take.",
-            "Start slowly - try lower doses first to see how you respond.",
-          ],
+          type: "paragraph",
+          text: `For safety, choose supplements tested by independent groups (USP, NSF), look for manufacturers that follow GMP, check expiration dates, avoid mega-doses, report all supplements to your doctor, and start with lower doses to see how you respond.`,
         },
         {
           type: "paragraph",

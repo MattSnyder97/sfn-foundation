@@ -42,16 +42,8 @@ export const caregiverTipsContent = {
           text: `Pain from SFN is real and can be severe, even if others cannot see it. Many people call it burning, stabbing, or electric shock-like. Some people also feel numbness, tingling, or strong sensitivity to touch.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Pain levels can change during the day: mornings may be easier than evenings.",
-            "Temperature can affect symptoms: heat or cold may make them worse.",
-            "Fatigue is common: chronic pain can be very tiring.",
-            "Mood changes can happen: chronic pain can lead to depression, anxiety, or irritability.",
-            "Good days and bad days occur: symptoms can be unpredictable.",
-            "Invisible illness: others may not understand because symptoms are not visible.",
-          ],
+          type: "paragraph",
+          text: `Symptoms can change during the day and with temperature. Fatigue and mood changes are common, and good days and bad days happen. Because SFN is often an invisible illness, others may not understand.`,
         },
         {
           type: "paragraph",
@@ -75,18 +67,8 @@ export const caregiverTipsContent = {
           text: `Create a supportive environment while encouraging independence when possible. Help without taking away your loved one's sense of control.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Help with household tasks like cleaning, cooking, and shopping if pain and fatigue make them hard.",
-            "Help manage medications: organize pills, set reminders, and note side effects.",
-            "Make the home comfortable: adjust temperature, use soft bedding, and lower bright lights.",
-            "Assist with foot care: washing, drying, and moisturizing feet and hands gently.",
-            "Support gentle exercise: encourage walking or swimming when they feel up to it.",
-            "Provide transportation: drive to appointments and help with directions.",
-            "Choose comfortable clothing: loose clothes and supportive shoes.",
-            "Organize the home: keep common items within easy reach to reduce movement.",
-          ],
+          type: "paragraph",
+          text: `Practical support includes helping with household tasks, managing medications, making the home comfortable, assisting with foot care, supporting gentle exercise, providing transportation, choosing comfortable clothing, and organizing common items within easy reach. Small changes can improve comfort and independence.`,
         },
         {
           type: "paragraph",
@@ -119,18 +101,8 @@ export const caregiverTipsContent = {
           text: `Being an advocate in healthcare settings can improve the care your loved one gets. Many providers are still learning about SFN, so a knowledgeable supporter can help.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Listen without trying to fix things: sometimes they just need understanding.",
-            "Ask how you can help: don't assume what they need; let them say.",
-            "Learn about SFN: knowing more helps you give better support.",
-            "Attend appointments: take notes, ask questions, and help remember details.",
-            "Help research treatments: look for new therapies, trials, and specialists.",
-            "Talk with family: help educate relatives so they can be supportive.",
-            "Validate their experience: say that their pain is real and their feelings matter.",
-            "Encourage without pushing: support their goals while respecting limits.",
-          ],
+          type: "paragraph",
+          text: `Good communication means listening, asking how to help, learning about SFN, attending appointments, researching treatments when needed, educating family, validating your loved one's experience, and encouraging them without pushing beyond limits.`,
         },
         {
           type: "paragraph",
@@ -156,18 +128,8 @@ export const caregiverTipsContent = {
           text: `Caregiver burnout is real. Watch for signs like feeling overwhelmed, irritable, or tired most of the time. If you feel this way, seek extra help or take a break.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Build a support network - connect with other caregivers, family, or support groups.",
-            "Take regular breaks - even short breaks help you recharge.",
-            "Keep up your own health - attend medical appointments and move your body.",
-            "Set realistic expectations - you cannot fix everything or remove all pain.",
-            "Learn stress management - try relaxation, meditation, or other techniques.",
-            "Accept help - let friends and family assist with tasks.",
-            "Keep your interests - continue activities you enjoy and keep friendships.",
-            "Consider counseling - a therapist can help you process hard emotions.",
-          ],
+          type: "paragraph",
+          text: `Protect your own health by building a support network, taking regular breaks, keeping up with medical care and exercise, setting realistic expectations, learning stress management, accepting help, keeping hobbies and friendships, and considering counseling if needed.`,
         },
         {
           type: "paragraph",

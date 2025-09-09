@@ -43,16 +43,8 @@ export const newlyDiagnosedContent = {
           text: `SFN can have many causes, and sometimes no cause is found. Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Your symptoms are real and valid: SFN causes real pain even if others cannot see it.",
-            "Symptoms can vary: you may have burning, stabbing, tingling, numbness, or sensitivity to touch.",
-            "It often starts in the feet and hands: many people notice symptoms in their extremities first.",
-            "Progression varies: symptoms may stay the same, get worse, or sometimes improve.",
-            "Treatment is available: while there is no cure, many treatments can help manage symptoms.",
-            "Research is ongoing: scientists continue to study SFN to find better treatments.",
-          ],
+          type: "paragraph",
+          text: `Your symptoms are real. SFN can cause burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options.`,
         },
         {
           type: "paragraph",
@@ -73,14 +65,10 @@ export const newlyDiagnosedContent = {
           type: "list",
           ordered: true,
           items: [
-            "Ask questions about your diagnosis: make sure you understand how SFN affects you and what to expect.",
-            "Get copies of your test results: keep skin biopsy reports, blood tests, and other records.",
-            "Research possible causes: if a cause was found, learn how to manage it.",
-            "Start a symptom diary: track pain, symptoms, and triggers to share with your care team.",
-            "Review medications: check if any current medicines could affect your nerves.",
-            "Get blood work: test for diabetes, B12 levels, thyroid function, and other issues.",
-            "Schedule follow-ups: plan regular check-ins to monitor progress and adjust treatments.",
-            "Connect with support: explore patient groups and [support groups](/resources/support-group).",
+            "Ask questions and make sure you understand your diagnosis.",
+            "Get copies of test results and start a symptom diary to share with your care team.",
+            "Review medications and get blood work to check for common causes like diabetes or vitamin deficiencies.",
+            "Schedule follow-ups and connect with support groups for information and community.",
           ],
         },
         {
@@ -180,18 +168,8 @@ export const newlyDiagnosedContent = {
           emotional challenges.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Allow yourself to grieve - it's normal to feel sad about your diagnosis and limits.",
-            "Stay connected - keep relationships with family and friends who support you.",
-            "Join support groups - connect with others who understand your experience.",
-            "Consider counseling - a therapist can help with coping strategies.",
-            "Be kind to yourself - practice patience as you adjust to the diagnosis.",
-            "Focus on what you can control - manage symptoms and maintain health.",
-            "Keep hope - treatments exist and research continues.",
-            "Celebrate small wins - notice improvements and good days.",
-          ],
+          type: "paragraph",
+          text: `It is normal to feel many emotions after diagnosis. Stay connected with supportive people, consider counseling if needed, join support groups, and be kind to yourself. Focus on what you can control and celebrate small wins as you manage your health.`,
         },
         {
           type: "paragraph",

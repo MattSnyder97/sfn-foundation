@@ -59,15 +59,8 @@ export const causesContent = {
           means even pre-diabetes or insulin resistance can start damaging your nerves.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Type 1 Diabetes - Usually develops in childhood or young adulthood when the body stops making insulin",
-            "Type 2 Diabetes - More common form that usually develops in adults when the body doesn't use insulin properly",
-            "Pre-diabetes - Blood sugar levels higher than normal but not yet diabetic (HbA1c 5.7-6.4%)",
-            "Metabolic Syndrome - A group of conditions including high blood pressure, excess belly fat, and abnormal cholesterol levels",
-            "Latent Autoimmune Diabetes in Adults (LADA) - A slow-developing form of autoimmune diabetes in adults",
-          ],
+          type: "paragraph",
+          text: `Diabetes comes in several forms that can damage nerves, including type 1 and type 2 diabetes, pre-diabetes and insulin resistance, metabolic syndrome, and slower-developing autoimmune diabetes (LADA). Managing blood sugar can help protect nerves.`,
         },
         {
           type: "image",
@@ -103,17 +96,8 @@ export const causesContent = {
           conditions are more likely to cause neuropathy than others.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Sarcoidosis - A condition causing inflammation in various organs. Up to 40% of sarcoidosis patients develop small fiber neuropathy",
-            "Sjögren's Syndrome - Affects glands that make tears and saliva, but can also damage nerves",
-            "Systemic Lupus Erythematosus (SLE) - Can affect many body systems including the nervous system",
-            "Celiac Disease - Sensitivity to gluten that can cause nerve damage in some people",
-            "Rheumatoid Arthritis - Joint inflammation that can sometimes affect nerves too",
-            "Inflammatory Bowel Disease - Including Crohn's disease and ulcerative colitis",
-            "Thyroid Disorders - Both overactive and underactive thyroid can affect nerves",
-          ],
+          type: "paragraph",
+          text: `Autoimmune conditions linked to SFN include sarcoidosis, Sjögren's syndrome, lupus, celiac disease, rheumatoid arthritis, inflammatory bowel disease, and some thyroid disorders. Treating the underlying immune condition can sometimes improve nerve health.`,
         },
         {
           type: "paragraph",
@@ -135,18 +119,8 @@ export const causesContent = {
           result in similar symptoms of pain, burning, and numbness.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Kidney Disease - Waste products that build up when kidneys don't work well can damage nerves",
-            "Liver Disease - Can cause toxic substances to build up and affect nerve function",
-            "HIV/AIDS - The virus itself or some treatments can cause neuropathy",
-            "Vitamin Deficiencies - Especially B12, B1, B6, and folate deficiencies",
-            "Hypothyroidism - Low thyroid hormone levels can slow nerve function",
-            "Fibromyalgia - Often overlaps with small fiber neuropathy",
-            "Amyloidosis - Abnormal protein deposits that can affect nerves",
-            "Vasculitis - Inflammation of blood vessels that can reduce blood flow to nerves",
-          ],
+          type: "paragraph",
+          text: `Other medical causes include kidney or liver disease, HIV or its treatments, vitamin deficiencies (especially B vitamins), hypothyroidism, fibromyalgia, amyloidosis, and vasculitis. Your doctor will test for these conditions when looking for causes.`,
         },
         {
           type: "paragraph",
@@ -174,18 +148,8 @@ export const causesContent = {
           able to switch you to a different medicine if needed.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Chemotherapy drugs - Especially platinum-based drugs, taxanes, and vincristine",
-            "HIV medications - Some older HIV drugs are more likely to cause neuropathy",
-            "Antibiotics - Especially fluoroquinolones ",
-            "Heart medications - Some drugs used for irregular heartbeat",
-            "Seizure medications - Phenytoin (Dilantin) with long-term use",
-            "Alcohol - Heavy, long-term alcohol use can damage nerves",
-            "Heavy metals - Lead, mercury, arsenic, and thallium exposure",
-            "Industrial chemicals - Some solvents and chemicals used in manufacturing",
-          ],
+          type: "paragraph",
+          text: `Certain medicines and toxins can harm small nerves, such as some chemotherapy drugs, older HIV medications, certain antibiotics, some heart or seizure drugs, heavy alcohol use, heavy metals, and industrial chemicals. Stopping or switching the offending agent often helps.`,
         },
         {
           type: "paragraph",
@@ -213,16 +177,8 @@ export const causesContent = {
           symptoms, tell your doctor - this information can help with diagnosis.`,
         },
         {
-          type: "list",
-          ordered: false,
-          items: [
-            "Fabry Disease - A rare genetic disorder affecting how the body processes certain fats",
-            "Hereditary Sensory and Autonomic Neuropathies (HSAN) - A group of inherited conditions affecting sensory nerves",
-            "SCN9A gene mutations - Changes in genes that control sodium channels in nerve cells",
-            "Familial Amyloidosis - Inherited forms of amyloid protein deposits",
-            "Tangier Disease - A rare condition affecting cholesterol metabolism",
-            "Mutations in other ion channel genes - Affecting how nerve cells send signals",
-          ],
+          type: "paragraph",
+          text: `Rare genetic causes include Fabry disease, hereditary sensory and autonomic neuropathies (HSAN), mutations in ion channel genes like SCN9A, familial amyloidosis, and other inherited metabolic conditions. Genetic testing may be recommended when family history suggests a hereditary cause.`,
         },
         {
           type: "paragraph",
