@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const slugPath = params.slug.join('/');
+  const { slug } = await params;
+  const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
   let pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function Page({ params }: PageProps) {
-  const slugPath = params.slug.join('/');
+  const { slug } = await params;
+  const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
   let pageData = getPageData(`/resources/${slugPath}`);
 
   if (!pageData) {
