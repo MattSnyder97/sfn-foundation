@@ -23,7 +23,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Small Fiber Neuropathy Foundation",
   description:
-    "Our foundation exists to speed up finding the cure for small fiber neuropathy and provide you the support you need along the way.",
+    "Our foundation strives to cure small fiber neuropathy and give you the support you need until that day comes.",
   metadataBase: new URL('https://sfn-foundation.org'),
   alternates: {
     canonical: '/',

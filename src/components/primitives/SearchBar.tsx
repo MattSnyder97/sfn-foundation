@@ -9,7 +9,7 @@ declare global {
 import { useState, useMemo, useRef, useEffect } from "react";
 import Fuse from "fuse.js";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 import { allContent } from "@/content";
 import trackEvent from '@/lib/analytics';
@@ -144,16 +144,35 @@ export default function SearchBar() {
         style={{ minHeight: '3.5rem' }}
       >
         <Search className="h-4 w-4 text-gray-500" />
-        <input
-          ref={inputRef}
-          type="text"
-          value={query}
-          onChange={handleChange}
-          placeholder="Search…"
-          className="w-full h-full border-none bg-transparent text-sm focus:outline-none"
-          aria-label="Site search"
-          style={{ fontSize: '1.1rem' }}
-        />
+        <div className="relative w-full">
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={handleChange}
+            placeholder="Search…"
+            className="w-full h-full border-none bg-transparent text-sm focus:outline-none pr-12 md:pr-4"
+            aria-label="Site search"
+            style={{ fontSize: '1.1rem' }}
+          />
+
+          {/* absolutely positioned mobile-only clear button inside input; only visible when query has text */}
+          {query && (
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                setResults([]);
+                inputRef.current?.focus();
+              }}
+              aria-label="Clear search"
+              title="Clear search"
+              className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 flex items-center justify-center rounded-full hover:bg-gray-100"
+            >
+              <X className="h-5 w-5 text-gray-500" />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Results dropdown — improved appearance and distinctive hover */}
