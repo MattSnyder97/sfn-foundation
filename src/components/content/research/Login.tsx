@@ -41,6 +41,10 @@ export default function Login({ title, subtitle, icon, actions, compact = false,
         ) : (
           actions && <div className="mt-4">{actions}</div>
         )}
+
+        <div className="mt-16 text-xs text-gray/60">
+          The Research Portal provides approved clinicians and researchers a secure place to submit, review, and collaborate on SFN studies and data. Please <a href="/contact" className="text-primary/80 underline">contact us</a> to request approval.
+        </div>
       </div>
     </div>
   );
