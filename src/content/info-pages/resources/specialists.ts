@@ -19,38 +19,17 @@ export const specialistsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Finding a specialist for small fiber neuropathy (SFN) can be hard. Many doctors do not know much about SFN. It is often missed or misdiagnosed. Try to see a doctor who has experience with SFN and knows the common tests.`,
-        },
-        {
-          type: "paragraph",
-          text: `Neurologists who treat peripheral neuropathy or autonomic disorders are often the best choice. Pain specialists and rheumatologists can help too, especially if an autoimmune problem might be involved.`,
-        },
-        {
-          type: "paragraph",
-          text: `Accurate diagnosis and care may mean seeing a specialist with access to skin biopsy or autonomic testing. You may need to travel or wait for an appointment, but getting the right care can help you in the long run.`,
+          text: `Finding a specialist for small fiber neuropathy (SFN) can be hard. Many doctors do not know much about SFN. It is often missed or misdiagnosed. Try to see a doctor who has experience with SFN and knows the common tests. Neurologists who treat peripheral neuropathy or autonomic disorders are often the best choice. Pain specialists and rheumatologists can help too, especially if an autoimmune problem might be involved. Accurate diagnosis and care may mean seeing a specialist with access to skin biopsy or autonomic testing. You may need to travel or wait for an appointment, but getting the right care can help you in the long run.`,
         },
       ],
     },
-
     {
       id: "what-to-look-for",
       title: "What to Look For",
       content: [
         {
           type: "paragraph",
-          text: `When looking for a specialist, choose doctors who have worked with SFN or peripheral nerve problems. They should know the common tests and treatment options.`,
-        },
-        {
-          type: "paragraph",
-          text: `Look for a board-certified neurologist with experience in peripheral neuropathy or autonomic disorders, access to skin biopsy and autonomic testing (like QSART or tilt table), familiarity with current SFN research and treatments, and a willingness to coordinate with other specialists when needed.`,
-        },
-        {
-          type: "paragraph",
-          text: `Doctors at major medical centers or universities often see more rare conditions. They usually have the testing equipment needed and may take part in research that could help patients.`,
-        },
-        {
-          type: "paragraph",
-          text: `Ask doctors about their experience with SFN during your first visit. A good specialist should explain how they diagnose SFN, what tests they use, and which treatments they recommend.`,
+          text: `When looking for a specialist, choose doctors who have worked with SFN or peripheral nerve problems. They should know the common tests and treatment options. Look for a board-certified neurologist with experience in peripheral neuropathy or autonomic disorders, access to skin biopsy and autonomic testing (like QSART or tilt table), familiarity with current SFN research and treatments, and a willingness to coordinate with other specialists when needed. Doctors at major medical centers or universities often see more rare conditions. They usually have the testing equipment needed and may take part in research that could help patients. Ask doctors about their experience with SFN during your first visit. A good specialist should explain how they diagnose SFN, what tests they use, and which treatments they recommend.`,
         },
       ],
     },

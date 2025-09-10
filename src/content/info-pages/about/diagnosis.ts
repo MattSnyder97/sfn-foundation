@@ -100,7 +100,7 @@ export const diagnosisContent = {
         },
         {
           type: "paragraph",
-          text: `The skin biopsy is the gold standard for diagnosing SFN. Your doctor takes a very small piece of skin, usually from the lower leg. A lab counts the small nerve fibers and compares them to normal levels.`,
+          text: `The skin biopsy is the gold standard for diagnosing SFN. Your doctor takes a very small piece of skin, usually from the lower leg. A lab counts the small nerve fibers and compares them to normal levels. Blood tests help find possible causes of your neuropathy. Your doctor will usually check for diabetes or prediabetes, vitamin B12, thyroid function, and signs of autoimmune disease. Treating the underlying cause can sometimes slow or improve symptoms.`,
         },
         {
           type: "image",
@@ -108,10 +108,6 @@ export const diagnosisContent = {
           alt: "Blood test tubes",
           caption:
             "Getting blood tests helps identify potential underlying causes of SFN, guiding treatment options.",
-        },
-        {
-          type: "paragraph",
-          text: `Blood tests help find possible causes of your neuropathy. Your doctor will usually check for diabetes or prediabetes, vitamin B12, thyroid function, and signs of autoimmune disease. Treating the underlying cause can sometimes slow or improve symptoms.`,
         },
         {
           type: "paragraph",

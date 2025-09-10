@@ -49,10 +49,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `The most common symptoms include burning pain, 
-          tingling, and numbness. You might also notice that your skin becomes very 
-          sensitive to light touch. Something as simple as bed sheets touching your 
-          feet can feel uncomfortable or painful.`,
+          text: `The most common symptoms include burning pain, tingling, and numbness. You might also notice that your skin becomes very sensitive to light touch. Something as simple as bed sheets touching your feet can feel uncomfortable or painful.`,
         },
         {
           type: "list",
@@ -78,13 +75,7 @@ export const symptomsContent = {
         },
         {
           type: "paragraph",
-          text: `Some people also have autonomic symptoms because small fibers control automatic body functions. These may cause problems with sweating, digestion, or heart rate. You might sweat too much or too little, have stomach problems, or feel dizzy when you stand up.`,
-        },
-        {
-          type: "paragraph",
-          text: `Symptoms can be worse at certain times. Many people notice their pain 
-          gets worse at night, making it hard to sleep. Heat, stress, or being on 
-          your feet for long periods can also make symptoms worse.`,
+          text: `Some people also have autonomic symptoms because small fibers control automatic body functions. These may cause problems with sweating, digestion, or heart rate. You might sweat too much or too little, have stomach problems, or feel dizzy when you stand up. Symptoms can be worse at certain times. Many people notice their pain gets worse at night, making it hard to sleep. Heat, stress, or being on your feet for long periods can also make symptoms worse.`,
         },
       ],
     },

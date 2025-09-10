@@ -46,15 +46,11 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment.`,
+          text: `Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment. Your symptoms are real. SFN can cause a wide variety of symptoms like burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options.`,
         },
         {
           type: "paragraph",
-          text: `Your symptoms are real. SFN can cause a huge variety of symptoms like burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options. [Read more about SFN Symptoms](/about/symptoms)`,
-        },
-        {
-          type: "paragraph",
-          text: `Having SFN does not mean your life is over. Many people with SFN still work, exercise, travel, and enjoy hobbies with proper care.`,
+          text: `Having SFN does not mean your life is over. Many people with SFN still work, exercise, travel, and enjoy hobbies with proper care. [Read more about SFN Symptoms](/about/symptoms)`,
         },
       ],
     },

@@ -27,11 +27,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `SFN is more common than many people think. About 200,000 people in the United States may have it. SFN is often seen in people with diabetes, autoimmune conditions, or certain genes. With the right diagnosis and treatment, many people find relief and keep a good quality of life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Learning about SFN is the first step toward feeling better. The sections below explain causes, diagnosis, symptoms, and treatments. You are not alone. There are resources and treatments to help you.`,
+          text: `SFN is more common than many people think. About 200,000 people in the United States may have it. SFN is often seen in people with diabetes, autoimmune conditions, or certain genes. With the right diagnosis and treatment, many people find relief and keep a good quality of life. Learning about SFN is the first step toward feeling better. The sections below explain causes, diagnosis, symptoms, and treatments. You are not alone. There are resources and treatments to help you.`,
         },
       ],
     },

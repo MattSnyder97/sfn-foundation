@@ -24,14 +24,7 @@ export const dictionaryContent = {
           text: `Understanding medical terms and acronyms can help you better communicate 
           with your healthcare team and understand your condition. This dictionary 
           explains common words, abbreviations, and phrases you might encounter 
-          when dealing with Small Fiber Neuropathy.`,
-        },
-        {
-          type: "paragraph",
-          text: `Medical language can feel overwhelming at first, but learning these 
-          terms will help you become a more informed patient. Don't hesitate to 
-          ask your doctor or healthcare provider to explain any terms you don't 
-          understand during your appointments.`,
+          when dealing with Small Fiber Neuropathy. Medical language can feel overwhelming at first, but learning these terms will help you become a more informed patient. Don't hesitate to ask your doctor or healthcare provider to explain any terms you don't understand during your appointments.`,
         },
       ],
     },

@@ -28,14 +28,7 @@ export const causesContent = {
         },
         {
           type: "paragraph",
-          text: `In about 53% of cases, doctors can't find a specific cause 
-          even after thorough testing. This is called "idiopathic" small fiber neuropathy. 
-          Even when the cause isn't clear, treatments can still help 
-          manage your symptoms.`,
-        },
-        {
-          type: "paragraph",
-          text: `Finding the cause is important. Treating it can sometimes slow or stop more nerve damage. If your small fiber neuropathy has been labeled "idiopathic", keep asking your doctor for tests. Idiopathic means doctors have not found the cause yet. Diabetes is the most common identifiable cause, but there are other possibilities your doctor will check for.`,
+          text: `In about 53% of cases, doctors can't find a specific cause even after thorough testing. This is called "idiopathic" small fiber neuropathy. Even when the cause isn't clear, treatments can still help manage your symptoms. Finding the cause is important because treating it can sometimes slow or stop more nerve damage. If your small fiber neuropathy has been labeled "idiopathic", keep asking your doctor for tests. Diabetes is the most common identifiable cause, but there are other possibilities your doctor will check for.`,
         },
       ],
     },
@@ -56,7 +49,7 @@ export const causesContent = {
           type: "paragraph",
           text: `Impaired glucose tolerance and components of metabolic 
           syndrome are often associated with small fiber neuropathy. This 
-          means even pre-diabetes or insulin resistance can start damaging your nerves.`,
+          means even pre-diabetes or insulin resistance can start damaging your nerves. Diabetes comes in several forms that can damage nerves, including type 1 and type 2 diabetes, pre-diabetes and insulin resistance, metabolic syndrome, and slower-developing autoimmune diabetes (LADA). Managing blood sugar can help protect nerves.`,
         },
         {
           type: "paragraph",
@@ -87,11 +80,7 @@ export const causesContent = {
           text: `Autoimmune diseases are associated with small fiber 
           neuropathy, though the exact way they cause nerve damage isn't 
           always clear. In autoimmune conditions, your immune system mistakenly attacks 
-          healthy parts of your body, including your nerves.`,
-        },
-        {
-          type: "paragraph",
-          text: `These conditions can cause inflammation that damages the small nerve 
+          healthy parts of your body, including your nerves. These conditions can cause inflammation that damages the small nerve 
           fibers or affects the blood vessels that supply them. Some autoimmune 
           conditions are more likely to cause neuropathy than others.`,
         },
@@ -156,15 +145,7 @@ export const causesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Some medications and toxic substances can damage small nerve fibers. 
-          The good news is that stopping the harmful substance often prevents more damage and sometimes allows nerves 
-          to heal.`,
-        },
-        {
-          type: "paragraph",
-          text: `Don't stop taking any prescribed medications without talking to your 
-          doctor first. They can help you weigh the benefits and risks and may be 
-          able to switch you to a different medicine if needed.`,
+          text: `Some medications and toxic substances can damage small nerve fibers. The good news is that stopping the harmful substance often prevents more damage and sometimes allows nerves to heal. Don't stop taking any prescribed medications without talking to your doctor first. They can help you weigh the benefits and risks and may be able to switch you to a different medicine if needed.`,
         },
         {
           type: "paragraph",
@@ -187,13 +168,7 @@ export const causesContent = {
           type: "paragraph",
           text: `Some people inherit genes that make them more likely to develop small 
           fiber neuropathy. These genetic forms are less common than other causes, 
-          but they're important to recognize because they can affect family members.`,
-        },
-        {
-          type: "paragraph",
-          text: `Genetic neuropathies often start earlier in life and may progress 
-          differently than other types. If you have family members with similar 
-          symptoms, tell your doctor - this information can help with diagnosis.`,
+          but they're important to recognize because they can affect family members. Genetic neuropathies often start earlier in life and may progress differently than other types. If you have family members with similar symptoms, tell your doctor - this information can help with diagnosis.`,
         },
         {
           type: "paragraph",

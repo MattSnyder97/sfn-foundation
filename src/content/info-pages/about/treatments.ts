@@ -21,15 +21,7 @@ export const treatmentsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Living with Small Fiber Neuropathy can feel scary, but there are options. While there is no cure yet, many treatments can help control pain and improve daily life. The goal is to reduce symptoms and treat any health problems that may be causing your neuropathy.`,
-        },
-        {
-          type: "paragraph",
-          text: `Every person with SFN is different. What helps one person may not help another. Doctors often use several treatments together. This gives you a better chance of finding relief. The sooner you start treatment, the better you may feel.`,
-        },
-        {
-          type: "paragraph",
-          text: `Your treatment plan might include medicine, lifestyle changes, and other 
+          text: `Living with Small Fiber Neuropathy can feel scary, but there are options. While there is no cure yet, many treatments can help control pain and improve daily life. The goal is to reduce symptoms and treat any health problems that may be causing your neuropathy. Every person with SFN is different. What helps one person may not help another. Doctors often use several treatments together. This gives you a better chance of finding relief. The sooner you start treatment, the better you may feel. Your treatment plan might include medicine, lifestyle changes, and other 
           therapies. Working closely with your healthcare team is the best way to 
           find what works for you. Remember, managing SFN takes time, and it's okay 
           to try different things until you find the right mix.`,

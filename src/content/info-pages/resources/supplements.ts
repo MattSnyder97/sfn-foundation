@@ -21,15 +21,7 @@ export const supplementsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Supplements can help manage small fiber neuropathy when used with other treatments. They are not a cure, but some vitamins and nutrients may reduce nerve pain and support nerve health over time.`,
-        },
-        {
-          type: "paragraph",
-          text: `Some people with SFN have nutrient deficiencies that can worsen symptoms. Correcting vitamin and mineral deficiencies can help nerves work better and may slow damage. It is important to know which supplements have good research and are safe to use.`,
-        },
-        {
-          type: "paragraph",
-          text: `Talk to your doctor before starting new supplements, especially if you take prescription medicines. Supplements can interact with drugs or cause side effects. Your provider can help make a safe plan for you.`,
+          text: `Supplements can help manage small fiber neuropathy when used with other treatments. They are not a cure, but some vitamins and nutrients may reduce nerve pain and support nerve health over time. Some people with SFN have nutrient deficiencies that can worsen symptoms. Correcting vitamin and mineral deficiencies can help nerves work better and may slow damage. It is important to know which supplements have good research and are safe to use. Talk to your doctor before starting new supplements, especially if you take prescription medicines. Supplements can interact with drugs or cause side effects. Your provider can help make a safe plan for you.`,
         },
       ],
     },

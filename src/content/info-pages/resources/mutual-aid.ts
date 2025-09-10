@@ -18,11 +18,7 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Mutual aid means we help each other in our community. This page connects people who need help with those who can give it. Help can include money, accessibility needs, or urgent support.`,
-        },
-        {
-          type: "paragraph",
-          text: `Below are current ways to help people in our community. To add someone, please [contact us](/contact). Small acts of kindness can make a big difference.`,
+          text: `Mutual aid means we help each other in our community. This page connects people who need help with those who can give it. Help can include money, accessibility needs, or urgent support. Below are current ways to help people in our community. To add someone, please [contact us](/contact). Small acts of kindness can make a big difference.`,
         },
       ],
     },
@@ -56,7 +52,7 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Links on this page go to individual fundraisers. The SFN Foundation does not handle or receive these funds. Please decide for yourself before donating.`,
+          text: `Links on this page go to individual fundraisers. The SFN Foundation does not handle or receive these funds.`,
         },
       ],
     },
