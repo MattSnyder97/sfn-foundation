@@ -4,11 +4,7 @@ import { useState } from 'react';
 import { ClientSafeProvider } from 'next-auth/react';
 import Login, { LoginInput, LoginError } from '@/components/content/research/Login';
 
-interface SignInProps {
-  providers: Record<string, ClientSafeProvider>;
-}
-
-export default function SignIn({ providers }: SignInProps) {
+export default function SignIn() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);

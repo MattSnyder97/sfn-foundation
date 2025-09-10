@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/primitives/Button";
 import { researchArticles } from "@/content/info-pages/research/research-articles";

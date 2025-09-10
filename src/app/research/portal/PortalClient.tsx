@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import InfoHero from '@/components/content/info/InfoHero';
 import EmailSignInButton from '@/components/primitives/EmailSignInButton';
-import { FiLock, FiInfo } from 'react-icons/fi';
+import { FiLock } from 'react-icons/fi';
 
 function getGreeting() {
   const hour = new Date().getHours();

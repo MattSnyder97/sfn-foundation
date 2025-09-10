@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 import AnimatedCheck from '@/components/primitives/AnimatedCheck';
 import { FiInfo } from 'react-icons/fi';
 
-import InfoHero from '@/components/content/info/InfoHero';
+// InfoHero intentionally not used here; removed to satisfy lint
 
 export default function ContactPage() {
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
 			if (subjectInput && subjectSelectEl) {
 				subjectInput.value = subjectSelectEl.value;
 			}
-		} catch (e) {
+		} catch {
 			// no-op; fallback to existing values
 		}
 		// Convert form fields to URLSearchParams so the API route can parse them as urlencoded body

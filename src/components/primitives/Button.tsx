@@ -34,13 +34,14 @@ export function Button({ className, variant, size, href, ...props }: ButtonProps
   const classes = clsx(buttonVariants({ variant, size }), className);
   if (href) {
     // render as an anchor when href is provided (keeps visual styling)
-    // cast props to any because anchor accepts a slightly different set of attributes
+    const anchorProps = props as React.AnchorHTMLAttributes<HTMLAnchorElement>;
     return (
-      <a className={classes} href={href} {...(props as any)} />
+      <a className={classes} href={href} {...anchorProps} />
     );
   }
 
+  const buttonProps = props as React.ButtonHTMLAttributes<HTMLButtonElement>;
   return (
-    <button className={classes} {...(props as any)} />
+    <button className={classes} {...buttonProps} />
   );
 }
