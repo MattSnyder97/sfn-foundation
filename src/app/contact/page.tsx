@@ -5,6 +5,7 @@ import Footer from '@/components/core/Footer';
 import { Button } from '@/components/primitives/Button';
 import { useRef, useState } from 'react';
 import AnimatedCheck from '@/components/primitives/AnimatedCheck';
+import { FiInfo } from 'react-icons/fi';
 
 import InfoHero from '@/components/content/info/InfoHero';
 
@@ -23,6 +24,7 @@ export default function ContactPage() {
 	const [subjectSelect, setSubjectSelect] = useState('General Inquiry');
 	const [credentials, setCredentials] = useState('');
 	const credentialsRef = useRef<HTMLTextAreaElement | null>(null);
+	const nameRef = useRef<HTMLInputElement | null>(null);
 	const [messageText, setMessageText] = useState('');
 	const [formError, setFormError] = useState('');
 	const hiddenSubjectRef = useRef<HTMLInputElement | null>(null);
@@ -33,9 +35,8 @@ export default function ContactPage() {
 	// Auto-focus credentials when user selects portal access
 	function handleSubjectChange(val: string) {
 		setSubjectSelect(val);
-		if (val === 'Research Portal Access') {
-			setTimeout(() => credentialsRef.current?.focus(), 50);
-		}
+		// Focus the name input whenever a subject is selected to guide the user to provide contact info
+		setTimeout(() => nameRef.current?.focus(), 50);
 	}
 
 	const [isSending, setIsSending] = useState(false);
@@ -118,31 +119,36 @@ export default function ContactPage() {
 		<>
 			<Header />
 			<section>
-				{/* InfoHero replaces the Contact title */}
-				<InfoHero title="Contact" />
-				<form
-					ref={formRef}
-					className="space-y-6 container-padding mx-auto py-16"
+				<div className="bg-white rounded-2xl default-shadow w-full max-w-2xl mx-auto mt-8 md:mt-12 mb-12 md:mb-16 overflow-hidden">
+					{/* Filled header */}
+					<div className="w-full md:rounded-t-2xl" style={{ background: 'var(--color-primary)' }}>
+						<div className="px-6 md:px-8 py-8 md:py-8 text-offWhite">
+							<h3 className="text-4xl font-bold">Contact</h3>
+						</div>
+					</div>
+					<form
+						ref={formRef}
+						className="p-8 space-y-6"
 						action="/api/contact"
 						method="POST"
 						onSubmit={handleSubmitAsync}
-				>
+					>
 					{/* Hidden subject input that will contain the final subject value sent to Formspree */}
 					<input type="hidden" name="subject" ref={hiddenSubjectRef} />
 
 					{/* Subject select */}
 					<div>
-						<label htmlFor="subject_select" className="block mb-2 font-medium">Subject</label>
+						<label htmlFor="subject_select" className="block mb-2 font-semibold text-dark">Subject</label>
 						<select
 							id="subject_select"
 							name="subject_select"
 							value={subjectSelect}
 							onChange={e => handleSubjectChange(e.target.value)}
-							className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary"
+							className="w-full pl-4 pr-8 py-3 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
 							required
 						>
 							{SUBJECT_OPTIONS.map(opt => (
-								<option key={opt} value={opt}>{opt}</option>
+								<option key={opt} value={opt} className="hover:bg-primary/10">{opt}</option>
 							))}
 						</select>
 					</div>
@@ -150,29 +156,30 @@ export default function ContactPage() {
 					{/* No custom subject input; dropdown value is used for subject */}
 
 					<div>
-						<label htmlFor="name" className="block mb-2 font-medium">Name</label>
-									<input
-										type="text"
-										id="name"
-										name="name"
-										required
-										  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary"
-									/>
+						<label htmlFor="name" className="block mb-2 font-semibold text-dark">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									ref={nameRef}
+									required
+									  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
+								/>
 					</div>
 					<div>
-						<label htmlFor="email" className="block mb-2 font-medium">Email</label>
+						<label htmlFor="email" className="block mb-2 font-semibold text-dark">Email</label>
 									<input
 										type="email"
 										id="email"
 										name="email"
 										required
-										  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary"
+										  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
 									/>
 					</div>
 						{/* If requesting portal access, show credentials field and change message copy */}
 						{subjectSelect === 'Research Portal Access' && (
 							<div>
-								<label htmlFor="credentials" className="block mb-2 font-medium">Please enter your certifications, credentials, and other information proving your credibility to access the Research Portal</label>
+								<label htmlFor="credentials" className="block mb-2 font-semibold text-dark">Please enter your certifications, credentials, and other information proving your credibility to access the Research Portal</label>
 		                        <textarea
 									id="credentials"
 									name="credentials"
@@ -180,13 +187,13 @@ export default function ContactPage() {
 										value={credentials}
 										onChange={e => setCredentials(e.target.value)}
 									rows={4}
-									className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary"
+									className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
 								/>
 							</div>
 						)}
 
 						<div>
-							<label htmlFor="message" className="block mb-2 font-medium">{subjectSelect === 'Research Portal Access' ? 'Please tell us why you are wanting to request access to the Research Portal.' : 'Message'}</label>
+							<label htmlFor="message" className="block mb-2 font-semibold text-dark">{subjectSelect === 'Research Portal Access' ? 'Please tell us why you are wanting to request access to the Research Portal.' : 'Message'}</label>
 							<textarea
 								id="message"
 								name="message"
@@ -194,7 +201,7 @@ export default function ContactPage() {
 								onChange={e => setMessageText(e.target.value)}
 								required
 								rows={5}
-								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary"
+								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
 							/>
 						</div>
 								{formError && <div className="text-sm text-error">{formError}</div>}
@@ -216,7 +223,15 @@ export default function ContactPage() {
 										'Send Email'
 									)}
 								</Button>
-				</form>
+								{/* Small response/timeframe note */}
+								<div className="text-xs text-dark/60 mt-4 inline-flex items-start gap-1.5">
+									<FiInfo className="text-dark/60" size={20} />
+									<span>
+										We will try to respond to emails within 2-3 business days. If you are experiencing a medical emergency, please contact your local hospital or emergency services.
+									</span>
+								</div>
+							</form>
+					</div>
 			</section>
 			<Footer />
 		</>
