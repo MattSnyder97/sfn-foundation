@@ -7,7 +7,7 @@ export default function ResearchPortalPage() {
   return (
     <>
       <Header />
-      <div className="bg-offWhite min-h-screen flex flex-col">
+      <div className="bg-offWhite flex-1 flex flex-col">
         <PortalClient />
         <Footer />
       </div>

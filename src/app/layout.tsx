@@ -57,7 +57,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${lato.variable} ${lora.variable} font-sans antialiased bg-offWhite text-dark`}
+        className={`${lato.variable} ${lora.variable} font-sans antialiased bg-offWhite text-dark min-h-screen flex flex-col`}
       >
         <AuthProvider>
           <ScrollAndOutboundTracker />

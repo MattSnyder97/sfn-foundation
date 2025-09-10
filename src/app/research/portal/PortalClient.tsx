@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import InfoHero from '@/components/content/info/InfoHero';
 import EmailSignInButton from '@/components/primitives/EmailSignInButton';
 import { FiLock } from 'react-icons/fi';
@@ -43,8 +43,19 @@ export default function PortalClient() {
   }
   // Wrap portal content in a centered card similar to the Login component
   return (
-    <div className="bg-offWhite flex flex-col items-center py-12">
-      <div className="bg-white rounded-2xl default-shadow w-full max-w-md p-8 text-center">
+    <div className="bg-offWhite flex flex-col items-start sm:items-center justify-start sm:justify-center py-0 sm:py-12 px-0 w-full">
+      <div className="bg-white rounded-none sm:rounded-2xl default-shadow w-full max-w-none sm:max-w-md p-6 sm:p-8 text-center relative">
+        {/* Sign out button in top-right when signed in */}
+        {isSignedIn && (
+          <div className="absolute top-4 right-4">
+            <button
+              onClick={() => signOut({ callbackUrl: '/' })}
+              className="text-sm text-gray/80 underline"
+            >
+              Sign out
+            </button>
+          </div>
+        )}
         {/* Specialist: show hero and portal content inside card */}
         {isSignedIn && isSpecialist ? (
           <>

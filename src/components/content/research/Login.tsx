@@ -17,9 +17,9 @@ export default function Login({ title, subtitle, icon, actions, compact = false,
   const logoMb = compact ? 'mb-6' : 'mb-12';
 
   return (
-    <div className="min-h-screen bg-offWhite flex flex-col items-center justify-center">
-      <div className={`bg-white rounded-2xl default-shadow w-full max-w-md ${cardPadding} text-center`}>
-        <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className={`mx-auto ${logoMb}`} />
+    <div className="min-h-[100dvh] bg-offWhite flex flex-col items-center justify-center py-0 sm:py-12 px-0">
+      <div className={`bg-white rounded-none sm:rounded-2xl default-shadow w-full max-w-none sm:max-w-md ${cardPadding} text-center sm:min-h-auto`}>
+  <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className={`mx-auto ${logoMb} w-auto max-w-full`} />
 
         {icon && (
           <div className="flex items-center justify-center mb-8">
