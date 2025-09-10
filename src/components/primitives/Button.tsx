@@ -26,10 +26,21 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  href?: string;
+}
 
-export function Button({ className, variant, size, ...props }: ButtonProps) {
+export function Button({ className, variant, size, href, ...props }: ButtonProps) {
+  const classes = clsx(buttonVariants({ variant, size }), className);
+  if (href) {
+    // render as an anchor when href is provided (keeps visual styling)
+    // cast props to any because anchor accepts a slightly different set of attributes
+    return (
+      <a className={classes} href={href} {...(props as any)} />
+    );
+  }
+
   return (
-    <button className={clsx(buttonVariants({ variant, size }), className)} {...props} />
+    <button className={classes} {...(props as any)} />
   );
 }

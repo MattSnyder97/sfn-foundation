@@ -1,6 +1,6 @@
-import { Button } from "@/components/primitives/Button";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/primitives/Button";
 import { researchArticles } from "@/content/info-pages/research/research-articles";
 
 
@@ -26,124 +26,80 @@ function formatDate(dateStr: string) {
 }
 
 export function LatestNews() {
-  // Sort and get the 3 most recent articles
-  const sortedArticles = [...researchArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  const newsArticles = sortedArticles.slice(0, 3).map(article => ({
-    date: formatDate(article.date),
-    title: article.title,
-    href: article.link
-  }));
+  // Get research articles sorted newest-first
+  const sorted = [...researchArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const latestTwo = sorted.slice(0, 2);
 
-  const featuredArticle = {
-    variant: "style3",
-    title: newsArticles[0]?.title || "Placeholder Highlighted Research Article",
-    description: researchArticles[0]?.summary || "This section is currently in development. Please check back soon for updates!",
-    imageSrc: "/images/common/researchGuy.png",
-    href: newsArticles[0]?.href || "/research/latest"
+  // Highlighted mutual-aid entry (Beth Kris) — link to the mutual aid page anchor
+  const highlighted = {
+    title: "Support Beth Kris",
+    description: "Beth became disabled after taking four antibiotic pills and now faces thousands in costs for basic accessibility equipment. Your support can help her regain independence during this difficult time.",
+    href: "/resources/mutual-aid#beth-kris",
+    image: "/images/patient-stories/bethKris2.png",
   };
 
   return (
     <section id="news" className="bg-offWhite py-8">
       <div className="container-padding mx-auto">
-        {/* Mobile Layout - Stacked */}
-        <div className="lg:hidden space-y-12">
-          {/* Mobile Header */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-primary mb-6">
-              Latest Research
-            </h2>
+        <div className="bg-white rounded-2xl default-shadow p-6 md:p-12">
+          <div className="mb-10">
+            <h2 className="text-3xl md:text-3xl text-center md:text-left font-bold text-primary">Latest News</h2>
           </div>
 
-          {/* Mobile News Articles */}
-          <div className="space-y-6 text-center">
-            {newsArticles.map((article, index) => (
-              <div key={index} className="border-b border-gray-200 pb-4">
-                <p className="text-sm text-gray/70 mb-2">{article.date}</p>
-                <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
-                  <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile See More Button */}
-          <div className="text-center mb-24">
-            <Link href="/research">
-              <Button variant="outlinePrimary" aria-label="Read more latest news articles about small fiber neuropathy" size="md">See All Research</Button>
-            </Link>
-          </div>
-         
-          {/* Mobile Card */}
-          <div className="flex justify-center">
-            <div className="w-full">
-              <div className="rounded-xl default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 cursor-pointer bg-primary text-white">
-                <Image 
-                  src="/images/common/researchGuy.png" 
-                  alt="The Cure for SFN Has Never Been Closer"
-                  width={500}
-                  height={256}
-                  className="w-full object-cover h-64"
-                />
-                <div className="px-8 py-6">
-                  <h3 className="font-semibold text-lg text-white">{featuredArticle.title}</h3>
-                  <p className="mt-2 text-sm opacity-70 text-white">{featuredArticle.description}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-white">
-                    Learn more
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="w-3 h-3">
-                      <path d="M1 6.5H12M12 6.5L6.5 1M12 6.5L6.5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
+          {/* Highlighted item */}
+          <div className="mb-6">
+            <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow hover:bg-primary/8 transition-colors duration-120">
+              <div className="flex flex-col md:flex-row items-stretch gap-4">
+                <div className="flex-1">
+                  <span className="inline-block text-sm font-semibold text-warning bg-warning/10 px-3 py-1 rounded-full mb-3">Community Outreach</span>
+                  <h3 className="font-semibold text-2xl text-dark mb-2">{highlighted.title}</h3>
+                  <p className="text-sm text-gray-700 md:max-w-[90ch]">{highlighted.description}</p>
+                    <div className="mt-2 md:hidden">
+                      <span className="text-primary font-semibold text-sm inline-flex items-center">
+                        Read More
+                      </span>
+                    </div>
+                </div>
+                <div className="hidden md:block w-56 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                  <Image src={highlighted.image} alt={highlighted.title} width={320} height={200} className="object-cover w-full h-full" />
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-        </div>
 
-        {/* Desktop Layout - Side by Side */}
-        <div className="hidden lg:flex items-start justify-center gap-16">
-          {/* Left Content */}
-          <div className="flex-1 max-w-lg">
-            <h2 className="text-4xl font-bold text-primary mb-6">
-              Latest Research
-            </h2>
+          {/* Latest two research articles as long clickable rows */}
+          <div className="space-y-4">
+            {latestTwo.map((a, idx) => {
+              // normalize image paths like other lists in the repo
+              const raw = a.image || '/images/common/researchGuy.png';
+              const imgSrc = raw.startsWith('/public/') ? raw.replace(/^\/public/, '') : raw;
+              return (
+                <a key={idx} href={a.link} target="_blank" rel="noopener noreferrer" className="block rounded-xl p-6 border-gray/20 border-1 bg-white default-shadow hover:bg-primary/8 transition-colors duration-120">
+                  <div className="flex flex-col md:flex-row items-stretch gap-4">
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-lg text-dark mb-2">{a.title}</h4>
+                      <p className="text-sm text-gray-700 md:max-w-[70ch]">
+                        <span className="text-sm text-gray-500 mr-2">{formatDate(a.date)}</span>
+                        <span>{a.summary}</span>
+                      </p>
+                        <div className="mt-2 md:hidden">
+                          <span className="text-primary font-semibold text-sm inline-flex items-center">
+                            Read More
+                          </span>
+                        </div>
+                    </div>
+                    <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                      <Image src={imgSrc} alt={a.title} width={320} height={200} className="object-cover w-full h-full" />
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
 
-            {/* News Articles List */}
-            <div className="space-y-6 mb-10">
-              {newsArticles.map((article, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4">
-                  <p className="text-sm text-gray/70 mb-2">{formatDate(article.date)}</p>
-                  <h3 className="text-lg font-medium text-gray hover:text-primary hover:underline transition-colors">
-                    <a href={article.href} target="_blank" rel="noopener">{article.title}</a>
-                  </h3>
-                </div>
-              ))}
-            </div>
-
-            <Link href="/research">
-              <Button variant="outlinePrimary" aria-label="Read more latest news articles about small fiber neuropathy" size="md">See All Research</Button>
-            </Link>
-          </div>
-         
-          {/* Right Card - Force style3 with inline styles as fallback */}
-          <div className="flex-shrink-0 w-full max-w-sm">
-            <div className="rounded-xl default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 cursor-pointer bg-primary text-white">
-              <Image
-                src="/images/common/researchGuy.png" 
-                alt="The Cure for SFN Has Never Been Closer"
-                width={500}
-                height={256}
-                className="w-full object-cover h-64"
-              />
-              <div className="px-8 py-6">
-                <h3 className="font-semibold text-lg text-white">{featuredArticle.title}</h3>
-                <p className="mt-2 text-sm opacity-70 text-white">{featuredArticle.description}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-white">
-                  Learn more
-                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="w-3 h-3">
-                    <path d="M1 6.5H12M12 6.5L6.5 1M12 6.5L6.5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-              </div>
+            <div className="mt-6 flex justify-center md:justify-start">
+              <Button href="/research" variant="outlinePrimary" size="md" className="px-6 py-3">
+                See All News
+              </Button>
             </div>
           </div>
         </div>

@@ -95,6 +95,9 @@ export default function LatestNewsList() {
                   <span className="text-sm text-gray-500 mr-2">{formatDate(article.date)}</span>
                   <span className="text-md">{article.summary}</span>
                 </p>
+                  <div className="mt-2 md:hidden">
+                    <span className="text-primary font-semibold text-sm">Read More</span>
+                  </div>
               </div>
 
               <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">

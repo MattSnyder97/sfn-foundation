@@ -74,6 +74,10 @@ html {
     box-shadow: 0px 4px 8px 0px rgba(98, 109, 251, 0.05);
   }
 
+  .emphasis-shadow {
+    box-shadow: 0 6px 18px 0 rgba(81, 89, 207, 0.12);
+  }
+
   /* Responsive Scroll Margin */
   @media (min-width: 1025px) {
     [id] {

@@ -32,7 +32,7 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Beth Kris is a member of our community who faces major accessibility and health challenges after taking a fluoroquinolone antibiotic. She is working to regain independence but needs support from others.`,
+          text: `Two years ago, Beth was active and independent. After taking four pills of a fluoroquinolone antibiotic, her life changed completely. She became disabled and now uses a wheelchair. Beth cannot work, drive, or leave home alone. She lives with severe chronic pain and other health problems that keep getting worse. She has seen lots of doctors and tried many treatments, but she is still mostly bedridden. She cannot qualify for disability benefits because she lacks enough work credits.`,
         },
         {
           type: "image",
@@ -42,7 +42,7 @@ export const mutualAidContent = {
         },
         {
           type: "paragraph",
-          text: `Beth's GoFundMe is raising money for accessible housing, mobility aids, and essential needs. Your help can make a real difference.`,
+          text: `Beth needs help paying for basic accessibility items like a house ramp, car equipment for her wheelchair, and other mobility aids. These things cost thousands of dollars. Her health is getting worse, and she also faces the heartbreak of having to put down her elderly cat due to an aggressive tumor. Beth is grateful for any support as she fights to regain some independence. Even small donations can help her get the tools she needs to improve her quality of life.`,
         },
         {
           type: "paragraph",
