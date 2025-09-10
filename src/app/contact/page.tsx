@@ -28,32 +28,7 @@ export default function ContactPage() {
 	const hiddenSubjectRef = useRef<HTMLInputElement | null>(null);
 	const formRef = useRef<HTMLFormElement | null>(null);
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-		setFormError('');
-	const subjectValue = subjectSelect;
-		if (!subjectValue) {
-			e.preventDefault();
-			setFormError('Please choose a subject or enter a custom subject.');
-			return;
-		}
-
-	 	// If requesting portal access, require credentials and a reason message
-	 		if (subjectValue === 'Research Portal Access') {
-			if (!credentials.trim()) {
-				e.preventDefault();
-				setFormError('Please provide your certifications and credentials to request portal access.');
-				return;
-			}
-			if (!messageText.trim()) {
-				e.preventDefault();
-				setFormError('Please explain why you are requesting access to the Research Portal.');
-				return;
-			}
-		}
-
-		if (hiddenSubjectRef.current) hiddenSubjectRef.current.value = subjectValue;
-		// allow normal form submission to proceed
-	}
+	// (removed unused handleSubmit) - client uses handleSubmitAsync via onSubmit
 
 	// Auto-focus credentials when user selects portal access
 	function handleSubjectChange(val: string) {
@@ -68,6 +43,16 @@ export default function ContactPage() {
 
 	async function submitFormdata(form: HTMLFormElement) {
 		const action = form.action;
+		// Ensure the hidden subject input is populated from the select right before building the payload
+		try {
+			const subjectInput = form.querySelector<HTMLInputElement>('input[name="subject"]');
+			const subjectSelectEl = form.querySelector<HTMLSelectElement>('select[name="subject_select"]');
+			if (subjectInput && subjectSelectEl) {
+				subjectInput.value = subjectSelectEl.value;
+			}
+		} catch (e) {
+			// no-op; fallback to existing values
+		}
 		// Convert form fields to URLSearchParams so the API route can parse them as urlencoded body
 		const fd = new FormData(form);
 		const params = new URLSearchParams();

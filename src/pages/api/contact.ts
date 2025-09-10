@@ -9,21 +9,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     // Normalize body: Next.js may provide a parsed object or a raw urlencoded string
-    let body: any = req.body || {};
+    let body: unknown = req.body || {};
+
     if (typeof body === 'string') {
       try {
         body = Object.fromEntries(new URLSearchParams(body).entries());
-      } catch (e) {
-        // failed to parse, keep as string
+      } catch (parseErr) {
+        console.warn('Contact API: failed to parse urlencoded body', parseErr);
       }
     }
 
-    console.log('Contact API received keys:', Object.keys(body || {}), 'content-type:', req.headers['content-type']);
-    const subject = (body.subject || body.subject_select || '').toString().trim();
-    const name = (body.name || '').toString().trim();
-    const email = (body.email || '').toString().trim();
-    const message = (body.message || '').toString().trim();
-    const credentials = (body.credentials || '').toString().trim();
+    const asRecord = (x: unknown): Record<string, unknown> => (typeof x === 'object' && x !== null) ? x as Record<string, unknown> : {};
+    const record = asRecord(body);
+
+    console.log('Contact API received keys:', Object.keys(record || {}), 'content-type:', req.headers['content-type']);
+
+    const subject = String(record.subject ?? record.subject_select ?? '').trim();
+    const name = String(record.name ?? '').trim();
+    const email = String(record.email ?? '').trim();
+    const message = String(record.message ?? '').trim();
+    const credentials = String(record.credentials ?? '').trim();
 
     // Basic validation
     if (!subject) return res.status(400).json({ ok: false, error: 'Subject is required' });
@@ -61,8 +66,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Forward error details where possible
     return res.status(response.status || 502).json({ ok: false, error: data?.error || 'Forwarding failed', data });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Contact API error:', err);
-    return res.status(502).json({ ok: false, error: err?.message || 'Server error' });
+    const message = err instanceof Error ? err.message : String(err);
+    return res.status(502).json({ ok: false, error: message || 'Server error' });
   }
 }
