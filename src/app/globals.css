@@ -16,6 +16,7 @@ html {
   --color-dark: #54566E;
   --color-gray: #5B5D70;
   --color-warning: #ff8b6e;
+  --color-error: #ff5d95;
 
   /* Fonts */
   --font-sans: 'Lato', sans-serif;

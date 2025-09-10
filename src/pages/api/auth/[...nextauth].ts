@@ -38,8 +38,8 @@ export const authOptions: NextAuthOptions = {
             <body style="background:#f3f4f6;padding:32px 12px;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
               <div style="max-width:520px;margin:0 auto;">
                 <div style="background:#ffffff;border-radius:14px;box-shadow:0 6px 18px rgba(16,24,40,0.06);padding:28px;text-align:center;">
-                  <h1 style="margin:0 0 12px 0;font-size:20px;color:#5B5D70;line-height:1.2;font-weight:700;">SFN Foundation Research Portal</h1>
-                  <p style="margin:0 0 18px 0;color:#374151;font-size:15px;line-height:1.4">Click the button below to securely sign in to your account. This link will expire shortly for your safety.</p>
+                  <h1 style="margin:0 0 12px 0;font-size:32px;color:#5B5D70;line-height:1.2;font-weight:700;">SFN Foundation Research Portal</h1>
+                  <p style="margin:0 0 18px 0;color:#374151;font-size:18px;line-height:1.4">Click the button below to securely sign in to your account. This link will expire shortly for your safety.</p>
 
                   <div style="text-align:center;margin:20px 0;">
                     <a href="${url}"
