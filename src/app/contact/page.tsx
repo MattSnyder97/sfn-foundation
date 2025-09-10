@@ -119,9 +119,9 @@ export default function ContactPage() {
 		<>
 			<Header />
 			<section>
-				<div className="bg-white rounded-2xl default-shadow w-full max-w-2xl mx-auto mt-8 md:mt-12 mb-12 md:mb-16 overflow-hidden">
+				<div className="bg-white rounded-none sm:rounded-2xl default-shadow w-full max-w-2xl mx-auto mt-0 md:mt-12 mb-0 md:mb-16 overflow-hidden">
 					{/* Filled header */}
-					<div className="w-full md:rounded-t-2xl" style={{ background: 'var(--color-primary)' }}>
+					<div className="w-full sm:rounded-t-2xl" style={{ background: 'var(--color-primary)' }}>
 						<div className="px-6 md:px-8 py-8 md:py-8 text-offWhite">
 							<h3 className="text-4xl font-bold">Contact</h3>
 						</div>
@@ -179,7 +179,7 @@ export default function ContactPage() {
 						{/* If requesting portal access, show credentials field and change message copy */}
 						{subjectSelect === 'Research Portal Access' && (
 							<div>
-								<label htmlFor="credentials" className="block mb-2 font-semibold text-dark">Please enter your certifications, credentials, and other information proving your credibility to access the Research Portal</label>
+								<label htmlFor="credentials" className="block mb-2 font-semibold text-dark">Please enter your certifications and other information proving your credibility.</label>
 		                        <textarea
 									id="credentials"
 									name="credentials"
@@ -193,7 +193,7 @@ export default function ContactPage() {
 						)}
 
 						<div>
-							<label htmlFor="message" className="block mb-2 font-semibold text-dark">{subjectSelect === 'Research Portal Access' ? 'Please tell us why you are wanting to request access to the Research Portal.' : 'Message'}</label>
+							<label htmlFor="message" className="block mb-2 font-semibold text-dark">{subjectSelect === 'Research Portal Access' ? 'Why you are wanting to request access to the Research Portal?' : 'Message'}</label>
 							<textarea
 								id="message"
 								name="message"
@@ -205,29 +205,32 @@ export default function ContactPage() {
 							/>
 						</div>
 								{formError && <div className="text-sm text-error">{formError}</div>}
-								<Button
-									type="submit"
-									variant={'outlinePrimary'}
-									size="md"
-									disabled={isSent || isSending}
-									className={isSent ? 'border-tertiary text-tertiary hover:text-tertiary hover:bg-transparent' : ''}
-								>
-									{isSent ? (
-										<span className="inline-flex items-center gap-2">
-											<AnimatedCheck size={20} />
-											<span className="text-tertiary">Email Sent</span>
-										</span>
-									) : isSending ? (
-										'Sending...'
-									) : (
-										'Send Email'
-									)}
-								</Button>
-								{/* Small response/timeframe note */}
-								<div className="text-xs text-dark/60 mt-4 inline-flex items-start gap-1.5">
-									<FiInfo className="text-dark/60" size={20} />
+
+								<div className="flex justify-center md:justify-start">
+									<Button
+										type="submit"
+										variant={'outlinePrimary'}
+										size="md"
+										disabled={isSent || isSending}
+										className={`${isSent ? 'border-tertiary text-tertiary hover:text-tertiary hover:bg-transparent' : ''}`}
+									>
+										{isSent ? (
+											<span className="inline-flex items-center gap-2">
+												<AnimatedCheck size={20} />
+												<span className="text-tertiary">Email Sent</span>
+											</span>
+										) : isSending ? (
+											'Sending...'
+										) : (
+											'Send Email'
+										)}
+									</Button>
+								</div>
+
+								<div className="text-xs text-dark/60 mt-2 inline-flex text-center md:text-left items-center md:items-start gap-2">
+									<FiInfo className="text-dark/60 mt-1 hidden md:inline-block" size={24} />
 									<span>
-										We will try to respond to emails within 2-3 business days. If you are experiencing a medical emergency, please contact your local hospital or emergency services.
+										We will try to respond to emails within 2-3 business days. If you are experiencing a medical emergency, please contact your local hospital or emergency services immediately.
 									</span>
 								</div>
 							</form>
