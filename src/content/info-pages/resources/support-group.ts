@@ -19,7 +19,7 @@ export const supportGroupContent = {
       content: [
         {
           type: "paragraph",
-          text: `Living with small fiber neuropathy can feel isolating. Our Discord support group connects people worldwide for live chat, advice, and encouragement. You can ask questions, share experiences, or just talk with others who understand.`,
+          text: `Living with small fiber neuropathy can feel isolating. Our Discord support group connects people worldwide for making connections, getting advice, and encouragement. You can ask questions, share experiences, or just talk with others who understand.`,
         },
         {
           type: "button",
@@ -44,7 +44,7 @@ export const supportGroupContent = {
         },
         {
           type: "paragraph",
-          text: `Discord also supports group activities like movie nights, book clubs, or meditation sessions. These events help build friendships and offer breaks from chronic pain. Voice and video options let members connect more personally when they want to.`,
+          text: `Discord also supports group activities like movie nights, book clubs, or gaming sessions. These events help build friendships and offer breaks from chronic pain. Voice and video options let members connect more personally when they want to.`,
         },
       ],
     },
