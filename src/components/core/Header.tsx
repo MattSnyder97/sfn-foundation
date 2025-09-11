@@ -216,9 +216,9 @@ const navLinks = [
                             target={item.target}
                             rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                             role="menuitem"
-                            ref={(el: any) => {
+                            ref={(el: HTMLElement | null) => {
                               if (!menuItemRefs.current[link.label]) menuItemRefs.current[link.label] = [];
-                              menuItemRefs.current[link.label][idx] = el;
+                              menuItemRefs.current[link.label][idx] = el as HTMLElement;
                             }}
                             tabIndex={0}
                             className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"

@@ -30,7 +30,7 @@ export const AccordionTrigger = ({ children }: { children: React.ReactNode }) =>
             // click to open (Radix will handle state)
             btn.click();
           }
-        } catch (err) {
+        } catch {
           // no-op on any error
         }
       }}

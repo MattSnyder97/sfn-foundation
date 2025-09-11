@@ -29,9 +29,7 @@ function formatDate(dateStr: string) {
   return `${months[month - 1]} ${day}${getOrdinal(day)}, ${year}`;
 }
 
-// Display summaries with a controlled max-width (in characters) so lines wrap predictably
-// Adjust MAX_CH to change where the line breaks (uses the 'ch' unit which approximates character width)
-const MAX_SUMMARY_CH = 64;
+// Display summaries with a controlled max-width so lines wrap predictably
 
 export default function LatestNewsList() {
   const [page, setPage] = useState(0);
