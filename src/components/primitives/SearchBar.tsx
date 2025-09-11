@@ -143,7 +143,7 @@ export default function SearchBar() {
         className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow focus-within:ring-2 focus-within:ring-primary h-full"
         style={{ minHeight: '3.5rem' }}
       >
-        <Search className="h-4 w-4 text-gray-500" />
+        <Search className="h-4 w-4 text-gray" />
         <div className="relative w-full">
           <input
             ref={inputRef}
@@ -169,7 +169,7 @@ export default function SearchBar() {
               title="Clear search"
               className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 flex items-center justify-center rounded-full hover:bg-gray-100"
             >
-              <X className="h-5 w-5 text-gray-500" />
+              <X className="h-5 w-5 text-gray" />
             </button>
           )}
         </div>
@@ -191,7 +191,7 @@ export default function SearchBar() {
                       className="block px-5 py-4 text-lg transition-colors duration-150 rounded-none hover:bg-primary/10 focus:bg-primary/20"
                       style={{ fontSize: '1.15rem' }}
                     >
-                      <div className="text-sm text-gray-600 mb-1">
+                      <div className="text-sm text-gray mb-1">
                         <span className="font-medium text-primary">&quot;{query}&quot;</span> on <span className="text-dark">{res.pageTitle} Page</span>
                       </div>
                       <div className="font-semibold text-dark mb-1">{res.sectionTitle}</div>
@@ -200,7 +200,7 @@ export default function SearchBar() {
                 ))}
               </ul>
             ) : (
-              <div className="px-5 py-4 text-sm text-gray-600">No results found</div>
+              <div className="px-5 py-4 text-sm text-gray">No results found</div>
             )}
           </div>
         </div>

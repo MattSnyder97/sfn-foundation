@@ -73,7 +73,7 @@ export default function LatestNewsList() {
   };
 
   if (!sortedArticles || sortedArticles.length === 0) {
-    return <div className="text-gray-500">No research articles available yet.</div>;
+    return <div className="text-gray">No research articles available yet.</div>;
   }
 
   return (
@@ -93,8 +93,8 @@ export default function LatestNewsList() {
             <div className="flex flex-col md:flex-row items-stretch gap-4">
               <div className="flex-1">
                 <h3 className="font-semibold text-lg mb-2 text-dark">{article.title}</h3>
-                <p className="text-md text-gray-700">
-                  <span className="text-sm text-gray-500 mr-2">{formatDate(article.date)}</span>
+                <p className="text-md text-gray">
+                  <span className="text-sm text-gray mr-2">{formatDate(article.date)}</span>
                   <span className="text-md">
                     {/* Use static classes so Tailwind can generate these rules; responsive: tighter on small screens */}
                     <span className="inline-block max-w-[45ch] md:max-w-[60ch] break-words whitespace-normal">{article.summary}</span>

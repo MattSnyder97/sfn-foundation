@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   // Persistent, visible focus styles for keyboard users
-  const focusClasses = "focus:outline-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-90";
+  const focusClasses = "focus:outline-none focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-90";
 
   return (
     <footer className="w-full bg-primary text-white print:hidden">

@@ -52,7 +52,7 @@ export function LatestNews() {
                 <div className="flex-1">
                   <span className="inline-block text-sm font-semibold text-dark bg-tertiary/24 px-3 py-1 rounded-full mb-3">Community Outreach</span>
                   <h3 className="font-semibold text-2xl text-dark mb-2">{highlighted.title}</h3>
-                  <p className="text-md text-gray-700 md:max-w-[90ch]">{highlighted.description}</p>
+                  <p className="text-md text-gray md:max-w-[90ch]">{highlighted.description}</p>
                     <div className="mt-2 md:hidden">
                       <span className="text-primary font-semibold text-sm inline-flex items-center">
                         Read More
@@ -77,7 +77,7 @@ export function LatestNews() {
                   <div className="flex flex-col md:flex-row items-stretch gap-4">
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg text-dark mb-2">{a.title}</h4>
-                      <p className="text-md text-gray-700 md:max-w-[70ch]">
+                      <p className="text-md text-gray md:max-w-[70ch]">
                         <span className="text-sm text-gray mr-2">{formatDate(a.date)}</span>
                         <span>{a.summary}</span>
                       </p>
