@@ -1,7 +1,6 @@
 import { getProviders, signIn } from 'next-auth/react';
 import { Button } from '../../components/primitives/Button';
 import { useState } from 'react';
-import { ClientSafeProvider } from 'next-auth/react';
 import ActionCard, { ActionCardInput, ActionCardError } from '@/components/content/research/ActionCard';
 
 export default function SignIn() {

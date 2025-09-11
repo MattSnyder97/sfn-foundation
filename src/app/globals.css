@@ -61,6 +61,37 @@ html {
   }
 }
 
+/* Accessible skip link and focus styles */
+@layer utilities {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -40px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    z-index: 9999;
+    transition: top 160ms ease, transform 160ms ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+    transform: translateY(0);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(81,89,207,0.18);
+  }
+
+  /* Respect user agent focus handling but provide a clear visible focus when keyboard navigating */
+  :focus:not(:focus-visible) {
+    /* keep visual noise down for mouse interactions */
+    outline: none;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
 /* ===== Utilities ===== */
 @layer utilities {
   .container-padding {

@@ -25,9 +25,6 @@ export const metadata: Metadata = {
   description:
     "Our foundation strives to cure small fiber neuropathy and give you the support you need until that day comes.",
   metadataBase: new URL('https://sfn-foundation.org'),
-  alternates: {
-    canonical: '/',
-  },
 };
 
 export default function RootLayout({
@@ -60,9 +57,13 @@ export default function RootLayout({
         className={`${lato.variable} ${lora.variable} font-sans antialiased bg-offWhite text-dark min-h-screen flex flex-col`}
       >
         <AuthProvider>
+          {/* Skip link for keyboard users */}
+          <a id="skip-to-content-link" href="#content" className="skip-link">Skip to Main Content</a>
           <ScrollAndOutboundTracker />
             <TitleOverride />
-          {children}
+          <main id="content" tabIndex={-1}>
+            {children}
+          </main>
         </AuthProvider>
         {/* JSON-LD Organization for SEO */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,6 +73,68 @@ export default function RootLayout({
           "url": "https://sfn-foundation.org",
           "logo": "https://sfn-foundation.org/logos/logo.png"
         }) }} />
+                {/* Ensure skip-to-content actually focuses the main element across browsers */}
+                <Script id="skip-to-content" strategy="afterInteractive">
+                  {`(function(){
+                    function findMain(){
+                      // prefer an explicit page-level skip target when present
+                      return document.querySelector('[data-skip-target="true"]') || document.getElementById('content') || document.querySelector('main') || document.querySelector('[role="main"]');
+                    }
+
+                    function firstFocusable(container){
+                      if(!container) return null;
+                      try{
+                        return container.querySelector('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"]), [contenteditable="true"], summary');
+                      }catch(e){return null;}
+                    }
+
+                    function focusElement(el){
+                      try{
+                        var child = firstFocusable(el);
+                        if(child){ child.focus(); child.scrollIntoView({block:'nearest'}); return; }
+                        if(el && typeof el.focus === 'function'){
+                          el.focus({preventScroll:true});
+                        }
+                        if(el && typeof el.scrollIntoView === 'function'){
+                          el.scrollIntoView();
+                        }
+                      }catch(e){}
+                    }
+
+                    function focusMainWithRetries(tries){ var el = findMain(); if(el){ focusElement(el); return true; } if(tries>0){ setTimeout(function(){ focusMainWithRetries(tries-1); }, 100); } return false; }
+
+                    // initial hash-case
+                    if (typeof window !== 'undefined' && window.location && window.location.hash === '#content') { setTimeout(function(){ focusMainWithRetries(10); }, 0); }
+
+                    // hash changes
+                    window.addEventListener('hashchange', function(){ if(window.location.hash === '#content') focusMainWithRetries(10); });
+
+                    // SPA navigation: emit locationchange on history API calls
+                    (function(){
+                      var _wr = function(type){
+                        var orig = history[type];
+                        return function(){
+                          var rv = orig.apply(this, arguments);
+                          try{ window.dispatchEvent(new Event('locationchange')); }catch(e){}
+                          return rv;
+                        };
+                      };
+                      history.pushState = _wr('pushState');
+                      history.replaceState = _wr('replaceState');
+                      window.addEventListener('popstate', function(){ window.dispatchEvent(new Event('locationchange')); });
+                    })();
+
+                    // when SPA navigation happens, try to focus main
+                    window.addEventListener('locationchange', function(){ focusMainWithRetries(10); });
+
+                    // bind directly to skip link
+                    function onSkipClick(e){ e.preventDefault(); focusMainWithRetries(10); }
+                    var skip = document.getElementById('skip-to-content-link');
+                    if(skip){ skip.addEventListener('click', onSkipClick); skip.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); focusMainWithRetries(10); } }); }
+                    else { /* retry binding if element appears later */ setTimeout(function(){ var s=document.getElementById('skip-to-content-link'); if(s){ s.addEventListener('click', onSkipClick); s.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); focusMainWithRetries(10); } }); } }, 200);
+                    }
+                  })();`}
+                </Script>
       </body>
     </html>
   );

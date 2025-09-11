@@ -44,7 +44,7 @@ function deriveAltFromSrc(src: string) {
       .trim();
     if (!spaced) return 'Image';
     return `Image of ${spaced.toLowerCase()}`;
-  } catch (e) {
+  } catch {
     return 'Image';
   }
 }

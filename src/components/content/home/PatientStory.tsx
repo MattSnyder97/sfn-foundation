@@ -31,7 +31,7 @@ export function PatientStory() {
             </blockquote>
            
             <p className="text-lg opacity mb-6">
-              — Matt, 28 years old, diagnosed in 2024
+              Matt, 28 years old, diagnosed in 2024
             </p>
 
             <Link

@@ -35,16 +35,16 @@ export default function PortalClient() {
 
   if (status === 'loading') {
     return (
-      <main className="flex-1 flex items-center justify-center">
+    <div role="main" data-skip-target="true" tabIndex={-1} className="flex-1 flex items-center justify-center">
         <div role="status" aria-label="Loading" className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
           <span className="sr-only">Loading</span>
         </div>
-      </main>
+      </div>
     );
   }
   return (
-    <div className={`bg-offWhite flex flex-col items-start sm:items-center justify-start sm:justify-center py-0 ${isSignedIn && isSpecialist ? 'sm:py-0' : 'sm:py-12'} px-0 w-full relative`}>
+    <div className={`bg-offWhite flex flex-col items-start sm:items-center justify-start sm:justify-center py-0 ${isSignedIn && isSpecialist ? 'sm:py-0' : 'sm:py-12'} px-0 w-full relative`} data-skip-target="true" tabIndex={-1}>
         {/* Sign out button in top-right when signed in */}
         {isSignedIn && (
           <div className="absolute top-4 right-4 z-50">

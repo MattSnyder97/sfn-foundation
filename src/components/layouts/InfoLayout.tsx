@@ -87,7 +87,7 @@ export default function InfoLayout({
     <>
       <Header />
       <InfoHero title={pageTitle} />
-      <main className="bg-offWhite">
+  <div role="main" className="bg-offWhite">
         <div className="container-padding mx-auto py-16">
           <div className="flex gap-4">
             {/* Sidebar */}
@@ -97,9 +97,9 @@ export default function InfoLayout({
                   className="sticky"
                   style={{ top: "calc(var(--header-height) - 32px)" }}
                 >
-                  <h3 className="text-lg font-semibold text-dark mb-4">
+                  <div className="text-lg font-semibold text-dark mb-4">
                     On this page
-                  </h3>
+                  </div>
                   <nav className="space-y-2">
                     {tableOfContents.map((item) => (
                       <a
@@ -121,11 +121,11 @@ export default function InfoLayout({
 
             {/* Main Content */}
             <div className="flex-1 max-w-auto">
-              <article className="bg-white rounded-[16px] px-8 md:px-12 py-12 default-shadow print-content">
+              <div className="bg-white rounded-[16px] px-8 md:px-12 py-12 default-shadow print-content">
                 {children}
 
                 {showActions && <InfoActions title={pageTitle} />}
-              </article>
+              </div>
 
               {showRelated && currentTags.length > 0 && (
                 <RelatedPages
@@ -136,7 +136,7 @@ export default function InfoLayout({
             </div>
           </div>
         </div>
-      </main>
+  </div>
       <Footer />
     </>
   );

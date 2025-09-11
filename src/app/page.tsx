@@ -11,13 +11,13 @@ export default function Home() {
     <>
       <Header />
 
-       <main className="space-y-18 pb-18"> 
+  <div role="main" data-skip-target="true" tabIndex={-1} className="space-y-18 pb-18"> 
         <Hero />
         <FeaturedCards />
         <FAQs />
         <PatientStory />
         <LatestNews />
-      </main>
+  </div>
 
       <Footer />
     </>
