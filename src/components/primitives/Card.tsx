@@ -52,7 +52,7 @@ export function Card({ variant, title, description, imageSrc, href }: CardProps)
       )}
       <div className="px-8 py-6">
         <h3 className="font-semibold text-lg text-shadow-subtle">{title}</h3>
-        <p className="mt-2 text-sm opacity-70 text-shadow-nearInvisible">{description}</p>
+        <p className="mt-2 text-sm text-shadow-nearInvisible">{description}</p>
         <span className={clsx("mt-4 inline-flex items-center gap-2", linkClasses)}>
           Learn more 
           <Image 

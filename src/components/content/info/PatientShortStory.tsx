@@ -56,7 +56,7 @@ const PatientShortStory: React.FC<PatientShortStoryProps> = ({ author, children 
         fontSize: '0.875rem',
         width: '100%',
       }}>
-        {author && <span className="italic font-medium text-gray-500">{author}</span>}
+        {author && <span className="italic font-medium text-gray">{author}</span>}
       </footer>
     </blockquote>
   );

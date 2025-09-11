@@ -9,7 +9,7 @@ export interface ResearchArticle {
 export const researchArticles: ResearchArticle[] = [
       {
       title: "From Pain-Centric to Multi-Symptom Small Fiber Neuropathy",
-      summary: "This study aimed to characterize the symptomatic variability of SFN and determine whether patients can be stratified into clinically meaningful subgroups.",
+      summary: "This study aimed to characterize the symptomatic variability of SFN and determine whether patients can be stratified into meaningful subgroups.",
       link: "https://onlinelibrary.wiley.com/doi/10.1111/ene.70321",
       date: "2025-08-25",
   image: "/images/common/chestThroatPain.jpg"

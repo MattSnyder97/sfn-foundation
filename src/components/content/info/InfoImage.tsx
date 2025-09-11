@@ -25,7 +25,7 @@ export default function InfoImage({ src, alt, caption }: InfoImageProps) {
         />
       </div>
       {caption && (
-        <figcaption className="mt-4 text-left text-sm text-gray/70">
+        <figcaption className="mt-2 text-left text-sm text-gray">
           {caption}
         </figcaption>
       )}

@@ -30,7 +30,7 @@ export function PatientStory() {
               &quot;Small fiber neuropathy is a battle, but I have learned ways to cope with it from others.&quot;
             </blockquote>
            
-            <p className="text-lg opacity-70 mb-6">
+            <p className="text-lg opacity mb-6">
               — Matt, 28 years old, diagnosed in 2024
             </p>
 
@@ -65,7 +65,7 @@ export function PatientStory() {
               &quot;Small fiber neuropathy is a battle, but I have learned ways to cope with it from others.&quot;
             </blockquote>
       
-            <p className="text-base opacity-70 mb-8 text-shadow-subtle">
+            <p className="text-base opacity mb-8 text-shadow-subtle">
               Matt, 28 years old, diagnosed in 2024
             </p>
 
