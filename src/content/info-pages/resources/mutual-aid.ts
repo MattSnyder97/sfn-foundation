@@ -1,6 +1,6 @@
 export const mutualAidContent = {
   slug: "/resources/mutual-aid",
-  tags: ["resources"],
+  tags: ["community-support", "resources"],
   hero: {
     title: "Mutual Aid",
   },

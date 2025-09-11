@@ -18,7 +18,6 @@ export default function ContactPage() {
 		'Feedback / Suggestion',
 		'Media / Press',
 		'Research Portal Access',
-		'SFN Question',
 		'Other',
 	];
 
@@ -139,7 +138,7 @@ export default function ContactPage() {
 				<div className="bg-white rounded-none sm:rounded-2xl default-shadow w-full max-w-2xl mx-auto mt-0 md:mt-12 mb-0 md:mb-16 overflow-hidden">
 					{/* Filled header */}
 					<div className="w-full sm:rounded-t-2xl" style={{ background: 'var(--color-primary)' }}>
-						<div className="px-6 md:px-8 py-8 md:py-8 text-offWhite">
+						<div className="px-6 md:px-8 py-8 md:py-8 text-white">
 							<h3 className="text-4xl font-bold">Contact</h3>
 						</div>
 					</div>

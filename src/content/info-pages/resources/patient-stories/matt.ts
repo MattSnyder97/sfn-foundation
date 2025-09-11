@@ -1,6 +1,6 @@
 export const mattContent = {
   slug: "/resources/patient-stories/matt",
-  tags: ["patient story"],
+  tags: ["patient-stories", "community-support"],
   hero: {
     title: "Matt's Journey with Small Fiber Neuropathy",
   },

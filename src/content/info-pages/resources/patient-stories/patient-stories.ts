@@ -1,6 +1,6 @@
 export const patientStoriesContent = {
   slug: "/resources/patient-stories",
-  tags: ["patient-stories"],
+  tags: ["patient-stories", "community-support"],
   hero: {
     title: "Patient Stories",
   },
