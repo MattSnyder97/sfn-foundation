@@ -4,7 +4,6 @@ import Header from '@/components/core/Header';
 import Footer from '@/components/core/Footer';
 import { Button } from '@/components/primitives/Button';
 import { useRef, useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
 import AnimatedCheck from '@/components/primitives/AnimatedCheck';
 import { FiInfo } from 'react-icons/fi';
 
@@ -44,15 +43,16 @@ export default function ContactPage() {
 	const [isSent, setIsSent] = useState(false);
 
 	// Preselect subject when coming from a link with ?subject=... (e.g. from the Research Portal action card)
-	const searchParams = useSearchParams();
-useEffect(() => {
-	const qs = searchParams?.get('subject');
-	if (qs) {
-		setSubjectSelect(qs);
-		// auto-focus name input to guide the user
-		setTimeout(() => nameRef.current?.focus(), 50);
-	}
-}, [searchParams]);
+	useEffect(() => {
+	  if (typeof window === 'undefined') return;
+	  const params = new URLSearchParams(window.location.search);
+	  const qs = params.get('subject');
+	  if (qs) {
+	    setSubjectSelect(qs);
+	    // auto-focus name input to guide the user
+	    setTimeout(() => nameRef.current?.focus(), 50);
+	  }
+	}, []);
 
 	async function submitFormdata(form: HTMLFormElement) {
 		const action = form.action;
