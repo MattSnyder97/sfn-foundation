@@ -106,7 +106,7 @@ export default function LatestNewsList() {
               </div>
 
               <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100 default-shadow">
-                <Image src={imgSrc} alt={article.title} width={320} height={200} className="object-cover w-full h-full" />
+                <Image src={imgSrc} alt={article.imageAlt || article.title} width={320} height={200} className="object-cover w-full h-full" />
               </div>
             </div>
           </a>

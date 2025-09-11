@@ -55,11 +55,11 @@ export function Card({ variant, title, description, imageSrc, href }: CardProps)
         <p className="mt-2 text-sm text-shadow-nearInvisible">{description}</p>
         <span className={clsx("mt-4 inline-flex items-center gap-2", linkClasses)}>
           Learn more 
-          <Image 
-            src="/icons/arrowRight.svg" 
-            alt="" 
-            width={13} 
-            height={13} 
+          <Image
+            src="/icons/arrowRight.svg"
+            alt="arrow pointing right"
+            width={13}
+            height={13}
             className="w-3 h-3"
           />
         </span>

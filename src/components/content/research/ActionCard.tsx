@@ -25,7 +25,7 @@ export default function ActionCard({ title, subtitle, icon, actions, compact = f
         <div className="w-full sm:rounded-t-2xl" style={{ background: 'var(--color-primary)' }}>
           <div className="px-6 md:px-8 py-8 md:py-8 text-offWhite">
             <div className="flex items-center justify-center">
-              <Image src="/logos/logoWhite.svg" alt="SFN Foundation" width={285} height={41} className="" />
+              <Image src="/logos/logoWhite.svg" alt="SFN Foundation logo" width={285} height={41} className="" />
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function ActionCard({ title, subtitle, icon, actions, compact = f
         <div className={`p-8 ${cardPadding} text-center`}>
           {/* Show logo above content only when topLogoBanner is not present */}
           {!topLogoBanner && (
-            <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className={`mx-auto ${logoMb} w-auto max-w-full`} />
+            <Image src="/logos/logo.svg" alt="SFN Foundation logo" width={285} height={41} className={`mx-auto ${logoMb} w-auto max-w-full`} />
           )}
 
           {icon && (
@@ -73,7 +73,7 @@ export default function ActionCard({ title, subtitle, icon, actions, compact = f
 
   const innerDefault = (
     <div className={`bg-white rounded-none sm:rounded-2xl default-shadow w-full max-w-none sm:max-w-md ${cardPadding} text-center sm:min-h-auto`}>
-        <Image src="/logos/logo.svg" alt="SFN Foundation" width={285} height={41} className={`mx-auto ${logoMb} w-auto max-w-full`} />
+  <Image src="/logos/logo.svg" alt="SFN Foundation logo" width={285} height={41} className={`mx-auto ${logoMb} w-auto max-w-full`} />
 
         {icon && (
           <div className="flex items-center justify-center mb-8">

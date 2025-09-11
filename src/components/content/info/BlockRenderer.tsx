@@ -26,8 +26,27 @@ interface ListBlock extends ContentBlock {
 interface ImageBlock extends ContentBlock {
   type: "image";
   src: string;
-  alt: string;
+  alt?: string;
   caption?: string;
+}
+
+// Derive a readable alt text from an image filename, e.g. "chestThroatPain.jpg" -> "Image of chest throat pain"
+function deriveAltFromSrc(src: string) {
+  try {
+    const parts = src.split('/');
+    const filename = parts[parts.length - 1] || src;
+    const name = filename.replace(/\.[^.]+$/, ''); // remove extension
+    // split on non-word chars and camelCase boundaries
+    const spaced = name
+      .replace(/([a-z])([A-Z])/g, '$1 $2')
+      .replace(/[_-]+/g, ' ')
+      .replace(/\W+/g, ' ')
+      .trim();
+    if (!spaced) return 'Image';
+    return `Image of ${spaced.toLowerCase()}`;
+  } catch (e) {
+    return 'Image';
+  }
 }
 
 interface ComponentBlock extends ContentBlock {
@@ -55,8 +74,13 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
       return <InfoParagraph>{(block as ParagraphBlock).text}</InfoParagraph>;
     case "list":
       return <InfoList ordered={(block as ListBlock).ordered} items={(block as ListBlock).items} />;
-    case "image":
-      return <InfoImage src={(block as ImageBlock).src} alt={(block as ImageBlock).alt} caption={(block as ImageBlock).caption} />;
+    case "image": {
+      const img = block as ImageBlock;
+      // Prefer explicit alt from content; fall back to caption, then derive from filename
+      const explicitAlt = img.alt && img.alt.trim();
+      const altText = explicitAlt || img.caption || deriveAltFromSrc(img.src);
+      return <InfoImage src={img.src} alt={altText} caption={img.caption} />;
+    }
     case "button": {
       const { label, href, variant } = block as ButtonBlock;
       const variantClasses = {

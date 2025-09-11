@@ -148,7 +148,7 @@ export default function Footer() {
               <span>Scroll to Top</span>
               <Image
                 src="/icons/arrowUp.svg"
-                alt="Arrow up"
+                alt="Back to top arrow"
                 width={6}
                 height={11}
                 className="group-hover:-translate-y-1 transition-transform duration-200 text-shadow-nearInvisible"

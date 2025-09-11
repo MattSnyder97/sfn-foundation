@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="absolute inset-0" style={{ zIndex: 2 }}>
         <Image
           src="/images/common/heroBackground.jpg"
-          alt="small fiber neuropathy"
+          alt="Illustration of small fiber neuropathy"
           fill
           priority
           fetchPriority="high"
