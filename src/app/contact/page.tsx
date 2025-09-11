@@ -4,6 +4,7 @@ import Header from '@/components/core/Header';
 import Footer from '@/components/core/Footer';
 import { Button } from '@/components/primitives/Button';
 import { useRef, useState, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
 import AnimatedCheck from '@/components/primitives/AnimatedCheck';
 import { FiInfo } from 'react-icons/fi';
 
@@ -29,6 +30,10 @@ export default function ContactPage() {
 	const [formError, setFormError] = useState('');
 	const hiddenSubjectRef = useRef<HTMLInputElement | null>(null);
 	const formRef = useRef<HTMLFormElement | null>(null);
+
+	// Dropdown open state and refs for keyboard navigation
+	const [isOpen, setIsOpen] = useState(false);
+	const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
 	// (removed unused handleSubmit) - client uses handleSubmitAsync via onSubmit
 
@@ -148,21 +153,106 @@ export default function ContactPage() {
 					{/* Hidden subject input that will contain the final subject value sent to Formspree */}
 					<input type="hidden" name="subject" ref={hiddenSubjectRef} />
 
-					{/* Subject select */}
+					{/* Subject select (accessible custom dropdown so options can be tabbed) */}
 					<div>
-						<label htmlFor="subject_select" className="block mb-2 font-semibold text-dark">Subject</label>
-						<select
-							id="subject_select"
-							name="subject_select"
-							value={subjectSelect}
-							onChange={e => handleSubjectChange(e.target.value)}
-							className="w-full pl-4 pr-8 py-3 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white"
-							required
+						<label htmlFor="subject_toggle" className="block mb-2 font-semibold text-dark">Subject</label>
+						<div
+							className="relative"
+							onKeyDown={(e) => {
+								// Prevent page scroll when using space on the toggle
+								if (e.key === ' ' && (e.target as HTMLElement)?.id === 'subject_toggle') {
+									e.preventDefault();
+								}
+							}}
 						>
-							{SUBJECT_OPTIONS.map(opt => (
-								<option key={opt} value={opt} className="hover:bg-primary/10">{opt}</option>
-							))}
-						</select>
+							<button
+								id="subject_toggle"
+								aria-haspopup="listbox"
+								aria-expanded={Boolean((hiddenSubjectRef.current && hiddenSubjectRef.current.value) || subjectSelect)}
+								type="button"
+								onClick={() => {
+									setIsOpen(o => !o);
+								}}
+								onKeyDown={(e) => {
+									if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+										e.preventDefault();
+										setIsOpen(true);
+										// focus will be handled by effect when isOpen becomes true
+									}
+									if (e.key === 'ArrowUp') {
+										e.preventDefault();
+										setIsOpen(true);
+									}
+								}}
+								className="w-full pl-4 pr-8 py-3 border rounded-lg focus:outline-none focus:ring focus:border-primary text-dark bg-white flex items-center justify-between"
+							>
+								<span className="truncate">{subjectSelect}</span>
+								<ChevronDown size={16} />
+							</button>
+
+							{isOpen && (
+								<ul
+									role="listbox"
+									aria-labelledby="subject_toggle"
+									id="subject_list"
+									tabIndex={-1}
+									className="absolute z-40 mt-2 w-full bg-white border rounded-lg shadow max-h-56 overflow-auto"
+									onKeyDown={(e) => {
+										const count = SUBJECT_OPTIONS.length;
+										if (e.key === 'Escape') {
+											setIsOpen(false);
+											(document.getElementById('subject_toggle') as HTMLButtonElement | null)?.focus();
+											return;
+										}
+									}}
+									onBlur={(e) => {
+										// Close only when focus leaves the dropdown container entirely
+										const related = (e as React.FocusEvent).relatedTarget as Node | null;
+										if (!related || !(e.currentTarget as HTMLElement).contains(related)) {
+											setIsOpen(false);
+										}
+									}}
+								>
+									{SUBJECT_OPTIONS.map((opt, idx) => (
+										<li key={opt}>
+											<button
+												ref={(el) => { optionRefs.current[idx] = el; return undefined; }}
+												type="button"
+												role="option"
+												aria-selected={subjectSelect === opt}
+												onClick={() => {
+													handleSubjectChange(opt);
+													if (hiddenSubjectRef.current) hiddenSubjectRef.current.value = opt;
+													setIsOpen(false);
+													// move focus to the name field to match previous behavior
+													setTimeout(() => nameRef.current?.focus(), 0);
+												}}
+												onKeyDown={(e) => {
+													if (e.key === 'ArrowDown') {
+														e.preventDefault();
+														const next = (idx + 1) % SUBJECT_OPTIONS.length;
+														optionRefs.current[next]?.focus();
+													} else if (e.key === 'ArrowUp') {
+														e.preventDefault();
+														const prev = (idx - 1 + SUBJECT_OPTIONS.length) % SUBJECT_OPTIONS.length;
+														optionRefs.current[prev]?.focus();
+													} else if (e.key === 'Enter' || e.key === ' ') {
+														e.preventDefault();
+														handleSubjectChange(opt);
+														if (hiddenSubjectRef.current) hiddenSubjectRef.current.value = opt;
+														setIsOpen(false);
+														setTimeout(() => nameRef.current?.focus(), 0);
+													}
+												}}
+												className={`w-full text-left px-4 py-2 hover:bg-primary/10 ${subjectSelect === opt ? 'bg-primary/5 font-semibold' : ''}`}
+											>
+												{opt}
+											</button>
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
 					</div>
 
 					{/* No custom subject input; dropdown value is used for subject */}
@@ -239,8 +329,8 @@ export default function ContactPage() {
 									</Button>
 								</div>
 
-								<div className="text-xs text-dark/60 mt-2 inline-flex text-center md:text-left items-center md:items-start gap-2">
-									<FiInfo className="text-dark/60 mt-1 hidden md:inline-block" size={24} />
+								<div className="text-xs text-dark mt-2 inline-flex text-center md:text-left items-center md:items-start gap-2">
+									<FiInfo className="mt-1 hidden md:inline-block" size={24} />
 									<span>
 										We will try to respond to emails within 2-3 business days. If you are experiencing a medical emergency, please contact your local hospital or emergency services immediately.
 									</span>

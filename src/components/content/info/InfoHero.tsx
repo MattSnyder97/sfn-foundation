@@ -10,6 +10,8 @@ interface InfoHeroProps {
 
 export default function InfoHero({ title }: InfoHeroProps) {
   const pathname = usePathname();
+  // Reuseable visible focus styles for keyboard users
+  const focusClasses = "focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-90";
   
   // Generate breadcrumbs from pathname
   const generateBreadcrumbs = () => {
@@ -69,7 +71,7 @@ export default function InfoHero({ title }: InfoHeroProps) {
                   ) : (
                     <Link 
                       href={crumb.href}
-                      className="text-white hover:text-white transition-colors duration-200 hover:underline"
+                      className={`text-white hover:text-white transition-colors duration-200 hover:underline ${focusClasses}`}
                     >
                       {crumb.label}
                     </Link>
