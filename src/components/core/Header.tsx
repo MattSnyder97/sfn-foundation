@@ -113,7 +113,13 @@ const navLinks = [
       if (menuEl && menuEl.contains(target)) return; // still inside menu
       if (toggle && toggle.contains(target)) return; // still on toggle
       // focus moved outside: close
-      setActiveDropdown(null);
+      // Defer the state update so it doesn't run synchronously during React's insertion effects
+      // (calling setState synchronously here can trigger the "useInsertionEffect must not schedule updates" error).
+      if (typeof window !== 'undefined') {
+        window.setTimeout(() => setActiveDropdown(null), 0);
+      } else {
+        setActiveDropdown(null);
+      }
     }
     document.addEventListener('focusin', handleFocusIn);
     return () => document.removeEventListener('focusin', handleFocusIn);

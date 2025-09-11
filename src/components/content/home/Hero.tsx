@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/primitives/Button";
 
 export default function Hero() {
@@ -44,11 +43,11 @@ export default function Hero() {
             Our foundation strives to cure small fiber neuropathy and give you the support you need until that day comes.
           </p>
           <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:flex-wrap md:gap-8 md:justify-start">
-            <Button variant="secondary" size="md">
-              <Link href="/resources/support-group">Support Group</Link>
+            <Button variant="secondary" size="md" href="/resources/support-group">
+              Support Group
             </Button>
-            <Button variant="outline" size="md">
-              <Link href="/research">Latest Research</Link>
+            <Button variant="outline" size="md" href="/research">
+              Latest Research
             </Button>
           </div>
         </div>

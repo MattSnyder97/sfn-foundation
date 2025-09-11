@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/primitives/Button";
 
 export function PatientStory() {
@@ -34,14 +33,9 @@ export function PatientStory() {
               Matt, 28 years old, diagnosed in 2024
             </p>
 
-            <Link
-              href="/resources/patient-stories/"
-              aria-label="Read Matt's full small fiber neuropathy story"
-            >
-              <Button variant="secondary" size="md">
-                Read Patient Stories
-              </Button>
-            </Link>
+            <Button variant="secondary" size="md" href="/resources/patient-stories/" aria-label="Read Matt's full small fiber neuropathy story">
+              Read Patient Stories
+            </Button>
           </div>
         </div>
 
@@ -69,16 +63,15 @@ export function PatientStory() {
               Matt, 28 years old, diagnosed in 2024
             </p>
 
-            <Link href="/resources/patient-stories/">
-              <Button
-                variant="secondary"
-                size="md"
-                className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
-                aria-label="Read Matt's full small fiber neuropathy story"
-              >
-                Read Patient Stories
-              </Button>
-            </Link>
+            <Button
+              variant="secondary"
+              size="md"
+              href="/resources/patient-stories/"
+              className="bg-white/90 text-primary hover:bg-white transition-colors duration-200"
+              aria-label="Read Matt's full small fiber neuropathy story"
+            >
+              Read Patient Stories
+            </Button>
           </div>
         </div>
       </div>
