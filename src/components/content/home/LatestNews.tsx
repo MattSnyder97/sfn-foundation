@@ -78,7 +78,7 @@ export function LatestNews() {
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg text-dark mb-2">{a.title}</h4>
                       <p className="text-md text-gray-700 md:max-w-[70ch]">
-                        <span className="text-sm text-gray-500 mr-2">{formatDate(a.date)}</span>
+                        <span className="text-sm text-gray mr-2">{formatDate(a.date)}</span>
                         <span>{a.summary}</span>
                       </p>
                         <div className="mt-2 md:hidden">

@@ -58,18 +58,18 @@ export default function InfoHero({ title }: InfoHeroProps) {
                 <li key={crumb.href} className="flex items-center">
                   {index > 0 && (
                     <ChevronRight 
-                      className="h-4 w-4 text-white/60 mx-2 translate-y-0.5" 
+                      className="h-4 w-4 text-white mx-2 translate-y-0.5" 
                       strokeWidth={2}
                     />
                   )}
                   {crumb.isLast ? (
-                    <span className="text-white font-medium">
+                    <span className="text-white font-bold">
                       {crumb.label}
                     </span>
                   ) : (
                     <Link 
                       href={crumb.href}
-                      className="text-white/60 hover:text-white transition-colors duration-200 hover:underline"
+                      className="text-white hover:text-white transition-colors duration-200 hover:underline"
                     >
                       {crumb.label}
                     </Link>

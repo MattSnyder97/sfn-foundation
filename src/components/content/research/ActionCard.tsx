@@ -57,7 +57,7 @@ export default function ActionCard({ title, subtitle, icon, actions, compact = f
             actions && <div className="mt-4">{actions}</div>
           )}
 
-          <div className="mt-12 text-xs text-gray/60">
+          <div className="mt-12 text-xs text-gray">
             The Research Portal provides approved clinicians and researchers a secure place to submit, review, and collaborate on SFN studies and data.
             <div className="mt-2">Please <a href="/contact?subject=Research%20Portal%20Access" className="text-primary/80 underline">contact us</a> to request approval.</div>
           </div>
