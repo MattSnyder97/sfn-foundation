@@ -22,26 +22,33 @@ export function FAQsGrid({ faqs }: FAQsGridProps) {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* Left column */}
-      <Accordion type="single" collapsible className="flex flex-col gap-6">
-        {leftColumn.map((faq) => (
-          <AccordionItem key={faq.value} value={faq.value}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+    // Single Accordion root so only one item can be open across both columns
+    <Accordion type="single" collapsible>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left column: independent vertical stack */}
+        <div className="flex flex-col gap-6">
+          {leftColumn.map((faq) => (
+            <div key={faq.value} className="w-full">
+              <AccordionItem value={faq.value}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            </div>
+          ))}
+        </div>
 
-      {/* Right column */}
-      <Accordion type="single" collapsible className="flex flex-col gap-6">
-        {rightColumn.map((faq) => (
-          <AccordionItem key={faq.value} value={faq.value}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
+        {/* Right column: independent vertical stack */}
+        <div className="flex flex-col gap-6">
+          {rightColumn.map((faq) => (
+            <div key={faq.value} className="w-full">
+              <AccordionItem value={faq.value}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Accordion>
   );
 }

@@ -8,6 +8,9 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Persistent, visible focus styles for keyboard users
+  const focusClasses = "focus:outline-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-90";
+
   return (
     <footer className="w-full bg-primary text-white print:hidden">
       <div className="container-padding mx-auto py-20">
@@ -28,24 +31,24 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="text-center md:text-left">
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-3 text-sm">
+      <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/about" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   About SFN
                 </Link>
               </li>
               <li>
-                <Link href="/resources/specialists" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/resources/specialists" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Find a Specialist
                 </Link>
               </li>
               <li>
-                <Link href="/research" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/research" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Latest Research
                 </Link>
               </li>
               <li>
-                <Link href="/resources/newly-diagnosed" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/resources/newly-diagnosed" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Newly Diagnosed
                 </Link>
               </li>
@@ -55,24 +58,24 @@ export default function Footer() {
           {/* Support */}
           <div className="text-center md:text-left">
             <h3 className="font-bold text-lg mb-4">Support</h3>
-            <ul className="space-y-3 text-sm">
+      <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/contact" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/contact" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/resources/mutual-aid" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/resources/mutual-aid" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Mutual Aid
                 </Link>
               </li>
                 <li>
-                <Link href="/resources/patient-stories" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/resources/patient-stories" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Patient Stories
                 </Link>
               </li>
               <li>
-                <Link href="/resources/support-group" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="/resources/support-group" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Support Group
                 </Link>
               </li>
@@ -82,25 +85,25 @@ export default function Footer() {
           {/* Specialists */}
           <div className="text-center md:text-left">
             <h3 className="font-bold text-lg mb-4">Specialists</h3>
-            <ul className="space-y-3 text-sm">
+      <ul className="space-y-3 text-sm">
               <li>
-                <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Clinical Trials
                 </Link>
               </li>
               <li>
-                <Link href="/research/portal" className="opacity hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2 text-shadow-nearInvisible">
+        <Link href="/research/portal" className={`opacity hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2 text-shadow-nearInvisible ${focusClasses}`}>
                   <Lock size={14} />
                   Research Portal
                 </Link>
               </li>
               <li>
-                <Link href="https://www.massgeneralbrigham.org/en/education-and-training/continuing-professional-development" target="_blank" rel="noopener noreferrer" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="https://www.massgeneralbrigham.org/en/education-and-training/continuing-professional-development" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Professional Development
                 </Link>
               </li>
               <li>
-                <Link href="https://www.youtube.com/watch?v=KtNnlY6RUdA" target="_blank" rel="noopener noreferrer" className="opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible">
+        <Link href="https://www.youtube.com/watch?v=KtNnlY6RUdA" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   SFN Overview Video
                 </Link>
               </li>
@@ -118,16 +121,16 @@ export default function Footer() {
             
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-4 text-sm text-shadow-nearInvisible">
-              <Link href="/accessibility" className="opacity hover:opacity-100 hover:underline transition-all">
+              <Link href="/accessibility" className={`opacity hover:opacity-100 hover:underline transition-all ${focusClasses}`}>
                 Accessibility
               </Link>
-              <Link href="/disclaimer" className="opacity hover:opacity-100 hover:underline transition-all">
+              <Link href="/disclaimer" className={`opacity hover:opacity-100 hover:underline transition-all ${focusClasses}`}>
                 Medical Disclaimer
               </Link>
-              <Link href="/privacy-policy" className="opacity hover:opacity-100 hover:underline transition-all">
+              <Link href="/privacy-policy" className={`opacity hover:opacity-100 hover:underline transition-all ${focusClasses}`}>
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-use" className="opacity hover:opacity-100 hover:underline transition-all">
+              <Link href="/terms-of-use" className={`opacity hover:opacity-100 hover:underline transition-all ${focusClasses}`}>
                 Terms of Use
               </Link>
             </div>
