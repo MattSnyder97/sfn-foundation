@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,6 +58,7 @@ const navLinks = [
       closeTimer.current = null;
     }
     setActiveDropdown(label);
+  // (do not aggressively move focus here) — when opened via focus, Tab will move into menu items
   };
 
   const scheduleClose = () => {
@@ -67,6 +68,56 @@ const navLinks = [
       closeTimer.current = null;
     }, 220);
   };
+
+  const closeDropdown = () => {
+    setActiveDropdown(null);
+  };
+
+  // refs for menu items per dropdown label to support arrow-key navigation
+  const menuItemRefs = useRef<Record<string, HTMLElement[]>>({});
+
+  // Keyboard navigation for menu items: ArrowUp/ArrowDown and Escape
+  const onMenuKeyDown = (e: React.KeyboardEvent, label: string) => {
+    const items = menuItemRefs.current[label] ?? [];
+    if (!items.length) return;
+    const idx = items.indexOf(document.activeElement as HTMLElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = items[Math.min(idx + 1, items.length - 1)];
+      next?.focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = items[Math.max(idx - 1, 0)];
+      prev?.focus();
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      items[0]?.focus();
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      items[items.length - 1]?.focus();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closeDropdown();
+    }
+  };
+
+  // Close dropdown when focus moves outside of header menus
+  useEffect(() => {
+    function handleFocusIn(e: FocusEvent) {
+      if (!activeDropdown) return;
+      const menuEl = document.getElementById(`menu-${activeDropdown.replace(/\s+/g, '-')}`);
+      // find the toggle button by aria-controls
+      const toggle = document.querySelector(`[aria-controls="menu-${activeDropdown.replace(/\s+/g, '-')}"]`);
+      const target = e.target as Node | null;
+      if (!target) return;
+      if (menuEl && menuEl.contains(target)) return; // still inside menu
+      if (toggle && toggle.contains(target)) return; // still on toggle
+      // focus moved outside: close
+      setActiveDropdown(null);
+    }
+    document.addEventListener('focusin', handleFocusIn);
+    return () => document.removeEventListener('focusin', handleFocusIn);
+  }, [activeDropdown]);
 
   const toggleMobileDropdown = (label: string) => {
     setMobileDropdowns((prev) => ({ ...prev, [label]: !prev[label] }));
@@ -99,15 +150,27 @@ const navLinks = [
                 onMouseLeave={scheduleClose}
               >
                 {/* ...existing code for nav links... */}
-                <div className="flex flex-col items-center relative group/nav">
+                  <div className="flex flex-col items-center relative group/nav">
                   <button
                     className={`flex items-center space-x-3 px-2 py-1 rounded transition-colors duration-150 cursor-pointer bg-transparent border-none outline-none focus:outline-none ${
                       isActive ? "text-primary" : "text-dark group-hover:text-primary"
                     }`}
                     style={{ background: "none" }}
                     tabIndex={0}
-                    aria-haspopup={link.dropdown ? "true" : undefined}
+                    aria-haspopup={link.dropdown ? "menu" : undefined}
+                    aria-controls={link.dropdown ? `menu-${link.label.replace(/\s+/g, '-')}` : undefined}
                     aria-expanded={isActive}
+                    onFocus={() => link.dropdown && openDropdown(link.label)}
+                    onKeyDown={(e) => {
+                      // Open menu with Enter/Space/ArrowDown
+                      if (link.dropdown && (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown')) {
+                        e.preventDefault();
+                        openDropdown(link.label);
+                      }
+                      if (e.key === 'Escape') {
+                        closeDropdown();
+                      }
+                    }}
                   >
                     {link.href ? (
                       <Link
@@ -136,19 +199,28 @@ const navLinks = [
                 </div>
                 {isActive && link.dropdown && (
                   <div
+                    id={`menu-${link.label.replace(/\s+/g, '-')}`}
+                    role="menu"
                     className="absolute left-0 top-full z-20 w-48 -translate-x-4"
                     onMouseEnter={() => openDropdown(link.label)}
                     onMouseLeave={scheduleClose}
+                    onKeyDown={(e) => onMenuKeyDown(e, link.label)}
                   >
                     <div className="pt-4">
                       <div className="bg-white default-shadow rounded-md overflow-hidden">
                         <div className="h-2 bg-primary rounded-t-md" />
-                        {link.items?.map((item) => (
+                        {link.items?.map((item, idx) => (
                           <Link
                             key={item.label}
                             href={item.href}
                             target={item.target}
                             rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                            role="menuitem"
+                            ref={(el: any) => {
+                              if (!menuItemRefs.current[link.label]) menuItemRefs.current[link.label] = [];
+                              menuItemRefs.current[link.label][idx] = el;
+                            }}
+                            tabIndex={0}
                             className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"
                           >
                             {item.label}
