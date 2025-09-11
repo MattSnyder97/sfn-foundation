@@ -71,17 +71,18 @@ export default function InfoActions({ title = "SFN Foundation Article", url }: I
         <p className="text-center text-gray mb-4 max-w-xl">
           Share feedback, ideas, or information corrections in our quick anonymous survey to help improve the SFN Foundation website.
         </p>
-        <a
+        <Button
           href="https://forms.gle/p81P8LdPwcERfi4D8"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Leave feedback via Google Form"
           onClick={handleSurveyClick}
+          variant="primary"
+          size="md"
+          className="font-semibold"
         >
-          <Button variant="primary" size="md" className="font-semibold">
-            Google Form Survey
-          </Button>
-        </a>
+          Google Form Survey
+        </Button>
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 items-center justify-center sm:items-start sm:justify-start print:hidden">

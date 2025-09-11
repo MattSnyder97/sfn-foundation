@@ -1,5 +1,4 @@
 // src/components/info/RelatedPages.tsx
-import Link from "next/link";
 import { allContent } from "@/content";
 import { Button } from "@/components/primitives/Button";
 
@@ -28,11 +27,15 @@ export default function RelatedPages({ currentSlug, currentTags = [] }: RelatedP
         <h3 className="text-sm text-gray sm:mb-0">Related Pages</h3>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-start">
           {related.map((page) => (
-            <Link key={page.slug} href={page.slug}>
-              <Button variant="outlinePrimary" size="sm" className="w-full text-center sm:w-auto">
-                {page.hero?.title}
-              </Button>
-            </Link>
+            <Button
+              key={page.slug}
+              href={page.slug}
+              variant="outlinePrimary"
+              size="sm"
+              className="w-full text-center sm:w-auto"
+            >
+              {page.hero?.title}
+            </Button>
           ))}
         </div>
       </div>
