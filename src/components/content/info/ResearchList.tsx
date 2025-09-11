@@ -75,7 +75,7 @@ export default function LatestNewsList() {
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-8">
       {articlesToShow.map((article, idx) => {
         // allow authors to accidentally include '/public' in the path; normalize to public root
         const raw = article.image || '/images/researchWoman.png';
@@ -107,7 +107,7 @@ export default function LatestNewsList() {
           </a>
         );
       })}
-      <div className="flex gap-4 justify-center mt-4 items-center print:hidden">
+      <div className="flex gap-4 justify-center items-center print:hidden">
         {page > 0 && (
           <Button
             variant="primary"

@@ -3,7 +3,7 @@ import trackEvent from "@/lib/analytics";
 import InfoParagraph from "@/components/content/info/InfoParagraph";
 import InfoImage from "@/components/content/info/InfoImage";
 import InfoList from "@/components/content/info/InfoList";
-import LatestNewsList from "@/components/content/info/LatestNewsList";
+import LatestNewsList from "@/components/content/info/ResearchList";
 import PatientStoriesList from "@/components/content/info/PatientStoriesList";
 import PatientShortStory from "@/components/content/info/PatientShortStory";
 

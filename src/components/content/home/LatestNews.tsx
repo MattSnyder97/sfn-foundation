@@ -46,7 +46,7 @@ export function LatestNews() {
           </div>
 
           {/* Highlighted item */}
-          <div className="mb-6">
+          <div className="mb-8">
             <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow hover:bg-primary/8 transition-colors duration-120">
               <div className="flex flex-col md:flex-row items-stretch gap-4">
                 <div className="flex-1">
@@ -59,7 +59,7 @@ export function LatestNews() {
                       </span>
                     </div>
                 </div>
-                <div className="hidden md:block w-56 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                <div className="hidden md:block w-64 h-40 flex-shrink-0 rounded overflow-hidden bg-gray-100">
                   <Image src={highlighted.image} alt={highlighted.title} width={320} height={200} className="object-cover w-full h-full default-shadow" />
                 </div>
               </div>
@@ -67,13 +67,13 @@ export function LatestNews() {
           </div>
 
           {/* Latest two research articles as long clickable rows */}
-          <div className="space-y-4">
+          <div className="space-y-8">
             {latestTwo.map((a, idx) => {
               // normalize image paths like other lists in the repo
               const raw = a.image || '/images/common/researchGuy.png';
               const imgSrc = raw.startsWith('/public/') ? raw.replace(/^\/public/, '') : raw;
               return (
-                <a key={idx} href={a.link} target="_blank" rel="noopener noreferrer" className="block rounded-xl p-6 border-gray/20 border-1 bg-white default-shadow hover:bg-primary/8 transition-colors duration-120">
+                <a key={idx} href={a.link} target="_blank" rel="noopener noreferrer" className="block rounded-xl p-8 border-gray/20 border-1 bg-white default-shadow hover:bg-primary/8 transition-colors duration-120">
                   <div className="flex flex-col md:flex-row items-stretch gap-4">
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg text-dark mb-2">{a.title}</h4>
