@@ -61,11 +61,11 @@ export function PatientStory() {
           
           {/* Content */}
           <div className="text-white">
-            <blockquote className="font-serif text-xl font-extrabold leading-relaxed mb-6">
+            <blockquote className="font-serif text-xl font-extrabold leading-relaxed mb-6 text-shadow-subtle">
               &quot;Small fiber neuropathy is a battle, but I have learned ways to cope with it from others.&quot;
             </blockquote>
       
-            <p className="text-base opacity-70 mb-8">
+            <p className="text-base opacity-70 mb-8 text-shadow-subtle">
               Matt, 28 years old, diagnosed in 2024
             </p>
 

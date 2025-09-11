@@ -1,9 +1,10 @@
 import AnimatedCheck from '@/components/primitives/AnimatedCheck';
-import Login from '@/components/content/research/Login';
+import ActionCard from '@/components/content/research/ActionCard';
 
 export default function CheckEmail() {
   return (
-    <Login
+    <ActionCard
+      topLogoBanner={true}
       icon={<AnimatedCheck className="text-gray mr-1" size={32} />}
       title="Email Sent"
       subtitle={<>

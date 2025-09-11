@@ -34,13 +34,13 @@ export default function Hero() {
       {/* Content */}
       <div className="container-padding mx-auto relative z-10 flex items-center min-h-[520px] md:min-h-[525px]">
         <div className="text-center md:text-left text-offWhite max-w-[550px] mx-auto md:mx-0">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-shadow-subtle">
             Giving Hope
           </h1>
-          <h2 className="text-xl md:text-2xl font-medium mb-6">
+          <h2 className="text-xl md:text-2xl font-medium mb-6 text-shadow-subtle">
             Through Community and Research
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-offWhite/80 max-w-prose mb-8 mx-auto md:mx-0">
+          <p className="text-base md:text-lg leading-relaxed text-offWhite/80 max-w-prose mb-8 mx-auto md:mx-0 text-shadow-subtle">
             Our foundation strives to cure small fiber neuropathy and give you the support you need until that day comes.
           </p>
           <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:flex-wrap md:gap-8 md:justify-start">

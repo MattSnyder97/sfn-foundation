@@ -2,7 +2,7 @@ import { getProviders, signIn } from 'next-auth/react';
 import { Button } from '../../components/primitives/Button';
 import { useState } from 'react';
 import { ClientSafeProvider } from 'next-auth/react';
-import Login, { LoginInput, LoginError } from '@/components/content/research/Login';
+import ActionCard, { ActionCardInput, ActionCardError } from '@/components/content/research/ActionCard';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -26,20 +26,21 @@ export default function SignIn() {
   };
 
   return (
-    <Login
+    <ActionCard
+      topLogoBanner={true}
       subtitle={<>Enter your email address to receive a sign-in link.</>}
       form
       formOnSubmit={handleSubmit}
       actions={(
         <>
-          <LoginInput
+          <ActionCardInput
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="Enter your email address"
             autoFocus
           />
-          {error && <LoginError>{error}</LoginError>}
+          {error && <ActionCardError>{error}</ActionCardError>}
           <Button
             type="submit"
             variant="primary"

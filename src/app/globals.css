@@ -78,6 +78,14 @@ html {
     box-shadow: 0 6px 18px 0 rgba(81, 89, 207, 0.12);
   }
 
+  .text-shadow-subtle {
+    text-shadow: 0 2px 6px rgba(16,24,40,0.16);
+  }
+
+  .text-shadow-nearInvisible {
+    text-shadow: 0 2px 6px rgba(34, 25, 51, 0.08);
+  }
+
   /* Responsive Scroll Margin */
   @media (min-width: 1025px) {
     [id] {
@@ -164,4 +172,5 @@ html {
   .hover-scale:hover {
     transform: scale(1.05);
   }
+
 }

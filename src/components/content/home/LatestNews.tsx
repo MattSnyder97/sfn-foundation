@@ -50,7 +50,7 @@ export function LatestNews() {
             <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow hover:bg-primary/8 transition-colors duration-120">
               <div className="flex flex-col md:flex-row items-stretch gap-4">
                 <div className="flex-1">
-                  <span className="inline-block text-sm font-semibold text-warning bg-warning/10 px-3 py-1 rounded-full mb-3">Community Outreach</span>
+                  <span className="inline-block text-sm font-semibold text-dark bg-tertiary/48 px-3 py-1 rounded-full mb-3">Community Outreach</span>
                   <h3 className="font-semibold text-2xl text-dark mb-2">{highlighted.title}</h3>
                   <p className="text-sm text-gray-700 md:max-w-[90ch]">{highlighted.description}</p>
                     <div className="mt-2 md:hidden">
@@ -60,7 +60,7 @@ export function LatestNews() {
                     </div>
                 </div>
                 <div className="hidden md:block w-56 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
-                  <Image src={highlighted.image} alt={highlighted.title} width={320} height={200} className="object-cover w-full h-full" />
+                  <Image src={highlighted.image} alt={highlighted.title} width={320} height={200} className="object-cover w-full h-full default-shadow" />
                 </div>
               </div>
             </a>
@@ -88,7 +88,7 @@ export function LatestNews() {
                         </div>
                     </div>
                     <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
-                      <Image src={imgSrc} alt={a.title} width={320} height={200} className="object-cover w-full h-full" />
+                      <Image src={imgSrc} alt={a.title} width={320} height={200} className="object-cover w-full h-full default-shadow" />
                     </div>
                   </div>
                 </a>

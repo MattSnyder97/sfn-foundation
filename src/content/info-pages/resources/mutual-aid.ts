@@ -52,13 +52,13 @@ export const mutualAidContent = {
       content: [
         {
           type: "paragraph",
-          text: `Links on this page go to individual fundraisers. The SFN Foundation does not handle or receive these funds.`,
+          text: `Links above go to individual fundraisers. The SFN Foundation does not handle or receive these funds.`,
         },
       ],
     },
   ],
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 7, 2025",
+    lastUpdated: "September 10, 2025",
   },
 };
