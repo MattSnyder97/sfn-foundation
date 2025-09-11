@@ -87,7 +87,7 @@ export default function InfoLayout({
     <>
       <Header />
       <InfoHero title={pageTitle} />
-  <div role="main" className="bg-offWhite">
+  <div role="main" data-skip-target="true" tabIndex={-1} className="bg-offWhite">
         <div className="container-padding mx-auto py-16">
           <div className="flex gap-4">
             {/* Sidebar */}
