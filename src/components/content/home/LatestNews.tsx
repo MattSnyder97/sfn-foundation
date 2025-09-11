@@ -38,7 +38,7 @@ export function LatestNews() {
   };
 
   return (
-    <section id="news" className="bg-offWhite py-8">
+    <section id="news" className="bg-offWhite">
       <div className="container-padding mx-auto">
         <div className="bg-white rounded-2xl default-shadow p-6 md:p-12">
           <div className="mb-10">
@@ -96,7 +96,7 @@ export function LatestNews() {
             })}
 
             <div className="mt-6 flex justify-center md:justify-start">
-              <Button href="/research" variant="outlinePrimary" size="md" className="px-6 py-3">
+              <Button href="/research" variant="outlinePrimary" size="md">
                 See All News
               </Button>
             </div>
