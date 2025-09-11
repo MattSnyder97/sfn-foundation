@@ -29,6 +29,10 @@ function formatDate(dateStr: string) {
   return `${months[month - 1]} ${day}${getOrdinal(day)}, ${year}`;
 }
 
+// Display summaries with a controlled max-width (in characters) so lines wrap predictably
+// Adjust MAX_CH to change where the line breaks (uses the 'ch' unit which approximates character width)
+const MAX_SUMMARY_CH = 64;
+
 export default function LatestNewsList() {
   const [page, setPage] = useState(0);
   const pageSize = 5;
@@ -93,14 +97,17 @@ export default function LatestNewsList() {
                 <h3 className="font-semibold text-lg mb-2 text-dark">{article.title}</h3>
                 <p className="text-md text-gray-700">
                   <span className="text-sm text-gray-500 mr-2">{formatDate(article.date)}</span>
-                  <span className="text-md">{article.summary}</span>
+                  <span className="text-md">
+                    {/* Use static classes so Tailwind can generate these rules; responsive: tighter on small screens */}
+                    <span className="inline-block max-w-[45ch] md:max-w-[60ch] break-words whitespace-normal">{article.summary}</span>
+                  </span>
                 </p>
                   <div className="mt-2 md:hidden">
                     <span className="text-primary font-semibold text-sm">Read More</span>
                   </div>
               </div>
 
-              <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+              <div className="hidden md:block w-48 h-32 flex-shrink-0 rounded overflow-hidden bg-gray-100 default-shadow">
                 <Image src={imgSrc} alt={article.title} width={320} height={200} className="object-cover w-full h-full" />
               </div>
             </div>
