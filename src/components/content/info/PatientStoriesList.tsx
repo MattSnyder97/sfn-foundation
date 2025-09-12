@@ -54,13 +54,13 @@ export default function PatientStoriesList() {
           <Link
             key={story.slug}
             href={story.slug}
-            className="border-gray/20 border-1 rounded-xl p-6 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="border-gray/20 border-1 rounded-xl p-6 bg-white block default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <div className="flex flex-col md:flex-row items-stretch gap-8">
               <div className="flex-1 p-2 md:p-4">
                 <h3 className="font-semibold text-lg mb-4 text-dark">{story.hero?.title}</h3>
-                <p className="text-md text-gray-700">
-                  <span className="text-sm text-gray-500 mr-2">{dateText}</span>
+                <p className="text-md text-gray">
+                  <span className="text-sm text-gray mr-2">{dateText}</span>
                   <span className="text-md">{excerptFrom(story)}</span>
                 </p>
               </div>
