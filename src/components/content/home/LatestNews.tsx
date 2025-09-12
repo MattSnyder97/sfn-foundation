@@ -47,7 +47,7 @@ export function LatestNews() {
 
           {/* Highlighted item */}
           <div className="mb-8">
-            <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow hover:bg-primary/8 transition-colors duration-120">
+                <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer">
               <div className="flex flex-col md:flex-row items-stretch gap-4">
                 <div className="flex-1">
                   <span className="inline-block text-sm font-semibold text-dark bg-tertiary/24 px-3 py-1 rounded-full mb-3">Community Outreach</span>
@@ -73,7 +73,7 @@ export function LatestNews() {
               const raw = a.image || '/images/common/researchGuy.png';
               const imgSrc = raw.startsWith('/public/') ? raw.replace(/^\/public/, '') : raw;
               return (
-                <a key={idx} href={a.link} target="_blank" rel="noopener noreferrer" className="block rounded-xl p-8 border-gray/20 border-1 bg-white default-shadow hover:bg-primary/8 transition-colors duration-120">
+                <a key={idx} href={a.link} target="_blank" rel="noopener noreferrer" className="block rounded-xl p-8 border-gray/20 border-1 bg-white default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer">
                   <div className="flex flex-col md:flex-row items-stretch gap-4">
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg text-dark mb-2">{a.title}</h4>

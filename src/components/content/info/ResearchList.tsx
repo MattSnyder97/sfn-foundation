@@ -88,7 +88,7 @@ export default function LatestNewsList() {
             href={article.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-gray/20 border-1 rounded-xl p-8 default-shadow bg-white block hover:bg-primary/8 transition-colors duration-120 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="border-gray/20 border-1 rounded-xl p-8 bg-white block default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <div className="flex flex-col md:flex-row items-stretch gap-4">
               <div className="flex-1">
