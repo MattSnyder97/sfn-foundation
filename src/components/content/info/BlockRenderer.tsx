@@ -6,9 +6,10 @@ import InfoList from "@/components/content/info/InfoList";
 import LatestNewsList from "@/components/content/info/ResearchList";
 import PatientStoriesList from "@/components/content/info/PatientStoriesList";
 import PatientShortStory from "@/components/content/info/PatientShortStory";
+import SpecialistCard from '@/components/content/info/SpecialistCard';
 
 interface ContentBlock {
-  type: "paragraph" | "list" | "image" | "component" | "button";
+  type: "paragraph" | "list" | "image" | "component" | "button" | "specialist";
   name?: string;
 }
 
@@ -28,6 +29,15 @@ interface ImageBlock extends ContentBlock {
   src: string;
   alt?: string;
   caption?: string;
+}
+
+interface SpecialistBlock extends ContentBlock {
+  type: "specialist";
+  nameTitle: string;
+  location: string;
+  imageSrc: string;
+  alt?: string;
+  link?: string;
 }
 
 // Derive a readable alt text from an image filename, e.g. "chestThroatPain.jpg" -> "Image of chest throat pain"
@@ -62,7 +72,7 @@ interface ButtonBlock extends ContentBlock {
   variant?: "primary" | "secondary" | "outline" | "outlinePrimary";
 }
 
-type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock | ComponentBlock | ButtonBlock;
+type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock | ComponentBlock | ButtonBlock | SpecialistBlock;
 
 interface BlockRendererProps {
   block: ContentBlockType;
@@ -130,6 +140,22 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
         );
       }
       return null;
+    }
+    case "specialist": {
+      const s = block as SpecialistBlock;
+      const card = (
+        <div className="my-6">
+          <SpecialistCard nameTitle={s.nameTitle} location={s.location} imageSrc={s.imageSrc} alt={s.alt} />
+        </div>
+      );
+      if (s.link) {
+        return (
+          <a href={s.link} target="_blank" rel="noopener noreferrer">
+            {card}
+          </a>
+        );
+      }
+      return card;
     }
     default:
       return null;

@@ -42,35 +42,38 @@ export const specialistsContent = {
           type: "paragraph",
           text: `The specialists listed below have experience with small fiber neuropathy and related conditions. They work in centers that often use current tests and treatments.`,
         },
+        // Specialist entries rendered as cards by the page renderer
         {
-          type: "image",
-          src: "/images/specialists/anneOaklander.png",
-          alt: "Dr. Anne Louise Oaklander, MD, PhD - Massachusetts General Hospital, Boston, MA",
-          caption: "Dr. Anne Louise Oaklander, MD, PhD - Massachusetts General Hospital, Boston, MA",
+          type: "specialist",
+          nameTitle: "Dr. Khosro Farhad, MD",
+          location: "Massachusetts General Hospital, Boston, MA",
+          imageSrc: "/images/specialists/khosroFarhad.png",
+          alt: "Dr. Khosro Farhad",
+          link: "https://www.massgeneral.org/doctors/20122/khosro-farhad",
         },
         {
-          type: "paragraph",
-          text: `Dr. Anne Louise Oaklander is a professor of neurology at Harvard Medical School and director of the Nerve Injury Unit at Massachusetts General Hospital. Her research has helped improve how we understand and diagnose SFN, especially autoimmune causes and skin biopsy use. [Link to Dr. Oaklander's physician page](https://www.massgeneral.org/doctors/17253/anne-louise-oaklander)`,
+          type: "specialist",
+          nameTitle: "Dr. Brent Goodman, MD",
+          location: "HonorHealth, Scottsdale, AZ",
+          imageSrc: "/images/specialists/brentGoodman.png",
+          alt: "Dr. Brent Goodman",
+          link: "https://www.honorhealth.com/physicians/brent-goodman",
         },
         {
-          type: "image",
-          src: "/images/specialists/lawrenceZeidman.png",
-          alt: "Dr. Lawrence Zeidman, MD - Northwest Community Health Services, Glenview, IL",
-          caption: "Dr. Lawrence Zeidman, MD - Northwest Community Health Services, Glenview, IL",
+          type: "specialist",
+          nameTitle: "Dr. Anne Louise Oaklander, MD, PhD",
+          location: "Massachusetts General Hospital, Boston, MA",
+          imageSrc: "/images/specialists/anneOaklander.png",
+          alt: "Dr. Anne Louise Oaklander",
+          link: "https://www.massgeneral.org/doctors/17253/anne-louise-oaklander",
         },
         {
-          type: "paragraph",
-          text: `Dr. Lawrence Zeidman is a neurologist who focuses on peripheral neuropathy and neuromuscular disorders. He has experience diagnosing and treating SFN and looks for underlying causes when possible. [Link to Dr. Zeidman's physician page](https://www.endeavorhealth.org/providers/lawrence-zeidman)`,
-        },
-        {
-          type: "image",
-          src: "/images/specialists/brentGoodman.png",
-          alt: "Dr. Brent Goodman, MD - HonorHeath, Scottsdale, AZ",
-          caption: "Dr. Brent Goodman, MD - HonorHeath, Scottsdale, AZ",
-        },
-        {
-          type: "paragraph",
-          text: `Dr. Brent Goodman specializes in autonomic disorders and dysautonomia. He has experience with the autonomic symptoms of SFN, which can help people who have both sensory and autonomic problems. [Link to Dr. Goodman's physician page](https://www.honorhealth.com/physicians/brent-goodman)`,
+          type: "specialist",
+          nameTitle: "Dr. Lawrence Zeidman, MD",
+          location: "Northwest Community Health Services, Glenview, IL",
+          imageSrc: "/images/specialists/lawrenceZeidman.png",
+          alt: "Dr. Lawrence Zeidman",
+          link: "https://www.endeavorhealth.org/providers/lawrence-zeidman",
         },
       ],
     },
@@ -132,7 +135,7 @@ export const specialistsContent = {
 
 // ---- Types ----
 export interface ContentBlock {
-  type: "paragraph" | "list" | "image";
+  type: "paragraph" | "list" | "image" | "specialist";
 }
 
 export interface ParagraphBlock extends ContentBlock {
@@ -153,4 +156,13 @@ export interface ImageBlock extends ContentBlock {
   caption?: string;
 }
 
-export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock;
+export interface SpecialistBlock extends ContentBlock {
+  type: "specialist";
+  nameTitle: string;
+  location: string;
+  imageSrc: string;
+  alt?: string;
+  link?: string;
+}
+
+export type ContentBlockType = ParagraphBlock | ListBlock | ImageBlock | SpecialistBlock;
