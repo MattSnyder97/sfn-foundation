@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { researchArticles } from "../../../content/info-pages/research/research-articles";
 import { Button } from "@/components/primitives/Button";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
@@ -40,12 +40,40 @@ export default function LatestNewsList() {
   const endIdx = startIdx + pageSize;
   const articlesToShow = sortedArticles.slice(startIdx, endIdx);
 
+  // scroll the list container to top on page change instead of the whole window
+  const listRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 100);
-    }
+    const el = listRef.current;
+    if (!el) return;
+    const id = window.setTimeout(() => {
+      // Try to scroll the container itself first
+      try {
+        if (typeof el.scrollTo === "function") {
+          el.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      } catch (e) {
+        // ignore and fallback to scrollIntoView
+      }
+
+      // If container scroll doesn't move it into view, ensure the page scrolls so the list top is visible
+      // and account for the sticky header height (defined in CSS var --header-height).
+      try {
+        const headerHeight = typeof window !== 'undefined'
+          ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
+          : 0;
+
+        const rect = el.getBoundingClientRect();
+        const absoluteTop = window.scrollY + rect.top;
+        const EXTRA_PADDING = 18; // extra space above the list when scrolled into view
+        const target = Math.max(0, absoluteTop - headerHeight - EXTRA_PADDING);
+        window.scrollTo({ top: target, behavior: 'smooth' });
+      } catch (e) {
+        // fallback to scrollIntoView if something goes wrong
+        try { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { /* ignore */ }
+      }
+    }, 100);
+    return () => window.clearTimeout(id);
   }, [page]);
 
   const handlePageChange = (newPage: number) => {
@@ -77,7 +105,7 @@ export default function LatestNewsList() {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div ref={listRef} className="flex flex-col gap-8 overflow-auto">
       {articlesToShow.map((article, idx) => {
         // allow authors to accidentally include '/public' in the path; normalize to public root
         const raw = article.image || '/images/researchWoman.png';
