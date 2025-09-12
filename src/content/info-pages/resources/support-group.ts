@@ -43,6 +43,12 @@ export const supportGroupContent = {
           text: `Channels keep conversations organized by topic, so you can find talks about treatments, symptoms, doctor tips, or daily life. We also have spaces to share wins, vent, or connect over hobbies. This helps the community support each other in many ways.`,
         },
         {
+          type: "image",
+          src: "/images/misc/discordExample.jpg",
+          alt: "Screenshot of a Discord server showing various channels and user interactions",
+          caption: "Example of a Discord server",
+        },
+        {
           type: "paragraph",
           text: `Discord also supports group activities like movie nights, book clubs, or gaming sessions. These events help build friendships and offer breaks from chronic pain. Voice and video options let members connect more personally when they want to.`,
         },
@@ -112,7 +118,7 @@ export const supportGroupContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 7, 2025",
+    lastUpdated: "September 12, 2025",
     references: [
       {
         title: "Peer Support Groups - National Institute of Mental Health",

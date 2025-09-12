@@ -65,7 +65,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Finding the right medicine takes time. You may need to try different drugs or doses. Some people do better with a mix of medicines. Always talk to your doctor before changing your medicines.`,
+          text: `Finding the right medicine takes time. You may need to try different drugs or doses. Some people do better with a mix of medicines. Always talk to your doctor before changing your medicines. [Find a SFN specialist](/resources/specialists)`,
         },
       ],
     },

@@ -101,7 +101,7 @@ export const resourcesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Connect with others who understand what you're going through. Our support group brings together people with SFN, families, and caregivers in a safe space. Members share treatment experiences, coping tips, and daily life advice. Get emotional support and know you are not alone. [Join our support group](/resources/support-group)`,
+          text: `Connect with others who understand what you're going through. Our support group brings together people with SFN, families, and caregivers in a safe space. Members share treatment experiences, coping tips, and daily life advice. You are not alone. [Join our support group](/resources/support-group)`,
         },
       ],
     },

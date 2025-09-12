@@ -114,6 +114,10 @@ export const dictionaryContent = {
             "**Vitamin Level Testing** - Blood tests to check for low levels of vitamins like B12 that can cause neuropathy.",
           ],
         },
+        {
+          type: "paragraph",
+          text: `[Learn more about diagnosing SFN](/about/diagnosis)`,
+        },
       ],
     },
 

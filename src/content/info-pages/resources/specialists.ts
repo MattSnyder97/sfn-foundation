@@ -50,7 +50,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Anne Louise Oaklander is a professor of neurology at Harvard Medical School and director of the Nerve Injury Unit at Massachusetts General Hospital. Her research has helped improve how we understand and diagnose SFN, especially autoimmune causes and skin biopsy use.`,
+          text: `Dr. Anne Louise Oaklander is a professor of neurology at Harvard Medical School and director of the Nerve Injury Unit at Massachusetts General Hospital. Her research has helped improve how we understand and diagnose SFN, especially autoimmune causes and skin biopsy use. [Link to Dr. Oaklander's physician page](https://www.massgeneral.org/doctors/17253/anne-louise-oaklander)`,
         },
         {
           type: "image",
@@ -60,7 +60,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Lawrence Zeidman is a neurologist who focuses on peripheral neuropathy and neuromuscular disorders. He has experience diagnosing and treating SFN and looks for underlying causes when possible.`,
+          text: `Dr. Lawrence Zeidman is a neurologist who focuses on peripheral neuropathy and neuromuscular disorders. He has experience diagnosing and treating SFN and looks for underlying causes when possible. [Link to Dr. Zeidman's physician page](https://www.endeavorhealth.org/providers/lawrence-zeidman)`,
         },
         {
           type: "image",
@@ -70,7 +70,7 @@ export const specialistsContent = {
         },
         {
           type: "paragraph",
-          text: `Dr. Brent Goodman specializes in autonomic disorders and dysautonomia. He has experience with the autonomic symptoms of SFN, which can help people who have both sensory and autonomic problems.`,
+          text: `Dr. Brent Goodman specializes in autonomic disorders and dysautonomia. He has experience with the autonomic symptoms of SFN, which can help people who have both sensory and autonomic problems. [Link to Dr. Goodman's physician page](https://www.honorhealth.com/physicians/brent-goodman)`,
         },
       ],
     },
@@ -115,7 +115,7 @@ export const specialistsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 22, 2025",
+    lastUpdated: "September 12, 2025",
     references: [
       {
         title:

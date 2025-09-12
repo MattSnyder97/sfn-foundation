@@ -186,14 +186,8 @@ export const newlyDiagnosedContent = {
           src: "/images/common/supportGroup.png",
           alt: "People in a support group setting",
           caption:
-            "Connecting with others who understand your experience can provide valuable emotional support and practical tips.",
+            "People in a support group setting",
         },
-        {
-          type: "button",
-          label: "Join the Support Group",
-          href: "https://discord.gg/UGNhBMkBS7",
-          variant: "outlinePrimary",
-          },
         {
           type: "paragraph",
           text: `Your journey with SFN will be unique to you. Some days will be better 
@@ -206,7 +200,7 @@ export const newlyDiagnosedContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "September 12, 2025",
     references: [
       {
         title: "Foundation for Peripheral Neuropathy - Newly Diagnosed Guide",
