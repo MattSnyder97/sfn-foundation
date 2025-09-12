@@ -21,77 +21,48 @@ export const AccordionItem = ({
 );
 
 export const AccordionTrigger = ({ children }: { children: React.ReactNode }) => {
-  // track recent pointer interactions so we can avoid treating pointer-focus as keyboard focus
+  // track recent pointer interactions to distinguish pointer vs keyboard focus
   const pointerRef = React.useRef(false);
-
-  // clear pointer flag shortly after pointerup to avoid stale state
-  const clearPointer = () => {
-    window.setTimeout(() => {
-      pointerRef.current = false;
-    }, 0);
-  };
+  const clearPointer = () => window.setTimeout(() => (pointerRef.current = false), 0);
 
   return (
     <RadixAccordion.Header>
       <RadixAccordion.Trigger
-        // When focused via Tab (keyboard), open the accordion so the next Tab moves into the panel content.
-        // But ignore focus that comes from a pointer (mouse/touch) to avoid double-toggle on click.
+        // Keyboard focus: open the item so Tab moves into its panel. Ignore pointer-originated focus.
         onFocus={(e: React.FocusEvent<HTMLButtonElement>) => {
-          try {
-            if (pointerRef.current) return; // skip if recent pointer interaction
-            const btn = e.currentTarget as HTMLButtonElement;
-            const expanded = btn.getAttribute('aria-expanded');
-            if (expanded === 'false') {
-              // programmatically open by clicking — Radix will update state
-              btn.click();
-            }
-          } catch {
-            // no-op on error
-          }
+          const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
+          if (item?.getAttribute('data-pointer-activated') === 'true' || pointerRef.current) return;
+          const btn = e.currentTarget as HTMLButtonElement;
+          if (btn.getAttribute('aria-expanded') === 'false') btn.click();
         }}
         onPointerDown={(e) => {
-          // unify pointer types (mouse/touch/pen)
           pointerRef.current = true;
-          // mark parent item as pointer-activated to suppress keyboard-only outline
-          try {
-            const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
-            if (item) {
-              // clear any previous timeout
-              const prev = item.getAttribute('data-pointer-timeout');
-              if (prev) window.clearTimeout(Number(prev));
-              item.setAttribute('data-pointer-activated', 'true');
-              const tid = window.setTimeout(() => { try { item.removeAttribute('data-pointer-activated'); item.removeAttribute('data-pointer-timeout'); } catch(e){} }, 600);
-              item.setAttribute('data-pointer-timeout', String(tid));
-            }
-          } catch (e) {}
+          const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
+          if (!item) return;
+          const prev = item.getAttribute('data-pointer-timeout');
+          if (prev) window.clearTimeout(Number(prev));
+          item.setAttribute('data-pointer-activated', 'true');
+          const tid = window.setTimeout(() => {
+            try {
+              item.removeAttribute('data-pointer-activated');
+              item.removeAttribute('data-pointer-timeout');
+            } catch {}
+          }, 600);
+          item.setAttribute('data-pointer-timeout', String(tid));
         }}
         onPointerUp={(e) => {
-          // clear the transient pointer flag shortly after pointer up
           clearPointer();
-          try {
-            // After a pointer activation, if the accordion item was opened, move focus
-            // into the panel for screen reader users: focus the first focusable element
-            // inside the content, or the content itself.
-            const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
-            if (item) {
-              // find the next element with Radix content inside this item
-              const content = item.querySelector('[data-state="open"][data-radix-accordion-content], [data-radix-accordion-content]') as HTMLElement | null;
-              // Radix doesn't always set a stable selector, so fallback to the next sibling content region
-              const fallbackContent = item.querySelector('[data-radix-accordion-content]') as HTMLElement | null;
-              const panel = content || fallbackContent;
-              if (panel) {
-                // try to focus the first focusable element inside the panel
-                const focusable = panel.querySelector<HTMLElement>(
-                  'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-                );
-                try {
-                  (focusable || panel).focus();
-                } catch (e) {}
-              }
-            }
-          } catch (e) {}
-          // clear pointer flag to allow keyboard interactions afterwards
+          const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
+          if (item) {
+            const panel = item.querySelector('[data-state="open"][data-radix-accordion-content], [data-radix-accordion-content]') as HTMLElement | null;
+            const focusable = panel?.querySelector<HTMLElement>('a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+            try { (focusable || panel)?.focus(); } catch {}
+          }
           pointerRef.current = false;
+          try {
+            const active = document.activeElement as HTMLElement | null;
+            if (active === (e.currentTarget as HTMLElement)) active.blur();
+          } catch {}
         }}
         className={cn(
           "group flex w-full items-center justify-between px-6 py-4",

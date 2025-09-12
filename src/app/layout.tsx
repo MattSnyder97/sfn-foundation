@@ -93,12 +93,17 @@ export default function RootLayout({
                     function focusElement(el){
                       try{
                         var child = firstFocusable(el);
-                        if(child){ child.focus(); child.scrollIntoView({block:'nearest'}); return; }
-                        if(el && typeof el.focus === 'function'){
-                          el.focus({preventScroll:true});
+                        if(child){
+                          // Scroll the first focusable into view at the top of the viewport,
+                          // then focus it without causing an additional jump.
+                          if(typeof child.scrollIntoView === 'function') child.scrollIntoView({block:'start', behavior:'smooth'});
+                          try{ child.focus({preventScroll:true}); }catch(e){ try{ child.focus(); }catch(e){} }
+                          return;
                         }
-                        if(el && typeof el.scrollIntoView === 'function'){
-                          el.scrollIntoView();
+                        // Scroll the main element into view first, then focus it.
+                        if(el && typeof el.scrollIntoView === 'function') el.scrollIntoView({block:'start', behavior:'smooth'});
+                        if(el && typeof el.focus === 'function'){
+                          try{ el.focus({preventScroll:true}); }catch(e){ try{ el.focus(); }catch(e){} }
                         }
                       }catch(e){}
                     }
