@@ -14,6 +14,20 @@ export default function SkipFocusHandler() {
   const timeoutId = useRef<number | null>(null);
 
   useEffect(() => {
+    // On mount mark navigation as just happened so the first Tab on initial load
+    // will show the skip link. We manage a short timeout to revert the flag.
+    if (!navJustHappened.current) {
+      navJustHappened.current = true;
+      if (timeoutId.current) {
+        window.clearTimeout(timeoutId.current);
+        timeoutId.current = null;
+      }
+      timeoutId.current = window.setTimeout(() => {
+        navJustHappened.current = false;
+        timeoutId.current = null;
+      }, 1000);
+    }
+
     // Single listener that checks navJustHappened flag
     const onKeyDown = (e: KeyboardEvent) => {
       if (!navJustHappened.current) return;
@@ -38,6 +52,11 @@ export default function SkipFocusHandler() {
 
     return () => {
       window.removeEventListener('keydown', onKeyDown, true);
+      if (timeoutId.current) {
+        window.clearTimeout(timeoutId.current);
+        timeoutId.current = null;
+      }
+      navJustHappened.current = false;
     };
   }, []);
 

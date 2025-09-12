@@ -42,8 +42,15 @@ export default function LatestNewsList() {
 
   // scroll the list container to top on page change instead of the whole window
   const listRef = useRef<HTMLDivElement | null>(null);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
+    // Skip effect on initial mount to avoid auto-scrolling when page first loads
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
     const el = listRef.current;
     if (!el) return;
     const id = window.setTimeout(() => {
