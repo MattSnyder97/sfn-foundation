@@ -42,7 +42,7 @@ export default function SignIn() {
           {error && <ActionCardError>{error}</ActionCardError>}
           <Button
             type="submit"
-            variant="primary"
+            variant="outlinePrimary"
             size="md"
             className="disabled:opacity-50"
             disabled={loading}

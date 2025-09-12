@@ -4,6 +4,6 @@ import { Button } from "@/components/primitives/Button";
 
 export default function EmailSignInButton() {
   return (
-    <Button onClick={() => signIn("email")}>Sign in with Email</Button>
+  <Button variant="outlinePrimary" onClick={() => signIn("email")}>Sign in with Email</Button>
   );
 }
