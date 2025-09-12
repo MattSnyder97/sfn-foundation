@@ -29,7 +29,7 @@ export default function InfoList({ items, ordered = false }: InfoListProps) {
                     href={href}
                     target={isInternal ? undefined : "_blank"}
                     rel={isInternal ? undefined : "noopener noreferrer"}
-                    className="text-primary hover:text-secondary underline font-medium transition-colors duration-200 print:hidden"
+                    className="text-primary hover:underline"
                   >
                     {children}
                   </a>

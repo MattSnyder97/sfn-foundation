@@ -73,7 +73,7 @@ export const mattContent = {
         {
           type: "paragraph",
           text: `Like many people with SFN, getting a proper diagnosis took time and 
-          persistence. The burning and shooting pains were difficult to describe 
+          persistence. All of these new symptoms were difficult to describe 
           to doctors, and initial tests often came back normal. It's frustrating 
           when you know something is seriously wrong but can't get clear answers.`,
         },
@@ -130,9 +130,9 @@ export const mattContent = {
         {
           type: "list",
           items: [
-            "Cetirizine (Zyrtec) 10mg",
-            "Methylphenidate (Concerta) 27mg",
-            "Naltrexone 0.5mg",
+            "Cetirizine (Zyrtec) 10mg for suspected MCAS",
+            "Methylphenidate (Concerta) 27mg for ADHD",
+            "Naltrexone 0.5mg for SFN",
           ],
         },
         {
@@ -142,12 +142,12 @@ export const mattContent = {
         {
           type: "list",
           items: [
-            "Acetyl L-Carnitine 500mg",
-            "B12 Methylcobalamin 2,000mcg",
-            "D3 50mcg",
-            "Fish Oil 1000mg 300mg Omega-3",
-            "Magnesium Glycinate 240mg",
-            "Seed Prebiotic Probiotic",
+            "Acetyl L-Carnitine 500mg for nerve health",
+            "B12 Methylcobalamin 2,000mcg for nerve health",
+            "D3 50mcg for overall health",
+            "Fish Oil 1000mg 300mg Omega-3 for inflammation",
+            "Magnesium Glycinate 240mg for muscle relaxation",
+            "[Seed Prebiotic Probiotic](https://seed.com/daily-synbiotic) for gut health",
           ],
         },
         {

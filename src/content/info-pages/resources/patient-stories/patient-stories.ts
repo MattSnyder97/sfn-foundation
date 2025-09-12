@@ -18,6 +18,10 @@ export const patientStoriesContent = {
           type: "paragraph",
           text: `Read stories from people living with Small Fiber Neuropathy. We have divided them into two categories: Stories and Short Stories. Stories are longer, more complete accounts of life with SFN, and Short Stories share a smaller piece of someone's experience.`,
         },
+        {
+          type: "paragraph",
+          text: `If you would like to share your story about living with SFN, please [contact us](/contact).`,
+        },
       ],
     },
     {
