@@ -100,13 +100,6 @@ export const mattContent = {
         },
         {
           type: "paragraph",
-          text: `One treatment I'm particularly interested in trying is Low Dose Naltrexone 
-          (LDN). From what I've read and heard from others in the community, it 
-          has helped some people with SFN symptoms. While I know it's not a cure-all, 
-          I'm optimistic about the possibility of some relief.`,
-        },
-        {
-          type: "paragraph",
           text: `Managing SFN is an ongoing process of trial and error, finding what 
           works and what doesn't. Every person's experience is different, and what 
           helps one person may not help another. That's why having access to specialists 
@@ -198,7 +191,7 @@ export const mattContent = {
       content: [
         {
           type: "paragraph",
-          text: `While SFN is a significant part of my daily reality, I'm determined not to let it define everything about my life. I've found new ways to adapt and enjoy the things I love, even if it means doing them a little differently. Woodworking has become both a creative outlet and a form of therapy. There's something satisfying about creating something beautiful and functional with my hands. I also picked up drawing again after years away from it, which helps me express myself and find moments of peace amidst the chaos.`,
+          text: `While SFN is a significant part of my daily reality, I'm determined not to let it define everything about my life. I've found new ways to adapt and enjoy the things I love, even if it means doing them a little differently. Woodworking has become both a creative outlet and a form of therapy. There's something satisfying about creating something beautiful and functional with my hands. I also picked up drawing again after years away from it, which helps me express myself and find moments to slow my mind down.`,
         },
         {
           type: "image",

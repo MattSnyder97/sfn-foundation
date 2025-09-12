@@ -200,7 +200,7 @@ const navLinks = [
                     )}
                   </button>
                   <span
-                    className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-160 origin-left rounded-full"
+                    className="absolute left-0 right-0 -bottom-1 h-[1.2px] bg-primary scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-80 origin-left rounded-full"
                   />
                 </div>
                 {isActive && link.dropdown && (
@@ -213,7 +213,8 @@ const navLinks = [
                     onKeyDown={(e) => onMenuKeyDown(e, link.label)}
                   >
                     <div className="pt-4">
-                      <div className="bg-white default-shadow rounded-md overflow-hidden">
+                      {/* Allow focus rings to render outside the rounded container */}
+                      <div className="bg-white default-shadow rounded-md overflow-visible">
                         <div className="h-2 bg-primary rounded-t-md" />
                         {link.items?.map((item, idx) => (
                           <Link
@@ -227,7 +228,7 @@ const navLinks = [
                               menuItemRefs.current[link.label][idx] = el as HTMLElement;
                             }}
                             tabIndex={0}
-                            className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200"
+                            className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200 focus:outline-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-opacity-95 rounded-sm"
                           >
                             {item.label}
                           </Link>

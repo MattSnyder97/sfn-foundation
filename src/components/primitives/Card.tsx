@@ -45,7 +45,7 @@ export function Card({ variant, title, description, imageSrc, href }: CardProps)
         <Image
           src={imageSrc}
           alt={title}
-          width={450}
+          width={400}
           height={250}
           className="w-full object-cover"
         />

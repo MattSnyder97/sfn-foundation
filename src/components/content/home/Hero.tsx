@@ -11,7 +11,7 @@ export default function Hero() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(90deg, #5159CF 20%, #629FFB 100%)',
+          background: 'linear-gradient(90deg, #5159CF 20%, #5C58D1 100%)',
           opacity: 1,
           zIndex: 1,
         }}
@@ -26,7 +26,7 @@ export default function Hero() {
           priority
           fetchPriority="high"
           className="object-cover"
-          style={{ opacity: 0.03 }}
+          style={{ opacity: 0.02 }}
         />
       </div>
 

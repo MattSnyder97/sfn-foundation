@@ -12,12 +12,12 @@ export default function Footer() {
   const focusClasses = "focus:outline-none focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-opacity-90";
 
   return (
-    <footer className="w-full bg-primary text-white print:hidden">
+    <footer className={`w-full bg-primary text-white print:hidden ${focusClasses}`}>
       <div className="container-padding mx-auto py-20">
         {/* Main Footer Content */}
         {/* Logo */}
-        <div className="mb-12 flex justify-center md:justify-start">
-          <Link href="/">
+        <div className={`mb-12 flex justify-center md:justify-start`}>
+          <Link href="/" className={`${focusClasses} inline-block`}>
             <Image
               src="/logos/logoWhite.svg"
               alt="SFN Foundation Logo"
@@ -145,7 +145,7 @@ export default function Footer() {
           <div className="flex justify-center">
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-sm opacity hover:opacity-100 hover:underline transition-all duration-200 group cursor-pointer"
+              className={`flex items-center space-x-2 text-sm opacity hover:opacity-100 hover:underline transition-all duration-200 group cursor-pointer ${focusClasses}`}
               aria-label="Scroll to top"
             >
               <span>Scroll to Top</span>

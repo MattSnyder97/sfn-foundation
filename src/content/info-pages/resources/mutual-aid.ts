@@ -33,8 +33,8 @@ export const mutualAidContent = {
         {
           type: "image",
           src: "/images/patient-stories/bethKris.jpeg",
-          alt: "Beth Kris",
-          caption: "Beth Kris"
+          alt: "Beth Kris with their partner",
+          caption: "Beth Kris with their partner"
         },
         {
           type: "paragraph",

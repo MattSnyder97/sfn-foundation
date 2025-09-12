@@ -5,6 +5,7 @@ import Script from "next/script";
 import AuthProvider from '@/components/providers/AuthProvider';
 import ScrollAndOutboundTracker from '@/components/core/ScrollAndOutboundTracker';
 import TitleOverride from '@/components/core/TitleOverride';
+import SkipFocusHandler from '@/components/core/SkipFocusHandler';
 
 // Load Lato as default sans
 const lato = Lato({
@@ -59,6 +60,7 @@ export default function RootLayout({
         <AuthProvider>
           {/* Skip link for keyboard users */}
           <a id="skip-to-content-link" href="#content" className="skip-link">Skip to Main Content</a>
+            <SkipFocusHandler />
           <ScrollAndOutboundTracker />
             <TitleOverride />
           <main id="content" tabIndex={-1}>
@@ -109,23 +111,7 @@ export default function RootLayout({
                     // hash changes
                     window.addEventListener('hashchange', function(){ if(window.location.hash === '#content') focusMainWithRetries(10); });
 
-                    // SPA navigation: emit locationchange on history API calls
-                    (function(){
-                      var _wr = function(type){
-                        var orig = history[type];
-                        return function(){
-                          var rv = orig.apply(this, arguments);
-                          try{ window.dispatchEvent(new Event('locationchange')); }catch(e){}
-                          return rv;
-                        };
-                      };
-                      history.pushState = _wr('pushState');
-                      history.replaceState = _wr('replaceState');
-                      window.addEventListener('popstate', function(){ window.dispatchEvent(new Event('locationchange')); });
-                    })();
-
-                    // when SPA navigation happens, try to focus main
-                    window.addEventListener('locationchange', function(){ focusMainWithRetries(10); });
+                    // The client-side routing focus behavior is handled in React by SkipFocusHandler.
 
                     // bind directly to skip link
                     function onSkipClick(e){ e.preventDefault(); focusMainWithRetries(10); }

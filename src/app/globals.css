@@ -65,17 +65,21 @@ html {
 @layer utilities {
   .skip-link {
     position: absolute;
-    left: 1rem;
-    top: -40px;
+    left: 2rem;
+    top: -60px;
     background: var(--color-primary);
     color: var(--color-white);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    padding: 1rem 2rem;
+    border-radius: 16px;
     z-index: 9999;
     transition: top 160ms ease, transform 160ms ease;
   }
-  .skip-link:focus {
-    top: 1rem;
+  /* only show the skip link visually when it's focus-visible (keyboard navigation)
+     programmatic focus (e.g., JS focusing on navigation) will not show the visual
+     affordance but the element will still be focused for screen reader/keyboard use */
+  .skip-link:focus-visible,
+  .skip-link[data-skip-visible="true"] {
+    top: 2.5rem;
     transform: translateY(0);
     outline: none;
     box-shadow: 0 0 0 3px rgba(81,89,207,0.18);
@@ -204,4 +208,32 @@ html {
     transform: scale(1.05);
   }
 
+}
+
+/* Accordion: show focus outline only when focused via keyboard (not pointer clicks)
+   - JS marks pointer activations with data-pointer-activated which is removed shortly after.
+   - Keyboard focus (focus-within) without that attribute shows a clear primary outline. */
+[data-accordion-item]:focus-within:not([data-pointer-activated]) {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 6px;
+  border-radius: var(--radius-card);
+  /* subtle shadow to match other focus treatments */
+  box-shadow: 0 6px 18px rgba(81, 89, 207, 0.08);
+}
+
+/* When an accordion item was activated by a pointer (mouse/touch), hide the
+   keyboard-only focus treatment for any focused element inside the item so
+   clicks/taps don't show the keyboard ring. Keep the focus for semantics,
+   but visually suppress the outline until keyboard navigation resumes. */
+[data-accordion-item][data-pointer-activated] :is(:focus, :focus-visible, *:focus, *:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Also ensure the accordion item element itself does not show the keyboard outline
+   when it was recently activated by pointer. Some browsers place the focus
+   outline on the ancestor element, so suppress it here as well. */
+[data-accordion-item][data-pointer-activated] {
+  outline: none !important;
+  box-shadow: none !important;
 }

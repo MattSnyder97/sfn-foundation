@@ -13,7 +13,8 @@ export const AccordionItem = ({
 }: RadixAccordion.AccordionItemProps) => (
   <RadixAccordion.Item
     {...props}
-    className="overflow-hidden rounded-2xl bg-white default-shadow transition-all"
+  data-accordion-item
+  className="overflow-hidden rounded-2xl bg-white default-shadow transition-all"
   >
     {children}
   </RadixAccordion.Item>
@@ -48,10 +49,50 @@ export const AccordionTrigger = ({ children }: { children: React.ReactNode }) =>
             // no-op on error
           }
         }}
-        onMouseDown={() => { pointerRef.current = true; }}
-        onTouchStart={() => { pointerRef.current = true; }}
-        onMouseUp={clearPointer}
-        onTouchEnd={clearPointer}
+        onPointerDown={(e) => {
+          // unify pointer types (mouse/touch/pen)
+          pointerRef.current = true;
+          // mark parent item as pointer-activated to suppress keyboard-only outline
+          try {
+            const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
+            if (item) {
+              // clear any previous timeout
+              const prev = item.getAttribute('data-pointer-timeout');
+              if (prev) window.clearTimeout(Number(prev));
+              item.setAttribute('data-pointer-activated', 'true');
+              const tid = window.setTimeout(() => { try { item.removeAttribute('data-pointer-activated'); item.removeAttribute('data-pointer-timeout'); } catch(e){} }, 600);
+              item.setAttribute('data-pointer-timeout', String(tid));
+            }
+          } catch (e) {}
+        }}
+        onPointerUp={(e) => {
+          // clear the transient pointer flag shortly after pointer up
+          clearPointer();
+          try {
+            // After a pointer activation, if the accordion item was opened, move focus
+            // into the panel for screen reader users: focus the first focusable element
+            // inside the content, or the content itself.
+            const item = (e.currentTarget as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
+            if (item) {
+              // find the next element with Radix content inside this item
+              const content = item.querySelector('[data-state="open"][data-radix-accordion-content], [data-radix-accordion-content]') as HTMLElement | null;
+              // Radix doesn't always set a stable selector, so fallback to the next sibling content region
+              const fallbackContent = item.querySelector('[data-radix-accordion-content]') as HTMLElement | null;
+              const panel = content || fallbackContent;
+              if (panel) {
+                // try to focus the first focusable element inside the panel
+                const focusable = panel.querySelector<HTMLElement>(
+                  'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+                try {
+                  (focusable || panel).focus();
+                } catch (e) {}
+              }
+            }
+          } catch (e) {}
+          // clear pointer flag to allow keyboard interactions afterwards
+          pointerRef.current = false;
+        }}
         className={cn(
           "group flex w-full items-center justify-between px-6 py-4",
           "font-medium text-lg text-gray transition-colors cursor-pointer",
@@ -62,7 +103,7 @@ export const AccordionTrigger = ({ children }: { children: React.ReactNode }) =>
         <ChevronDown
           strokeWidth={2.5}
           className={cn(
-            "h-5 w-5 text-gray-500 transition-transform duration-300",
+            "h-5 w-5 text-gray transition-transform duration-300",
             // Flip + color on open
             "group-data-[state=open]:scale-y-[-1] group-data-[state=open]:text-primary",
             // Also color on hover
@@ -77,7 +118,7 @@ export const AccordionTrigger = ({ children }: { children: React.ReactNode }) =>
 export const AccordionContent = ({ children }: { children: React.ReactNode }) => (
   <RadixAccordion.Content
     className={cn(
-      "px-6 pb-4 text-sm text-gray-600 leading-relaxed overflow-hidden",
+      "px-6 pb-4 text-sm text-gray leading-relaxed overflow-hidden",
       "data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp"
     )}
   >

@@ -45,7 +45,7 @@ export default function InfoHero({ title }: InfoHeroProps) {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(90deg, #5159CF 20%, #629FFB 100%)',
+          background: 'linear-gradient(90deg, #5159CF 20%, #5C58D1 100%)',
           opacity: 0.5,
           zIndex: 1,
         }}
