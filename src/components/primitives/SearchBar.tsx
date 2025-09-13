@@ -183,18 +183,28 @@ export default function SearchBar() {
             <div className="h-2 bg-primary rounded-t-xl" />
 
             {results.length > 0 ? (
-              <ul className="max-h-80 overflow-y-auto divide-y divide-gray-100">
+              <ul className="max-h-80 overflow-y-auto divide-y divide-primary/12">
                 {results.map((res, idx) => (
                   <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="last:border-none">
                     <Link
                       href={`${res.pageSlug}#${res.sectionId}`}
-                      className="block px-5 py-4 text-lg transition-colors duration-150 rounded-none hover:bg-primary/10 focus:bg-primary/20"
+                      className="group relative block px-5 py-4 text-lg transition-colors duration-150 rounded-none focus:bg-primary/20"
                       style={{ fontSize: '1.15rem' }}
                     >
-                      <div className="text-sm text-gray mb-1">
+                      <div className="text-sm text-gray mb-1 relative z-10">
                         <span className="font-medium text-primary">&quot;{query}&quot;</span> on <span className="text-dark">{res.pageTitle} Page</span>
                       </div>
-                      <div className="font-semibold text-dark mb-1">{res.sectionTitle}</div>
+
+                      {/* Title with inline underline sized to the title width */}
+                      <div className="relative z-10 mb-1">
+                        <span className="relative inline-block">
+                          <span className="font-semibold text-dark">{res.sectionTitle}</span>
+                          <span
+                            aria-hidden="true"
+                            className="absolute left-0 right-0 -bottom-2 h-1 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-56 group-hover:opacity-100 group-focus:opacity-100 group-hover:scale-x-100"
+                          />
+                        </span>
+                      </div>
                     </Link>
                   </li>
                 ))}
