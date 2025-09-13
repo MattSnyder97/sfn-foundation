@@ -8,7 +8,15 @@ export interface ResearchArticle {
 }
 
 export const researchArticles: ResearchArticle[] = [
-      {
+    {
+      title: "Gene Therapy Clinical Trial to Start in October for SFN Pain",
+      summary: "A clinical trial using gene therapy to reduce severe pain from SFN is set to begin in October. If you are in the Boston area, you may be eligible to participate.",
+      link: "https://clinicaltrials.gov/study/NCT06980948",
+      date: "2025-09-05",
+      image: "/images/common/injection.png",
+      imageAlt: "Image showing injection into a patient's arm"
+    },
+    {
       title: "From Pain-Centric to Multi-Symptom Small Fiber Neuropathy",
       summary: "This study aimed to characterize the symptomatic variability of SFN and determine whether patients can be stratified into meaningful subgroups.",
       link: "https://onlinelibrary.wiley.com/doi/10.1111/ene.70321",
