@@ -6,6 +6,8 @@ import AuthProvider from '@/components/providers/AuthProvider';
 import ScrollAndOutboundTracker from '@/components/core/ScrollAndOutboundTracker';
 import TitleOverride from '@/components/core/TitleOverride';
 import SkipFocusHandler from '@/components/core/SkipFocusHandler';
+import Cookies from '@/components/core/Cookies';
+import AnalyticsLoader from '@/components/core/AnalyticsLoader';
 
 // Load Lato as default sans
 const lato = Lato({
@@ -41,18 +43,7 @@ export default function RootLayout({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://sfn-foundation.org" />
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-LBNGNC5J4V"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-LBNGNC5J4V');
-          `}
-        </Script>
+        {/* Google Analytics is loaded client-side only after explicit consent by the user via AnalyticsLoader. */}
       </head>
       <body
         className={`${lato.variable} ${lora.variable} font-sans antialiased bg-offWhite text-dark min-h-screen flex flex-col`}
@@ -67,6 +58,8 @@ export default function RootLayout({
             {children}
           </main>
         </AuthProvider>
+  <Cookies />
+  <AnalyticsLoader />
         {/* JSON-LD Organization for SEO */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

@@ -34,6 +34,14 @@ export default function SkipFocusHandler() {
       if (e.key === 'Tab') {
         e.preventDefault();
         try {
+          // Prefer cookie consent focus if present (developer wants first Tab to land there when banner visible)
+          const cookieAccept = document.getElementById('cookie-consent-accept') as HTMLElement | null;
+          if (cookieAccept && cookieAccept.offsetParent !== null) {
+            cookieAccept.focus({ preventScroll: true });
+            navJustHappened.current = false;
+            return;
+          }
+
           const skip = document.getElementById('skip-to-content-link');
           if (skip) {
             skip.setAttribute('data-skip-visible', 'true');
