@@ -140,7 +140,7 @@ export default function SearchBar() {
     <div className="relative w-full max-w-2xl h-full">
       {/* Input (fills vertical space on desktop, 30% taller on mobile) */}
       <div
-        className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow focus-within:ring-2 focus-within:ring-primary h-full"
+        className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow h-full"
         style={{ minHeight: '3.5rem' }}
       >
         <Search className="h-4 w-4 text-gray" />
@@ -188,7 +188,7 @@ export default function SearchBar() {
                   <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="last:border-none">
                     <Link
                       href={`${res.pageSlug}#${res.sectionId}`}
-                      className="group relative block px-5 py-4 text-lg transition-colors duration-150 rounded-none focus:bg-primary/20"
+                      className="group relative block px-5 py-4 text-lg transition-colors duration-150 border-primary rounded-none"
                       style={{ fontSize: '1.15rem' }}
                     >
                       <div className="text-sm text-gray mb-1 relative z-10">
@@ -201,7 +201,7 @@ export default function SearchBar() {
                           <span className="font-semibold text-dark">{res.sectionTitle}</span>
                           <span
                             aria-hidden="true"
-                            className="absolute left-0 right-0 -bottom-2 h-1 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-56 group-hover:opacity-100 group-focus:opacity-100 group-hover:scale-x-100"
+                            className="absolute left-0 right-0 -bottom-2 h-1 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-56 group-hover:opacity-100 group-hover:scale-x-100"
                           />
                         </span>
                       </div>
