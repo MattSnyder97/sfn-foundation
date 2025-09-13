@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../primitives/Button";
 
 const COOKIE_NAME = "sfn_cookie_consent";
@@ -62,7 +62,7 @@ export default function Cookies() {
             <h3 id="cookie-consent-heading" className="text-2xl sm:text-3xl font-bold">Cookies?</h3>
 
             <p className="mt-3 text-sm sm:text-base text-white/90">
-              We use cookies and similar technologies to improve the website. By clicking "Accept" you agree to our cookie use in our <a href="/privacy-policy" className="underline">Privacy Policy</a>.
+              We use cookies and similar technologies to improve the website. By clicking &quot;Accept&quot; you agree to our cookie use in our <a href="/privacy-policy" className="underline">Privacy Policy</a>.
             </p>
 
             <div className="mt-4 sm:mt-6 flex flex-row items-center justify-center sm:justify-start gap-3">

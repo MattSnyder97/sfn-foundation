@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const COOKIE_NAME = "sfn_cookie_consent";
 const GA_ID = "G-LBNGNC5J4V"; // measurement ID
@@ -31,7 +31,11 @@ export default function AnalyticsLoader() {
 
     const removeGA = () => {
       // mark disabled flag in case any earlier code checks it
-      try { (window as any)['ga-disable-' + GA_ID] = true; } catch (e) {}
+      try {
+        // safely set a disable flag without asserting `any`
+        const key = 'ga-disable-' + GA_ID;
+        (window as unknown as Record<string, unknown>)[key] = true;
+      } catch (e) {}
       // remove injected GA scripts (if any)
       const nodes = Array.from(document.querySelectorAll('script[data-ga]'));
       nodes.forEach(n => n.parentNode?.removeChild(n));
