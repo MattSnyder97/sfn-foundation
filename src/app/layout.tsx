@@ -4,7 +4,6 @@ import "./globals.css";
 import Script from "next/script";
 import AuthProvider from '@/components/providers/AuthProvider';
 import ScrollAndOutboundTracker from '@/components/core/ScrollAndOutboundTracker';
-import TitleOverride from '@/components/core/TitleOverride';
 import SkipFocusHandler from '@/components/core/SkipFocusHandler';
 import Cookies from '@/components/core/Cookies';
 import AnalyticsLoader from '@/components/core/AnalyticsLoader';
@@ -53,7 +52,6 @@ export default function RootLayout({
           <a id="skip-to-content-link" href="#content" className="skip-link">Skip to Main Content</a>
             <SkipFocusHandler />
           <ScrollAndOutboundTracker />
-            <TitleOverride />
           <main id="content" tabIndex={-1}>
             {children}
           </main>
