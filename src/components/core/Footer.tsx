@@ -87,7 +87,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Specialists</h3>
       <ul className="space-y-3 text-sm">
               <li>
-        <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+        <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy&viewType=Table&sort=StudyFirstPostDate" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Clinical Trials
                 </Link>
               </li>

@@ -30,7 +30,7 @@ const navLinks = [
     href: "/research",
     dropdown: true,
     items: [
-      { label: "Clinical Trials", href: "https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy", target: "_blank" },
+      { label: "Clinical Trials", href: "https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy&viewType=Table&sort=StudyFirstPostDate", target: "_blank" },
       { label: "Latest Research", href: "/research" },
     ],
   },

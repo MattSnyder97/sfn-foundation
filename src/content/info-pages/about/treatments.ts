@@ -221,7 +221,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `If you are interested in new treatments, talk to your doctor about clinical trials. These studies help develop new medicines and can give some patients access to treatments before they are widely available. Your doctor can help decide if a trial might be right for you. [View clinical trials for SFN](https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy)`,
+          text: `If you are interested in new treatments, talk to your doctor about clinical trials. These studies help develop new medicines and can give some patients access to treatments before they are widely available. Your doctor can help decide if a trial might be right for you. [View clinical trials for SFN](https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy&viewType=Table&sort=StudyFirstPostDate)`,
         },
       ],
     },
