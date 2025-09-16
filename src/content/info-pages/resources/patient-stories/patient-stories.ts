@@ -51,7 +51,7 @@ export const patientStoriesContent = {
   ],
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 7, 2025",
+    lastUpdated: "September 16, 2025",
     references: [],
   },
 };

@@ -31,7 +31,8 @@ import { termsOfUseContent } from "./legal/terms-of-use";
 
 // ===== Patient Stories =====
 import { patientStoriesContent } from "./info-pages/resources/patient-stories/patient-stories";
-import { mattContent } from "./info-pages/resources/patient-stories/matt";
+import { mattKYContent } from "./info-pages/resources/patient-stories/matt-KY";
+import { eliMNContent } from "./info-pages/resources/patient-stories/eli-MN";
 
 export const allContent = [
   // About
@@ -58,5 +59,6 @@ export const allContent = [
   ...[termsOfUseContent],
   // Patient Stories
   ...[patientStoriesContent],
-  ...[mattContent],
+  ...[mattKYContent],
+  ...[eliMNContent],
 ];

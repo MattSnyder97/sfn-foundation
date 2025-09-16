@@ -1,8 +1,8 @@
-export const mattContent = {
+export const mattKYContent = {
   slug: "/resources/patient-stories/matt",
   tags: ["patient-stories", "community-support"],
   hero: {
-    title: "Matt's Journey with Small Fiber Neuropathy",
+    title: "Finding Purpose from the Pain",
   },
 
   tableOfContents: [
@@ -218,7 +218,7 @@ export const mattContent = {
   ],
 
   meta: {
-    author: "Matt, SFN Foundation Founder",
+    author: "Matt, age 28, Kentucky",
     lastUpdated: "August 28, 2025",
   },
 };
