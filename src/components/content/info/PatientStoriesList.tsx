@@ -3,7 +3,9 @@ import Image from 'next/image';
 import { allContent } from '@/content/index';
 type ContentBlock = { type?: string; text?: string; src?: string };
 type ContentSection = { content?: ContentBlock[] };
-type Story = { slug: string; sections?: ContentSection[]; hero?: { title?: string }; meta?: { lastUpdated?: string } };
+type AuthorObj = { name?: string; fullName?: string; age?: number | string; location?: string; city?: string };
+type Meta = { lastUpdated?: string; author?: string | AuthorObj; authorName?: string; by?: string };
+type Story = { slug: string; sections?: ContentSection[]; hero?: { title?: string }; meta?: Meta };
 
 export default function PatientStoriesList() {
   // Filter stories, then sort by lastUpdated (newest first)
@@ -11,26 +13,12 @@ export default function PatientStoriesList() {
     .filter((item) => item.slug.startsWith('/resources/patient-stories/') && item.slug !== '/resources/patient-stories')
     .slice() // copy before sorting
     .sort((a, b) => {
-      const ta = a.meta?.lastUpdated ? new Date(a.meta.lastUpdated).getTime() : 0;
-      const tb = b.meta?.lastUpdated ? new Date(b.meta.lastUpdated).getTime() : 0;
+      const ta = a.meta?.lastUpdated ? new Date(a.meta?.lastUpdated).getTime() : 0;
+      const tb = b.meta?.lastUpdated ? new Date(b.meta?.lastUpdated).getTime() : 0;
       const na = Number.isFinite(ta) ? ta : 0;
       const nb = Number.isFinite(tb) ? tb : 0;
       return nb - na;
     });
-
-  const excerptFrom = (story: Story) => {
-    try {
-      const firstSection = story.sections?.[0];
-        const firstBlock = firstSection?.content?.find((b) => b.type === 'paragraph');
-      if (firstBlock?.text) {
-        const txt = firstBlock.text.replace(/\s+/g, ' ').trim();
-        return txt.length > 240 ? txt.slice(0, 200).trim() + '…' : txt;
-      }
-    } catch {
-      // ignore
-    }
-    return '';
-  };
 
   const findLastImage = (story: Story) => {
     try {
@@ -69,16 +57,15 @@ export default function PatientStoriesList() {
   };
 
   // helper: build author line from meta.author (string or {name, age, location})
-  const getAuthorLine = (story: Story) => {
-    const metaAny = (story as any).meta || {};
-    const authorRaw = metaAny.author || metaAny.authorName || metaAny.by;
+  const getAuthorLine = (meta?: Meta) => {
+    const authorRaw = meta?.author || meta?.authorName || meta?.by;
     if (!authorRaw) return '';
     let name = '';
     let age: string | number | undefined;
     let location: string | undefined;
     if (typeof authorRaw === 'string') {
       name = authorRaw;
-    } else if (typeof authorRaw === 'object') {
+    } else if (typeof authorRaw === 'object' && authorRaw !== null) {
       name = authorRaw.name || authorRaw.fullName || '';
       age = authorRaw.age;
       location = authorRaw.location || authorRaw.city;
@@ -91,40 +78,38 @@ export default function PatientStoriesList() {
     return parts.join(', ');
   };
  
-   if (stories.length === 0) {
-     return <p>No stories have been added yet.</p>;
-   }
+  if (stories.length === 0) {
+    return <p>No stories have been added yet.</p>;
+  }
  
-   return (
-     <div className="flex flex-col gap-6">
-       {stories.map((story) => {
-  const imgSrc = findLastImage(story);
+  return (
+    <div className="flex flex-col gap-6">
+      {stories.map((story) => {
+        const imgSrc = findLastImage(story);
         const dateText = story.meta?.lastUpdated || '';
-        const publishedText = dateText ? `Published ${formatDateWithOrdinal(dateText)}` : '';
-        const authorLine = getAuthorLine(story);
+        const authorLine = getAuthorLine(story.meta);
         return (
           <Link
             key={story.slug}
             href={story.slug}
-            className="group block rounded-xl default-shadow bg-white border border-gray-200 p-6 md:p-8 transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="border-gray/20 border-1 rounded-xl p-6 bg-white block default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            {/* desktop: content | image */}
-            <div className="flex flex-col md:grid md:grid-cols-[1fr_220px] md:items-center gap-6">
-              {/* text column - vertically centered */}
-              <div className="flex-1 flex flex-col justify-center">
-                <h3 className="font-semibold text-lg md:text-xl mb-2 text-dark group-hover:text-primary transition-colors">{story.hero?.title}</h3>
-                {authorLine ? <p className="text-sm text-gray-600 mb-1">{authorLine}</p> : null}
-                <p className="text-sm text-gray-500 mb-0"><time dateTime={dateText}>{formatDateWithOrdinal(dateText)}</time></p>
+            <div className="flex flex-col md:flex-row items-stretch gap-8">
+              <div className="flex-1 p-2 md:p-4 flex flex-col justify-center">
+                <h3 className="font-semibold text-lg mb-4 text-dark">{story.hero?.title}</h3>
+                {/* author line (if any) */}
+                {authorLine ? <p className="text-sm text-gray mb-2">{authorLine}</p> : null}
+                {/* published date */}
+                <p className="text-sm text-gray">{formatDateWithOrdinal(dateText)}</p>
               </div>
  
-              {/* image column */}
-              <div className="hidden md:flex w-full md:w-56 h-36 md:h-44 rounded-lg overflow-hidden bg-gray-100 shadow-sm flex-shrink-0">
-                <Image src={imgSrc} alt={story.hero?.title || 'Patient story image'} width={640} height={400} className="object-cover w-full h-full" />
+              <div className="hidden default-shadow md:block w-48 h-40 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                <Image src={imgSrc} alt={story.hero?.title || 'Patient story image'} width={320} height={200} className="object-cover w-full h-full rounded" />
               </div>
             </div>
           </Link>
         );
       })}
-     </div>
-   );
- }
+    </div>
+  );
+}
