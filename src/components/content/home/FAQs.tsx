@@ -85,7 +85,7 @@ export function FAQs() {
       answer: (
         <>
           Treatment focuses on regular exercise, a healthy diet, and treating any
-          underlying conditions. Many people also use pain medicines or supplements
+          underlying conditions. Many people use pain medications or supplements
           to help manage symptoms.
           <br />
           <br />

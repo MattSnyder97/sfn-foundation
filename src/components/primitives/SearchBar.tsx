@@ -178,7 +178,8 @@ export default function SearchBar() {
       {/* Results dropdown — improved appearance and distinctive hover */}
       {query && (results.length > 0 || query.length >= 2) && (
         <div className="absolute left-0 top-full z-50 mt-2 w-full">
-          <div className="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-200">
+          {/* allow focus rings to be visible outside rounded container */}
+          <div className="bg-white shadow-xl rounded-xl border border-gray-200 overflow-visible">
             {/* top primary cap to match header dropdown */}
             <div className="h-2 bg-primary rounded-t-xl" />
 
@@ -188,22 +189,26 @@ export default function SearchBar() {
                   <li key={`${res.pageSlug}-${res.sectionId}-${idx}`} className="last:border-none">
                     <Link
                       href={`${res.pageSlug}#${res.sectionId}`}
-                      className="group relative block px-5 py-4 text-lg transition-colors duration-150 border-primary rounded-none"
+                      // keep link focusable but move visible ring to inner content wrapper
+                      className="group relative block px-5 py-4 text-lg transition-colors duration-150 border-primary rounded-none focus:outline-none z-20"
                       style={{ fontSize: '1.15rem' }}
                     >
-                      <div className="text-sm text-gray mb-1 relative z-10">
-                        <span className="font-medium text-primary">&quot;{query}&quot;</span> on <span className="text-dark">{res.pageTitle} Page</span>
-                      </div>
+                      {/* inner wrapper receives the visible focus ring; add padding and use a less-rounded corner */}
+                      <div className="relative z-10 inline-block w-full rounded-sm px-1 py-1 group-focus:ring-4 group-focus:ring-primary group-focus:ring-offset-4 group-focus:ring-offset-white">
+                        <div className="text-sm text-gray mb-1">
+                          <span className="font-medium text-primary">&quot;{query}&quot;</span> on <span className="text-dark">{res.pageTitle} Page</span>
+                        </div>
 
-                      {/* Title with inline underline sized to the title width */}
-                      <div className="relative z-10 mb-1">
-                        <span className="relative inline-block">
-                          <span className="font-semibold text-dark">{res.sectionTitle}</span>
-                          <span
-                            aria-hidden="true"
-                            className="absolute left-0 right-0 -bottom-2 h-1 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-56 group-hover:opacity-100 group-hover:scale-x-100"
-                          />
-                        </span>
+                        {/* Title with inline underline sized to the title width */}
+                        <div className="mb-1">
+                          <span className="relative inline-block">
+                            <span className="font-semibold text-dark">{res.sectionTitle}</span>
+                            <span
+                              aria-hidden="true"
+                              className="absolute left-0 right-0 -bottom-2 h-1 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-56 group-hover:opacity-100 group-hover:scale-x-100"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   </li>

@@ -38,6 +38,10 @@ html {
 
   /* Miscellaneous */
   --header-height: 200px;
+
+  /* Focus ring defaults */
+  --focus-ring-offset: 4px;      /* matches focus-visible:ring-offset-4 */
+  --focus-ring-radius: 0.125rem; /* small rounded (tailwind rounded-sm) */
 }
 
 
@@ -90,10 +94,23 @@ html {
     /* keep visual noise down for mouse interactions */
     outline: none;
   }
+  /* Default keyboard focus treatment (uses variables so it's consistent across the app).
+     Smaller corner radius (rounded-sm) and natural offset equivalent to ring-offset-4. */
   :focus-visible {
     outline: 3px solid var(--color-primary);
-    outline-offset: 3px;
+    outline-offset: var(--focus-ring-offset);
+    border-radius: var(--focus-ring-radius);
   }
+
+  /* Utility: explicit outline-based focus ring for components that prefer an outline
+     (useful as a fallback when ring utilities are clipped by overflow). */
+  .focus-ring:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: var(--focus-ring-offset);
+    border-radius: var(--focus-ring-radius);
+  }
+
+  /* ...existing code... */
 }
 
 /* ===== Utilities ===== */
