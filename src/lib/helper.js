@@ -9,6 +9,7 @@ dotenv.config();
 // --- generateContentIndex logic ---
 function generateContentIndex() {
   const contentDirs = [
+    "src/content/info-pages/about-the-foundation",
     "src/content/info-pages/about",
     "src/content/info-pages/research",
     "src/content/info-pages/resources",
@@ -17,6 +18,7 @@ function generateContentIndex() {
   ];
 
   const sectionMap = {
+    "src/content/info-pages/about-the-foundation": "About the Foundation",
     "src/content/info-pages/about": "About",
     "src/content/info-pages/research": "Research",
     "src/content/info-pages/resources": "Resources",

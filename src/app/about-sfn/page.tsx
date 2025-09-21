@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 
 export default function Page() {
 
-  const pageContent = getMainPageData('about');
+  const pageContent = getMainPageData('about-sfn');
 
   if (!pageContent) {
     notFound();

@@ -28,6 +28,8 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({
+      // expire magic links after 1 hour (3600 seconds)
+      maxAge: 60 * 60,
       async sendVerificationRequest({ identifier, url }) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
@@ -39,7 +41,7 @@ export const authOptions: NextAuthOptions = {
               <div style="max-width:520px;margin:0 auto;">
                 <div style="background:#ffffff;border-radius:14px;box-shadow:0 6px 18px rgba(16,24,40,0.06);padding:28px;text-align:center;">
                   <h1 style="margin:0 0 12px 0;font-size:32px;color:#5B5D70;line-height:1.2;font-weight:700;">SFN Foundation Research Portal</h1>
-                  <p style="margin:0 0 18px 0;color:#374151;font-size:18px;line-height:1.4">Click the button below to securely sign in to your account. This link will expire shortly for your safety.</p>
+                  <p style="margin:0 0 18px 0;color:#374151;font-size:18px;line-height:1.4">Click the button below to sign in to your account. This link will expire in an hour.</p>
 
                   <div style="text-align:center;margin:20px 0;">
                     <a href="${url}"

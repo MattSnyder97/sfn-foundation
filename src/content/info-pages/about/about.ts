@@ -1,5 +1,5 @@
 export const aboutContent = {
-  slug: "/about",
+  slug: "/about-sfn",
   tags: ["about"],
   hero: {
     title: "About SFN",

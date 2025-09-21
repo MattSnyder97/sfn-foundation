@@ -225,6 +225,17 @@ html {
     transform: scale(1.05);
   }
 
+  /* New utility: hover shadow for devices that support hover */
+  .hover-shadow {
+    transition: box-shadow 160ms ease;
+  }
+  @media (hover: hover) {
+    .hover-shadow:hover {
+      --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+
 }
 
 /* Accordion: show focus outline only when focused via keyboard (not pointer clicks)

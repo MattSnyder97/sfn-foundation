@@ -66,22 +66,7 @@ export function FAQs() {
     },
     {
       value: "faq-5",
-      question: "Is there a cure for SFN?",
-      answer: (
-        <>
-          There is no cure right now. If the cause is found and treated, some people
-          do improve. Research and clinical trials are ongoing and give hope.
-          <br />
-          <br />
-          <Link href="/research/" className="text-primary hover:underline">
-            Stay updated on our Research page
-          </Link>
-        </>
-      ),
-    },
-    {
-      value: "faq-6",
-      question: "What are my treatment options for SFN?",
+      question: "What treatments are available for SFN?",
       answer: (
         <>
           Treatment focuses on regular exercise, a healthy diet, and treating any
@@ -95,6 +80,21 @@ export function FAQs() {
         </>
       ),
     },
+    {
+      value: "faq-6",
+      question: "What is the SFN Foundation?",
+      answer: (
+        <>
+          The SFN Foundation exists for those affected by Small Fiber Neuropathy. We are committed to improving the lives of people living with SFN through research, education, support, and awareness.
+          <br />
+          <br />
+          <Link href="/about-the-foundation" className="text-primary hover:underline">
+            Learn more about the SFN Foundation
+          </Link>
+        </>
+      ),
+    },
+
   ];
 
   return (

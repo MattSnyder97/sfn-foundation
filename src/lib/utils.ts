@@ -2,7 +2,8 @@
  * Mapping for better display names for slugs used in navigation and breadcrumbs.
  */
 export const segmentLabels: Record<string, string> = {
-  'about': 'About',
+  'about-sfn': 'About SFN',
+  'about-the-foundation': 'About the Foundation',
   'accessibility': 'Accessibility',
   'caregiver-tips': 'Caregiver Tips',
   'causes': 'Causes',
@@ -10,6 +11,7 @@ export const segmentLabels: Record<string, string> = {
   'dictionary': 'SFN Dictionary',
   'disclaimer': 'Medical Disclaimer',
   'doctors': 'Approved Doctors',
+  'specialists': 'Find a Specialist',
   'mutual-aid': 'Mutual Aid',
   'newly-diagnosed': 'Newly Diagnosed',
   'patient-stories': 'Patient Stories',

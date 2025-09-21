@@ -7,10 +7,13 @@ import LatestNewsList from "@/components/content/info/ResearchList";
 import PatientStoriesList from "@/components/content/info/PatientStoriesList";
 import PatientShortStory from "@/components/content/info/PatientShortStory";
 import SpecialistCard from '@/components/content/info/SpecialistCard';
+import Roadmap from "@/components/content/info/Roadmap";
 
 interface ContentBlock {
   type: "paragraph" | "list" | "image" | "component" | "button" | "specialist";
   name?: string;
+  component?: string;
+  props?: any;
 }
 
 interface ParagraphBlock extends ContentBlock {
@@ -61,7 +64,9 @@ function deriveAltFromSrc(src: string) {
 
 interface ComponentBlock extends ContentBlock {
   type: "component";
-  name: string;
+  name?: string;
+  component?: string;
+  props?: any;
 }
 
 interface ButtonBlock extends ContentBlock {
@@ -125,19 +130,28 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
       );
     }
     case "component": {
-      if ((block as ComponentBlock).name === "LatestNewsList") {
-        return <LatestNewsList />;
+      // Support either `name` or `component` key coming from content JSON
+      const compName = (block as ComponentBlock).name || (block as ComponentBlock).component;
+      const compProps = (block as ComponentBlock).props || {};
+
+      if (compName === "LatestNewsList") {
+        return <LatestNewsList {...compProps} />;
       }
-      if ((block as ComponentBlock).name === "PatientStoriesList") {
-        return <PatientStoriesList />;
+      if (compName === "PatientStoriesList") {
+        return <PatientStoriesList {...compProps} />;
       }
-      if ((block as ComponentBlock).name === "PatientShortStory") {
-        const props: { author?: string; date?: string; children?: React.ReactNode } = (block as ComponentBlock & { props?: { author?: string; date?: string; children?: React.ReactNode } }).props || {};
+      if (compName === "PatientShortStory") {
+        const props: { author?: string; date?: string; children?: React.ReactNode } = compProps || {};
         return (
           <PatientShortStory author={props.author}>
             {props.children}
           </PatientShortStory>
         );
+      }
+      // Render Roadmap component when content provides type: "component" and name/component: "Roadmap"
+      if (compName === "Roadmap") {
+        const props: { items?: string[] } = compProps || {};
+        return <Roadmap items={props.items || []} />;
       }
       return null;
     }

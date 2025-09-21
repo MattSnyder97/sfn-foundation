@@ -23,6 +23,9 @@ import { specialistsContent } from "./info-pages/resources/specialists";
 import { supplementsContent } from "./info-pages/resources/supplements";
 import { supportGroupContent } from "./info-pages/resources/support-group";
 
+// ===== About the Foundation =====
+import { aboutTheFoundationContent } from "./info-pages/about-the-foundation/about-the-foundation";
+
 // ===== Legal =====
 import { accessibilityContent } from "./legal/accessibility";
 import { disclaimerContent } from "./legal/disclaimer";
@@ -41,6 +44,8 @@ export const allContent = [
   ...[diagnosisContent],
   ...[symptomsContent],
   ...[treatmentsContent],
+  // About the Foundation
+  ...[aboutTheFoundationContent],
   // Research
   ...[researchContent],
   // Resources

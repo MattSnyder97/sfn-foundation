@@ -18,13 +18,13 @@ export default function Header() {
   const navLinks = [
     {
       label: "About SFN",
-      href: "/about",
+      href: "/about-sfn",
       dropdown: true,
       items: [
-        { label: "Causes", href: "/about/causes" },
-        { label: "Diagnosis", href: "/about/diagnosis" },
-        { label: "Symptoms", href: "/about/symptoms" },
-        { label: "Treatments", href: "/about/treatments" },
+        { label: "Causes", href: "/about-sfn/causes" },
+        { label: "Diagnosis", href: "/about-sfn/diagnosis" },
+        { label: "Symptoms", href: "/about-sfn/symptoms" },
+        { label: "Treatments", href: "/about-sfn/treatments" },
       ],
     },
     {
@@ -50,6 +50,14 @@ export default function Header() {
         { label: "SFN Dictionary", href: "/resources/dictionary" },
         { label: "Support Group", href: "/resources/support-group",},
         { label: "Supplements", href: "/resources/supplements" },
+      ],
+    },
+    {
+      label: "SFN Foundation",
+      href: "/about-the-foundation",
+      dropdown: true,
+      items: [
+        { label: "About the Foundation", href: "/about-the-foundation/" },
       ],
     },
   ];
@@ -125,7 +133,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white default-shadow relative md:sticky md:top-0 md:z-50">
-      <div className="container-padding mx-auto flex items-center justify-between py-12">
+      <div className="container-padding mx-auto flex items-center justify-between py-8 md:py-12">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -138,7 +146,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center justify-end flex-1 space-x-12 relative">
+        <div className="hidden xl:flex items-center justify-end flex-1 space-x-8 relative">
           {/* Hide category links when search is open */}
           {!searchOpen && navLinks.map((link) => {
             const isActive = activeDropdown === link.label;
@@ -152,12 +160,11 @@ export default function Header() {
                 {/* ...existing code for nav links... */}
                   <div className="flex flex-col items-center relative">
                     {link.dropdown ? (
-                      // Updated: use a navigable label (Link/span) and a separate caret button
-                      <div className="flex items-center space-x-3 px-2 py-1 rounded-sm transition-colors duration-150 cursor-default">
+                      <div className="flex items-center space-x-2 px-2 py-1 rounded-sm transition-colors duration-150 cursor-default">
                         {link.href ? (
                           <Link
                             href={link.href}
-                            className={`text-base font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
+                            className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
                             onFocus={() => openDropdown(link.label)} // keep focus opening behavior for keyboard users
                             onKeyDown={(e) => {
                               // ArrowDown opens dropdown and moves focus to first menu item
@@ -177,7 +184,7 @@ export default function Header() {
                           </Link>
                         ) : (
                           <span
-                            className={`text-base font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
+                            className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
                             tabIndex={0}
                             onFocus={() => openDropdown(link.label)}
                             onKeyDown={(e) => {
@@ -215,19 +222,19 @@ export default function Header() {
                           className={`flex items-center justify-center p-1 rounded-md focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white`}
                         >
                           <ChevronDown
-                            strokeWidth={2.5}
-                            className={`h-3.5 w-3.5 transition-all duration-160 ${isActive ? "scale-y-[-1] text-primary" : "text-dark group-hover:text-primary"}`}
+                            strokeWidth={2}
+                            className={`h-4 w-4 translate-y-0.5 transition-all duration-160 ${isActive ? "scale-y-[-1] text-primary" : "text-dark group-hover:text-primary"}`}
                           />
                         </button>
                       </div>
                     ) : (
                       // Non-dropdown categories: make the Link the focusable control (no nested interactive)
                       link.href ? (
-                        <Link href={link.href} className="text-base font-medium px-2 py-1">
+                        <Link href={link.href} className="text-lg font-medium px-2 py-1">
                           {link.label}
                         </Link>
                       ) : (
-                        <span className="text-base font-medium px-2 py-1">{link.label}</span>
+                        <span className="text-lg font-medium px-2 py-1">{link.label}</span>
                       )
                     )}
                   </div>
@@ -235,14 +242,14 @@ export default function Header() {
                    <div
                      id={`menu-${link.label.replace(/\s+/g, '-')}`}
                      role="menu"
-                     className="absolute left-0 top-full z-20 w-48 -translate-x-4"
+                     className="absolute left-0 top-full z-20 w-48 -translate-x-3"
                      onMouseEnter={() => openDropdown(link.label)}
                      onMouseLeave={scheduleClose}
                      onKeyDown={(e) => onMenuKeyDown(e, link.label)}
                    >
                      <div className="pt-4">
                        {/* Allow focus rings to render outside the rounded container */}
-                       <div className="bg-white default-shadow rounded-md overflow-visible">
+                       <div className="bg-white border border-primary/8 emphasis-shadow rounded-md overflow-visible">
                          <div className="h-2 bg-primary rounded-t-md" />
                          {link.items?.map((item, idx) => (
                            <Link
@@ -256,7 +263,7 @@ export default function Header() {
                                menuItemRefs.current[link.label][idx] = el as HTMLElement;
                              }}
                              tabIndex={0}
-                             className="block px-4 py-3 text-sm text-gray hover:text-primary hover:underline transition-colors duration-200 focus:outline-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-opacity-95 rounded-sm"
+                             className="block px-4 py-3 text-md text-gray hover:text-primary hover:underline transition-colors duration-200 focus:outline-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-opacity-95 rounded-sm"
                            >
                              {item.label}
                            </Link>
@@ -318,7 +325,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center ml-auto">
+        <div className="xl:hidden flex items-center ml-auto">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"

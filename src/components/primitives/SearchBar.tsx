@@ -137,10 +137,10 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl h-full">
+    <div className="relative w-full max-w-4xl h-full">
       {/* Input (fills vertical space on desktop, 30% taller on mobile) */}
       <div
-        className="flex items-center gap-3 rounded-xl border border-dark/20 bg-white px-4 py-2 default-shadow h-full"
+        className="flex items-center gap-3 rounded-xl border-2 md:border-3 border-gray md:border-primary/80 bg-white px-4 py-2 default-shadow h-full"
         style={{ minHeight: '3.5rem' }}
       >
         <Search className="h-4 w-4 text-gray" />

@@ -27,7 +27,6 @@ export default function SignIn() {
   return (
     <ActionCard
       topLogoBanner={true}
-      subtitle={<>Enter your email address to receive a sign-in link.</>}
       form
       formOnSubmit={handleSubmit}
       actions={(

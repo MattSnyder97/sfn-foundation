@@ -2,7 +2,7 @@ export const eliMNContent = {
   slug: "/resources/patient-stories/eli",
   tags: ["patient-stories", "community-support"],
   hero: {
-    title: "From Childhood SFN to Scientific Advocacy",
+    title: "Growing Up with SFN and Becoming a Scientist",
   },
 
   tableOfContents: [
@@ -69,6 +69,12 @@ export const eliMNContent = {
           text: `Previously, a basketball player and a top cross-country runner, I had to give up my sports as my body declined further. I kept looking for anything to reduce the symptoms but so far, I have only been successful with my hair and none of the actual, painful symptoms. I was a good student, but because of my SFN and the lack of proper treatment, we didn't know if I'd be able to go to college. I pushed to go anyways and only applied to schools with top medical facilities for my conditions.`,
         },
         {
+          type: "image",
+          src: "/images/patient-stories/eli-MN1.jpeg",
+          alt: "Eli Perr wearing a lab coat",
+          caption: "Eli smiling in the lab.",
+        },
+        {
           type: "paragraph",
           text: `I knew pushing through would be worth it because I studied biology and neuroscience and I was going to become a scientist and help find better treatments and someday a cure for people like me. Again, I was so naive. Unlike Star Trek, one of my favorite shows since I was kid, scientists only get to study diseases that there is funding for, that the public cares about. Few know about SFN and few have deemed it worthy of study. In fact, no lab in my undergrad institution or my grad institution (a large state school!) is studying any type of neuropathy let alone SFN. Only a few niche labs across the country are studying it and at least for now I am required to study something else, something that, although rarer than SFN, the public and government has decided is worthy.`,
         },
@@ -82,6 +88,12 @@ export const eliMNContent = {
         {
           type: "paragraph",
           text: `I am now 28 and nothing has changed for me except that I've gotten worse. I had hoped over several decades we would have more research, better treatments but with so little SFN funding progress moves at a snail's pace. It is unfair and unacceptable that millions with SFN and related conditions are ignored. I hope one day, with the help of this new organization this changes. Maybe, one day I will even have the chance to apply the skills I have developed to study SFN in the lab.`,
+        },
+        {
+          type: "image",
+          src: "/images/patient-stories/eli-MN2.jpeg",
+          alt: "Eli Perr looking into a microscope",
+          caption: "Eli looking into a microscope.",
         },
       ],
     }
