@@ -47,10 +47,10 @@ export function LatestNews() {
 
           {/* Highlighted item */}
           <div className="mb-8">
-                <a href={highlighted.href} className="block rounded-xl p-8 border-gray/20 border-1 bg-white emphasis-shadow default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer">
+                <a href={highlighted.href} className="block rounded-xl p-8 border-tertiary border bg-white emphasis-shadow default-shadow overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-xl cursor-pointer">
               <div className="flex flex-col md:flex-row items-stretch gap-4">
                 <div className="flex-1">
-                  <span className="inline-block text-sm font-semibold text-dark bg-tertiary/24 px-3 py-1 rounded-full mb-3">Community Outreach</span>
+                  <span className="inline-block text-sm font-semibold text-dark bg-tertiary/24 px-3 py-1 rounded-full mb-3">Pinned Article</span>
                   <h3 className="font-semibold text-2xl text-dark mb-2">{highlighted.title}</h3>
                   <p className="text-md text-gray md:max-w-[90ch]">{highlighted.description}</p>
                     <div className="mt-2 md:hidden">

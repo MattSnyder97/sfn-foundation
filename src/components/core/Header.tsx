@@ -8,7 +8,6 @@ import { ChevronDown } from "lucide-react";
 import SearchBar from "@/components/primitives/SearchBar";
 
 export default function Header() {
-  const router = useRouter();
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

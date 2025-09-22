@@ -197,7 +197,6 @@ export default function ContactPage() {
 									tabIndex={-1}
 									className="absolute z-40 mt-2 w-full bg-white border rounded-lg shadow max-h-56 overflow-auto"
 									onKeyDown={(e) => {
-										const count = SUBJECT_OPTIONS.length;
 										if (e.key === 'Escape') {
 											setIsOpen(false);
 											(document.getElementById('subject_toggle') as HTMLButtonElement | null)?.focus();

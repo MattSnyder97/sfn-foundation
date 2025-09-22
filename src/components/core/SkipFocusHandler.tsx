@@ -51,7 +51,9 @@ export default function SkipFocusHandler() {
             window.setTimeout(remove, 3000);
             skip.focus({ preventScroll: true });
           }
-        } catch (err) {}
+        } catch {
+          // error intentionally ignored (or log selectively)
+        }
         navJustHappened.current = false;
       }
     };
