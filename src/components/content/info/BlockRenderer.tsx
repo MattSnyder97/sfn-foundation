@@ -13,7 +13,7 @@ interface ContentBlock {
   type: "paragraph" | "list" | "image" | "component" | "button" | "specialist";
   name?: string;
   component?: string;
-  props?: any;
+  props?: Record<string, unknown>;
 }
 
 interface ParagraphBlock extends ContentBlock {
@@ -66,7 +66,7 @@ interface ComponentBlock extends ContentBlock {
   type: "component";
   name?: string;
   component?: string;
-  props?: any;
+  props?: Record<string, unknown>;
 }
 
 interface ButtonBlock extends ContentBlock {
@@ -84,20 +84,23 @@ interface BlockRendererProps {
 }
 
 export default function BlockRenderer({ block }: BlockRendererProps) {
+  // Use discriminated union narrowing by checking block.type directly.
   switch (block.type) {
     case "paragraph":
-      return <InfoParagraph>{(block as ParagraphBlock).text}</InfoParagraph>;
+      return <InfoParagraph>{block.text}</InfoParagraph>;
+
     case "list":
-      return <InfoList ordered={(block as ListBlock).ordered} items={(block as ListBlock).items} />;
+      return <InfoList ordered={block.ordered} items={block.items} />;
+
     case "image": {
-      const img = block as ImageBlock;
-      // Prefer explicit alt from content; fall back to caption, then derive from filename
+      const img = block;
       const explicitAlt = img.alt && img.alt.trim();
       const altText = explicitAlt || img.caption || deriveAltFromSrc(img.src);
       return <InfoImage src={img.src} alt={altText} caption={img.caption} />;
     }
+
     case "button": {
-      const { label, href, variant } = block as ButtonBlock;
+      const { label, href, variant } = block;
       const variantClasses = {
         primary: "border-2 border-primary bg-primary text-white hover:bg-offWhite hover:border-primary hover:text-primary",
         secondary: "bg-offWhite border-2 border-offWhite text-primary hover:bg-primary hover:text-offWhite",
@@ -129,34 +132,36 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
         </div>
       );
     }
+
     case "component": {
-      // Support either `name` or `component` key coming from content JSON
-      const compName = (block as ComponentBlock).name || (block as ComponentBlock).component;
-      const compProps = (block as ComponentBlock).props || {};
+      const compName = block.name || block.component;
+      const compProps = block.props || {};
 
       if (compName === "LatestNewsList") {
-        return <LatestNewsList {...compProps} />;
+        // LatestNewsList expects its own props — if none are required we can render without spreading unknowns
+        return <LatestNewsList />;
       }
       if (compName === "PatientStoriesList") {
-        return <PatientStoriesList {...compProps} />;
+        return <PatientStoriesList />;
       }
       if (compName === "PatientShortStory") {
-        const props: { author?: string; date?: string; children?: React.ReactNode } = compProps || {};
+        const author = typeof compProps["author"] === "string" ? (compProps["author"] as string) : undefined;
+        const children = compProps["children"] as React.ReactNode | undefined;
         return (
-          <PatientShortStory author={props.author}>
-            {props.children}
+          <PatientShortStory author={author}>
+            {children}
           </PatientShortStory>
         );
       }
-      // Render Roadmap component when content provides type: "component" and name/component: "Roadmap"
       if (compName === "Roadmap") {
-        const props: { items?: string[] } = compProps || {};
-        return <Roadmap items={props.items || []} />;
+        const items = Array.isArray(compProps["items"]) ? (compProps["items"] as unknown[]).filter(i => typeof i === "string").map(String) : [];
+        return <Roadmap items={items} />;
       }
       return null;
     }
+
     case "specialist": {
-      const s = block as SpecialistBlock;
+      const s = block;
       const card = (
         <div className="my-6">
           <SpecialistCard nameTitle={s.nameTitle} location={s.location} imageSrc={s.imageSrc} alt={s.alt} />
@@ -171,6 +176,7 @@ export default function BlockRenderer({ block }: BlockRendererProps) {
       }
       return card;
     }
+
     default:
       return null;
   }
