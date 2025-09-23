@@ -116,7 +116,7 @@ export const dictionaryContent = {
         },
         {
           type: "paragraph",
-          text: `[Learn more about diagnosing SFN](/about/diagnosis)`,
+          text: `[Learn more about diagnosing SFN](/about-sfn/diagnosis)`,
         },
       ],
     },
@@ -152,7 +152,7 @@ export const dictionaryContent = {
         },
         {
           type: "paragraph",
-          text: `[Learn more about SFN treatments](/about/treatments)`,
+          text: `[Learn more about SFN treatments](/about-sfn/treatments)`,
         },
       ],
     },
@@ -188,7 +188,7 @@ export const dictionaryContent = {
         },
         {
           type: "paragraph",
-          text: `[Learn more about SFN symptoms](/about/symptoms)`,
+          text: `[Learn more about SFN symptoms](/about-sfn/symptoms)`,
         },
       ],
     },

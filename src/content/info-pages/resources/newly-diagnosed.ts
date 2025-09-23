@@ -50,7 +50,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Having SFN does not mean your life is over. Many people with SFN still work, exercise, travel, and enjoy hobbies with proper care. [Read more about SFN Symptoms](/about/symptoms)`,
+          text: `Having SFN does not mean your life is over. Many people with SFN still work, exercise, travel, and enjoy hobbies with proper care. [Read more about SFN Symptoms](/about-sfn/symptoms)`,
         },
       ],
     },

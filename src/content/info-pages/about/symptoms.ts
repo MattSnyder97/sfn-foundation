@@ -1,5 +1,5 @@
 export const symptomsContent = {
-  slug: "/about/symptoms",
+  slug: "/about-sfn/symptoms",
   tags: ["symptoms", "about"],
   hero: {
     title: "Symptoms",

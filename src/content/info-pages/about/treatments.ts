@@ -1,5 +1,5 @@
 export const treatmentsContent = {
-  slug: "/about/treatments",
+  slug: "/about-sfn/treatments",
   tags: ["treatments", "about"],
   hero: {
     title: "Treatments",

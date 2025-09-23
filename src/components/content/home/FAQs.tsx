@@ -13,7 +13,7 @@ export function FAQs() {
           and automatic body signals.
           <br />
           <br />
-          <Link href="/about/" className="text-primary hover:underline">
+          <Link href="/about-sfn/" className="text-primary hover:underline">
             Learn more on our About SFN page
           </Link>
         </>
@@ -28,7 +28,7 @@ export function FAQs() {
           shooting or stabbing pains, stomach or bowel problems, and brain fog.
           <br />
           <br />
-          <Link href="/about/symptoms" className="text-primary hover:underline">
+          <Link href="/about-sfn/symptoms" className="text-primary hover:underline">
             Read more on our Symptoms page
           </Link>
         </>
@@ -43,7 +43,7 @@ export function FAQs() {
           nerve fibers are in the skin and helps confirm a diagnosis of SFN.
           <br />
           <br />
-          <Link href="/about/diagnosis" className="text-primary hover:underline">
+          <Link href="/about-sfn/diagnosis" className="text-primary hover:underline">
             Learn more on our Diagnosis page
           </Link>
         </>
@@ -58,7 +58,7 @@ export function FAQs() {
           toxins, and genetic factors.
           <br />
           <br />
-          <Link href="/about/causes" className="text-primary hover:underline">
+          <Link href="/about-sfn/causes" className="text-primary hover:underline">
             Explore more on our Causes page
           </Link>
         </>
@@ -74,7 +74,7 @@ export function FAQs() {
           to help manage symptoms.
           <br />
           <br />
-          <Link href="/about/treatments" className="text-primary hover:underline">
+          <Link href="/about-sfn/treatments" className="text-primary hover:underline">
             Read more on our Treatments page
           </Link>
         </>

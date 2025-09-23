@@ -8,6 +8,26 @@ interface PageProps {
   }>
 }
 
+// helper: try several slug formats so contentLoader finds pages whether
+// content files use "causes", "/about/causes" or "/about-sfn/causes"
+function resolvePageData(slug: string | undefined) {
+  if (!slug) return undefined
+  const candidates = [
+    slug,
+    `/${slug}`,
+    `about/${slug}`,
+    `/about/${slug}`,
+    `about-sfn/${slug}`,
+    `/about-sfn/${slug}`,
+  ]
+
+  for (const key of candidates) {
+    const pd = getPageData(key)
+    if (pd) return pd
+  }
+  return undefined
+}
+
 export async function generateStaticParams() {
   return [
     { slug: 'causes' },
@@ -19,7 +39,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getPageData(slug)
+  const pageData = resolvePageData(slug)
  
   if (!pageData) {
     return {
@@ -38,7 +58,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
-  const pageData = getPageData(slug)
+  const pageData = resolvePageData(slug)
  
   if (!pageData) {
     notFound()

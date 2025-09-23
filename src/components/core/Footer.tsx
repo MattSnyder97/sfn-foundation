@@ -33,7 +33,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
       <ul className="space-y-3 text-sm">
               <li>
-        <Link href="/about" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+        <Link href="/about-sfn" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   About SFN
                 </Link>
               </li>

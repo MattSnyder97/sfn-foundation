@@ -49,7 +49,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `Knowing what may have caused your SFN can guide treatment choices. Treating the underlying problem can sometimes slow or improve symptoms. [Learn more about SFN causes](/about/causes)`,
+          text: `Knowing what may have caused your SFN can guide treatment choices. Treating the underlying problem can sometimes slow or improve symptoms. [Learn more about SFN causes](/about-sfn/causes)`,
         },
       ],
     },
@@ -64,7 +64,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `The diagnostic process can be frustrating. Getting the right diagnosis helps find effective treatments. A neurologist who knows SFN can make a big difference. [Learn more about SFN diagnosis](/about/diagnosis)`,
+          text: `The diagnostic process can be frustrating. Getting the right diagnosis helps find effective treatments. A neurologist who knows SFN can make a big difference. [Learn more about SFN diagnosis](/about-sfn/diagnosis)`,
         },
       ],
     },
@@ -83,7 +83,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `Symptoms vary and can change over time. Some people have mild symptoms that come and go. Others have constant pain that affects daily life. Understanding your symptoms helps your healthcare team plan treatment. [Learn more about SFN symptoms](/about/symptoms)`,
+          text: `Symptoms vary and can change over time. Some people have mild symptoms that come and go. Others have constant pain that affects daily life. Understanding your symptoms helps your healthcare team plan treatment. [Learn more about SFN symptoms](/about-sfn/symptoms)`,
         },
       ],
     },
@@ -102,7 +102,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `Finding the right treatment takes time. What works for one person may not work for another. Doctors often try different combinations until they find what helps. Starting treatment sooner can improve the chances of managing symptoms. [Learn more about SFN treatments](/about/treatments)`,
+          text: `Finding the right treatment takes time. What works for one person may not work for another. Doctors often try different combinations until they find what helps. Starting treatment sooner can improve the chances of managing symptoms. [Learn more about SFN treatments](/about-sfn/treatments)`,
         },
       ],
     },

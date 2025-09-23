@@ -7,14 +7,14 @@ export function FeaturedCards() {
       title: "Research Backed Treatments to Improve SFN",
       description: "Neuropathy is a complex condition, but there are ways to manage your symptoms effectively.",
       imageSrc: "/images/common/doctorMan.png",
-      href: "/about/treatments"
+      href: "/about-sfn/treatments"
     },
     {
       variant: "style3",
       title: "All of the Symptoms Associated with Small Fiber Neuropathy",
       description: "Small fiber neuropathy can cause a huge range of symptoms.",
       imageSrc: "/images/common/painWoman.png",
-      href: "/about/symptoms"
+      href: "/about-sfn/symptoms"
     },
     {
       variant: "style3",

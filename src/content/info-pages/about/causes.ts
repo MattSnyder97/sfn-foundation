@@ -1,5 +1,5 @@
 export const causesContent = {
-  slug: "/about/causes",
+  slug: "/about-sfn/causes",
   tags: ["causes", "about"],
   hero: {
     title: "Causes",
@@ -168,7 +168,7 @@ export const causesContent = {
           type: "paragraph",
           text: `Some people inherit genes that make them more likely to develop small 
           fiber neuropathy. These genetic forms are less common than other causes, 
-          but they're important to recognize because they can affect family members. Genetic neuropathies often start earlier in life and may progress differently than other types. If you have family members with similar symptoms, tell your doctor as this information can help with diagnosis. [Learn more about getting a SFN diagnosis](/about/diagnosis).`,
+          but they're important to recognize because they can affect family members. Genetic neuropathies often start earlier in life and may progress differently than other types. If you have family members with similar symptoms, tell your doctor as this information can help with diagnosis. [Learn more about getting a SFN diagnosis](/about-sfn/diagnosis).`,
         },
         {
           type: "paragraph",

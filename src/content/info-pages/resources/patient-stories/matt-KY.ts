@@ -125,7 +125,7 @@ export const mattKYContent = {
           items: [
             "Cetirizine (Zyrtec) 10mg for suspected MCAS",
             "Methylphenidate (Concerta) 27mg for ADHD",
-            "Naltrexone 0.5mg for SFN",
+            "Naltrexone 1.5mg for SFN",
           ],
         },
         {

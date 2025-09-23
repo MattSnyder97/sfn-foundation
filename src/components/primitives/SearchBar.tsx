@@ -102,8 +102,8 @@ export default function SearchBar() {
     const hits = fuse.search(q);
 
     // Deprioritize certain pages/folders.
-    // Exact-page deprioritizations (parents only): '/resources' and '/about'
-    const deprioritizedExact = ['/resources', '/about'];
+    // Exact-page deprioritizations (parents only): '/resources' and '/about-sfn'
+    const deprioritizedExact = ['/resources', '/about-sfn'];
     // Prefix matches (entire folder and its children)
     const deprioritizedPrefix = ['/patient-stories', '/disclaimer', '/accessibility', '/terms-of-use', '/privacy-policy'];
 
