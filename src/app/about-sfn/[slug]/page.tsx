@@ -13,10 +13,6 @@ interface PageProps {
 function resolvePageData(slug: string | undefined) {
   if (!slug) return undefined
   const candidates = [
-    slug,
-    `/${slug}`,
-    `about/${slug}`,
-    `/about/${slug}`,
     `about-sfn/${slug}`,
     `/about-sfn/${slug}`,
   ]
