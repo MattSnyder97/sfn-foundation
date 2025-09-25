@@ -31,7 +31,7 @@ export const eliMNContent = {
         {
           type: "paragraph",
           text: `Of course, the doctors didn't know what to do with me. When they found nothing they insisted it was growing pains, anxiety or my favorite, I was just attention-seeking.
-          One helpful doctor suggested it could be neuropathy but I didn't have diabetes so it didn't fit. I learned quickly that doctors knew a lot less than I had thought and wouldn't be the saviors I was taught to believe they were. It took until I was fifteen to get a diagnosis of SFN and not because a particular doctor I ran into took the time or energy to look further into my case. I was lucky, as even fewer people knew about SFN back then, but a family friend recommended I get a skin biopsy.`,
+          One helpful doctor suggested it could be neuropathy but I didn't have diabetes so it didn't fit. I learned quickly that doctors knew a lot less than I had thought and wouldn't be the saviors I was taught to believe they were. It took until I was eighteen to get a diagnosis of SFN and not because a particular doctor I ran into took the time or energy to look further into my case. I was lucky, as even fewer people knew about SFN back then, but a family friend recommended I get a skin biopsy.`,
         },
         {
           type: "paragraph",
