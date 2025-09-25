@@ -84,7 +84,7 @@ export const supportGroupContent = {
       content: [
           {
             type: "paragraph",
-            text: `Our Discord server is moderated to keep the community safe and supportive. Please follow these key rules that mods enforce to protect everyone:`,
+            text: `Our Discord server is moderated to keep the community safe and supportive. Please follow these rules that mods enforce to protect everyone:`,
           },
           {
             type: "list",
@@ -94,7 +94,7 @@ export const supportGroupContent = {
               "No hate, bigotry, or discrimination. Respect all members.",
               "No unsolicited medical advice. Honor requests for no advice.",
               "Do not present basic remedies like yoga or fad diets as cures for severe conditions.",
-              "No politics, except in the healthcare-politics channel.",
+              "No politics, except in the #healthcare-politics channel.",
               "Do not minimize or shame anyone's experience or treatment choices.",
               "Do not source prescription or illegal drugs. Discuss only legal, medically prescribed treatments.",
               "Respect pronouns and neurodiverse language preferences.",
@@ -104,7 +104,7 @@ export const supportGroupContent = {
           },
           {
             type: "paragraph",
-            text: `Nothing shared here is medical advice. Mods may take action if these rules are broken. For full details, see the guidelines in our Discord server.`,
+            text: `Nothing shared here is medical advice. Mods may take action if these rules are broken.`,
           },
           {
           type: "button",
