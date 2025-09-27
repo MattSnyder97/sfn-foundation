@@ -8,6 +8,7 @@ export default function ResearchPortalPage() {
     <>
       <Header />
       <div className="bg-offWhite flex-1 flex flex-col">
+        {/* PortalClient decides which view to render based on access (query param or localStorage) */}
         <PortalClient />
         <Footer />
       </div>

@@ -163,31 +163,15 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Two alternative options some people try are Low Dose Naltrexone and medical cannabis. Research continues, but some studies show possible benefit for nerve pain.`,
+          text: `Low Dose Naltrexone (LDN) is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.`,
         },
         {
           type: "paragraph",
-          text: `**Low Dose Naltrexone (LDN)** is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.`,
+          text: `Medical cannabis is legal in many states for chronic pain. Some people with neuropathy find it helps with pain and sleep, though the evidence is mixed. Medical cannabis comes in many forms (oils, capsules, edibles, topicals, inhaled). CBD may reduce pain and inflammation without causing a high, while THC can help pain but causes mental effects. Laws and access vary by state; dosing starts low and increases slowly, especially with edibles where effects can take 1–2 hours.`,
         },
         {
           type: "paragraph",
-          text: `Low Dose Naltrexone (LDN) may reduce inflammation and help the body's pain control systems. Typical doses are small (often 1.5–4.5 mg at bedtime) and it usually requires a compounding pharmacy. Side effects are often mild, like vivid dreams or sleep changes. LDN is not usually covered by insurance and costs can vary. Current studies are small, so more research is needed to confirm benefits for SFN.`,
-        },
-        {
-          type: "paragraph",
-          text: `Recent studies suggest it may help some people with cryptogenic SFN, with improvements in pain and autonomic symptoms. More research is needed to confirm its benefits.`,
-        },
-        {
-          type: "paragraph",
-          text: `Medical cannabis is legal in many states for chronic pain. Some people with neuropathy find it helps with pain and sleep, though the evidence is mixed.`,
-        },
-        {
-          type: "paragraph",
-          text: `Medical cannabis comes in many forms (oils, capsules, edibles, topicals, inhaled). CBD may reduce pain and inflammation without causing a high, while THC can help pain but causes mental effects. Laws and access vary by state; dosing starts low and increases slowly, especially with edibles where effects can take 1–2 hours.`,
-        },
-        {
-          type: "paragraph",
-          text: `Research suggests medical cannabis can help nerve pain for some people. Side effects such as impaired thinking and breathing problems can occur, especially at higher doses.`,
+          text: `Intravenous Immunoglobulin (IVIG) is a blood product that some doctors consider for certain types of SFN. However, the first major study found no significant benefit over placebo for idiopathic SFN. IVIG is very expensive (over $30,000 for a treatment course) and most insurance companies don't cover it since effectiveness isn't proven. All patients experienced side effects including headache, nausea, and rash. Some research suggests it might help specific autoimmune types of SFN, but more studies are needed.`,
         },
         {
           type: "paragraph",
@@ -229,7 +213,7 @@ export const treatmentsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 25, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title:
@@ -265,6 +249,11 @@ export const treatmentsContent = {
           "Low-Dose Naltrexone for Treatment of Pain - National Center for Biotechnology Information",
         link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313374/",
       },
+      {
+        title:
+          "Intravenous Immunoglobulin Therapy in Patients With Painful Idiopathic Small Fiber Neuropathy - National Center for Biotechnology Information",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8205474/",
+      }
     ],
   },
 };

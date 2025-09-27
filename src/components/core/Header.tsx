@@ -150,130 +150,142 @@ export default function Header() {
           {!searchOpen && navLinks.map((link) => {
             const isActive = activeDropdown === link.label;
             return (
+              // NOTE: removed the outer "group" here so outer hover doesn't trigger inner group-hover styles
               <div
                 key={link.label}
-                className="relative group"
+                className="relative"
                 onMouseEnter={() => openDropdown(link.label)}
                 onMouseLeave={scheduleClose}
               >
                 {/* ...existing code for nav links... */}
-                  <div className="flex flex-col items-center relative">
-                    {link.dropdown ? (
-                      <div className="flex items-center space-x-2 px-2 py-1 rounded-sm transition-colors duration-150 cursor-default">
-                        {link.href ? (
-                          <Link
-                            href={link.href}
-                            className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
-                            onFocus={() => openDropdown(link.label)} // keep focus opening behavior for keyboard users
-                            onKeyDown={(e) => {
-                              // ArrowDown opens dropdown and moves focus to first menu item
-                              if (e.key === 'ArrowDown') {
-                                e.preventDefault();
-                                openDropdown(link.label);
-                                const items = menuItemRefs.current[link.label] ?? [];
-                                // focus first menu item after menu opens (defer to next tick)
-                                if (items && items[0]) {
-                                  window.setTimeout(() => items[0]?.focus(), 0);
-                                }
+                <div className="flex flex-col items-center relative">
+                  {link.dropdown ? (
+                    <div className="flex items-center space-x-2 px-2 py-1 rounded-sm transition-colors duration-150 cursor-default">
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark hover:text-primary"}`}
+                          onFocus={() => openDropdown(link.label)} // keep focus opening behavior for keyboard users
+                          onKeyDown={(e) => {
+                            // ArrowDown opens dropdown and moves focus to first menu item
+                            if (e.key === 'ArrowDown') {
+                              e.preventDefault();
+                              openDropdown(link.label);
+                              const items = menuItemRefs.current[link.label] ?? [];
+                              // focus first menu item after menu opens (defer to next tick)
+                              if (items && items[0]) {
+                                window.setTimeout(() => items[0]?.focus(), 0);
                               }
-                              // Allow Enter/Space to perform native link activation (navigate)
-                            }}
-                          >
-                            <span className="cursor-pointer">{link.label}</span>
-                          </Link>
-                        ) : (
-                          <span
-                            className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark group-hover:text-primary"}`}
-                            tabIndex={0}
-                            onFocus={() => openDropdown(link.label)}
-                            onKeyDown={(e) => {
-                              // For non-href dropdown headers behave like button for keyboard
-                              if (e.key === 'ArrowDown') {
-                                e.preventDefault();
-                                openDropdown(link.label);
-                                const items = menuItemRefs.current[link.label] ?? [];
-                                if (items && items[0]) {
-                                  window.setTimeout(() => items[0]?.focus(), 0);
-                                }
-                              } else if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                openDropdown(link.label);
-                              }
-                            }}
-                          >
-                            {link.label}
-                          </span>
-                        )}
-
-                        {/* Caret button toggles dropdown (separate interactive control) */}
-                        <button
-                          aria-label={`${isActive ? 'Close' : 'Open'} ${link.label} menu`}
-                          aria-controls={`menu-${link.label.replace(/\s+/g, '-')}`}
-                          aria-expanded={isActive}
-                          tabIndex={-1} // remove from sequential tab order
-                          onMouseDown={(e) => { e.preventDefault(); }} // prevent mouse click from focusing the button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            // toggle: if currently open, close; otherwise open
-                            if (isActive) closeDropdown();
-                            else openDropdown(link.label);
+                            }
+                            // Allow Enter/Space to perform native link activation (navigate)
                           }}
-                          className={`flex items-center justify-center p-1 rounded-md focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white`}
                         >
-                          <ChevronDown
-                            strokeWidth={2}
-                            className={`h-4 w-4 translate-y-0.5 transition-all duration-160 ${isActive ? "scale-y-[-1] text-primary" : "text-dark group-hover:text-primary"}`}
-                          />
-                        </button>
-                      </div>
-                    ) : (
-                      // Non-dropdown categories: make the Link the focusable control (no nested interactive)
-                      link.href ? (
-                        <Link href={link.href} className="text-lg font-medium px-2 py-1">
-                          {link.label}
+                          <span className="cursor-pointer">{link.label}</span>
                         </Link>
                       ) : (
-                        <span className="text-lg font-medium px-2 py-1">{link.label}</span>
-                      )
-                    )}
-                  </div>
-                 {isActive && link.dropdown && (
-                   <div
-                     id={`menu-${link.label.replace(/\s+/g, '-')}`}
-                     role="menu"
-                     className="absolute left-0 top-full z-20 w-48 -translate-x-3"
-                     onMouseEnter={() => openDropdown(link.label)}
-                     onMouseLeave={scheduleClose}
-                     onKeyDown={(e) => onMenuKeyDown(e, link.label)}
-                   >
-                     <div className="pt-4">
-                       {/* Allow focus rings to render outside the rounded container */}
-                       <div className="bg-white border border-primary/8 emphasis-shadow rounded-md overflow-visible">
-                         <div className="h-2 bg-primary rounded-t-md" />
-                         {link.items?.map((item, idx) => (
-                           <Link
-                             key={item.label}
-                             href={item.href}
-                             target={item.target}
-                             rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                             role="menuitem"
-                             ref={(el: HTMLElement | null) => {
-                               if (!menuItemRefs.current[link.label]) menuItemRefs.current[link.label] = [];
-                               menuItemRefs.current[link.label][idx] = el as HTMLElement;
-                             }}
-                             tabIndex={0}
-                             className="block px-4 py-3 text-md text-gray hover:text-primary hover:underline transition-colors duration-200 focus:outline-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-opacity-95 rounded-sm"
-                           >
-                             {item.label}
+                        <span
+                          className={`text-lg font-medium ${isActive ? "text-primary" : "text-dark hover:text-primary"}`}
+                          tabIndex={0}
+                          onFocus={() => openDropdown(link.label)}
+                          onKeyDown={(e) => {
+                            // For non-href dropdown headers behave like button for keyboard
+                            if (e.key === 'ArrowDown') {
+                              e.preventDefault();
+                              openDropdown(link.label);
+                              const items = menuItemRefs.current[link.label] ?? [];
+                              if (items && items[0]) {
+                                window.setTimeout(() => items[0]?.focus(), 0);
+                              }
+                            } else if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              openDropdown(link.label);
+                            }
+                          }}
+                        >
+                          {link.label}
+                        </span>
+                      )}
+
+                      {/* Caret button toggles dropdown (separate interactive control) */}
+                      <button
+                        aria-label={`${isActive ? 'Close' : 'Open'} ${link.label} menu`}
+                        aria-controls={`menu-${link.label.replace(/\s+/g, '-')}`}
+                        aria-expanded={isActive}
+                        tabIndex={-1} // remove from sequential tab order
+                        onMouseDown={(e) => { e.preventDefault(); }} // prevent mouse click from focusing the button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          // toggle: if currently open, close; otherwise open
+                          if (isActive) closeDropdown();
+                          else openDropdown(link.label);
+                        }}
+                        className={`flex items-center justify-center p-1 rounded-md focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white hover:text-primary`}
+                      >
+                        <ChevronDown
+                          strokeWidth={2}
+                          className={`h-4 w-4 translate-y-0.5 transition-all duration-160 ${isActive ? "scale-y-[-1] text-primary" : "text-dark"}`}
+                        />
+                      </button>
+                    </div>
+                  ) : (
+                    // Non-dropdown categories: make the Link the focusable control (no nested interactive)
+                    link.href ? (
+                      <Link href={link.href} className="text-lg font-medium px-2 py-1">
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span className="text-lg font-medium px-2 py-1">{link.label}</span>
+                    )
+                  )}
+                </div>
+                {isActive && link.dropdown && (
+                  <div
+                    id={`menu-${link.label.replace(/\s+/g, '-')}`}
+                    role="menu"
+                    className="absolute left-0 top-full z-20 w-48 -translate-x-3"
+                    onMouseEnter={() => openDropdown(link.label)}
+                    onMouseLeave={scheduleClose}
+                    onKeyDown={(e) => onMenuKeyDown(e, link.label)}
+                  >
+                    <div className="pt-4">
+                      {/* Allow focus rings to render outside the rounded container */}
+                      <div className="bg-white border border-primary/8 emphasis-shadow rounded-md overflow-visible">
+                        <div className="h-2 bg-primary rounded-t-md" />
+                        {link.items?.map((item, idx) => (
+                          <Link
+                            key={item.label}
+                            href={item.href}
+                            target={item.target}
+                            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                            role="menuitem"
+                            ref={(el: HTMLElement | null) => {
+                              if (!menuItemRefs.current[link.label]) menuItemRefs.current[link.label] = [];
+                              menuItemRefs.current[link.label][idx] = el as HTMLElement;
+                            }}
+                            tabIndex={0}
+                            // keep an inner group on this Link only so underline reacts to this link's hover/focus
+                            className="group block px-4 py-3 text-md text-gray transition-colors duration-200 focus:outline-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-opacity-95 rounded-sm"
+                          >
+                            {/* inner wrapper gets the visible animated underline similar to SearchBar results */}
+                            <div className="relative inline-block">
+                               <span className="relative z-10 inline-block text-md text-gray group-hover:text-primary group-focus:text-primary">
+                                 {item.label}
+                               </span>
+                               {/* reduced thickness (h-1) and smaller vertical offset (-bottom-1) */}
+                               <span
+                                 aria-hidden="true"
+                                 className="absolute left-0 right-0 -bottom-1 h-0.5 bg-primary rounded-sm z-0 opacity-0 transform scale-x-95 transition-all duration-64 group-hover:opacity-100 group-hover:scale-x-100 group-focus:opacity-100 group-focus:scale-x-100"
+                               />
+                             </div>
                            </Link>
                          ))}
-                       </div>
-                     </div>
-                   </div>
-                 )}
-               </div>
-             );
-           })}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
 
           {/* Search / Close Icon */}
           <div className="flex items-center">
