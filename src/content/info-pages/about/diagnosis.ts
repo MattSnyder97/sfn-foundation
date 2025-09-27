@@ -124,11 +124,7 @@ export const diagnosisContent = {
       content: [
         {
           type: "paragraph",
-          text: `Many people with SFN work with neurologists, doctors who focus on the nervous system. Neurologists train to diagnose and treat types of neuropathy, including SFN.`,
-        },
-        {
-          type: "paragraph",
-          text: `Your family doctor may refer you to a neurologist if they suspect SFN. Some neurologists focus specifically on peripheral neuropathy. [Find a SFN specialist](/resources/specialists)`,
+          text: `Many people with SFN work with neurologists, doctors who focus on the nervous system. Neurologists train to diagnose and treat types of neuropathy, including SFN. Your family doctor may refer you to a neurologist if they suspect SFN. Some neurologists focus specifically on peripheral neuropathy. [Find a SFN specialist](/resources/specialists)`,
         },
         {
           type: "paragraph",
@@ -168,7 +164,7 @@ export const diagnosisContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title:

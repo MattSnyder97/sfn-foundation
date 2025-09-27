@@ -21,8 +21,12 @@ export const supplementsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Supplements can help manage small fiber neuropathy when used with other treatments. They are not a cure, but some vitamins and nutrients may reduce nerve pain and support nerve health over time. Some people with SFN have nutrient deficiencies that can worsen symptoms. Correcting vitamin and mineral deficiencies can help nerves work better and may slow damage. It is important to know which supplements have good research and are safe to use. Talk to your doctor before starting new supplements, especially if you take prescription medicines. Supplements can interact with drugs or cause side effects. Your provider can help make a safe plan for you.`,
+          text: `Supplements can help manage small fiber neuropathy when used with other treatments. They are not a cure, but some vitamins and nutrients may reduce nerve pain and support nerve health over time. Some people with SFN have nutrient deficiencies that can worsen symptoms.`,
         },
+        {
+          type: "paragraph",
+          text: `Correcting vitamin and mineral deficiencies can help nerves work better and may slow damage. It is important to know which supplements have good research and are safe to use. Talk to your doctor before starting new supplements, especially if you take prescription medicines. Supplements can interact with drugs or cause side effects.`,
+        }
       ],
     },
 
@@ -32,11 +36,7 @@ export const supplementsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Some supplements have good scientific research showing benefits for nerve pain and nerve health. Doctors may recommend these when studies show they work and are generally safe.`,
-        },
-        {
-          type: "paragraph",
-          text: `Alpha-lipoic acid is one of the most studied supplements for neuropathy. It is an antioxidant that may protect nerves and reduce burning pain. Studies show benefits for diabetic neuropathy and other nerve conditions.`,
+          text: `Some supplements have scientific research showing benefits for nerve pain and nerve health. Doctors may recommend these when studies show they work and are generally safe.`,
         },
         {
           type: "list",
@@ -44,7 +44,6 @@ export const supplementsContent = {
           items: [
             "Alpha-Lipoic Acid - may reduce burning pain and protect nerves. Typical dose: 300-600mg daily.",
             "Acetyl-L-Carnitine - may help nerve cells make energy and support repair. Typical dose: 1000-3000mg daily.",
-            "Curcumin - the active part of turmeric with anti-inflammatory effects. Look for forms with better absorption. Typical dose: 500-1000mg daily.",
             "Omega-3 Fatty Acids - EPA and DHA from fish oil can reduce inflammation, including in nerves. Typical dose: 1000-2000mg combined EPA and DHA daily.",
           ],
         },
@@ -67,11 +66,7 @@ export const supplementsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Some vitamins are key for nerve health. Many people with neuropathy have low levels, which can worsen symptoms. Test vitamin levels and fix deficiencies as a first step.`,
-        },
-        {
-          type: "paragraph",
-          text: `B vitamins matter for nerve health. Nerves need these vitamins to work and repair. Low B vitamin levels can make neuropathy worse over time.`,
+          text: `Some vitamins are key for nerve health. Many people with neuropathy have low levels, which can worsen symptoms. Get vitamin levels checked with blood tests before starting high-dose supplements. Too much of some vitamins, especially B6, can harm nerves. Your doctor can order tests and help set safe doses.`,
         },
         {
           type: "list",
@@ -83,10 +78,6 @@ export const supplementsContent = {
             "Vitamin D3 - many people have low vitamin D. It is important for nerves and immune health. Typical dose: 1000-4000 IU daily based on blood tests.",
           ],
         },
-        {
-          type: "paragraph",
-          text: `Get vitamin levels checked with blood tests before starting high-dose supplements. Too much of some vitamins, especially B6, can harm nerves. Your doctor can order tests and help set safe doses.`,
-        },
       ],
     },
 
@@ -97,13 +88,6 @@ export const supplementsContent = {
         {
           type: "paragraph",
           text: `Antioxidants protect nerves from damage by free radicals and oxidative stress. This damage may play a role in SFN. Getting enough antioxidants may slow nerve damage and reduce inflammation.`,
-        },
-        {
-          type: "paragraph",
-          text: `Your body makes some antioxidants on its own, but you can get additional 
-          protection from supplements and foods. The most effective antioxidants for 
-          nerve health are those that can cross into nerve tissue and provide direct 
-          protection where it's needed most.`,
         },
         {
           type: "list",
@@ -156,15 +140,7 @@ export const supplementsContent = {
       content: [
         {
           type: "paragraph",
-          text: `Not all supplements are the same. The industry is less regulated than prescription drugs, so quality varies. Choosing high-quality supplements matters for safety and effectiveness.`,
-        },
-        {
-          type: "paragraph",
-          text: `Look for supplements tested by independent groups for purity and potency. Organizations like USP, NSF, and ConsumerLab test supplements to check labels and contaminants.`,
-        },
-        {
-          type: "paragraph",
-          text: `For safety, choose supplements tested by independent groups (USP, NSF), look for manufacturers that follow GMP, check expiration dates, avoid mega-doses, report all supplements to your doctor, and start with lower doses to see how you respond.`,
+          text: `Not all supplements are the same. The industry is less regulated than prescription drugs, so quality varies. Choosing high-quality supplements matters for safety and effectiveness. For safety, choose supplements tested by independent groups (USP, NSF), look for manufacturers that follow GMP, check expiration dates, avoid mega-doses, report all supplements to your doctor, and start with lower doses to see how you respond.`,
         },
         {
           type: "paragraph",
@@ -172,11 +148,7 @@ export const supplementsContent = {
         },
         {
           type: "paragraph",
-          text: `Keep a journal of supplements you take and how you feel. This helps you and your doctor see what helps and what may cause problems. Remember supplements add to a healthy diet and medical care; they do not replace them.`,
-        },
-        {
-          type: "paragraph",
-          text: `Be patient with supplements. Most need weeks or months of steady use before you notice effects. Try each supplement for at least 8 to 12 weeks before judging if it helps.`,
+          text: `Keep a journal of supplements you take and how you feel. This helps you and your doctor see what helps and what may cause problems. Remember supplements add to a healthy diet and medical care; they do not replace them. Be patient with supplements. Most need weeks or months of steady use before you notice effects. Try each supplement for at least 8 to 12 weeks before judging if it helps.`,
         },
       ],
     },
@@ -184,7 +156,7 @@ export const supplementsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 22, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title: "Alpha-lipoic acid - National Center for Complementary and Integrative Health",

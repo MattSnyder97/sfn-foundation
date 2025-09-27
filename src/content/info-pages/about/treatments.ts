@@ -171,7 +171,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Intravenous Immunoglobulin (IVIG) is a blood product that some doctors consider for certain types of SFN. However, the first major study found no significant benefit over placebo for idiopathic SFN. IVIG is very expensive (over $30,000 for a treatment course) and most insurance companies don't cover it since effectiveness isn't proven. All patients experienced side effects including headache, nausea, and rash. Some research suggests it might help specific autoimmune types of SFN, but more studies are needed.`,
+          text: `Intravenous Immunoglobulin (IVIG) is a blood product that some doctors consider for certain types of SFN. However, the first major study found no significant benefit over placebo for idiopathic SFN. IVIG is very expensive (averaging around $10,000 per treatment) and most insurance companies don't cover it since effectiveness isn't proven. Many patients experience side effects including headache, nausea, and rash. Some research suggests it might help specific autoimmune types of SFN, but more studies are needed.`,
         },
         {
           type: "paragraph",

@@ -21,11 +21,7 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Getting a diagnosis of small fiber neuropathy can feel overwhelming and scary. You may have many questions and strong emotions. The good news is you now have answers for your symptoms and can start taking steps to feel better.`,
-        },
-        {
-          type: "paragraph",
-          text: `SFN is a long-term condition, but many people live active lives with proper care. With the right treatments and lifestyle changes, you can manage symptoms and keep your quality of life. You do not have to face this alone.`,
+          text: `Getting a diagnosis of small fiber neuropathy can feel overwhelming and scary. You may have many questions and strong emotions. The good news is you now have answers for your symptoms and can start taking steps to feel better. SFN is a long-term condition, but many people live active lives with proper care. With the right treatments and lifestyle changes, you can manage symptoms and keep your quality of life. You do not have to face this alone.`,
         },
         {
         type: "button",
@@ -46,7 +42,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment. Your symptoms are real. SFN can cause a wide variety of symptoms like burning, stabbing, tingling, numbness, or sensitivity to touch. It often starts in the hands and feet, and how it changes over time varies by person. While there is no cure yet, many treatments can help, and research continues to look for better options.`,
+          text: `Common causes include diabetes, autoimmune diseases, vitamin deficiencies, some medicines, and genetics. Knowing possible causes can help guide treatment. Your symptoms are real. SFN can cause a wide variety of symptoms like burning, stabbing, tingling, numbness, or sensitivity to touch. While there is no cure yet, many treatments can help, and research continues to look for better options.`,
         },
         {
           type: "paragraph",
@@ -86,11 +82,7 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Managing SFN often means working with several healthcare providers. A good care team can improve treatment and quality of life. Each provider adds different expertise to help your condition.`,
-        },
-        {
-          type: "paragraph",
-          text: `Start with your current doctors and add specialists as needed. Make sure your providers can share information and coordinate care.`,
+          text: `Managing SFN often means working with several healthcare providers. A good care team can improve treatment and quality of life. Each provider adds different expertise to help your condition. Start with your current doctors and add specialists as needed. Make sure your providers can share information and coordinate care.`,
         },
         {
           type: "list",
@@ -123,11 +115,7 @@ export const newlyDiagnosedContent = {
       content: [
         {
           type: "paragraph",
-          text: `Certain lifestyle changes can help manage SFN symptoms and may slow nerve damage. Start with small, manageable changes and add more over time. Small steps can make a big difference.`,
-        },
-        {
-          type: "paragraph",
-          text: `Choose changes that you can keep up over time. You don't need to change everything at once. Start with one or two areas and add more when you are ready.`,
+          text: `Certain lifestyle changes can help manage SFN symptoms and may slow nerve damage. Start with small, manageable changes and add more over time. Small steps can make a big difference. Choose changes that you can keep up over time. You don't need to change everything at once. Start with one or two areas and add more when you are ready.`,
         },
         {
           type: "list",
@@ -145,11 +133,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `Notice what triggers your symptoms and what helps. Some people find heat makes symptoms worse, while others find warmth soothing. Track these patterns to adjust your environment and activities.`,
-        },
-        {
-          type: "paragraph",
-          text: `Consider working with a nutritionist to create a diet that supports nerve health. They can help identify foods that reduce inflammation and provide needed nutrients.`,
+          text: `Notice what triggers your symptoms and what helps. Some people find heat makes symptoms worse, while others find warmth soothing. Track these patterns to adjust your environment and activities. Consider working with a dietician to create a diet that supports nerve health. They can help identify foods that reduce inflammation and provide needed nutrients.`,
         },
       ],
     },
@@ -171,15 +155,7 @@ export const newlyDiagnosedContent = {
         },
         {
           type: "paragraph",
-          text: `It is normal to feel many emotions after diagnosis. Stay connected with supportive people, consider counseling if needed, join support groups, and be kind to yourself. Focus on what you can control and celebrate small wins as you manage your health.`,
-        },
-        {
-          type: "paragraph",
-          text: `Therapies like Acceptance and Commitment Therapy (ACT) can help you build coping skills for chronic pain and emotional challenges. Many people find these tools helpful for quality of life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Asking for help is a sign of strength. Whether it is help with tasks, emotional support, or counseling, getting assistance lets you focus on healing and recovery.`,
+          text: `Therapies like Acceptance and Commitment Therapy (ACT) can help you build coping skills for chronic pain and emotional challenges. Many people find these tools helpful for quality of life. Asking for help is a sign of strength. Whether it is help with tasks, emotional support, or counseling, getting assistance lets you focus on healing and recovery.`,
         },
         {
           type: "image",
@@ -200,7 +176,7 @@ export const newlyDiagnosedContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 12, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title: "Foundation for Peripheral Neuropathy - Newly Diagnosed Guide",

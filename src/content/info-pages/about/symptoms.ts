@@ -45,25 +45,23 @@ export const symptomsContent = {
       content: [
         {
           type: "paragraph",
-          text: `People often describe SFN pain as burning, stabbing, or electric. Some say it feels like walking on hot coals or like pins and needles. These sensations happen when damaged nerves send wrong signals to the brain. Symptoms may be steady or may move around and change in intensity.`,
-        },
-        {
-          type: "paragraph",
-          text: `The most common symptoms include burning pain, tingling, and numbness. You might also notice that your skin becomes very sensitive to light touch. Something as simple as bed sheets touching your feet can feel uncomfortable or painful.`,
+          text: `The most common symptoms include burning pain, stabbing pain, tingling, and numbness. You might also notice that your skin becomes very sensitive to light touch. Something as simple as bed sheets touching your feet can feel uncomfortable or painful.`,
         },
         {
           type: "list",
           ordered: false,
           items: [
             "Burning pain - Often described as feeling like your feet are on fire. This is usually the most common and troubling symptom.",
-            "Stabbing or shooting pain - Sharp pains that come suddenly and can feel like electric shocks or being stabbed with needles.",
-            "Tingling or pins and needles - A prickly feeling similar to when your foot falls asleep, but it doesn't go away.",
-            "Numbness - Loss of feeling in your hands or feet. You might not notice cuts, burns, or other injuries.",
-            "Sensitivity to touch - Light touches that normally wouldn't bother you can feel painful or uncomfortable.",
-            "Temperature problems - Difficulty telling if something is hot or cold, or unusual sensitivity to temperature changes.",
+            "Gastrointestinal symptoms - Some people have problems with digestion, like bloating, constipation, or diarrhea.",
             "Itching - Some people experience intense itching without any visible skin problems.",
             "Muscle weakness - Your hands or feet might feel weak, making it hard to grip things or walk normally.",
+            "Numbness - Loss of feeling in your hands or feet. You might not notice cuts, burns, or other injuries.",
             "Patchy, migratory, or asymmetric symptoms - Pain, tingling, or numbness that moves around, affects one side, or involves the face, trunk, or other areas. These patterns are more common in immune-related SFN.",
+            "Sensitivity to touch - Light touches that normally wouldn't bother you can feel painful or uncomfortable.",
+            "Sexual dysfunction - Some people experience changes in sexual function, including erectile dysfunction or vaginal dryness.",
+            "Stabbing or shooting pain - Sharp pains that come suddenly and can feel like electric shocks or being stabbed with needles.",
+            "Temperature problems - Difficulty telling if something is hot or cold, or unusual sensitivity to temperature changes.",
+            "Tingling or pins and needles - A prickly feeling similar to when your foot falls asleep, but it doesn't go away."
           ],
         },
         {
@@ -90,13 +88,6 @@ export const symptomsContent = {
           about the same. For others, they might get slowly worse or sometimes even 
           improve. Understanding how your symptoms might change can help you plan 
           and work with your healthcare team.`,
-        },
-        {
-          type: "paragraph",
-          text: `In the early stages, you might only have mild tingling or burning in 
-          your toes or fingertips. These feelings might come and go, and you might 
-          not think much of them at first. As nerve damage progresses, 
-          the symptoms can become more constant and spread to larger areas.`,
         },
         {
           type: "paragraph",
@@ -152,6 +143,7 @@ export const symptomsContent = {
             "Emotional health - Chronic pain can lead to feelings of sadness, frustration, or anxiety about the future.",
             "Social activities - You might avoid activities you used to enjoy because of pain or fear of making symptoms worse.",
             "Exercise - Pain might make you want to avoid physical activity, even though gentle exercise can help.",
+            "Sexual health - Some people experience changes in sexual function, including erectile dysfunction or vaginal dryness.",
           ],
         },
         {
@@ -193,10 +185,6 @@ export const symptomsContent = {
           text: `If you have symptoms that might be SFN, see a healthcare provider. Early diagnosis and treatment can help manage symptoms and may keep them from getting worse. Do not wait if you have ongoing pain or unusual sensations.`,
         },
         {
-          type: "paragraph",
-          text: `See a doctor if painful or unusual symptoms last more than a few days. Even mild symptoms are worth checking.`,
-        },
-        {
           type: "list",
           ordered: false,
           items: [
@@ -223,7 +211,7 @@ export const symptomsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 24, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title:

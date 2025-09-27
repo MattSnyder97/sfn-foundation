@@ -45,11 +45,7 @@ export const aboutContent = {
         },
         {
           type: "paragraph",
-          text: `In about half of SFN cases, doctors cannot find a specific cause. This is called idiopathic SFN. Even when the cause is unknown, treatments can still help manage symptoms and improve quality of life.`,
-        },
-        {
-          type: "paragraph",
-          text: `Knowing what may have caused your SFN can guide treatment choices. Treating the underlying problem can sometimes slow or improve symptoms. [Learn more about SFN causes](/about-sfn/causes)`,
+          text: `In about half of SFN cases, doctors cannot find a specific cause. This is called idiopathic SFN. Even when the cause is unknown, treatments can still help manage symptoms and improve quality of life. Knowing what may have caused your SFN can guide treatment choices. Treating the underlying problem can sometimes slow or improve symptoms. [Learn more about SFN causes](/about-sfn/causes)`,
         },
       ],
     },
@@ -73,10 +69,6 @@ export const aboutContent = {
       id: "symptoms",
       title: "Symptoms",
       content: [
-        {
-          type: "paragraph",
-          text: `SFN symptoms are often burning, stabbing, or tingling. Some people say it feels like walking on hot coals or like pins and needles. Symptoms usually start in the feet and hands and may spread to other parts of the body.`,
-        },
         {
           type: "paragraph",
           text: `Common symptoms include burning pain, numbness, sensitivity to touch, and trouble sensing temperature. Some people also have problems with automatic body functions like sweating, digestion, or blood pressure.`,
@@ -110,7 +102,7 @@ export const aboutContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title:

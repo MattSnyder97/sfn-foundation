@@ -19,7 +19,7 @@ export const supportGroupContent = {
       content: [
         {
           type: "paragraph",
-          text: `Living with small fiber neuropathy can feel isolating. Our Discord support group connects people worldwide for making connections, getting advice, and encouragement. You can ask questions, share experiences, or just talk with others who understand.`,
+          text: `Living with small fiber neuropathy can feel isolating, but you do not have to go through it alone. Our support group brings people together from around the world to share experiences, ask questions, find advice, and encourage one another. Whether you want to connect, learn, or just chat with others who understand, you are welcome here.`,
         },
         {
           type: "button",
@@ -36,11 +36,7 @@ export const supportGroupContent = {
       content: [
         {
           type: "paragraph",
-          text: `We use Discord because it helps build real connections. Unlike forums or social media, Discord lets people talk in real time. This makes it easier to get quick answers or to chat when you need support.`,
-        },
-        {
-          type: "paragraph",
-          text: `Channels keep conversations organized by topic, so you can find talks about treatments, symptoms, doctor tips, or daily life. We also have spaces to share wins, vent, or connect over hobbies. This helps the community support each other in many ways.`,
+          text: `We use Discord because it helps create real connections. Unlike forums or social media, Discord allows people to talk in real time, making it easier to get quick answers or find support when you need it. Channels keep conversations organized by topic, so you can explore discussions on treatments, symptoms, doctor tips, or daily life. There are also spaces to celebrate wins, vent frustrations, or connect over hobbies. Together, the community can support one another in many meaningful ways.`,
         },
         {
           type: "image",
@@ -50,7 +46,7 @@ export const supportGroupContent = {
         },
         {
           type: "paragraph",
-          text: `Discord also supports group activities like movie nights, book clubs, or gaming sessions. These events help build friendships and offer breaks from chronic pain. Voice and video options let members connect more personally when they want to.`,
+          text: `Discord also makes it easy to host group activities such as movie nights, book clubs, or gaming sessions. These events bring people together, help build friendships, and provide a welcome break from chronic pain. With voice and video options, members can connect more personally whenever they choose.`,
         },
       ],
     },
@@ -61,19 +57,11 @@ export const supportGroupContent = {
       content: [
         {
           type: "paragraph",
-          text: `If you're new to Discord, it is easier than it seems. Discord works on computers, phones, and tablets. You can use it in a web browser or [download the app](https://discord.com/download) for a smoother experience. See Discord's [Beginner's Guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord) for help.`,
+          text: `If you are new to Discord, it is easier than it looks. Discord works on computers, phones, and tablets. You can use it in a web browser or [download the app](https://discord.com/download) for a smoother experience. For step by step help, check Discord's [Beginner's Guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord).`,
         },
         {
           type: "paragraph",
-          text: `After joining, read the welcome messages and guidelines. Channels are listed on the left and cover specific topics. Start by introducing yourself in the introduce-yourself channel.`,
-        },
-        {
-          type: "paragraph",
-          text: `Conversations happen in real time, like text messaging. You can reply to messages, react with emojis, or start new topics. Don't feel pressured to join right away. Our community is patient and welcoming.`,
-        },
-        {
-          type: "paragraph",
-          text: `For mobile use, download the Discord app from your phone's app store. This lets you get notifications when people reply and makes checking in easier. You can change notification settings to avoid being overwhelmed.`,
+          text: `Once you join, start by reading the welcome message which will guide you through the setup process. Channels are listed on the left and each one covers a specific topic. Feel free to introduce yourself in the introduce yourself channel!`,
         },
       ],
     },
@@ -90,21 +78,17 @@ export const supportGroupContent = {
             type: "list",
             ordered: false,
             items: [
-              "No minors allowed. The server is for adults only.",
-              "No hate, bigotry, or discrimination. Respect all members.",
-              "No unsolicited medical advice. Honor requests for no advice.",
-              "Do not present basic remedies like yoga or fad diets as cures for severe conditions.",
-              "No politics, except in the #healthcare-politics channel.",
+              "Adults only. No minors.",
+              "Be respectful: no hate, discrimination, shaming; honor pronouns and neurodiverse language.",
+              "No medical or treatment advice, unproven cures, pseudoscience, or discussion of experimental/research/illegally sourced drugs; only legal, medically prescribed treatments may be discussed.",
+              "No politics except in #healthcare-politics.",
               "Do not minimize or shame anyone's experience or treatment choices.",
-              "Do not source prescription or illegal drugs. Discuss only legal, medically prescribed treatments.",
-              "Respect pronouns and neurodiverse language preferences.",
-              "No pseudoscience or unsupported medical claims.",
-              "Inactive members may lose access to sensitive channels.",
+              "Inactive members may lose access to sensitive channels."
             ],
           },
           {
             type: "paragraph",
-            text: `Nothing shared here is medical advice. Mods may take action if these rules are broken.`,
+            text: `Nothing shared in the support group is medical advice. Mods may take action if these rules are broken.`,
           },
           {
           type: "button",
@@ -118,7 +102,7 @@ export const supportGroupContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 12, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title: "Peer Support Groups - National Institute of Mental Health",

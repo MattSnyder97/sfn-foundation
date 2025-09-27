@@ -87,10 +87,6 @@ export const specialistsContent = {
           text: `Prepare well for your specialist visit so you can use the time wisely. Appointments with experts may be limited and can have long wait times.`,
         },
         {
-          type: "paragraph",
-          text: `Before the visit, gather medical records, test results, and reports from other doctors. Make a timeline of your symptoms and treatments. This helps the specialist understand your case faster.`,
-        },
-        {
           type: "list",
           ordered: false,
           items: [
@@ -118,7 +114,7 @@ export const specialistsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 12, 2025",
+    lastUpdated: "September 27, 2025",
     references: [
       {
         title:
