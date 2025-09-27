@@ -59,8 +59,8 @@ export function LatestNews() {
                       </span>
                     </div>
                 </div>
-                <div className="hidden md:block w-64 h-40 flex-shrink-0 rounded overflow-hidden bg-gray-100 default-shadow">
-                  <Image src={highlighted.image} alt={highlighted.title} width={320} height={200} className="object-cover w-full h-full" />
+                <div className="hidden md:block w-72 h-48 flex-shrink-0 rounded overflow-hidden bg-gray-100 default-shadow">
+                  <Image src={highlighted.image} alt={highlighted.title} width={720} height={405} className="object-cover w-full h-full" />
                 </div>
               </div>
             </a>
