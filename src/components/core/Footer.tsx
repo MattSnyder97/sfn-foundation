@@ -48,8 +48,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-        <Link href="/resources/newly-diagnosed" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
-                  Newly Diagnosed
+        <Link href="/about-the-foundation" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                  About SFN Foundation
                 </Link>
               </li>
             </ul>
