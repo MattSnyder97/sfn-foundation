@@ -107,7 +107,7 @@ export default function InfoLayout({
                         href={`#${item.id}`}
                         className={`block text-sm py-1 transition-all duration-200 pl-4 ${
                           activeId === item.id
-                            ? "border-l-4 border-primary pl-6 text-primary bg-transparent"
+                            ? "border-l-6 border-primary pl-6 text-primary bg-transparent"
                             : "text-gray hover:text-primary hover:underline"
                         }`}
                       >
