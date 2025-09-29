@@ -35,7 +35,7 @@ export const dictionaryContent = {
       content: [
         {
           type: "paragraph",
-          text: `These are common abbreviations and acronyms used in small fiber neuropathy information, medical records, and research.`,
+          text: `These are common acronyms used in small fiber neuropathy information, medical records, and research.`,
         },
         {
           type: "list",
@@ -51,6 +51,7 @@ export const dictionaryContent = {
             "**LDN** - Low Dose Naltrexone. A low-dose medication that may lower inflammation and pain for some people.",
             "**MCAS** - Mast Cell Activation Syndrome. A condition where mast cells release too many chemicals, sometimes linked to SFN.",
             "**NCS** - Nerve Conduction Study. A test that checks how fast electrical signals move through nerves.",
+            "**NLD** - Non-Length Dependent. A common pattern of small fiber neuropathy where symptoms can present in any area of the body, not just the hands and feet.",
             "**QSART** - Quantitative Sudomotor Axon Reflex Test. A test that checks how well small nerve fibers control sweating.",
             "**SFN** - Small Fiber Neuropathy. Damage to small nerve fibers that carry pain, temperature, and some automatic signals.",
             "**TST** - Thermoregulatory Sweat Test. A test that measures how the body sweats when exposed to heat.",
@@ -75,6 +76,7 @@ export const dictionaryContent = {
             "**Autonomic Neuropathy** - Damage to nerves that control automatic functions like heart rate, blood pressure, and digestion.",
             "**Axon** - The long part of a nerve cell that sends electrical signals away from the cell body.",
             "**Distal** - Areas of the body farther from the center, like hands and feet.",
+            "**Dysautonomia** - Problems with the autonomic nervous system, which controls automatic body functions.",
             "**Hyperalgesia** - Increased sensitivity to pain, where painful things hurt more than they should.",
             "**Hypesthesia** - Reduced sensitivity to touch, pressure, or other sensations.",
             "**Idiopathic** - No known cause. Many SFN cases are idiopathic.",
@@ -135,7 +137,6 @@ export const dictionaryContent = {
             items: [
             "**Anticonvulsants** - Drugs first used for seizures that can also help nerve pain, such as gabapentin and pregabalin.",
             "**Antidepressants** - Some antidepressants like duloxetine and nortriptyline can reduce nerve pain.",
-            "**Capsaicin** - A cream from hot peppers that can reduce pain when applied to the skin.",
             "**Compounding Pharmacy** - A pharmacy that makes custom medicines, sometimes needed for treatments like low dose naltrexone.",
             "**Duloxetine (Cymbalta)** - An antidepressant also used to treat diabetic nerve pain.",
             "**Gabapentin** - An anticonvulsant often used as a first treatment for nerve pain.",
@@ -182,7 +183,7 @@ export const dictionaryContent = {
             "**Pins and Needles** - A prickling or tingling sensation, also called paresthesia.",
             "**Restless Legs** - An uncomfortable urge to move the legs, often worse at night, sometimes associated with neuropathy.",
             "**Stabbing Pain** - Sharp, knife-like pains that come and go suddenly.",
-            "**Stocking-Glove Distribution** - A pattern where symptoms start in the hands and feet and gradually move toward the body.",
+            "**Stocking-Glove Distribution** - A pattern where symptoms present in the feet and hands.",
             "**Temperature Sensitivity** - Difficulty sensing hot or cold temperatures, or pain triggered by temperature changes.",
             "**Tingling** - A light prickling sensation, often described as feeling like carbonation on the skin.",
             "**Warm/Cool Sensations** - Abnormal feelings of warmth or coolness in affected areas without actual temperature changes.",

@@ -32,10 +32,6 @@ export const symptomsContent = {
           their daily life. Understanding your symptoms is the first step toward 
           getting the help you need.`,
         },
-        {
-          type: "paragraph",
-          text: `SFN symptoms often start in your feet and hands and can slowly spread up your limbs. This is called a stocking-glove pattern. Not everyone follows this pattern. Some people have patchy or changing symptoms that may affect the face, trunk, or other areas. These patterns are more common when the cause is immune-related, such as Sjögren syndrome or sarcoidosis. Knowing the pattern can help your doctor make the right diagnosis and plan treatment.`,
-        },
       ],
     },
 
@@ -45,7 +41,7 @@ export const symptomsContent = {
       content: [
         {
           type: "paragraph",
-          text: `The most common symptoms include burning pain, stabbing pain, tingling, and numbness. You might also notice that your skin becomes very sensitive to light touch. Something as simple as bed sheets touching your feet can feel uncomfortable or painful.`,
+          text: `The most common symptoms include brain fog, burning pain, bowel and stomach problems, dysautonomia-related symptoms, numbness, sexual dysfunction, shooting or stabbing pains, tingling, twitching, urinary issues, and vibrating sensations. These symptoms can vary widely in how they feel and how often they happen. Some people have a few symptoms, while others have many. It is common for symptoms to be non-length dependent, meaning they can affect any part of the body rather than just the hands and feet.`,
         },
         {
           type: "list",

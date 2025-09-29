@@ -24,8 +24,7 @@ export function FAQs() {
       question: "What are the symptoms?",
       answer: (
         <>
-          Common symptoms include burning pain, numbness, tingling, twitching, vibrations,
-          shooting or stabbing pains, stomach or bowel problems, and brain fog.
+          The most common symptoms include brain fog, burning pain, bowel and stomach problems, dysautonomia-related symptoms, numbness, sexual dysfunction, shooting or stabbing pains, tingling, twitching, urinary issues, and vibrating sensations.
           <br />
           <br />
           <Link href="/about-sfn/symptoms" className="text-primary hover:underline">
@@ -69,8 +68,7 @@ export function FAQs() {
       question: "What treatments are available for SFN?",
       answer: (
         <>
-          Treatment focuses on regular exercise, a healthy diet, and treating any
-          underlying conditions. Many people use pain medications or supplements
+          Treatment focuses on managing symptoms and treating any underlying conditions. Many people use pain medications or supplements
           to help manage symptoms.
           <br />
           <br />
