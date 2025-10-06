@@ -38,6 +38,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+        <Link href="/about-the-foundation" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                  About SFN Foundation
+                </Link>
+              </li>
+              <li>
         <Link href="/resources/specialists" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Find a Specialist
                 </Link>
@@ -45,11 +50,6 @@ export default function Footer() {
               <li>
         <Link href="/research" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Latest Research
-                </Link>
-              </li>
-              <li>
-        <Link href="/about-the-foundation" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
-                  About SFN Foundation
                 </Link>
               </li>
             </ul>
@@ -85,25 +85,25 @@ export default function Footer() {
           {/* Specialists */}
           <div className="text-center md:text-left">
             <h3 className="font-bold text-lg mb-4">Specialists</h3>
-      <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-sm">
+              {/* Alphabetical order by link text */}
               <li>
-        <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy&viewType=Table&sort=StudyFirstPostDate" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                <Link href="https://clinicaltrials.gov/search?cond=small%20fiber%20neuropathy&viewType=Table&sort=StudyFirstPostDate" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   Clinical Trials
                 </Link>
               </li>
               <li>
-        <Link href="/research/portal" className={`opacity hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start gap-2 text-shadow-nearInvisible ${focusClasses}`}>
-                  <Lock size={14} />
+                <Link href="/resources/specialists" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                  Find a Specialist
+                </Link>
+              </li>
+              <li>
+                <Link href="/research/portal" className={`opacity hover:opacity-100 hover:underline transition-all flex items-center justify-center md:justify-start text-shadow-nearInvisible ${focusClasses}`}>
                   Research Portal
                 </Link>
               </li>
               <li>
-        <Link href="https://www.massgeneralbrigham.org/en/education-and-training/continuing-professional-development" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
-                  Professional Development
-                </Link>
-              </li>
-              <li>
-        <Link href="https://www.youtube.com/watch?v=KtNnlY6RUdA" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                <Link href="https://www.youtube.com/watch?v=KtNnlY6RUdA" target="_blank" rel="noopener noreferrer" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
                   SFN Overview Video
                 </Link>
               </li>

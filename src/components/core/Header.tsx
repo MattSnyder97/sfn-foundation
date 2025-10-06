@@ -57,6 +57,7 @@ export default function Header() {
       dropdown: true,
       items: [
         { label: "About the Foundation", href: "/about-the-foundation/" },
+        { label: "Contact", href: "/contact/" },
       ],
     },
   ];
