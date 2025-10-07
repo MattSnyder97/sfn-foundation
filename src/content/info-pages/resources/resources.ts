@@ -12,7 +12,7 @@ export const resourcesContent = {
     { id: "mutual-aid", title: "Mutual Aid" },
     { id: "newly-diagnosed", title: "Newly Diagnosed" },
     { id: "patient-stories", title: "Patient Stories" },
-    { id: "sfn-dictionary", title: "SFN Dictionary" },
+    { id: "sfn-glossary", title: "SFN Glossary" },
     { id: "support-group", title: "Support Group" },
     { id: "supplements", title: "Supplements" },
   ],
@@ -85,12 +85,12 @@ export const resourcesContent = {
     },
 
     {
-      id: "sfn-dictionary",
-      title: "SFN Dictionary",
+      id: "sfn-glossary",
+      title: "SFN Glossary",
       content: [
         {
           type: "paragraph",
-          text: `Our dictionary explains medical terms related to small fiber neuropathy that you may hear in appointments, research, or online. Find definitions for anatomy terms, medication names, and tests. This reference can help you talk with your healthcare team. [Read the SFN dictionary](/resources/dictionary)`,
+          text: `Our glossary explains medical terms related to small fiber neuropathy that you may hear in appointments, research, or online. Find definitions for anatomy terms, medication names, and tests. This reference can help you talk with your healthcare team. [Read the SFN glossary](/resources/glossary)`,
         },
       ],
     },

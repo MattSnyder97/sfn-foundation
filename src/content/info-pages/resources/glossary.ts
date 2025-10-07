@@ -1,8 +1,8 @@
-export const dictionaryContent = {
-  slug: "/resources/dictionary",
+export const glossaryContent = {
+  slug: "/resources/glossary",
   tags: ["resources"],
   hero: {
-    title: "SFN Dictionary",
+    title: "SFN Glossary",
   },
 
   tableOfContents: [
@@ -22,7 +22,7 @@ export const dictionaryContent = {
         {
           type: "paragraph",
           text: `Understanding medical terms and acronyms can help you better communicate 
-          with your healthcare team and understand your condition. This dictionary 
+          with your healthcare team and understand your condition. This glossary 
           explains common words, abbreviations, and phrases you might encounter 
           when dealing with Small Fiber Neuropathy. Medical language can feel overwhelming at first, but learning these terms will help you become a more informed patient. Don't hesitate to ask your doctor or healthcare provider to explain any terms you don't understand during your appointments.`,
         },
@@ -43,6 +43,9 @@ export const dictionaryContent = {
             items: [
             "**ALA** - Alpha Lipoic Acid. An antioxidant supplement sometimes used to help nerve pain.",
             "**ALCAR** - Acetyl-L-Carnitine. A supplement that may help nerve cells make energy and support repair.",
+            "**CBD** - Cannabidiol. A compound found in cannabis that may help with pain and inflammation.",
+            "**CBG** - Cannabigerol. A non-psychoactive compound in cannabis that is being studied for potential health benefits.",
+            "**COVID** - Coronavirus Disease. An infectious disease caused by the SARS-CoV-2 virus that can cause small fiber neuropathy.",
             "**EMG** - Electromyography. A test that records electrical activity in muscles to help find nerve or muscle problems.",
             "**IENFD** - Intraepidermal Nerve Fiber Density. A measure of small nerve fibers in a skin biopsy.",
             "**iSFN** - Idiopathic Small Fiber Neuropathy. SFN with no known cause.",
@@ -54,6 +57,7 @@ export const dictionaryContent = {
             "**NLD** - Non-Length Dependent. A common pattern of small fiber neuropathy where symptoms can present in any area of the body, not just the hands and feet.",
             "**QSART** - Quantitative Sudomotor Axon Reflex Test. A test that checks how well small nerve fibers control sweating.",
             "**SFN** - Small Fiber Neuropathy. Damage to small nerve fibers that carry pain, temperature, and some automatic signals.",
+            "**THC** - Tetrahydrocannabinol. The main psychoactive compound in cannabis, which may help with pain relief.",
             "**TST** - Thermoregulatory Sweat Test. A test that measures how the body sweats when exposed to heat.",
           ],
         },

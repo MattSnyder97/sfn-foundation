@@ -9,12 +9,13 @@ html {
   /* Colors */
   --color-primary: #5159CF;
   --color-secondary: #009CFA;
-  --color-tertiary: #4bbea0;
+  --color-tertiary: #20B2AA ;
   --color-white: #FBF8F8;
   --color-offWhite: #EFEEF5;
   --color-black: #373847;
   --color-dark: #54566E;
   --color-gray: #5B5D70;
+  --color-coral: #FF6B6B;
   --color-warning: #ff8b6e;
   --color-error: #ff5d95;
 

@@ -15,7 +15,7 @@ import { researchContent } from "./info-pages/research/research";
 
 // ===== Resources =====
 import { caregiverTipsContent } from "./info-pages/resources/caregiver-tips";
-import { dictionaryContent } from "./info-pages/resources/dictionary";
+import { glossaryContent } from "./info-pages/resources/glossary";
 import { mutualAidContent } from "./info-pages/resources/mutual-aid";
 import { newlyDiagnosedContent } from "./info-pages/resources/newly-diagnosed";
 import { resourcesContent } from "./info-pages/resources/resources";
@@ -50,7 +50,7 @@ export const allContent = [
   ...[researchContent],
   // Resources
   ...[caregiverTipsContent],
-  ...[dictionaryContent],
+  ...[glossaryContent],
   ...[mutualAidContent],
   ...[newlyDiagnosedContent],
   ...[resourcesContent],

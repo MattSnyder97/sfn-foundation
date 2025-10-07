@@ -8,7 +8,7 @@ export const segmentLabels: Record<string, string> = {
   'caregiver-tips': 'Caregiver Tips',
   'causes': 'Causes',
   'diagnosis': 'Diagnosis',
-  'dictionary': 'SFN Dictionary',
+  'glossary': 'SFN Glossary',
   'disclaimer': 'Medical Disclaimer',
   'doctors': 'Approved Doctors',
   'specialists': 'Find a Specialist',

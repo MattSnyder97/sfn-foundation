@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 export async function generateStaticParams() {
   return [
     { slug: ['caregiver-tips'] },
-    { slug: ['dictionary'] },
+    { slug: ['glossary'] },
     { slug: ['newly-diagnosed'] },
     { slug: ['patient-stories'] },
     { slug: ['patient-stories', 'matt'] },

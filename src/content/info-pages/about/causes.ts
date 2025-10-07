@@ -9,6 +9,7 @@ export const causesContent = {
     { id: "overview", title: "Overview" },
     { id: "diabetes", title: "Diabetes and Blood Sugar" },
     { id: "autoimmune", title: "Autoimmune Conditions" },
+    { id: "infections", title: "Infections" },
     { id: "other-medical", title: "Other Medical Conditions" },
     { id: "medications", title: "Medications and Toxins" },
     { id: "genetic", title: "Genetic Factors" },
@@ -107,6 +108,29 @@ export const causesContent = {
     },
 
     {
+      id: "infections",
+      title: "Infections",
+      content: [
+        {
+          type: "paragraph",
+          text: `Some infections can lead to small fiber neuropathy, either during the active infection or as a long-term effect after recovery. The infection may directly damage nerve fibers or trigger immune responses that affect the nerves.`,
+        },
+        {
+          type: "paragraph",
+          text: `COVID-19 (SARS-CoV-2) has emerged as a cause of small fiber neuropathy, particularly in people with long COVID. Studies show that some people develop neuropathy symptoms like burning pain, numbness, and tingling weeks to months after their initial COVID infection. Research suggests COVID can damage small nerve fibers and trigger immune responses that affect the nervous system. Since COVID is a recent disease, more research is needed to fully understand how common this complication is and what the long-term effects might be.`,
+        },
+        {
+          type: "paragraph",
+          text: `There have been rare reports of small fiber neuropathy after COVID-19 vaccination. These cases appear to be very uncommon and may involve immune responses to the vaccine. Because vaccines are newer than the disease itself, ongoing research continues to study any potential connections. If you developed nerve symptoms after vaccination, your doctor can help determine the cause and appropriate treatment. The benefits of vaccination in preventing severe COVID-19 remain clear for most people.`,
+        },
+        {
+          type: "paragraph",
+          text: `Other infections that can cause small fiber neuropathy include HIV/AIDS, hepatitis C, Lyme disease, and shingles. If you developed neuropathy symptoms during or after an infection, tell your doctor so they can look for possible connections.`,
+        },
+      ],
+    },
+
+    {
       id: "other-medical",
       title: "Other Medical Conditions",
       content: [
@@ -122,7 +146,6 @@ export const causesContent = {
           items: [
             "Kidney Disease - Waste products that build up when kidneys don't work well can damage nerves",
             "Liver Disease - Can cause toxic substances to build up and affect nerve function",
-            "HIV/AIDS - The virus itself or some treatments can cause neuropathy",
             "Vitamin Deficiencies - Especially B12, B1, B6, and folate deficiencies",
             "Hypothyroidism - Low thyroid hormone levels can slow nerve function",
             "Fibromyalgia - Often overlaps with small fiber neuropathy",
@@ -188,7 +211,7 @@ export const causesContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "August 20, 2025",
+    lastUpdated: "October 7, 2025",
     references: [
       {
         title: "Small fiber neuropathy: A burning problem - Cleveland Clinic Journal of Medicine",
@@ -197,6 +220,18 @@ export const causesContent = {
       {
         title: "Small Fiber Neuropathy: What It Is, Symptoms & Treatment - Cleveland Clinic",
         link: "https://my.clevelandclinic.org/health/diseases/17479-small-fiber-neuropathy",
+      },
+      {
+        title: "Case-Control Study of Individuals With Small Fiber Neuropathy After COVID-19 - Neurology",
+        link: "https://www.neurology.org/doi/10.1212/NXI.0000000000200244",
+      },
+      {
+        title: "Small fiber neuropathy associated with SARS-CoV-2 infection - PMC",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8661991/",
+      },
+      {
+        title: "Post-COVID-19 vaccine small-fiber neuropathy and tinnitus treated with plasma exchange - PMC",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9537871/",
       },
     ],
   },

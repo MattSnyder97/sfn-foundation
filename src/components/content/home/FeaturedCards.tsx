@@ -18,10 +18,10 @@ export function FeaturedCards() {
     },
     {
       variant: "style3",
-      title: "SFN, ALA, EMG—oh my! Check out our Acronym Dictionary",
-      description: "All the acronyms and terminology can be daunting, so we created a dictionary.",
+      title: "SFN, ALA, EMG—oh my! Check out our SFN Glossary",
+      description: "All the acronyms and terminology can be daunting, so we created a glossary.",
       imageSrc: "/images/common/confusedMan.png",
-      href: "/resources/dictionary"
+      href: "/resources/glossary"
     }
   ];
 
