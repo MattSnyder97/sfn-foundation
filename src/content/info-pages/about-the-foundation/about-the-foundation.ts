@@ -35,7 +35,7 @@ export const aboutTheFoundationContent = {
       content: [
         {
           type: "paragraph",
-          text: `The SFN Foundation launched in August 2025 when [Matt Snyder](resources/patient-stories/matt) began developing this website under the guidance of SFN medical experts and researchers. Seeing the need for better coordination in SFN research and more support for patients, we set out to create something that could make a real difference.`,
+          text: `The SFN Foundation launched in August 2025 when [Matt](resources/patient-stories/matt) began developing this website under the guidance of SFN medical experts and researchers. Seeing the need for better coordination in SFN research and more support for patients, we set out to create something that could make a real difference.`,
         },
         {
           type: "paragraph",
