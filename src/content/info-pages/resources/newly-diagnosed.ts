@@ -23,12 +23,6 @@ export const newlyDiagnosedContent = {
           type: "paragraph",
           text: `Getting a diagnosis of small fiber neuropathy can feel overwhelming and scary. You may have many questions and strong emotions. The good news is you now have answers for your symptoms and can start taking steps to feel better. SFN is a long-term condition, but many people live active lives with proper care. With the right treatments and lifestyle changes, you can manage symptoms and keep your quality of life. You do not have to face this alone.`,
         },
-        {
-        type: "button",
-        label: "Join the Support Group",
-        href: "https://discord.gg/UGNhBMkBS7",
-        variant: "outlinePrimary",
-        },
       ],
     },
 

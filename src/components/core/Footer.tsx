@@ -75,8 +75,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-        <Link href="/resources/support-group" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
-                  Support Group
+        <Link href="/resources/" className={`opacity hover:opacity-100 hover:underline transition-all text-shadow-nearInvisible ${focusClasses}`}>
+                  Resources
                 </Link>
               </li>
             </ul>

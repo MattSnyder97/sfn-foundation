@@ -157,12 +157,6 @@ export const symptomsContent = {
           not alone, and there are people who understand what you're going through.`,
         },
         {
-        type: "button",
-        label: "Join the Support Group",
-        href: "https://discord.gg/UGNhBMkBS7",
-        variant: "outlinePrimary",
-        },
-        {
           type: "paragraph",
           text: `Many people with SFN find ways to adapt and continue doing the things 
           they love. This might mean using tools to help with daily tasks, changing 

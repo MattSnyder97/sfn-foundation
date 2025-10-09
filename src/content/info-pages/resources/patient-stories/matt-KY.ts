@@ -22,8 +22,7 @@ export const mattKYContent = {
       content: [
         {
           type: "paragraph",
-          text: `Hi, I'm Matt. I'm 28 years old and live in Kentucky. Like many of you 
-          reading this, I never expected to be dealing with Small Fiber Neuropathy 
+          text: `Hi, I'm Matt. Like many of you reading this, I never expected to be dealing with Small Fiber Neuropathy 
           at such a young age. My journey with SFN started in early 2024, and it's 
           been a challenging path of symptoms, diagnosis, and learning to navigate 
           life with a chronic condition.`,
@@ -206,8 +205,8 @@ export const mattKYContent = {
         {
           type: "image",
           src: "/images/patient-stories/mattFriends.jpg",
-          alt: "Matt and friends at Red River Gorge",
-          caption: "Me and my friends at Red River Gorge, one of my favorite places to go hiking and climbing.",
+          alt: "Matt and friends hiking",
+          caption: "Me and my friends at one of my favorite places to go hiking and climbing.",
         },
         {
           type: "paragraph",
@@ -218,7 +217,7 @@ export const mattKYContent = {
   ],
 
   meta: {
-    author: "Matt, age 28, Kentucky",
+    author: "Matt, Kentucky",
     lastUpdated: "August 28, 2025",
   },
 };

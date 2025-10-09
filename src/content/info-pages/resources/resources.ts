@@ -13,7 +13,7 @@ export const resourcesContent = {
     { id: "newly-diagnosed", title: "Newly Diagnosed" },
     { id: "patient-stories", title: "Patient Stories" },
     { id: "sfn-glossary", title: "SFN Glossary" },
-    { id: "support-group", title: "Support Group" },
+    //{ id: "support-group", title: "Support Group" },
     { id: "supplements", title: "Supplements" },
   ],
 
@@ -94,7 +94,7 @@ export const resourcesContent = {
         },
       ],
     },
-
+    /*
     {
       id: "support-group",
       title: "Support Group",
@@ -105,7 +105,7 @@ export const resourcesContent = {
         },
       ],
     },
-
+    */
     {
       id: "supplements",
       title: "Supplements",
