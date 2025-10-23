@@ -53,33 +53,33 @@ export default function LatestNewsList() {
 
     const el = listRef.current;
     if (!el) return;
-    const id = window.setTimeout(() => {
-      // Try to scroll the container itself first
-      try {
-        if (typeof el.scrollTo === "function") {
-          el.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      } catch (e) {
-        // ignore and fallback to scrollIntoView
-      }
 
-      // If container scroll doesn't move it into view, ensure the page scrolls so the list top is visible
-      // and account for the sticky header height (defined in CSS var --header-height).
+    const id = window.setTimeout(() => {
+      // Always scroll the page so the list top is visible (no container scrolling).
       try {
-        const headerHeight = typeof window !== 'undefined'
-          ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0
-          : 0;
+        const headerHeight =
+          typeof window !== "undefined"
+            ? parseInt(
+                getComputedStyle(document.documentElement).getPropertyValue(
+                  "--header-height"
+                )
+              ) || 0
+            : 0;
 
         const rect = el.getBoundingClientRect();
         const absoluteTop = window.scrollY + rect.top;
-        const EXTRA_PADDING = 18; // extra space above the list when scrolled into view
+        const EXTRA_PADDING = 18;
         const target = Math.max(0, absoluteTop - headerHeight - EXTRA_PADDING);
-        window.scrollTo({ top: target, behavior: 'smooth' });
-      } catch (e) {
-        // fallback to scrollIntoView if something goes wrong
-        try { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { /* ignore */ }
+        window.scrollTo({ top: target, behavior: "smooth" });
+      } catch {
+        try {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        } catch {
+          /* ignore */
+        }
       }
     }, 100);
+
     return () => window.clearTimeout(id);
   }, [page]);
 
@@ -112,7 +112,10 @@ export default function LatestNewsList() {
   }
 
   return (
-    <div ref={listRef} className="flex flex-col gap-8 overflow-auto">
+    <div
+      ref={listRef}
+      className="flex flex-col gap-8 overflow-visible"
+    >
       {articlesToShow.map((article, idx) => {
         // allow authors to accidentally include '/public' in the path; normalize to public root
         const raw = article.image || '/images/researchWoman.png';
