@@ -163,7 +163,7 @@ export const treatmentsContent = {
         },
         {
           type: "paragraph",
-          text: `Low Dose Naltrexone (LDN) is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.
+          text: `Low Dose Naltrexone (LDN) is a medication that was originally used at higher doses to treat addiction. At very low doses (1-5mg daily), it may help reduce inflammation and pain. Recent research specifically in patients with biopsy-confirmed cryptogenic Small Fiber Neuropathy (SFN) found that LDN may improve symptoms, especially in sensory and autonomic domains. Here is a Google Document with lots of [success stories of people who have used LDN to treat various conditions including neuropathy](https://docs.google.com/document/d/1ruk5xYyOs5QnI04j5Ai2v1e5v9ioLfld-xuepb7EHT4/edit?usp=drivesdk). However, the evidence is limited by small sample size and variable dosing, and more research is needed to confirm its benefits.
           [Watch this video by Dr. Been to learn more about how LDN works](https://www.youtube.com/watch?v=G2TztMYNDss&t).`,
         },
         {
@@ -214,7 +214,7 @@ export const treatmentsContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 27, 2025",
+    lastUpdated: "November 9, 2025",
     references: [
       {
         title:
