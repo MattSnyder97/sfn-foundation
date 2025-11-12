@@ -14,7 +14,7 @@ export const AccordionItem = ({
   <RadixAccordion.Item
     {...props}
   data-accordion-item
-  className="overflow-hidden rounded-2xl bg-white default-shadow transition-all"
+  className="overflow-hidden rounded-2xl bg-white default-shadow transition-all duration-75 hover:scale-[1.02] data-[state=open]:hover:scale-100"
   >
     {children}
   </RadixAccordion.Item>
