@@ -9,6 +9,15 @@ export interface ResearchArticle {
 
 export const researchArticles: ResearchArticle[] = [
     {
+      title: "Half a Billion Euros Funding Post-Infectious Disease Research",
+      summary: "Germany is investing heavily in research on post-infectious diseases, long COVID or ME/CFS, to better understand and treat these conditions. You may need a browser translator for this article as it is in German.",
+      link: "https://www.bmftr.bund.de/SharedDocs/Kurzmeldungen/DE/2025/11/nationale-dekade-postinfekti%C3%B6se-erkrankungen.html",
+      date: "2025-11-13",
+      image: "/images/common/researchGuy.png",
+      imageAlt: "Image of a woman researcher"
+    },
+  
+    {
       title: "Gene Therapy Clinical Trial to Start in October for SFN Pain",
       summary: "A clinical trial using gene therapy to reduce severe pain from SFN is set to begin in October. If you are in the Boston area, you may be eligible to participate.",
       link: "https://clinicaltrials.gov/study/NCT06980948",
