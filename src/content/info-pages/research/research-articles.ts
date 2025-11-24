@@ -16,6 +16,15 @@ export const researchArticles: ResearchArticle[] = [
       image: "/images/common/researchGuy.png",
       imageAlt: "Image of a woman researcher"
     },
+    {
+      title: "NVG-2089: Next-Generation IVIG Enters Phase 2 Trials",
+      summary:
+        "Rockefeller startup launches Phase 2 trials of NVG-2089, a next-generation synthetic IVIG designed to offer more powerful and potentially safer treatment options for severe autoimmune diseases, including CIDP. Early Phase 1 data showed promising efficacy with minimal side effects.",
+      link: "https://www.rockefeller.edu/news/38552-rockefeller-startup-aims-to-change-the-course-of-treatment-for-severe-autoimmune-diseases/",
+      date: "2025-11-07",
+      image: "/images/common/iv.jpg",
+      imageAlt: "Illustration of an IV drip in a clinical setting"
+    },
   
     {
       title: "Gene Therapy Clinical Trial to Start in October for SFN Pain",
