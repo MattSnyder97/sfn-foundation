@@ -20,7 +20,7 @@
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.1.0",
     "lucide-react": "^0.539.0",
-    "next": "^15.5.2",
+    "next": "^16.0.8",
     "next-auth": "^4.24.11",
     "nodemailer": "^6.10.1",
     "prisma": "^6.15.0",
@@ -43,8 +43,7 @@
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
-  }
-  ,
+  },
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 Edge versions",
