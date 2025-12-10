@@ -24,7 +24,7 @@ export const supportGroupContent = {
         {
           type: "button",
           label: "Join the Support Group",
-          href: "https://discord.gg/UGNhBMkBS7",
+          href: "https://discord.gg/XSrrZDA4N3",
           variant: "outlinePrimary",
         },
       ],
@@ -93,7 +93,7 @@ export const supportGroupContent = {
           {
           type: "button",
           label: "Join the Support Group",
-          href: "https://discord.gg/UGNhBMkBS7",
+          href: "https://discord.gg/XSrrZDA4N3",
           variant: "outlinePrimary",
           },
       ],
@@ -102,7 +102,7 @@ export const supportGroupContent = {
 
   meta: {
     author: "the SFN Foundation",
-    lastUpdated: "September 27, 2025",
+    lastUpdated: "December 9, 2025",
     references: [
       {
         title: "Peer Support Groups - National Institute of Mental Health",
