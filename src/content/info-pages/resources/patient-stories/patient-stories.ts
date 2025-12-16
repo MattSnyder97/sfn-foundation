@@ -16,7 +16,7 @@ export const patientStoriesContent = {
       content: [
         {
           type: "paragraph",
-          text: `Read stories from people living with Small Fiber Neuropathy. We have divided them into two categories: Stories and Short Stories. Stories are longer, more complete accounts of life with SFN, and Short Stories share a smaller piece of someone's experience.`,
+          text: `Read stories from people affected by Small Fiber Neuropathy. We have divided them into two categories: Stories and Short Stories. Stories are longer, more complete accounts of life with SFN, and Short Stories share a smaller piece of someone's experience.`,
         },
         {
           type: "paragraph",
