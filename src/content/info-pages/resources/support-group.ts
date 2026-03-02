@@ -24,7 +24,7 @@ export const supportGroupContent = {
         {
           type: "button",
           label: "Join the Support Group",
-          href: "https://discord.gg/XSrrZDA4N3",
+          href: "https://discord.gg/VPPgbRQPem",
           variant: "outlinePrimary",
         },
       ],
@@ -93,7 +93,7 @@ export const supportGroupContent = {
           {
           type: "button",
           label: "Join the Support Group",
-          href: "https://discord.gg/XSrrZDA4N3",
+          href: "https://discord.gg/VPPgbRQPem",
           variant: "outlinePrimary",
           },
       ],
