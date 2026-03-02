@@ -29,12 +29,12 @@ export function LatestNews() {
   const sorted = [...researchArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const latestTwo = sorted.slice(0, 2);
 
-  // Highlighted mutual-aid entry (Beth Kris) — link to the mutual aid page anchor
+// Highlighted mutual-aid entry (Donia Lilly) — link to the mutual aid page anchor
   const highlighted = {
-    title: "Support Beth Kris",
-    description: "Beth became disabled after taking four antibiotic pills and now faces thousands in costs for basic accessibility equipment. Your support can help her regain independence during this difficult time.",
-    href: "/resources/mutual-aid#beth-kris",
-    image: "/images/patient-stories/bethKris2.png",
+    title: "Support Donia Lilly",
+    description: "Donia has been homeless since 9/30/2025 due to her severe neuro-immune disorder. She needs help securing a quiet, permanent ADA accessible home where she can live for the rest of her life.",
+    href: "/resources/mutual-aid#donia-lilly",
+    image: "/images/patient-stories/doniaLilly2.jpeg",
   };
 
   return (
